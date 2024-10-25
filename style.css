@@ -97,14 +97,18 @@ nav {
 
 }
 
-nav ul {
+#menu {
+    list-style:none;
     display: flex;
-    list-style: none;
 }
 
-nav ul li {
-    margin-right: 20px;
-    font-size: 14px;
+#menu .item {
+    margin:0px 25px;
+}
+
+#menu .item a {
+    color:#626A67;
+    text-decoration: none;
 }
 
 /* Category Section */
@@ -146,13 +150,15 @@ nav ul li {
     font-weight: bold;
 }
 
-
-.view-all {
+.view-next-prev {
+    text-align: right;
+}
+ .view-all {
     margin-right: 30px;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    text-align: center;
+     text-align: right;
     text-transform: capitalize;
     color: #787878;
 }
@@ -181,6 +187,14 @@ nav ul li {
 }
 .swiper-prev:hover, .swiper-next:hover {
     background: #FFC43F;
+}
+#wp-products{
+    padding: 40px 20px;
+    background-color: white;
+}
+#wp-products h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 .trending-products{
     padding: 40px 20px;
@@ -234,4 +248,105 @@ nav ul li {
 .fa-heart {
     color: red;
     cursor: pointer;
+}
+
+
+
+
+#list-products {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#list-products .item {
+    width: 290px;
+    height: 374px;
+    background:#362f2f;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#list-products .item img {
+    display: block;
+    margin:0px auto;
+    margin-top:17px;
+}
+
+#list-products .item .stars {
+
+    display: flex;
+    margin:0px auto;
+    width: 50%;
+}
+
+#list-products .item .name {
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    margin-top:21px;
+}
+
+#list-products .item .desc {
+    text-align: center;
+    color:#626a67;
+}
+
+#list-products .item .price {
+    text-align: center;
+    color:#f42424;
+    font-weight: bold;
+    margin-top:20px;
+}
+#footer {
+    width: 100%;
+    background:rgb(0,0,0,0.79);
+    height: 322px;
+    margin-top:338px;
+    padding:0px 63px;
+    padding-top:57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .box {
+    width: 250px;
+    color:#fff;
+}
+
+#footer .box .quick-menu {
+    margin-top:40px;
+
+}
+
+
+#footer .box .quick-menu .item{
+    margin-bottom:12px;
+
+}
+#footer .box .quick-menu ,.item a{
+    color:#fff;
+    text-decoration: none;
+}
+
+
+
+#footer .box form input {
+    width: 294px;
+    height: 42px;
+    background:transparent;
+    padding-left:20px;
+    color:#fff;
+    margin-top:30px;
+}
+
+#footer .box form button {
+    background:#362f2f;
+    box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    width: 163px;
+    height: 38px;
+    margin-top:29px;
+    color:#fff;
 }
