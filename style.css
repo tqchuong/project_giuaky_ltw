@@ -84,10 +84,20 @@ header {
     align-items: center;
     font-size: 14px;
 }
-.login img{
-    width: 40px;
+.login button {
+    justify-content: center;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.login img {
+    width: 35px;
+    height: auto;
     margin-right: 10px;
 }
+
 
 /* Navigation */
 nav {
@@ -275,31 +285,18 @@ nav {
     margin-top:17px;
 }
 
-#list-products .item .stars {
 
-    display: flex;
-    margin:0px auto;
-    width: 50%;
-}
 
-#list-products .item .name {
-    text-align: center;
-    color:#fff;
-    font-weight: bold;
-    margin-top:21px;
-}
 
-#list-products .item .desc {
-    text-align: center;
-    color:#626a67;
-}
 
-#list-products .item .price {
-    text-align: center;
-    color:#f42424;
-    font-weight: bold;
-    margin-top:20px;
-}
+
+
+
+
+
+
+
+
 #footer {
     width: 100%;
     background:rgb(0,0,0,0.79);
@@ -319,6 +316,9 @@ nav {
 #footer .box .quick-menu {
     margin-top:40px;
 
+}
+#footer .box .logo {
+    margin-bottom: 10px;
 }
 
 
