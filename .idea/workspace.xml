@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f9c2080-de86-415f-96f7-5f1bbbd35132" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img/ctsp2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.css" beforeDir="false" afterPath="$PROJECT_DIR$/a.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ctsp1.html" beforeDir="false" afterPath="$PROJECT_DIR$/ctsp1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/ctsp2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gaotl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gaotl3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/gaotl4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/khach1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index (1).html" beforeDir="false" afterPath="$PROJECT_DIR$/index (1).html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,22 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.chsp1.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "npt",
-    "last_opened_file_path": "D:/test",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.chsp1.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;npt&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/test&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -70,7 +77,8 @@
       <workItem from="1729767081843" duration="12622000" />
       <workItem from="1729846412041" duration="12462000" />
       <workItem from="1729920702187" duration="2826000" />
-      <workItem from="1729952399216" duration="1436000" />
+      <workItem from="1729952399216" duration="2999000" />
+      <workItem from="1730014196960" duration="5202000" />
     </task>
     <servers />
   </component>
