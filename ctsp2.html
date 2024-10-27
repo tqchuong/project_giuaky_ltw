@@ -12,19 +12,16 @@
     <meta name="description" content="">
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="a.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <header>
     <div class="logo">
         <img src="img/logo.png" alt="FoodMart Logo">
-        <h1>FOODMART <p>Grocery Store</p></h1>
     </div>
     <div class="search-cart">
         <select>
@@ -63,17 +60,11 @@
                     <div class="col-md-12 col-lg-2">
                         <!-- Product thumbnail images -->
                         <div class="product-thumbnails">
-                            <img src="img/gaotl51.jpg" alt="Thumbnail 1" class="thumb-image img-fluid" onclick="changeImage('img/gaotl51.jpg')">
-                            <img src="img/gaotl21.jpg" alt="Thumbnail 2" class="thumb-image img-fluid" onclick="changeImage('img/gaotl21.jpg')">
-                            <img src="img/gaotl31.jpg" alt="Thumbnail 3" class="thumb-image img-fluid" onclick="changeImage('img/gaotl31.jpg')">
-                            <img src="img/gaotl41.jpg" alt="Thumbnail 4" class="thumb-image img-fluid" onclick="changeImage('img/gaotl41.jpg')">
-                            <img src="img/gaotl1.jpg" alt="Thumbnail 5" class="thumb-image img-fluid" onclick="changeImage('img/gaotl1.jpg')">
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-10">
                         <!-- Main product image -->
                         <div class="product-main-image">
-                            <img id="mainImage" src="img/gaotl51.jpg" alt="Main Product" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -81,10 +72,8 @@
             <div class="col-lg-5">
                 <div class="product-info">
                     <div class="element-header">
-                        <h2 itemprop="name" class="display-6">Gạo Thiên Long 5kg</h2>
                         <div class="rating-container d-flex gap-0 align-items-center">
                             <div class="rating" data-rating="1">
-                                <span class="text-primary" style="font-size: 32px;">★</span> <!-- Ký tự sao màu chính -->
                             </div>
                             <div class="rating" data-rating="2">
                                 <span class="text-primary" style="font-size: 32px;">★</span>
@@ -93,18 +82,14 @@
                                 <span class="text-primary" style="font-size: 32px;">★</span>
                             </div>
                             <div class="rating" data-rating="4">
-                                <span class="text-primary" style="font-size: 32px;">★</span> <!-- Ký tự sao màu chính cho sao thứ 4 -->
                             </div>
                             <div class="rating" data-rating="5">
-                                <span class="text-secondary" style="font-size: 32px;">☆</span> <!-- Ký tự sao rỗng cho nửa sao -->
                             </div>
                             <span class="rating-count">(4.5)</span>
                         </div>
 
                         <div class="product-price pt-3 pb-3">
-                            <strong class="text-primary display-6 fw-bold">₫ 190.000</strong><del class="ms-2">230.000₫</del>
                         </div>
-                        <p>Gạo Thiên Long có nguồn gốc từ giống lúa Rồng thiêng độc quyền của Tập đoàn Lộc Trời, với sự sát cánh của các kỹ sư nông nghiệp Ba Cùng và bà con nông dân, trên vùng nguyên liệu canh tác theo tiêu chuẩn quốc tế SRP. Cơm từ gạo Thiên Long đã được các chuyên gia quốc tế đánh giá rất ngon, hậu vị ngọt và có mùi thơm dứa đặc trưng riêng biệt. Sản phẩm được sản xuất và đóng gói theo tiêu chuẩn quốc tế BRC – tiêu chuẩn an toàn thực phẩm Châu Âu.</p>
 
                         <div class="product-quantity pt-3">
                             <div class="stock-number text-dark"><em>Còn 4 sản phẩm</em></div>
@@ -113,17 +98,14 @@
                                 <div class="input-group product-qty" style="max-width: 150px;">
     <span class="input-group-btn">
         <!-- Nút trừ số lượng -->
-        <button type="button" class="quantity-left-minus btn btn-danger btn-number" onclick="changeQuantity(-1)" data-type="minus" data-field="">
             -
         </button>
     </span>
 
                                     <!-- Input nhập số lượng sản phẩm -->
-                                    <input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
 
                                     <span class="input-group-btn">
         <!-- Nút cộng số lượng -->
-        <button type="button" class="quantity-right-plus btn btn-success btn-number" onclick="changeQuantity(1)" data-type="plus" data-field="">
             +
         </button>
     </span>
@@ -131,8 +113,6 @@
 
                                 <!-- Nút hành động: Mua ngay hoặc Thêm vào giỏ hàng -->
                                 <div class="qty-button d-flex flex-wrap pt-3">
-                                    <button type="submit" class="btn btn-primary py-3 px-4 text-uppercase me-3 mt-3">Mua Ngay</button>
-                                    <button type="submit" name="add-to-cart" value="1269" class="btn btn-dark py-3 px-4 text-uppercase mt-3">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
 
@@ -173,63 +153,22 @@
         </div>
     </div>
 </section>
-
 <section class="product-info-tabs py-5">
     <div class="container-fluid">
         <div class="row">
-            <div class=
-                         "d-flex flex-column flex-md-row align-items-start gap-5">
-                <div class=
-                             "nav flex-row flex-wrap flex-md-column nav-pills me-3 col-lg-3"
-                     id="v-pills-tab" role="tablist" aria-orientation=
-                             "vertical">
-                    <button class="nav-link text-start active" id=
-                            "v-pills-description-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-description" type="button"
-                            role="tab" aria-controls="v-pills-description"
-                            aria-selected="true">Description</button>
-                    <button class="nav-link text-start" id=
-                            "v-pills-additional-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-additional" type="button"
-                            role="tab" aria-controls="v-pills-additional"
-                            aria-selected="false">Additional Information</button>
-                    <button class="nav-link text-start" id=
-                            "v-pills-reviews-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-reviews" type="button" role=
-                                    "tab" aria-controls="v-pills-reviews" aria-selected=
-                                    "false">Customer Reviews</button>
                 </div>
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id=
-                            "v-pills-description" role="tabpanel" aria-labelledby=
-                                 "v-pills-description-tab" tabindex="0">
                         <h5>Chi tiết sản phẩm</h5>
-                        <p>Gạo Hạt Ngọc Trời – Cam kết chuẩn sạch:
-                            Không chỉ thơm ngon hợp ý, gạo Hạt Ngọc Trời nổi tiếng là loại gạo chuẩn sạch giúp người nội trợ thêm an tâm khi thưởng thức:</p>
-                        <ul style="list-style-type:disc;" class=
-                                "list-unstyled ps-4">
                             <p>Hướng dẫn chế biến</p>
                             <li>- Đong gạo và nước theo tỉ lệ 1:1 (1 lon gạo : 1 lon nước)</li>
-                            <li>- Sau khi cơm chín, tiếp tục giữ ấm (keep warm) thêm 10 phút sẽ có bữa cơm tuyệt vời</li>
                             <li>(Thêm/giảm nước cho những lần nấu sau theo sở thích).</li>
                         </ul>
-                        <p>Gạo Thiên Long có nguồn gốc từ giống lúa Rồng thiêng độc quyền của Tập đoàn Lộc Trời, với sự sát cánh của các kỹ sư nông nghiệp Ba Cùng và bà con nông dân, trên vùng nguyên liệu canh tác theo tiêu chuẩn quốc tế SRP. Cơm từ gạo Thiên Long đã được các chuyên gia quốc tế đánh giá rất ngon, hậu vị ngọt và có mùi thơm dứa đặc trưng riêng biệt. Sản phẩm được sản xuất và đóng gói theo tiêu chuẩn quốc tế BRC – tiêu chuẩn an toàn thực phẩm Châu Âu.</p>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-additional"
-                         role="tabpanel" aria-labelledby=
-                                 "v-pills-additional-tab" tabindex="0">
                         <p>Thông tin sản phẩm</p>
-                        <ul style="list-style-type:disc;" class=
-                                "list-unstyled ps-4">
-                            <li>Tên sản phẩm: Gạo Thiên Long</li>
-                            <li>Khối lượng: 5 kg</li>
                             <li>Đóng gói: Hộp giúp bảo quản gạo tốt hơn và giữ được hương vị thơm ngon.</li>
                             <li>Dinh dưỡng:Giàu tinh bột và các vitamin khoáng chất</li>
                         </ul>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-reviews" role=
-                            "tabpanel" aria-labelledby="v-pills-reviews-tab"
-                         tabindex="0">
                         <div class="review-box d-flex flex-wrap">
                             <div class="col-lg-6 d-flex flex-wrap gap-3">
                                 <div class="col-md-2">
@@ -240,7 +179,6 @@
                                 <div class="col-md-8">
                                     <div class="review-content">
                                         <div class="rating-container d-flex align-items-center">
-                                            <span class="text-primary" style="font-size: 24px;">★★★★☆</span> <!-- Ký tự sao -->
                                             <span class="rating-count">(4)</span>
                                         </div>
                                         <div class="review-header">
@@ -273,11 +211,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 <section id="related-products" class="py-5">
@@ -310,41 +243,17 @@
         </div>
     </div>
 </section>
-<footer>
-    <div id="footer">
-        <div class="box">
-            <div class="logo">
-                <img src="img/logo.png" alt="FoodMart Logo">
-                <h1>FOODMART <p>Grocery Store</p></h1>
             </div>
-            <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
         </div>
-        <div class="box">
-            <h3>NỘI DUNG</h3>
-            <ul class="quick-menu">
-                <div class="item">
-                    <a href="">Trang chủ</a>
                 </div>
-                <div class="item">
-                    <a href="">Sản phẩm</a>
                 </div>
-                <div class="item">
-                    <a href="">Blog</a>
                 </div>
-                <div class="item">
-                    <a href="">Lời cảm ơn</a>
                 </div>
             </ul>
         </div>
-        <div class="box">
-            <h3>LIÊN HỆ</h3>
-            <form action="">
-                <input type="text" placeholder="Địa chỉ email">
-                <button>Nhận tin</button>
             </form>
         </div>
     </div>
-
 </footer>
 <script src="scp.js"></script>
 </body>
