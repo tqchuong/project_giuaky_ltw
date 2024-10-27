@@ -5,10 +5,6 @@
     --red: #B5292F;
 }
 
-
-
-
-
 .checkout-page.active {
     transform: translateX(0);
 }
