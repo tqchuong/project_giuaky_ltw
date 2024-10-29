@@ -8,6 +8,7 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+
 </head>
 <body>
 <header>
@@ -94,12 +95,12 @@
             <span>Phân loại </span>
             <select id="advanced-search-category-select" name="" onchange="searchProducts()">
                 <option>Tất cả</option>
-                <option>Món chay</option>
-                <option>Món mặn</option>
-                <option>Món lẩu</option>
-                <option>Món ăn vặt</option>
-                <option>Món tráng miệng</option>
-                <option>Nước uống</option>
+                <option>Gạo</option>
+                <option>Lúa mì</option>
+                <option>Bắp</option>
+                <option>Cao lương</option>
+                <option>Kê</option>
+                <option>Khác</option>
             </select>
         </div>
         <div class="advanced-search-price">
@@ -107,23 +108,23 @@
             <input id="min-price" onchange="searchProducts()" placeholder="tối thiểu" type="number">
             <span>đến</span>
             <input id="max-price" onchange="searchProducts()" placeholder="tối đa" type="number">
-            <button id="advanced-search-price-btn"><i class="fa-light fa-magnifying-glass-dollar"></i></button>
+            <button id="advanced-search-price-btn"><i class="fa-solid fa-magnifying-glass-dollar"></i></button>
         </div>
         <div class="advanced-search-control">
-            <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-regular fa-arrow-up-short-wide"></i>
+            <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-solid fa-arrow-up-short-wide"></i>
             </button>
-            <button id="sort-descending" onclick="searchProducts(2)"><i class="fa-regular fa-arrow-down-wide-short"></i>
+            <button id="sort-descending" onclick="searchProducts(2)"><i class="fa-solid fa-arrow-down-wide-short"></i>
             </button>
-            <button id="reset-search" onclick="searchProducts(0)"><i class="fa-light fa-arrow-rotate-right"></i>
+            <button id="reset-search" onclick="searchProducts(0)"><i class="fa-solid fa-arrow-rotate-right"></i>
             </button>
-            <button onclick="closeSearchAdvanced()"><i class="fa-light fa-xmark"></i></button>
+            <button onclick="closeSearchAdvanced()"><i class="fa-solid fa-xmark"></i></button>
         </div>
     </div>
 </div>
 <main class="main-wrapper">
     <div class="container" id="trangchu">
         <div class="home-slider">
-            <img src="./assets/img/banner2.jpg" alt="">
+            <img src="./assets/img/Banner.png" alt="">
 
         </div>
         <div class="home-service" id="home-service">
@@ -310,7 +311,7 @@
         </div>
     </div>
 </footer>
-
+<script src="index.js"></script>
 
 </body>
 </html>
