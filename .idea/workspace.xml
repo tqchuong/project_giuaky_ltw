@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c77a67c9-2da0-42cb-b230-4b300acebd33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/css/cs.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/Banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/cao lương.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gạo nếp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/kê.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/luong-thuc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/lúa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/ngô.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/rice.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +30,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="TypeScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -35,24 +48,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "hmc",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_directory_selection": "V:/LTW/Project",
-    "last_opened_file_path": "V:/LTW/Project",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hmc&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;V:/LTW/Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;V:/LTW/Project&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="V:\LTW\Project" />
@@ -85,7 +98,10 @@
       <workItem from="1730115553538" duration="983000" />
       <workItem from="1730117040471" duration="10591000" />
       <workItem from="1730129925017" duration="233000" />
-      <workItem from="1730209064242" duration="2108000" />
+      <workItem from="1730209064242" duration="3749000" />
+      <workItem from="1730268032082" duration="4288000" />
+      <workItem from="1730272707518" duration="2854000" />
+      <workItem from="1730301205183" duration="863000" />
     </task>
     <servers />
   </component>

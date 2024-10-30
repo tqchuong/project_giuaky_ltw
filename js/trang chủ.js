@@ -14,15 +14,6 @@ modalBox.forEach(item => {
     })
 });
 
-function closeModal() {
-    modalContainer.forEach(item => {
-        item.classList.remove('open');
-    });
-    console.log(modalContainer)
-    body.style.overflow = "auto";
-}
-
-
 
 // Open Search Advanced
 document.querySelector(".filter-btn").addEventListener("click",(e) => {
@@ -39,6 +30,13 @@ document.querySelector(".form-search-input").addEventListener("click",(e) => {
 function closeSearchAdvanced() {
     document.querySelector(".advanced-search").classList.toggle("open");
 }
+
+
+
+
+
+
+
 
 
 

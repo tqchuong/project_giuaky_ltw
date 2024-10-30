@@ -5,8 +5,8 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>FoodMart Store</title>
-    <link href="style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
 
 </head>
@@ -35,7 +35,7 @@
 
                 <div class="logo">
                     <a href="">
-                        <img alt="FoodMart Logo" src="./assets/img/logo.png">
+                        <img alt="FoodMart Logo" src="../img/logo/logo.png">
                     </a>
                     <h1>FOODMART <p>Grocery Store</p></h1>
                 </div>
@@ -80,12 +80,17 @@
     <div class="container">
         <ul class="menu-list">
             <li class="menu-list-item"><a class="menu-link" href="">Trang chủ</a></li>
-            <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
-            <li class="menu-list-item" onclick="showCategory('Lúa mì')"><a class="menu-link" href="javascript:">Lúa mì</a></li>
-            <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
-            <li class="menu-list-item" onclick="showCategory('Cao lương')"><a class="menu-link" href="javascript:">Cao lương</a></li>
+            <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a>
+            </li>
+            <li class="menu-list-item" onclick="showCategory('Lúa mì')"><a class="menu-link" href="javascript:">Lúa
+                mì</a></li>
+            <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a>
+            </li>
+            <li class="menu-list-item" onclick="showCategory('Cao lương')"><a class="menu-link" href="javascript:">Cao
+                lương</a></li>
             <li class="menu-list-item" onclick="showCategory('Kê')"><a class="menu-link" href="javascript:">Kê</a></li>
-            <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+            <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -124,7 +129,7 @@
 <main class="main-wrapper">
     <div class="container" id="trangchu">
         <div class="home-slider">
-            <img src="./assets/img/Banner.png" alt="">
+            <img alt="" src="../img/banner/Banner.png">
 
         </div>
         <div class="home-service" id="home-service">
@@ -169,9 +174,41 @@
             <h2 class="home-title">Khám phá sản phẩm của chúng tôi</h2>
         </div>
         <div class="home-products" id="home-products">
+            <div class="col-product">
+                <article class="card-product">
+                    <div class="card-header">
+                        <a class="card-image-link" href="#" onclick="">
+                            <img alt="" class="card-image"
+                                 src="">
+                        </a>
+                    </div>
+                    <div class="food-info">
+                        <div class="card-content">
+                            <div class="card-title">
+                                <a class="card-title-link" href="#" onclick="detailProduct(1)"></a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="product-price">
+                                <span class="current-price"></span>
+                            </div>
+                            <div class="product-buy">
+                                <button class="card-button order-item" onclick="detailProduct(1)"><i
+                                        class="fa-regular fa-cart-shopping-fast"></i> Đặt món
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
         <div class="page-nav">
             <ul class="page-nav-list">
+                <li class="page-nav-item active"><a href="javascript:">1</a></li>
+                <li class="page-nav-item"><a href="javascript:">2</a></li>
+                <li class="page-nav-item"><a href="javascript:">3</a></li>
+                <li class="page-nav-item"><a href="javascript:">4</a></li>
+                <li class="page-nav-item"><a href="javascript:">5</a></li>
             </ul>
         </div>
     </div>
@@ -185,7 +222,7 @@
             <div class="footer-top-content">
                 <div class="logo">
                     <a href="">
-                        <img alt="FoodMart Logo" src="./assets/img/logo.png">
+                        <img alt="FoodMart Logo" src="../img/logo/logo.png">
                     </a>
                     <h1>FOODMART <p>Grocery Store</p></h1>
                 </div>
@@ -195,7 +232,7 @@
                         <p class="footer-top-subs-text">Nhận thông tin mới nhất từ chúng tôi</p>
                     </div>
                     <form class="form-ground">
-                        <input type="email" class="form-ground-input" placeholder="Nhập email của bạn">
+                        <input class="form-ground-input" placeholder="Nhập email của bạn" type="email">
                         <button class="form-ground-btn">
                             <span>ĐĂNG KÝ</span>
                             <i class="fa-solid fa-arrow-right"></i>
@@ -301,7 +338,7 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div class="contact-content conatct-item-email">
-                                <span>abc@domain.com</span><br />
+                                <span>abc@domain.com</span><br/>
                                 <span>xyz@domain.com</span>
                             </div>
                         </div>
@@ -311,7 +348,7 @@
         </div>
     </div>
 </footer>
-<script src="index.js"></script>
 
+<script src="../js/trang%20chủ.js"></script>
 </body>
 </html>
