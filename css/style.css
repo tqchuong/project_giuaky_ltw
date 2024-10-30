@@ -679,11 +679,7 @@ header {
     margin-top: 30px;
 }
 
-.home-products {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
+
 
 /* Footer */
 /* Css footer */
@@ -1042,6 +1038,14 @@ header {
 
 .card-button i {
     margin-right: 3px;
+}
+.add-cart{
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    margin-left: 10px;
+    background-color: var(--red);
+
 }
 
 .page-nav,.page-nav-list {
