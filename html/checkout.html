@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
     <title>Document</title>
 </head>
+
 <body>
     <div class="checkout-page">
         <div class="checkout-header">
@@ -25,7 +29,7 @@
                             <div class="checkout-type-order">
                                 <button class="type-order-btn active" id="giaotannoi">
                                     <i class="fa-duotone fa-moped"
-                                        style="--fa-secondary-opacity: 1.0; --fa-primary-color: dodgerblue; --fa-secondary-color: #ffb100;"></i>
+                                        style="--fa-secondary-opacity: 1.0;--fa-primary-color: dodgerblue;--fa-secondary-color: #ffb100;"></i>
                                     Giao tận nơi
                                 </button>
                                 <button class="type-order-btn" id="tudenlay">
@@ -40,6 +44,8 @@
                             <div class="date-order">
                             </div>
                         </div>
+                        
+
                         <div class="content-group chk-ship" id="giaotannoi-group">
                             <p class="checkout-content-label">Thời gian giao hàng</p>
                             <div class="delivery-time">
@@ -85,11 +91,11 @@
                             <p class="checkout-content-label">Lấy hàng tại chi nhánh</p>
                             <div class="delivery-time">
                                 <input type="radio" name="chinhanh" id="chinhanh-1" class="radio">
-                                <label for="chinhanh-1">273 An Dương Vương, Phường 3, Quận 5</label>
+                                <label for="chinhanh-1">Test1</label>
                             </div>
                             <div class="delivery-time">
                                 <input type="radio" name="chinhanh" id="chinhanh-2" class="radio">
-                                <label for="chinhanh-2">04 Tôn Đức Thắng, Phường Bến Nghé, Quận 1</label>
+                                <label for="chinhanh-2">Test2</label>
                             </div>
                         </div>
                         <div class="content-group">
@@ -138,15 +144,38 @@
                         của chúng tôi.
                     </div>
                 </div>
-                <div class="total-checkout">
-                    <div class="text">Tổng tiền</div>
-                    <div class="price-bill">
-                        <div class="price-final" id="checkout-cart-price-final">0</div>
+
+                <div class="payment-options" bis_skin_checked="1">
+                    <div bis_skin_checked="1">
+                        <label
+                            style="border: 1px solid #ced4da;height: calc(1.5em + 0.75rem + 2px);border-radius: 0.25rem;width: 100%; padding: 6px; background: #fff">
+                            <input type="radio" id="rdPaymentTypeCod" name="paymentType" value="COD"
+                                checked="">&nbsp;&nbsp;
+                            <i class="fa-solid fa-hand-holding-usd"></i>
+                            <span>&nbsp;&nbsp;Thanh toán khi nhận hàng</span>
+                        </label>
+
+                        <label
+                            style="border: 1px solid #ced4da;height: calc(1.5em + 0.75rem + 2px);border-radius: 0.25rem;width: 100%; padding: 6px; background: #fff;">
+                            <input type="radio" id="rdPaymentTypeMomo" name="paymentType" value="MOMO">&nbsp;&nbsp;
+                            <i class="fa-solid fa-wallet"></i>
+                            <span>&nbsp;&nbsp;Thanh toán bằng ví điện tử</span>
+                        </label>
+                    </div>
+                    <div class="total-checkout">
+                        <div class="text">Tổng tiền</div>
+                        <div class="price-bill">
+                            <div class="price-final" id="checkout-cart-price-final">0</div>
+                        </div>
                     </div>
                 </div>
                 <button class="complete-checkout-btn">Đặt hàng</button>
             </div>
         </main>
     </div>
+    <script src="../js/checkout.js"></script>
+  
+ 
 </body>
+
 </html>
