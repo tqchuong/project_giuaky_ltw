@@ -5,6 +5,10 @@ function detailOrderProduct(arr,id) {
             orderHtml += `<tr>
             <td>${item.madon}</td>
             <td>${item.quantity}</td>
+
+
+
+            
             <td>${vnd(item.price)}</td>
             <td>${formatDate(item.time)}</td>
             </tr>      
