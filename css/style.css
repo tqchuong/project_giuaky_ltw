@@ -188,21 +188,11 @@ header {
 }
 
 .logo img {
-    width: 50px;
+    width: 250px;
     margin-right: 10px;
 }
 
-.logo h1 {
-    font-size: 24px;
-    color: #ffa500;
-}
 
-.logo h1 p {
-    display: block;
-    margin-left: 5px;
-    font-size: 12px;
-    color: #999;
-}
 .header-top {
     background-color: var(--red);
     height: 30px;
