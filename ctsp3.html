@@ -14,6 +14,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="a.css">
+    <link href="style.css" rel="stylesheet">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,38 +24,120 @@
 </head>
 <body>
 <header>
-    <div class="logo">
-        <img src="img/logo.png" alt="FoodMart Logo">
-        <h1>FOODMART <p>Grocery Store</p></h1>
-    </div>
-    <div class="search-cart">
-        <select>
-            <option>Tất cả </option>
-            <option>Gạo</option>
-            <option>Bánh mì</option>
-        </select>
-        <input type="text" placeholder="Tìm kiếm với hơn 150 sản phẩm">
-        <button>Tìm kiếm</button>
-        <div class="contact-cart">
-            <p>Hỗ trợ? <strong> 1800 1234</strong></p>
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-left">
+                <ul class="header-top-list">
+                    <li><a href=""><i class="fa-regular fa-phone"></i> 0123 456 789 (miễn phí)</a></li>
+                    <li><a href=""><i class="fa-light fa-location-dot"></i> Xem vị trí cửa hàng</a></li>
+                </ul>
+            </div>
+            <div class="header-top-right">
+                <ul class="header-top-list">
+                    <li><a href="">Giới thiệu</a></li>
+                    <li><a href="">Cửa hàng</a></li>
+                    <li><a href="">Chính sách</a></li>
+                </ul>
+            </div>
         </div>
     </div>
+    <div class="header-middle">
+        <div class="container">
+            <div class="header-middle-left">
 
-    <div class="login">
-        <img src = "img/login.jpg" >
-        <img src="img/cart.png">
+                <div class="logo">
+                    <a href="">
+                        <img alt="FoodMart Logo" src="img/logo.png">
+                    </a>
+                    <h1>FOODMART <p>Grocery Store</p></h1>
+                </div>
+            </div>
+            <div class="header-middle-center">
+                <form action="" class="form-search">
+                    <span class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input class="form-search-input" oninput="searchProducts()" placeholder="Tìm kiếm món ăn..."
+                           type="text">
+                    <button class="filter-btn"><i class="fa-solid fa-filter"></i><span>Lọc</span></button>
+                </form>
+            </div>
+            <div class="header-middle-right">
+                <ul class="header-middle-right-list">
+
+                    <li class="header-middle-right-item dropdown open">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="auth-container">
+                            <span class="text-dndk">Đăng nhập / Đăng ký</span>
+                            <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <ul class="header-middle-right-menu">
+                            <li><a href="javascript:" id="login"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+                            </li>
+                            <li><a href="javascript:" id="signup"><i class="fa-solid fa-user-plus"></i> Đăng ký</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-middle-right-item open" onclick="openCart()">
+                        <div class="cart-icon-menu">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="count-product-cart">0</span>
+                        </div>
+                        <span>Giỏ hàng</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </header>
-
-<!-- Navigation Menu -->
-<nav>
-    <ul>
-        <li>Trang chủ</li>
-        <li>Giới thiệu</li>
-        <li>Sản phẩm</li>
-
-    </ul>
+<nav class="header-bottom">
+    <div class="container">
+        <ul class="menu-list">
+            <li class="menu-list-item"><a class="menu-link" href="">Trang chủ</a></li>
+            <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a>
+            </li>
+            <li class="menu-list-item" onclick="showCategory('Lúa mì')"><a class="menu-link" href="javascript:">Lúa
+                mì</a></li>
+            <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a>
+            </li>
+            <li class="menu-list-item" onclick="showCategory('Cao lương')"><a class="menu-link" href="javascript:">Cao
+                lương</a></li>
+            <li class="menu-list-item" onclick="showCategory('Kê')"><a class="menu-link" href="javascript:">Kê</a></li>
+            <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a>
+            </li>
+        </ul>
+    </div>
 </nav>
+<div class="advanced-search">
+    <div class="container">
+        <div class="advanced-search-category">
+            <span>Phân loại </span>
+            <select id="advanced-search-category-select" name="" onchange="searchProducts()">
+                <option>Tất cả</option>
+                <option>Gạo</option>
+                <option>Lúa mì</option>
+                <option>Bắp</option>
+                <option>Cao lương</option>
+                <option>Kê</option>
+                <option>Khác</option>
+            </select>
+        </div>
+        <div class="advanced-search-price">
+            <span>Giá từ</span>
+            <input id="min-price" onchange="searchProducts()" placeholder="tối thiểu" type="number">
+            <span>đến</span>
+            <input id="max-price" onchange="searchProducts()" placeholder="tối đa" type="number">
+            <button id="advanced-search-price-btn"><i class="fa-solid fa-magnifying-glass-dollar"></i></button>
+        </div>
+        <div class="advanced-search-control">
+            <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-solid fa-arrow-up-short-wide"></i>
+            </button>
+            <button id="sort-descending" onclick="searchProducts(2)"><i class="fa-solid fa-arrow-down-wide-short"></i>
+            </button>
+            <button id="reset-search" onclick="searchProducts(0)"><i class="fa-solid fa-arrow-rotate-right"></i>
+            </button>
+            <button onclick="closeSearchAdvanced()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+</div>
 
 <section id="selling-product" class="single-product mt-0 mt-md-5">
     <div class="container-fluid">
@@ -315,40 +398,136 @@
         </div>
     </div>
 </section>
-<footer>
-    <div id="footer">
-        <div class="box">
-            <div class="logo">
-                <img src="img/logo.png" alt="FoodMart Logo">
-                <h1>FOODMART <p>Grocery Store</p></h1>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-top-content">
+                <div class="logo">
+                    <a href="">
+                        <img alt="FoodMart Logo" src="img/logo.png">
+                    </a>
+                    <h1>FOODMART <p>Grocery Store</p></h1>
+                </div>
+                <div class="footer-top-subbox">
+                    <div class="footer-top-subs">
+                        <h2 class="footer-top-subs-title">Đăng ký nhận tin</h2>
+                        <p class="footer-top-subs-text">Nhận thông tin mới nhất từ chúng tôi</p>
+                    </div>
+                    <form class="form-ground">
+                        <input class="form-ground-input" placeholder="Nhập email của bạn" type="email">
+                        <button class="form-ground-btn">
+                            <span>ĐĂNG KÝ</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
-        </div>
-        <div class="box">
-            <h3>NỘI DUNG</h3>
-            <ul class="quick-menu">
-                <div class="item">
-                    <a href="">Trang chủ</a>
-                </div>
-                <div class="item">
-                    <a href="">Sản phẩm</a>
-                </div>
-                <div class="item">
-                    <a href="">Blog</a>
-                </div>
-                <div class="item">
-                    <a href="">Lời cảm ơn</a>
-                </div>
-            </ul>
-        </div>
-        <div class="box">
-            <h3>LIÊN HỆ</h3>
-            <form action="">
-                <input type="text" placeholder="Địa chỉ email">
-                <button>Nhận tin</button>
-            </form>
         </div>
     </div>
+    <div class="widget-area">
+        <div class="container">
+            <div class="widget-row">
+                <div class="widget-row-col-1">
+                    <h3 class="widget-title">Về chúng tôi</h3>
+                    <div class="widget-row-col-content">
+                        <p>Chúng tôi cam kết kiểm soát chất lượng nghiêm ngặt
+                            và không ngừng cải tiến sản phẩm để đáp ứng nhu cầu
+                            của khách hàng. Sức khỏe và sự hài lòng của bạn là
+                            ưu tiên hàng đầu của chúng tôi.</p>
+                    </div>
+                    <div class="widget-social">
+                        <div class="widget-social-item">
+                            <a href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="widget-social-item">
+                            <a href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="widget-social-item">
+                            <a href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <div class="widget-social-item">
+                            <a href="">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-row-col">
+                    <h3 class="widget-title">Liên kết</h3>
+                    <ul class="widget-contact">
+                        <li class="widget-contact-item">
+                            <a href="">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Về chúng tôi</span>
+                            </a>
+                        </li>
+                        <li class="widget-contact-item">
+                            <a href="">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Thực đơn</span>
+                            </a>
+                        </li>
+                        <li class="widget-contact-item">
+                            <a href="">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Điều khoản</span>
+                            </a>
+                        </li>
+                        <li class="widget-contact-item">
+                            <a href="">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Liên hệ</span>
+                            </a>
+                        </li>
+                        <li class="widget-contact-item">
+                            <a href="">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Tin tức</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget-row-col-1">
+                    <h3 class="widget-title">Liên hệ</h3>
+                    <div class="contact">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-content">
+                                <span>FIT_NLUHCM</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-content contact-item-phone">
+                                <span>0123 456 789</span>
+                                <br>
+                                <span>0987 654 321</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-content conatct-item-email">
+                                <span>abc@domain.com</span><br/>
+                                <span>xyz@domain.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 <script src="js/jquery-1.11.0.min.js"></script>
