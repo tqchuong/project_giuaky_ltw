@@ -102,7 +102,7 @@ function searchProducts(mode) {
     showHomeProduct(result)
 }
 // Phân trang
-let perPage = 12;
+let perPage = 3;
 let currentPage = 1;
 let totalPage = 0;
 let perProducts = [];
