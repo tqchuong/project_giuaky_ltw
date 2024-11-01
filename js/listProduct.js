@@ -6,7 +6,7 @@ function createProduct() {
             status: 1,
             title: 'Bắp nữ hoàng',
             img: '../img/img-pro/bap1.jpg',
-            category: 'Gạo',
+            category: 'b',
             price: 200000,
         }, {
             id: 2,
