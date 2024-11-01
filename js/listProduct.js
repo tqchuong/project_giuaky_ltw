@@ -1,7 +1,7 @@
 function createProduct() {
     localStorage.removeItem('products');
     if (localStorage.getItem('products') == null) {
-        let product = [{
+        let products = [{
             id: 1,
             status: 1,
             title: 'name-product',
@@ -59,7 +59,7 @@ function createProduct() {
             price: 200000,
         }
         ]
-        localStorage.setItem('products', JSON.stringify(product));
+        localStorage.setItem('products', JSON.stringify(products));
     }
 }
 
