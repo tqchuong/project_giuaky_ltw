@@ -4,9 +4,9 @@ function createProduct() {
         let products = [{
             id: 1,
             status: 1,
-            title: 'name-product',
-            img: 'src',
-            category: 'Phan loai',
+            title: 'Bắp nữ hoàng',
+            img: '../img/img-pro/bap1.jpg',
+            category: 'Gạo',
             price: 200000,
         }, {
             id: 2,

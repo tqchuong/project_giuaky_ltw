@@ -3,6 +3,7 @@ function vnd(price) {
     return price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
 }
 
+
 // Open Search Advanced
 document.querySelector(".filter-btn").addEventListener("click",(e) => {
     e.preventDefault();
@@ -23,7 +24,7 @@ function renderProducts(showProduct) {
     let productHtml = '';
     if(showProduct.length == 0) {
         document.getElementById("home-title").style.display = "none";
-        productHtml = `<div class="no-result"><div class="no-result-h">Tìm kiếm không có kết quả</div><div class="no-result-p">Xin lỗi, chúng tôi không thể tìm được kết quả hợp với tìm kiếm của bạn</div><div class="no-result-i"><i class="fa-light fa-face-sad-cry"></i></div></div>`;
+        productHtml = `<div class="no-result"><div class="no-result-h">Tìm kiếm không có kết quả</div><div class="no-result-p">Xin lỗi, chúng tôi không thể tìm được kết quả hợp với tìm kiếm của bạn</div><div class="no-result-i"><i class="fa-solid fa-face-sad-cry"></i></div></div>`;
     } else {
         document.getElementById("home-title").style.display = "block";
         showProduct.forEach((product) => {
@@ -45,7 +46,7 @@ function renderProducts(showProduct) {
                             <span class="current-price">${vnd(product.price)}</span>
                         </div>
                     <div class="product-buy">
-                        <button onclick="detailProduct(${product.id})" class="card-button order-item"><i class="fa-regular fa-cart-shopping-fast"></i> Đặt món</button>
+                        <button onclick="detailProduct(${product.id})" class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
                     </div> 
                 </div>
                 </div>
@@ -101,7 +102,7 @@ function searchProducts(mode) {
     showHomeProduct(result)
 }
 // Phân trang
-let perPage = 4;
+let perPage = 12;
 let currentPage = 1;
 let totalPage = 0;
 let perProducts = [];
@@ -146,6 +147,28 @@ function paginationChange(page, productAll, currentPage) {
         document.getElementById("home-service").scrollIntoView();
     })
     return node;
+}
+// Back to top
+window.onscroll = () => {
+    let backtopTop = document.querySelector(".back-to-top")
+    if (document.documentElement.scrollTop > 100) {
+        backtopTop.classList.add("active");
+    } else {
+        backtopTop.classList.remove("active");
+    }
+}
+// Hiển thị chuyên mục
+function showCategory(category) {
+    document.getElementById('trangchu').classList.remove('hide');
+    document.getElementById('account-user').classList.remove('open');
+    document.getElementById('order-history').classList.remove('open');
+    let productSearch = productAll.filter(value => {
+        return value.category.toString().toUpperCase().includes(category.toUpperCase());
+    })
+    let currentPageSeach = 1;
+    displayList(productSearch, perPage, currentPageSeach);
+    setupPagination(productSearch, perPage, currentPageSeach);
+    document.getElementById("home-title").scrollIntoView();
 }
 
 
