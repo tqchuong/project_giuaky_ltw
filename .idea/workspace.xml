@@ -7,7 +7,9 @@
     <list default="true" id="c77a67c9-2da0-42cb-b230-4b300acebd33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/img-pro/gao jap2an2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img-pro/gao nep ót.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img-pro/hat ke3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img-pro/khoai so.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listProduct.js" afterDir="false" />
     </list>
@@ -93,7 +95,9 @@
       <workItem from="1730301205183" duration="3195000" />
       <workItem from="1730380133224" duration="2494000" />
       <workItem from="1730470995249" duration="1041000" />
-      <workItem from="1730472071476" duration="8121000" />
+      <workItem from="1730472071476" duration="8179000" />
+      <workItem from="1730516923328" duration="857000" />
+      <workItem from="1730539048341" duration="2947000" />
     </task>
     <servers />
   </component>

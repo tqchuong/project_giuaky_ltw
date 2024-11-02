@@ -102,7 +102,7 @@ function searchProducts(mode) {
     showHomeProduct(result)
 }
 // Phân trang
-let perPage = 3;
+let perPage = 12;
 let currentPage = 1;
 let totalPage = 0;
 let perProducts = [];
@@ -167,7 +167,8 @@ function showCategory(category) {
     let currentPageSeach = 1;
     displayList(productSearch, perPage, currentPageSeach);
     setupPagination(productSearch, perPage, currentPageSeach);
-    document.getElementById("home-title").scrollIntoView();
+    document.getElementById("home-service").scrollIntoView();
+
 }
 
 
