@@ -74,6 +74,115 @@ function thanhtoanpage(option, product) {
 
     totalBillOrder.innerHTML = totalBillOrderHtml;
 }
+// Xu ly hinh thuc giao hang
+let giaotannoi = document.querySelector('#giaotannoi');
+let tudenlay = document.querySelector('#tudenlay');
+let tudenlayGroup = document.querySelector('#tudenlay-group');
+let chkShip = document.querySelectorAll(".chk-ship");
+
+tudenlay.addEventListener('click', () => {
+    giaotannoi.classList.remove("active");
+    tudenlay.classList.add("active");
+    chkShip.forEach(item => {
+        item.style.display = "none";
+    });
+    tudenlayGroup.style.display = "block";
+    switch (option) {
+        case 1:
+            priceFinal.innerText = vnd(getCartTotal());
+            break;
+        case 2:
+            priceFinal.innerText = vnd((product.soluong * product.price));
+            break;
+    }
+})
+
+giaotannoi.addEventListener('click', () => {
+    tudenlay.classList.remove("active");
+    giaotannoi.classList.add("active");
+    tudenlayGroup.style.display = "none";
+    chkShip.forEach(item => {
+        item.style.display = "flex";
+    });
+    switch (option) {
+        case 1:
+            priceFinal.innerText = vnd(getCartTotal() + PHIVANCHUYEN);
+            break;
+        case 2:
+            priceFinal.innerText = vnd((product.soluong * product.price) + PHIVANCHUYEN);
+            break;
+    }
+})
+
+// Thong tin cac don hang da mua - Xu ly khi nhan nut dat hang
+function xulyDathang(product) {
+    let diachinhan = "";
+    let hinhthucgiao = "";
+    let thoigiangiao = "";
+
+    const giaotannoi = document.querySelector("#giaotannoi");
+    const tudenlay = document.querySelector("#tudenlay");
+    const giaongay = document.querySelector("#giaongay");
+    const giaovaogio = document.querySelector("#deliverytime");
+    const currentUser = JSON.parse(localStorage.getItem('currentuser'));
+
+    // Xác định hình thức giao hàng và địa chỉ nhận
+    if (giaotannoi.classList.contains("active")) {
+        const diachiInput = document.querySelector("#diachinhan");
+        diachinhan = diachiInput ? diachiInput.value : "";
+        hinhthucgiao = giaotannoi.innerText.trim();
+    } else if (tudenlay.classList.contains("active")) {
+        const chinhanh1 = document.querySelector("#chinhanh-1");
+        const chinhanh2 = document.querySelector("#chinhanh-2");
+        
+        if (chinhanh1 && chinhanh1.checked) {
+            diachinhan = "273 An Dương Vương, Phường 3, Quận 5";
+        } else if (chinhanh2 && chinhanh2.checked) {
+            diachinhan = "04 Tôn Đức Thắng, Phường Bến Nghé, Quận 1";
+        }
+        hinhthucgiao = tudenlay.innerText.trim();
+    }
+
+    // Xác định thời gian nhận hàng
+    if (giaongay && giaongay.checked) {
+        thoigiangiao = "Giao ngay khi xong";
+    } else if (giaovaogio && giaovaogio.checked) {
+        const choiseTime = document.querySelector(".choise-time");
+        thoigiangiao = choiseTime ? choiseTime.value : "";
+    }
+
+    // Xử lý thêm logic theo yêu cầu, ví dụ lưu trữ hoặc hiển thị thông tin đặt hàng
+    console.log("Thông tin đặt hàng:");
+    console.log("Địa chỉ nhận:", diachinhan);
+    console.log("Hình thức giao hàng:", hinhthucgiao);
+    console.log("Thời gian giao hàng:", thoigiangiao);
+
+    // Có thể thêm logic khác ở đây nếu cần
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     thanhtoanpage(1); 
 });
+
+
