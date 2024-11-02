@@ -4,107 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f9c2080-de86-415f-96f7-5f1bbbd35132" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/js/productdetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/productdetails1.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/productdetails1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/productdetails2.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/productdetails2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/productdetails3.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/productdetails3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/Bắc-Đẩu-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/Thơm-Mỹ-25kg-2-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-504-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-64-cho-dao-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-DaiThom_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-Japonica_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-Jasmine-thai-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ST21_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ST24-anpharice-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ST24_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ST25-baobi_moi-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ST25-hut-chan-khong-5kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ST25_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-co-may-4-mua-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-dai-loan-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-dai-loan-2-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-dai-loan-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-gia-si-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-hat-ngoc-thai-300x300.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-hat-ngoc-troi-thien-long-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-huong-lai-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-huu-co-st25-ong-cua-hop-2kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-lai-mien-campuchia-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-long-chau-66-moi-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-lut-do-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-lut-huyet-rong-tui-2kg-300x300.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-lut-tim-hat-ngoc-troi-3-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-mam-Vibigaba-300x300.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-mam-st25-gaba-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-nang-hoa-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-nang-hoa-4-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-nep-than-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ngoc-sa-5kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ngoc-thuc-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-ong-cua-st25-lua-tom-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-st25-lua-tom-hop2kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-tam-bui-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-tam-thom-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-thom-lai-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-thom-lai-sua-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-thom-thai-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-thom-thai-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/gao-tu-quy-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/hat-ngoc-troi-thien-vuong-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/hat-ngoc-troi-tien-nu-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/hop-mam-nghe-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/hop-qua-tang-gao-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/nep-cai-hoa-vang-tui-2kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/nep-cam-tay-bac-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/nep-ngong-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/tam-samo-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-gao/z2041531383285_c2cd7582beb6f7ce0241016b38350fa5-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/Bot-ngu-coc-minmin-29-hat-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/Ngu-coc-an-kieng-EURO-DIET-CEREAL-20-goi-600x600.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/Ngu-coc-dinh-duong-EURO-CEREAL-20-goi-xuat-Nhat-600x600.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/Ngu-coc-dinh-duong-EURO-CEREAL-tui-hop-20-goi-600x600.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/Ngu-coc-dinh-duong-GOLDEN-KARE-20-goi-600x600.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/bot-ngu-coc-dinh-duong-damtuh-han-quoc-50-goi-5(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-abalanca.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-an-chay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-an-chay2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-an-king.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-calbe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-hena.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-tami.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu-coc-vital.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-ngucoc/ngu_coc_dinh_duong_hena-450x450.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/bap1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/bap2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao jap2an2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao japan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao japan1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao japan3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao japan4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao lut dien bien.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao nep ót.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao nep.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao thom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao-tam-thom-hai-hau.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao-thien-long.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gao1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/gaost25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/hat ke1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/hat ke2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/hat ke3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/khoai lang mat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/khoai lang tim.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/khoai mai.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/khoai mi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/khoai so.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/pho kho.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/yen mach 2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-pro/yen mach.jpg" beforeDir="false" />
-    </list>
+    <list default="true" id="8f9c2080-de86-415f-96f7-5f1bbbd35132" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +79,7 @@
       <workItem from="1730543555454" duration="2070000" />
       <workItem from="1730545711920" duration="3000" />
       <workItem from="1730550483022" duration="102000" />
-      <workItem from="1730554486564" duration="6751000" />
+      <workItem from="1730554486564" duration="6902000" />
     </task>
     <servers />
   </component>
