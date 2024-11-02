@@ -153,19 +153,23 @@
 .date-order {
     display: flex;
     justify-content: space-between;
-    column-gap: 20px;
+    gap: 10px;
 }
 
 .pick-date {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 10px 15px;
+    border-radius: 5px;
     background-color: #f6f6f6;
     color: #666;
     text-align: center;
-    text-decoration: none;
+    border: none;
+    cursor: pointer;
     font-weight: 600;
+    flex: 1;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none; /* Loại bỏ dấu gạch chân */
 }
+
 
 .pick-date.active {
     background-color: #B5292F; /* Màu đỏ */
@@ -176,6 +180,7 @@
     background-color: #d9534f; /* Màu đỏ nhạt hơn khi hover */
     color: #fff;
 }
+
 
 
 .delivery-time:not(:last-child) {
@@ -373,5 +378,3 @@
     border-color: #333; /* Đổi màu viền khi focus */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-
-

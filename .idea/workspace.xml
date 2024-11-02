@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c77a67c9-2da0-42cb-b230-4b300acebd33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/index.html" afterDir="false" />
@@ -12,6 +13,11 @@
       <change beforePath="$PROJECT_DIR$/img/img-pro/khoai so.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listProduct.js" afterDir="false" />
+=======
+    <list default="true" id="8f9c2080-de86-415f-96f7-5f1bbbd35132" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.css" beforeDir="false" afterPath="$PROJECT_DIR$/a.css" afterDir="false" />
+>>>>>>> 3a7fec0ed26e8aad436a1305f04c392009113e8c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,20 +27,35 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
         <option value="HTML File" />
         <option value="TypeScript File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+=======
+        <option value="CSS File" />
+        <option value="HTML File" />
+>>>>>>> 3a7fec0ed26e8aad436a1305f04c392009113e8c
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2npVMe0F6FNFqKgRfkiKLwCwC32" />
+=======
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2nq4jIy7Ug1t4Wt3LLKCRZbt2Zu" />
+>>>>>>> 3a7fec0ed26e8aad436a1305f04c392009113e8c
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,12 +63,19 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+<<<<<<< HEAD
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;hmc&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;V:/LTW/Project&quot;,
     &quot;last_opened_file_path&quot;: &quot;V:/LTW/Project&quot;,
+=======
+    &quot;JavaScript Debug.chsp1.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;npt&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/test&quot;,
+>>>>>>> 3a7fec0ed26e8aad436a1305f04c392009113e8c
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -57,11 +85,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+<<<<<<< HEAD
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="V:\LTW\Project" />
     </key>
   </component>
+=======
+>>>>>>> 3a7fec0ed26e8aad436a1305f04c392009113e8c
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,6 +103,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="c77a67c9-2da0-42cb-b230-4b300acebd33" name="Changes" comment="" />
       <created>1729669957969</created>
       <option name="number" value="Default" />
@@ -98,6 +130,28 @@
       <workItem from="1730472071476" duration="8179000" />
       <workItem from="1730516923328" duration="857000" />
       <workItem from="1730539048341" duration="2947000" />
+=======
+      <changelist id="8f9c2080-de86-415f-96f7-5f1bbbd35132" name="Changes" comment="" />
+      <created>1729687406160</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729687406160</updated>
+      <workItem from="1729687407254" duration="1619000" />
+      <workItem from="1729767081843" duration="12622000" />
+      <workItem from="1729846412041" duration="12462000" />
+      <workItem from="1729920702187" duration="2826000" />
+      <workItem from="1729952399216" duration="2999000" />
+      <workItem from="1730014196960" duration="5904000" />
+      <workItem from="1730126514406" duration="3237000" />
+      <workItem from="1730208241019" duration="384000" />
+      <workItem from="1730214589673" duration="855000" />
+      <workItem from="1730295824205" duration="136000" />
+      <workItem from="1730378406698" duration="5762000" />
+      <workItem from="1730384662209" duration="661000" />
+      <workItem from="1730523571713" duration="571000" />
+      <workItem from="1730543555454" duration="2070000" />
+      <workItem from="1730545711920" duration="3000" />
+>>>>>>> 3a7fec0ed26e8aad436a1305f04c392009113e8c
     </task>
     <servers />
   </component>
