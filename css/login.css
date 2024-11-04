@@ -380,10 +380,23 @@ img {
   color: var(--first-color);  /* Changes to blue on hover */
   text-decoration: none;  /* No underline on hover */
 }
+.login__box {
+  width: 100%; /* Đảm bảo tất cả các khối input chiếm toàn bộ chiều rộng */
+  display: flex;
+  flex-direction: column; /* Đảm bảo nhãn nằm phía trên input */
+}
 
+.login__input {
+  width: 100%; /* Đảm bảo input chiếm toàn bộ chiều rộng khối cha */
+  padding: 1.5rem 2.5rem 1.5rem 1.25rem; /* Giữ nguyên padding nếu cần */
+  border-radius: 1rem;
+  font-weight: var(--font-semi-bold);
+}
 
-
-
-
+.login__label {
+  width: 100%; /* Đảm bảo nhãn có chiều rộng bằng với input */
+  display: block;
+  margin-bottom: 0.5rem; /* Khoảng cách giữa nhãn và input */
+}
 
 }

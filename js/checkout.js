@@ -136,9 +136,9 @@ function xulyDathang(product) {
         const chinhanh2 = document.querySelector("#chinhanh-2");
         
         if (chinhanh1 && chinhanh1.checked) {
-            diachinhan = "273 An Dương Vương, Phường 3, Quận 5";
+            diachinhan = "Phường Linh Trung, TP Thủ Đức, TP Hồ Chí Minh";
         } else if (chinhanh2 && chinhanh2.checked) {
-            diachinhan = "04 Tôn Đức Thắng, Phường Bến Nghé, Quận 1";
+            diachinhan = "An Nhơn, Bình Định";
         }
         hinhthucgiao = tudenlay.innerText.trim();
     }
