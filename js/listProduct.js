@@ -45,48 +45,42 @@ function createProduct() {
             category: 'Khác',
             price: 15000
         }, {
-            id: 1,
+            id: 7,
             status: 1,
             title: 'Gạo lứt đen',
             img: '../image/img-pro/gao%20lut%20dien%20bien.jpg',
             category: 'Gạo',
             price: 32000
         }, {
-            id: 8,
+            id: 9,
             status: 1,
             title: 'Hạt kê',
             img: '../image/img-pro/hat%20ke2.jpg',
             category: 'Kê',
             price: 40000
         }, {
-            id: 9,
+            id: 10,
             status: 1,
             title: 'Gạo thiên long',
             img: '../image/img-pro/gao-tam-thom-hai-hau.jpg',
             category: 'Gạo',
             price: 22000
         }, {
-            id:10 ,
+            id:11 ,
             status: 1,
             title: 'Gạo thiên long',
             img: '../image/img-pro/gao-thien-long.jpg',
             category: 'Gạo',
             price: 27000
         }, {
-            id:11 ,
+            id:12 ,
             status: 1,
             title: 'Gạo lứt đen',
             img: '../image/img-pro/gao-nep-cam.jpg',
             category: 'Gạo',
             price: 30000
         }, {
-            id:12 ,
-            status: 1,
-            title: 'Hạt kê nếp Indo',
-            img: '../image/img-pro/hat-ke-nep.jpg',
-            category: 'Kê',
-            price: 70000
-        }, {
+
             id:13,
             status: 1,
             title: 'Khoai sọ',

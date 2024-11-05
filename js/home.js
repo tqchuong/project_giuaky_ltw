@@ -25,37 +25,41 @@ function renderProducts(showProduct) {
     let productHtml = '';
     if (showProduct.length == 0) {
         document.getElementById("home-title").style.display = "none";
-        productHtml = `<div class="no-result"><div class="no-result-h">Tìm kiếm không có kết quả</div><div class="no-result-p">Xin lỗi, chúng tôi không thể tìm được kết quả hợp với tìm kiếm của bạn</div><div class="no-result-i"><i class="fa-solid fa-face-sad-cry"></i></div></div>`;
+        productHtml = `<div class="no-result">...Thông báo khi không có kết quả...</div>`;
     } else {
         document.getElementById("home-title").style.display = "block";
-        showProduct.forEach((product, index) => {
-            productHtml += `<div class="col-product">
-            <article class="card-product" >
-                <div class="card-header">
-                    <a href="productdetails${index + 1}.html" class="card-image-link">
-                    <img class="card-image" src="${product.img}" alt="${product.title}">
-                    </a>
-                </div>
-                <div class="food-info">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <a href="productdetails${index + 1}.html" class="card-title-link">${product.title}</a>
+        showProduct.forEach(product => {
+            productHtml += `
+                <div class="col-product">
+                    <article class="card-product">
+                        <div class="card-header">
+                            <a href="productdetails${product.id}.html?id=${product.id}" class="card-image-link">
+                                <img class="card-image" src="${product.img}" alt="${product.title}">
+                            </a>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="product-price">
-                            <span class="current-price">${vnd(product.price)}</span>
+                        <div class="food-info">
+                            <div class="card-content">
+                                <div class="card-title">
+                                    <a href="productdetails${product.id}.html?id=${product.id}" class="card-title-link">${product.title}</a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="product-price">
+                                    <span class="current-price">${vnd(product.price)}</span>
+                                </div>
+                                <div class="product-buy">
+                                    <button onclick="window.location='productdetails${product.id}.html?id=${product.id}'" class="card-button order-item">
+                                        <i class="fa-solid fa-cart-plus"></i> Đặt hàng
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    <div class="product-buy">
-                        <button onclick="window.location='productdetails${index + 1}.html'" class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
-                    </div> 
-                </div>
-                </div>
-            </article>
-        </div>`;
+                    </article>
+                </div>`;
         });
     }
     document.getElementById('home-products').innerHTML = productHtml;
+
 
 
 
