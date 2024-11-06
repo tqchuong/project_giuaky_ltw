@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c77a67c9-2da0-42cb-b230-4b300acebd33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listProduct.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +38,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;hmc&quot;,
@@ -92,7 +95,10 @@
       <workItem from="1730472071476" duration="8179000" />
       <workItem from="1730516923328" duration="857000" />
       <workItem from="1730539048341" duration="3460000" />
-      <workItem from="1730561864920" duration="614000" />
+      <workItem from="1730561864920" duration="799000" />
+      <workItem from="1730564405335" duration="57000" />
+      <workItem from="1730737120304" duration="1043000" />
+      <workItem from="1730905143314" duration="608000" />
     </task>
     <servers />
   </component>

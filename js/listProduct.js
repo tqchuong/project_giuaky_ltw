@@ -99,6 +99,34 @@ function createProduct() {
             img: '../img/img-pro/yen%20mach.jpg',
             category: 'Khác',
             price: 70000
+        }, {
+            id: 15,
+            status: 1,
+            title: 'Cao lương',
+            img: '../img/img-pro/cao-luong.jpg',
+            category: 'Cao lương',
+            price: 80000
+        }, {
+            id: 16,
+            status: 1,
+            title: 'Đậu phộng',
+            img: '../img/img-pro/dau-phong.jpg',
+            category: 'Khác',
+            price: 12000
+        }, {
+            id: 17,
+            status: 1,
+            title: 'Lúa mì',
+            img: '../img/img-pro/lua-mi.jpg',
+            category: 'Lúa mì',
+            price: 70000
+        }, {
+            id: 18,
+            status: 1,
+            title: 'Khoai tây',
+            img: '../img/img-pro/khoai-tay.jpg',
+            category: 'Khác',
+            price: 20000
         }
         ]
         localStorage.setItem('products', JSON.stringify(products));
