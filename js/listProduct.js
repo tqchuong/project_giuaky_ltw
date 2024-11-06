@@ -103,51 +103,39 @@ function createProduct() {
         localStorage.setItem('products', JSON.stringify(products));
     }
 }
+// Xóa accounts khỏi localStorage để kiểm tra thử nghiệm
 
 
-// Create admin account 
+// Tạo tài khoản admin mặc định nếu chưa tồn tại
 function createAdminAccount() {
-    let accounts = JSON.parse(localStorage.getItem("accounts")) || []; // Chuyển đổi dữ liệu từ localStorage hoặc khởi tạo mảng rỗng
+    let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
 
-    // Kiểm tra xem tài khoản admin đã tồn tại hay chưa
+    // Kiểm tra nếu tài khoản admin đã tồn tại
     let adminExists = accounts.some(account => account.userType === 1);
 
     if (!adminExists) {
         accounts.push({
-            fullname: "tuquangchuong",
+            fullname: "tqc",
             phone: "0123456789",
-            password: "123456",
+            password: "1",
             address: 'https://github.com/tqchuong',
             email: 'tqc7704@gmail.com',
             status: 1,
             join: new Date(),
             cart: [],
-            userType: 1 // Xác định tài khoản này là admin
+            userType: 1 // Tài khoản admin
         });
-        accounts.push({
-            fullname: "test",
-            phone: "0113456789",
-            password: "123456",
-            address: '',
-            email: '',
-            status: 1,
-            join: new Date(),
-            cart: [],
-            userType: 1 // Xác định tài khoản này là admin
-        });
-
-        // Lưu danh sách tài khoản vào localStorage
+        // Lưu vào localStorage
         localStorage.setItem('accounts', JSON.stringify(accounts));
-        console.log("Admin accounts created successfully.");
+        console.log("Admin account created successfully.");
     } else {
-        console.log("Admin accounts already exist.");
+        console.log("Admin account already exists.");
     }
 }
 
-
-// Kết hợp nhiều hàm với `window.onload`
 window.onload = function() {
-    createProduct(); // Giả sử hàm này đã được định nghĩa
+    createProduct();
     createAdminAccount();
 };
+
 
