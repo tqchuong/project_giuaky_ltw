@@ -370,4 +370,10 @@ function createAdminAccount() {
 window.onload = function() {
     createProduct();
     createAdminAccount();
+<<<<<<< HEAD
 };
+=======
+};
+
+
+>>>>>>> 87c93b81486fb662fdf2464d3d2ce1104ec05dcb
