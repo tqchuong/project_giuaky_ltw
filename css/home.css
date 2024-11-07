@@ -1080,8 +1080,256 @@ header {
     opacity: 1;
     transform: scale(1);
 }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+#account-user,
+#order-history {
+    display: none;
+}
+
+
+
+.header-middle-right-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.header-middle-right-item.dropdown.open:hover .header-middle-right-menu,
+.header-middle-right-item.dropdown.open #user-menu.show {
+    display: block;
+}
+
+.header-middle-right-menu li {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.header-middle-right-menu li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header-middle-right-menu li a:hover {
+    color: #d9534f;
+}
+#user-menu {
+    position: absolute;
+    top: 100%; /* Đặt ngay bên dưới auth-container */
+    right: 0;
+    display: none; /* Ẩn mặc định */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header-middle-right-item:hover #user-menu {
+    display: block;
+}
+#user-menu {
+    position: absolute;
+    top: 100%; /* Đặt ngay bên dưới auth-container */
+    right: 0;
+    display: none;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+    min-width: 180px;
+    font-family: Arial, sans-serif;
+}
+
+#user-menu li {
+    list-style: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+/* CSS cho menu thả xuống */
+.header-middle-right-menu {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-top: 5px;
+    min-width: 180px;
+}
+
+.header-middle-right-menu li {
+    list-style: none;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-middle-right-menu li:hover {
+    background-color: #f2f2f2;
+}
+
+.header-middle-right-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.header-middle-right-menu li i {
+    margin-right: 10px;
+    color: #d9534f; /* Màu đỏ của icon */
+}
+
+/* CSS tài khoản của bạn */
+/* CSS tài khoản của bạn */
+#account-user {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.main-account {
+    width: 80%;
+    border: 1px solid #dae2e6;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.main-account-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.main-account-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.main-account-header p {
+    font-size: 14px;
+    color: #666;
+}
+
+.main-account-body {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.main-account-body-col {
+    width: 48%; /* Giảm chiều rộng để tạo khoảng cách giữa các cột */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-control:disabled {
+    background-color: #e9ecef;
+}
+
+.main-account-body-row {
+    display: flex;
+    justify-content: space-between; /* Đặt khoảng cách đều giữa các nút */
+    padding-top: 20px;
+}
+
+.main-account-body-row > div {
+    flex: 1;
+    margin-right: 10px; /* Khoảng cách giữa hai nút */
+}
+
+.main-account-body-row > div:last-child {
+    margin-right: 0; /* Xóa khoảng cách phải cho nút cuối */
+}
+
+#save-info-user,
+#save-password {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #d9534f;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+#save-info-user i,
+#save-password i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+#save-info-user:hover,
+#save-password:hover {
+    background-color: #c9302c;
+}
+
+
+.header-middle-right-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    width: 200px;
+}
+
+.header-middle-right-item:hover .header-middle-right-menu {
+    display: block;
+}
+
+.header-middle-right-menu li {
+    padding: 10px;
+}
+
+.header-middle-right-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.header-middle-right-menu li a:hover {
+    color: #007bff;
+}
+>>>>>>> e3577e9a472e549c2752a03f3940430f1b829438
