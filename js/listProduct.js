@@ -1,3 +1,4 @@
+
 function createProduct() {
     localStorage.removeItem('products');
     if (localStorage.getItem('products') == null) {
@@ -334,6 +335,7 @@ function createProduct() {
                 category: 'Khác',
                 price: 23000
             }
+
         ]
         localStorage.setItem('products', JSON.stringify(products));
     }

@@ -657,3 +657,26 @@ function detailOrderProduct(arr,id) {
     document.getElementById("show-product-order-detail").innerHTML = orderHtml
     document.querySelector(".modal.detail-order-product").classList.add("open")
 }
+function cancelSearchUser() {
+    let accounts = localStorage.getItem("accounts") ? JSON.parse(localStorage.getItem("accounts")).filter(item => item.userType == 0) : [];
+    showUserArr(accounts);
+    document.getElementById("tinh-trang-user").value = 2;
+    document.getElementById("form-search-user").value = "";
+    document.getElementById("time-start-user").value = "";
+    document.getElementById("time-end-user").value = "";
+}
+
+
+
+function deleteAcount(phone) {
+    let accounts = JSON.parse(localStorage.getItem('accounts'));
+    let index = accounts.findIndex(item => item.phone == phone);
+    if (confirm("Bạn có chắc muốn xóa?")) {
+        accounts.splice(index, 1)
+    }
+    localStorage.setItem("accounts", JSON.stringify(accounts));
+    showUser();
+}
+
+
+
