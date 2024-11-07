@@ -666,7 +666,7 @@ function cancelSearchUser() {
     document.getElementById("time-end-user").value = "";
 }
 
-window.onload = showUser();
+
 
 function deleteAcount(phone) {
     let accounts = JSON.parse(localStorage.getItem('accounts'));

@@ -1,4 +1,4 @@
-var $addQuantity = $(".btn-quantity.plus"),
+ var $addQuantity = $(".btn-quantity.plus"),
   $minusQuantity = $(".btn-quantity.minus"),
   $removeItem = $(".btn-remove");
 

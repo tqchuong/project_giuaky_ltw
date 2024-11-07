@@ -1080,13 +1080,6 @@ header {
     opacity: 1;
     transform: scale(1);
 }
-<<<<<<< HEAD
-
-
-
-
-
-=======
 #account-user,
 #order-history {
     display: none;
@@ -1332,4 +1325,3 @@ header {
 .header-middle-right-menu li a:hover {
     color: #007bff;
 }
->>>>>>> e3577e9a472e549c2752a03f3940430f1b829438

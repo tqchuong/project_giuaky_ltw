@@ -269,17 +269,3 @@ function logOut() {
 document.addEventListener('DOMContentLoaded', () => {
     kiemtradangnhap();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
