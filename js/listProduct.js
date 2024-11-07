@@ -103,5 +103,39 @@ function createProduct() {
         localStorage.setItem('products', JSON.stringify(products));
     }
 }
+// Xóa accounts khỏi localStorage để kiểm tra thử nghiệm
 
-window.onload = createProduct();
+
+// Tạo tài khoản admin mặc định nếu chưa tồn tại
+function createAdminAccount() {
+    let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+
+    // Kiểm tra nếu tài khoản admin đã tồn tại
+    let adminExists = accounts.some(account => account.userType === 1);
+
+    if (!adminExists) {
+        accounts.push({
+            fullname: "tqc",
+            phone: "0123456789",
+            password: "1",
+            address: 'https://github.com/tqchuong',
+            email: 'tqc7704@gmail.com',
+            status: 1,
+            join: new Date(),
+            cart: [],
+            userType: 1 // Tài khoản admin
+        });
+        // Lưu vào localStorage
+        localStorage.setItem('accounts', JSON.stringify(accounts));
+        console.log("Admin account created successfully.");
+    } else {
+        console.log("Admin account already exists.");
+    }
+}
+
+window.onload = function() {
+    createProduct();
+    createAdminAccount();
+};
+
+
