@@ -222,7 +222,7 @@ function kiemtradangnhap() {
         if (user.userType === 1) {
             menuHtml += `<li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a></li>`;
         }
-        
+
         menuHtml += `
             <li><a href="javascript:void(0);" onclick="showAccountInfo()"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
             <li><a href="javascript:void(0);" onclick="showOrderHistory()"><i class="fa-solid fa-bag-shopping"></i> Đơn hàng đã mua</a></li>
@@ -267,23 +267,6 @@ function logOut() {
 
 // Thực thi kiểm tra khi DOM đã sẵn sàng
 document.addEventListener('DOMContentLoaded', () => {
+
     kiemtradangnhap();
-<<<<<<< HEAD
 });
-=======
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 87c93b81486fb662fdf2464d3d2ce1104ec05dcb
