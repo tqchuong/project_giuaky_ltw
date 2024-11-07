@@ -178,3 +178,116 @@ function showCategory(category) {
     document.getElementById("home-service").scrollIntoView();
 
 }
+
+
+// Ẩn tất cả các phần
+function hideAllSections() {
+    document.getElementById('trangchu').style.display = 'none';
+    document.getElementById('account-user').style.display = 'none';
+    document.getElementById('order-history').style.display = 'none';
+}
+
+// Hiển thị trang chủ
+function showHomePage() {
+    hideAllSections();
+    document.getElementById('trangchu').style.display = 'block';
+}
+
+// Hiển thị thông tin tài khoản khi nhấn vào "Tài khoản của tôi"
+function showAccountInfo() {
+    hideAllSections();
+    document.getElementById('account-user').style.display = 'block';
+}
+
+// Hiển thị lịch sử đơn hàng khi nhấn vào "Đơn hàng đã mua"
+function showOrderHistory() {
+    hideAllSections();
+    document.getElementById('order-history').style.display = 'block';
+}
+
+// Kiểm tra trạng thái đăng nhập và hiển thị thông tin tài khoản
+function kiemtradangnhap() {
+    const currentUser = localStorage.getItem('currentuser');
+    if (currentUser) {
+        const user = JSON.parse(currentUser);
+
+        // Cập nhật tên người dùng
+        const userFullnameElement = document.getElementById("user-fullname");
+        if (userFullnameElement) {
+            userFullnameElement.innerHTML = `${user.fullname} <i class="fa-sharp fa-solid fa-caret-down"></i>`;
+        }
+
+        // Ẩn Đăng nhập / Đăng ký nếu đã đăng nhập
+        const textDndkElement = document.querySelector('.text-dndk');
+        const authOptions = document.getElementById("auth-options");
+        if (textDndkElement && authOptions) {
+            textDndkElement.style.display = 'none';
+            authOptions.style.display = 'none';
+        }
+
+        // Hiển thị menu quản lý nếu là admin
+        let menuHtml = '';
+        if (user.userType === 1) {
+            menuHtml += `<li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a></li>`;
+        }
+        
+        menuHtml += `
+            <li><a href="javascript:void(0);" onclick="showAccountInfo()"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
+            <li><a href="javascript:void(0);" onclick="showOrderHistory()"><i class="fa-solid fa-bag-shopping"></i> Đơn hàng đã mua</a></li>
+            <li class="border"><a id="logout" href="javascript:;"><i class="fa-solid fa-right-from-bracket"></i> Thoát tài khoản</a></li>
+        `;
+
+        const userMenuElement = document.getElementById('user-menu');
+        if (userMenuElement) {
+            userMenuElement.innerHTML = menuHtml;
+            userMenuElement.style.display = 'none'; // Ẩn menu mặc định
+        }
+
+        // Thêm sự kiện đăng xuất
+        const logoutElement = document.getElementById('logout');
+        if (logoutElement) {
+            logoutElement.addEventListener('click', logOut);
+        }
+
+        // Hiển thị menu khi click vào auth-container
+        const authContainer = document.querySelector('.auth-container');
+        if (authContainer) {
+            authContainer.addEventListener('click', (event) => {
+                event.stopPropagation(); // Ngăn chặn sự kiện nổi bọt
+                userMenuElement.style.display = userMenuElement.style.display === 'block' ? 'none' : 'block';
+            });
+        }
+
+        // Đóng menu khi click bên ngoài
+        document.addEventListener('click', (event) => {
+            if (!authContainer.contains(event.target)) {
+                userMenuElement.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Xử lý sự kiện đăng xuất
+function logOut() {
+    localStorage.removeItem('currentuser');
+    window.location.href = "home.html"; // Quay lại trang chủ sau khi đăng xuất
+}
+
+// Thực thi kiểm tra khi DOM đã sẵn sàng
+document.addEventListener('DOMContentLoaded', () => {
+    kiemtradangnhap();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
