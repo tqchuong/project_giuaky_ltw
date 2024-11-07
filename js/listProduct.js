@@ -66,14 +66,14 @@ function createProduct() {
             category: 'Gạo',
             price: 22000
         }, {
-            id:11 ,
+            id: 11,
             status: 1,
             title: 'Gạo thiên long',
             img: '../image/img-pro/gao-thien-long.jpg',
             category: 'Gạo',
             price: 27000
         }, {
-            id:12 ,
+            id: 12,
             status: 1,
             title: 'Gạo lứt đen',
             img: '../image/img-pro/gao-nep-cam.jpg',
@@ -81,7 +81,7 @@ function createProduct() {
             price: 30000
         }, {
 
-            id:13,
+            id: 13,
             status: 1,
             title: 'Khoai sọ',
             img: '../image/img-pro/khoai-so.jpg',
@@ -334,6 +334,38 @@ function createProduct() {
                 img: '../image/img-luongkho/vn-11134207-7r98o-lor7c7288s232f-300x300.jpg',
                 category: 'Khác',
                 price: 23000
+            },
+            {
+                id: 45,
+                status: 1,
+                title: 'Phở gạo',
+                img: '../image/img-dokho/20240912-114520_0e8d2bb5536f4f188e511efcdb22cce3_medium.jpg',
+                category: 'Khác',
+                price: 20000
+            },
+            {
+                id: 46,
+                status: 1,
+                title: 'Bánh ướt khô',
+                img: '../image/img-dokho/banh-uop-kho-simply-food-chay-tot-market_a00054f60449463c9077095ba108b36c_large.png',
+                category: 'Khác',
+                price: 19000
+            },
+            {
+                id: 47,
+                status: 1,
+                title: 'Bánh hỏi',
+                img: '../image/img-dokho/banh_hoi_symply_food_bc5d4a00af7f4b6f97bfd1066af047b8_large.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 48,
+                status: 1,
+                title: 'Bún gạo Bình Tây',
+                img: '../image/img-dokho/bun-gao-binh-tay-1-300x300_ba9b7c71594c45efbd9d86124a056615_large.png',
+                category: 'Khác',
+                price: 19500
             }
 
         ]
@@ -341,4 +373,37 @@ function createProduct() {
     }
 }
 
-window.onload = createProduct();
+function createAdminAccount() {
+
+    let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+
+    // Kiểm tra nếu tài khoản admin đã tồn tại
+    let adminExists = accounts.some(account => account.userType === 1);
+
+    if (!adminExists) {
+        accounts.push({
+            fullname: "tqc",
+            phone: "0123456789",
+            password: "1",
+            address: 'https://github.com/tqchuong',
+            email: 'tqc7704@gmail.com',
+            status: 1,
+            join: new Date(),
+            cart: [],
+            userType: 1 // Tài khoản admin
+        });
+        // Lưu vào localStorage
+        localStorage.setItem('accounts', JSON.stringify(accounts));
+        console.log("Admin account created successfully.");
+    } else {
+        console.log("Admin account already exists.");
+    }
+}
+
+window.onload = function() {
+    createProduct();
+    createAdminAccount();
+};
+
+
+
