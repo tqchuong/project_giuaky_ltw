@@ -19,6 +19,8 @@ document.querySelector(".form-search-input").addEventListener("click",(e) => {
 function closeSearchAdvanced() {
     document.querySelector(".advanced-search").classList.toggle("open");
 }
+
+
 // Page
 function renderProducts(showProduct) {
     let productHtml = '';
@@ -56,6 +58,8 @@ function renderProducts(showProduct) {
     }
     document.getElementById('home-products').innerHTML = productHtml;
 }
+
+
 // Find Product
 var productAll = JSON.parse(localStorage.getItem('products')).filter(item => item.status == 1);
 function searchProducts(mode) {

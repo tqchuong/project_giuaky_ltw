@@ -1,4 +1,3 @@
-
 function createProduct() {
     localStorage.removeItem('products');
     if (localStorage.getItem('products') == null) {
@@ -51,6 +50,13 @@ function createProduct() {
             img: '../image/img-pro/gao%20lut%20dien%20bien.jpg',
             category: 'Gạo',
             price: 32000
+        }, {
+            id: 8,
+            status: 1,
+            title: 'Khoai lang mật',
+            img: '../image/img-pro/khoai lang mat.jpg',
+            category: 'Khoai',
+            price: 12000
         }, {
             id: 9,
             status: 1,
@@ -366,7 +372,424 @@ function createProduct() {
                 img: '../image/img-dokho/bun-gao-binh-tay-1-300x300_ba9b7c71594c45efbd9d86124a056615_large.png',
                 category: 'Khác',
                 price: 19500
+            },
+            {
+                id: 49,
+                status: 1,
+                title: 'Bún gạo nàng hương ',
+                img: '../image/img-dokho/bun-gao-nang-huong-bt-300x300_a4b2812151974f138d7d5fd7cb67d628_large.png',
+                category: 'Khác',
+                price: 19600
+            },
+            {
+                id: 50,
+                status: 1,
+                title: 'Bún chùm ngây ',
+                img: '../image/img-dokho/bun_chum_ngay_chay_tot_market_2c2b602e13984fb4aa6a28c30d34dbc7_large.png',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 51,
+                status: 1,
+                title: 'Bún gấc ',
+                img: '../image/img-dokho/bun_gac_cao_bang_chay_tot_market_9424ddc1acaf4397b81744a62e7008eb_large.png',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 52,
+                status: 1,
+                title: 'Bún gạo lứt',
+                img: '../image/img-dokho/bun_gao_lut_den-chay_tot_market_7f290f46971b4ee2bcb6f7a979d4afaa_large.png',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 53,
+                status: 1,
+                title: 'Bún ngô',
+                img: '../image/img-dokho/bun_ngo_chay_tot_694a006d68754e34b2cd8300b9efdda7_large.png',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 54,
+                status: 1,
+                title: 'Hủ tiếu nam vang ',
+                img: '../image/img-dokho/hu-tieu-nam-vang-simply-food-chay-tot-market_af31271a96014c60981c8faeb3221d88_large.png',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 55,
+                status: 1,
+                title: 'Mì quảng',
+                img: '../image/img-dokho/mi-quang-simply-food-chay-tot-market_eb63d1cbb82347b0b3086be0286050f7_large.png',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 56,
+                status: 1,
+                title: 'Mì chũ gạo lứt',
+                img: '../image/img-dokho/mi_chu_gao_lut_chay_tot_market-removebg-preview_b39099b25cbc4d10a24e2b2a68f163be_large.png',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 57,
+                status: 1,
+                title: 'Mì chũ rau củ',
+                img: '../image/img-dokho/mi_chu_rau_cu_e0ee9f8ce6604923ad6c49bf72545e9a_large.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 58,
+                status: 1,
+                title: 'Miến dong đỏ',
+                img: '../image/img-dokho/mien_dong_do-chay_tot_market_a673d07e97274811a4531ea1a5475e7a_large.png',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 59,
+                status: 1,
+                title: 'Miến dong',
+                img: '../image/img-dokho/mien_dong_symply_food_chay_tot_market_d77a32bfcd604c39826413bac3f60794_large.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 60,
+                status: 1,
+                title: 'Bột ngũ cốc dinh dưỡng',
+                img: '../image/cereal/bot-ngu-coc-dinh-duong-damtuh-han-quoc-50-goi-5(1).jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 61,
+                status: 1,
+                title: 'Bột ngũ cốc minmin',
+                img: '../image/cereal/Bot-ngu-coc-minmin-29-hat-8.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 62,
+                status: 1,
+                title: 'Ngũ cốc abalanca',
+                img: '../image/cereal/ngu-coc-abalanca.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 63,
+                status: 1,
+                title: 'Ngũ cốc ăn chay',
+                img: '../image/cereal/ngu-coc-an-chay.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 64,
+                status: 1,
+                title: 'Ngũ cốc ăn chay',
+                img: '../image/cereal/ngu-coc-an-chay2.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 65,
+                status: 1,
+                title: 'Ngũ cốc ăn kiêng',
+                img: '../image/cereal/Ngu-coc-an-kieng-EURO-DIET-CEREAL-20-goi-600x600.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 66,
+                status: 1,
+                title: 'Ngũ cốc Calbe',
+                img: '../image/cereal/ngu-coc-calbe.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 67,
+                status: 1,
+                title: 'Ngũ cốc cho bé',
+                img: '../image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 68,
+                status: 1,
+                title: 'Ngũ cốc dinh dưỡng',
+                img: '../image/cereal/Ngu-coc-dinh-duong-EURO-CEREAL-20-goi-xuat-Nhat-600x600.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 69,
+                status: 1,
+                title: 'Ngũ cốc dinh dưỡng',
+                img: '../image/cereal/Ngu-coc-dinh-duong-EURO-CEREAL-tui-hop-20-goi-600x600.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 70,
+                status: 1,
+                title: 'Ngũ cốc dinh dưỡng',
+                img: '../image/cereal/Ngu-coc-dinh-duong-GOLDEN-KARE-20-goi-600x600.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 71,
+                status: 1,
+                title: 'Ngũ cốc hena',
+                img: '../image/cereal/ngu-coc-hena.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 72,
+                status: 1,
+                title: 'Ngũ cốc tami',
+                img: '../image/cereal/ngu-coc-tami.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 73,
+                status: 1,
+                title: 'Ngũ cốc vital',
+                img: '../image/cereal/ngu-coc-vital.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 74,
+                status: 1,
+                title: 'Cháo thịt bò',
+                img: '../image/dong-goi/chao-thit-bo.jpg',
+                category: 'Khác',
+                price: 18500
+            },
+            {
+                id: 75,
+                status: 1,
+                title: 'Cháo tươi lươn đậu xanh',
+                img: '../image/dong-goi/chao-tuoi-luon-dau-xanh-cay-thi-goi-260g-202401021618587467.jpg',
+                category: 'Khác',
+                price: 17500
+            },
+            {
+                id: 76,
+                status: 1,
+                title: 'Cháo tươi thịt bò cà rốt',
+                img: '../image/dong-goi/chao-tuoi-thit-bo-cay-thi-goi-260g-202309032058365692.jpg',
+                category: 'Khác',
+                price: 16500
+            },
+            {
+                id: 77,
+                status: 1,
+                title: 'Cháo tươi thịt heo bí đỏ',
+                img: '../image/dong-goi/chao-tuoi-thit-heo-cay-thi-goi-260g-202407091435294691.jpg',
+                category: 'Khác',
+                price: 18500
+            },
+            {
+                id: 78,
+                status: 1,
+                title: 'Cháo gà',
+                img: '../image/dong-goi/chao-vifon-vi-ga-goi-50g-202306231013287313.jpg',
+                category: 'Khác',
+                price: 12500
+            },
+            {
+                id: 79,
+                status: 1,
+                title: 'Cháo thịt bằm',
+                img: '../image/dong-goi/chao-vifon-vi-thit-bam-goi-50g-202306231012172188.jpg',
+                category: 'Khác',
+                price: 17500
+            },
+            {
+                id: 80,
+                status: 1,
+                title: 'Mì 3 miền gà sợi phở',
+                img: '../image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg',
+                category: 'Khác',
+                price: 12500
+            },
+            {
+                id: 81,
+                status: 1,
+                title: 'Mì đệ nhất thịt bằm',
+                img: '../image/dong-goi/mi-de-nhat-thit-bam.jpg',
+                category: 'Khác',
+                price: 17500
+            },
+            {
+                id: 82,
+                status: 1,
+                title: 'Mì gấu đỏ bò bít tết',
+                img: '../image/dong-goi/mi-gau-do-bo-bit-tet-goi-63g-202407121408410572.jpg',
+                category: 'Khác',
+                price: 25500
+            },
+            {
+                id: 83,
+                status: 1,
+                title: 'Mì gấu đỏ gà sợi phở',
+                img: '../image/dong-goi/mi-gau-do-ga-soi-pho.jpg',
+                category: 'Khác',
+                price: 13500
+            },
+            {
+                id: 84,
+                status: 1,
+                title: 'Mì gấu đỏ thịt bằm',
+                img: '../image/dong-goi/mi-gau-do-thit-bam-goi-63g-202407121411246247.jpg',
+                category: 'Khác',
+                price: 16500
+            },
+            {
+                id: 85,
+                status: 1,
+                title: 'Mì gấu đỏ tôm và gà',
+                img: '../image/dong-goi/mi-gau-do-tom-va-ga-goi-63g-202407061656540859.jpg',
+                category: 'Khác',
+                price: 18500
+            },
+            {
+                id: 86,
+                status: 1,
+                title: 'Mì hảo hảo chua cay',
+                img: '../image/dong-goi/mi-hao-hao-chua-cay.jpg',
+                category: 'Khác',
+                price: 14500
+            },
+            {
+                id: 87,
+                status: 1,
+                title: 'Mì khoa tây omachi',
+                img: '../image/dong-goi/mi-khoai-tay-omachi-tom-chua-cay-thai-goi-80g-202306061558151636.jpg',
+                category: 'Khác',
+                price: 15500
+            },
+            {
+                id: 88,
+                status: 1,
+                title: 'Mì lẩu thái',
+                img: '../image/dong-goi/mi-lau-thai.jpg',
+                category: 'Khác',
+                price: 17500
+            },
+            {
+                id: 89,
+                status: 1,
+                title: 'Mì siu-kay x2',
+                img: '../image/dong-goi/mi-siu-kay-x2.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 90,
+                status: 1,
+                title: 'Mì xào hảo hảo',
+                img: '../image/dong-goi/mi-xao-hao-hao.jpg',
+                category: 'Khác',
+                price: 15500
+            },
+            {
+                id: 91,
+                status: 1,
+                title: 'Nui rau củ',
+                img: '../image/dong-goi/nui-rau-cu.jpg',
+                category: 'Khác',
+                price: 17500
+            },
+            {
+                id: 92,
+                status: 1,
+                title: 'Nui thượng hạng',
+                img: '../image/dong-goi/nui-xoan-ba-bay-goi-500g-clone-202405271312145099.jpg',
+                category: 'Khác',
+                price: 16500
+            },
+            {
+                id: 93,
+                status: 1,
+                title: 'Yến mạch trái cây',
+                img: '../image/img-pro/yen-mach-trai-cay-sunrise-vi-pho-mai-bich-300g-202306241735231539.png',
+                category: 'Khác',
+                price: 13500
+            },
+            {
+                id: 94,
+                status: 1,
+                title: 'Gạo thơm thái',
+                img: '../image/riceproducts/gao-thom-thai-300x300.jpg',
+                category: 'Khác',
+                price: 17500
+            },
+            {
+                id: 95,
+                status: 1,
+                title: 'Gạo thơm lài sữa',
+                img: '../image/riceproducts/gao-thom-lai-sua-300x300.jpg',
+                category: 'Khác',
+                price: 17500
+            },
+            {
+                id: 96,
+                status: 1,
+                title: 'Gạo thơm lài',
+                img: '../image/riceproducts/gao-thom-lai-300x300.jpg',
+                category: 'Khác',
+                price: 19500
+            },
+            {
+                id: 97,
+                status: 1,
+                title: 'Gạo tám thơm',
+                img: '../image/riceproducts/gao-tam-thom-300x300.jpg',
+                category: 'Khác',
+                price: 15500
+            },
+            {
+                id: 98,
+                status: 1,
+                title: 'Gạo nếp than',
+                img: '../image/riceproducts/gao-nep-than-300x300.jpg',
+                category: 'Khác',
+                price: 16500
+            },
+            {
+                id: 99,
+                status: 1,
+                title: 'Gạo nàng hoa',
+                img: '../image/riceproducts/gao-nang-hoa-300x300.jpg',
+                category: 'Khác',
+                price: 14500
+            },
+            {
+                id: 100,
+                status: 1,
+                title: 'Gạo long châu',
+                img: '../image/riceproducts/gao-long-chau-66-moi-300x300.jpg',
+                category: 'Khác',
+                price: 12500
             }
+
 
         ]
         localStorage.setItem('products', JSON.stringify(products));
@@ -400,7 +823,7 @@ function createAdminAccount() {
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     createProduct();
     createAdminAccount();
 };
