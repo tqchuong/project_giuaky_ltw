@@ -1,6 +1,4 @@
-
 function createProduct() {
-    localStorage.removeItem('products');
     if (localStorage.getItem('products') == null) {
         let products = [{
             id: 1,
@@ -8,28 +6,46 @@ function createProduct() {
             title: 'Bắp nữ hoàng',
             img: '../image/img-pro/bap1.jpg',
             category: 'Bắp',
-            price: 10000
+            price: 10000,
+            desc: 'Một Món chay ngon miệng với nấm đùi gà thái chân hương, xào săn với lửa và thật nhiều tỏi băm, nêm nếm với mắm và nước tương chay, món ngon đưa cơm và rất dễ ăn cả cho người lớn và trẻ nhỏ.'
         }, {
             id: 2,
             status: 1,
             title: 'Bắp nếp',
             img: '../image/img-pro/bap2.jpg',
             category: 'Bắp',
-            price: 20000
+            price: 20000,
+            desc: 'Một Món chay ngon miệng với nấm đùi gà thái chân hương, xào săn với lửa và thật nhiều tỏi băm, nêm nếm với mắm và nước tương chay, món ngon đưa cơm và rất dễ ăn cả cho người lớn và trẻ nhỏ.'
         }, {
-            id: 3,
-            status: 1,
-            title: 'Gạo ST25',
-            img: '../image/img-pro/gaost25.jpg',
-            category: 'Gạo',
-            price: 30000
-        }, {
+        //     id: 3,
+        //     status: 1,
+        //     title: 'Gạo ST25',
+        //     img: '../image/img-pro/gaost25.jpg',
+        //     images: [
+        //         '../image/productdetails/gaost25-1.jpg',
+        //         '../image/productdetails/gaost25-2.jpg',
+        //         '../image/productdetails/gaost25-3.jpg',
+        //         '../image/productdetails/gaost25-4.jpg',
+        //         '../image/productdetails/gaost25-3.jpg'
+        //     ],
+        //     category: 'Gạo',
+        //     price: 10000,
+        //     rating: 4,  // Đánh giá trung bình
+        //     views: 1234,  // Lượt truy cập
+        //
+        //     reviews: [
+        //         {customer: 'Khách hàng A', comment: 'Sản phẩm rất ngon và chất lượng.'},
+        //         {customer: 'Khách hàng B', comment: 'Dịch vụ tốt, sẽ mua lại.'}
+        //     ]
+        //
+        // }, {
             id: 4,
             status: 1,
             title: 'Gạo Thiên Long',
             img: '../image/img-pro/gao-thien-long.jpg',
             category: 'Gạo',
-            price: 40000
+            price: 40000,
+            desc: 'Một Món chay ngon miệng với nấm đùi gà thái chân hương, xào săn với lửa và thật nhiều tỏi băm, nêm nếm với mắm và nước tương chay, món ngon đưa cơm và rất dễ ăn cả cho người lớn và trẻ nhỏ.'
         }, {
             id: 5,
             status: 1,
@@ -37,6 +53,7 @@ function createProduct() {
             img: '../image/img-pro/khoai%20mi.jpg',
             category: 'Khác',
             price: 20000
+
         }, {
             id: 6,
             status: 1,
@@ -66,14 +83,14 @@ function createProduct() {
             category: 'Gạo',
             price: 22000
         }, {
-            id:11 ,
+            id: 11,
             status: 1,
             title: 'Gạo thiên long',
             img: '../image/img-pro/gao-thien-long.jpg',
             category: 'Gạo',
             price: 27000
         }, {
-            id:12 ,
+            id: 12,
             status: 1,
             title: 'Gạo lứt đen',
             img: '../image/img-pro/gao-nep-cam.jpg',
@@ -81,7 +98,7 @@ function createProduct() {
             price: 30000
         }, {
 
-            id:13,
+            id: 13,
             status: 1,
             title: 'Khoai sọ',
             img: '../image/img-pro/khoai-so.jpg',
@@ -338,6 +355,7 @@ function createProduct() {
 
         ]
         localStorage.setItem('products', JSON.stringify(products));
+
     }
 }
 
