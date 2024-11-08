@@ -31,13 +31,13 @@
                 <form action="" class="login__form">
                     <div class="login__content grid">
                         <div class="login__box">
-                            <input type="text" id="login-name" name="login-name" required placeholder=" " class="login__input" aria-label="Name">
+                            <input type="text" id="login-name" name="login-name" required placeholder=" " class="login__input" >
                             <label for="login-name" class="login__label">Name</label>
                             <i class="ri-mail-fill login__icon"></i>
-                            <span class="form-message name"></span>
+                            <span class="form-message namelogin"></span>
                         </div>
                         <div class="login__box">
-                            <input type="password" id="login-password" name="login-password" required placeholder=" " class="login__input" aria-label="Password">
+                            <input type="password" id="login-password" name="login-password" required placeholder=" " class="login__input" >
                             <label for="login-password" class="login__label">Password</label>
                             <i class="ri-eye-off-fill login__icon login__password" id="loginPassword"></i>
                             <span class="form-message-check-login form-message"></span>
@@ -46,7 +46,7 @@
                     <p>
                         <button id="forgotPasswordLink" class="forgotPasswordLink">Forgot your password?</button>
                     </p>
-                    <button type="button" id="loginButton" class="login__button">Login</button>
+                    <button type="button" id="login-button" class="login__button">Login</button>
 
                 </form>
                 <p class="login__switch">
@@ -62,7 +62,7 @@
             <div class="login__area">
                 <form action="" class="login__form">
                     <div class="login__box">
-                        <input type="text" id="names" name="name" required placeholder=" " class="login__input" aria-label="Names">
+                        <input type="text" id="names" name="names" required placeholder=" " class="login__input" aria-label="Names">
                         <label for="names" class="login__label">Names</label>
                         <i class="ri-id-card-fill login__icon"></i>
                         <span class="form-message-name form-message"></span>
@@ -85,7 +85,7 @@
                         <i class="ri-eye-off-fill login__icon login__password" id="loginPasswordCreate"></i>
                         <span class="form-message-password form-message"></span>
                     </div>
-                    <button type="submit" class="login__button">Create account</button>
+                    <button type="submit" class="login__button" id="signup-button">Create account</button>
                 </form>
                 <p class="login__switch">
                     Already have an account?
@@ -116,5 +116,6 @@
     </div>
     <!--=============== MAIN JS ===============-->
     <script src="../js/login.js"></script>
+    <script src="../js/home.js"></script>
 </body>
 </html>
