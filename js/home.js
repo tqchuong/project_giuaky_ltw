@@ -49,68 +49,129 @@ function closeModal() {
 function detailProduct(index) {
     let modal = document.querySelector('.modal.product-detail');
     let products = JSON.parse(localStorage.getItem('products'));
-    // Ngăn không cho hành động mặc định (nếu cần)
     event.preventDefault();
     let infoProduct = products.find(sp => sp.id === index);
 
-    let reviewsHTML = '';
-    if (infoProduct.reviews && infoProduct.reviews.length > 0) {
-        reviewsHTML = infoProduct.reviews.map(review => `  
-            <div class="review">  
-                <strong>${review.customer}</strong>: ${review.comment}  
-            </div>  
-        `).join('');
+    // Kiểm tra nếu không tìm thấy sản phẩm
+    if (!infoProduct) return;
+
+    // Tạo các ảnh trong carousel từ mảng `images`
+    let carouselImages = '';
+    if (infoProduct.images && infoProduct.images.length > 0) {
+        infoProduct.images.forEach((imgSrc, i) => {
+            carouselImages += `<img src="${imgSrc}" class="carousel-image ${i === 0 ? 'active' : ''}" alt="Product Image ${i + 1}">`;
+        });
     } else {
-        reviewsHTML = '<p>Chưa có đánh giá nào.</p>';
+        // Nếu không có nhiều ảnh, chỉ hiển thị một ảnh chính
+        carouselImages = `<img src="${infoProduct.img}" class="carousel-image active" alt="Product Image">`;
     }
 
-    let modalHtml = `  
-        <div class="modal-header">  
-            <img class="product-image" src="${infoProduct.img}" alt="${infoProduct.title}">  
-        </div>  
-        <div class="modal-body">  
-            <h2 class="product-title">${infoProduct.title}</h2>  
-            <div class="product-control">  
-                <div class="priceBox">  
-                    <span class="current-price">${vnd(infoProduct.price)}</span>  
-                </div>  
-                <div class="buttons_added">  
-                    <input class="minus is-form" type="button" value="-" onclick="decreasingNumber(this)">  
-                    <input class="input-qty" max="100" min="1" name="" type="number" value="1">  
-                    <input class="plus is-form" type="button" value="+" onclick="increasingNumber(this)">  
-                </div>  
-            </div>  
-            <p class="product-description">${infoProduct.desc}</p>  
-            <div class="product-rating">  
-                ${infoProduct.rating ? `<p>Đánh giá: ${infoProduct.rating} / 5</p>` : '<p>Không có đánh giá.</p>'}  
-                ${infoProduct.views ? `<p>Lượt xem: ${infoProduct.views}</p>` : '<p>Không có thông tin lượt xem.</p>'}  
-            </div>  
-            <div class="product-reviews">  
-                <h3>Đánh giá:</h3>  
-                ${reviewsHTML}  
-            </div>  
-        </div>  
-        <div class="notebox">  
-            <p class="notebox-title">Ghi chú</p>  
-            <textarea class="text-note" id="popup-detail-note" placeholder="Nhập thông tin cần lưu ý..."></textarea>  
-        </div>  
-        <div class="modal-footer">  
-            <div class="price-total">  
-                <span class="thanhtien">Thành tiền</span>  
-                <span class="price">${vnd(infoProduct.price)}</span>  
-            </div>  
-            <div class="modal-footer-control">  
-                <button class="button-dathangngay" data-product="${infoProduct.id}">Đặt hàng ngay</button>  
-                <button class="button-dat" id="add-cart" title="Thêm vào giỏ hàng" onclick="animationCart()">  
-                    <i class="fa-light fa-basket-shopping"></i>  
-                </button>  
-            </div>  
-        </div>  
-    `;
+    // Tạo nội dung cho modal với carousel
+    let modalHtml = `
+        <div class="modal-header">
+            <div class="product-carousel">
+                <div class="carousel-images">
+                    ${carouselImages}
+                </div>
+                <button class="carousel-prev" onclick="prevImage()">‹</button>
+                <button class="carousel-next" onclick="nextImage()">›</button>
+            </div>
+        </div>
+        <div class="modal-body">
+            <h2 class="product-title">${infoProduct.title}</h2>
+            <div class="product-control">
+                <div class="priceBox">
+                    <span class="current-price">${vnd(infoProduct.price)}</span>
+                </div>
+                <div class="buttons_added">
+                    <input class="minus is-form" type="button" value="-" onclick="decreasingNumber(this)">
+                    <input class="input-qty" max="100" min="1" name="" type="number" value="1">
+                    <input class="plus is-form" type="button" value="+" onclick="increasingNumber(this)">
+                </div>
+            </div>
+            <p class="product-description">${infoProduct.desc}</p>
+            
+            <div class="product-rating">
+                <p>
+                    <span>Đánh giá: ${infoProduct.rating} ⭐</span> |   
+                    <span>Lượt xem: ${infoProduct.views} 👁️</span> |   
+                    <span>${infoProduct.reviews.length} Đánh Giá</span>
+                </p>
+            </div>
+            
+            <h3>Chi tiết sản phẩm</h3>
+            <div class="product-details">
+                <!-- Thông tin chi tiết sản phẩm -->
+                         <p class="detail-item"><strong>Danh mục:</strong> ${infoProduct.category}</p>  
+            <p class="detail-item"><strong>Kho:</strong> ${infoProduct.kho}</p>  
+            <p class="detail-item"><strong>Thương hiệu:</strong> ${infoProduct.brand}</p>  
+            <p class="detail-item"><strong>Chế độ ăn uống:</strong> ${infoProduct.status ? 'Hữu cơ' : 'Không hữu cơ'}</p>  
+            <p class="detail-item"><strong>Loại:</strong> ${infoProduct.type}</p>  
+            <p class="detail-item"><strong>Trọng lượng:</strong> ${infoProduct.weight}</p>  
+            <p class="detail-item"><strong>Hạn sử dụng:</strong> ${infoProduct.shelf_life}</p>  
+            <p class="detail-item"><strong>Xuất xứ:</strong> ${infoProduct.origin}</p>  
+            <p class="detail-item"><strong>Ngày hết hạn:</strong> ${infoProduct.expiry_date}</p>  
+            <p class="detail-item"><strong>Số lượng:</strong> ${infoProduct.quantity}</p>  
+            <p class="detail-item"><strong>Ngày sản xuất:</strong> ${infoProduct.manufacture_date}</p>  
+            <p class="detail-item"><strong>Tên tổ chức chịu trách nhiệm sản xuất:</strong> ${infoProduct.manufacturer}</p>  
+            <p class="detail-item"><strong>Gửi từ:</strong> ${infoProduct.ship_from}</p>  
+            </div>
 
+            <div class="product-reviews">
+                <h3>Đánh giá:</h3>
+                ${infoProduct.reviews.map(review => `<div class="review"><strong>${review.customer}</strong>: ${review.comment}</div>`).join('')}
+            </div>
+        </div>
+        <div class="notebox">
+            <p class="notebox-title">Ghi chú</p>
+            <textarea class="text-note" id="popup-detail-note" placeholder="Nhập thông tin cần lưu ý..."></textarea>
+        </div>
+        <div class="modal-footer">
+            <div class="price-total">
+                <span class="thanhtien">Thành tiền</span>
+                <span class="price">${vnd(infoProduct.price)}</span>
+            </div>
+            <div class="modal-footer-control">
+                 <button class="button-dathangngay" data-product="${infoProduct.id}" onclick="handleOrderNow(${infoProduct.id})">Đặt hàng ngay</button>  
+                 <button class="button-dat" id="add-cart" title="Thêm vào giỏ hàng" onclick="addToCart(${infoProduct.id})"><i class="fa-light fa-basket-shopping"></i> Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    `;
     document.querySelector('#product-detail-content').innerHTML = modalHtml;
     modal.classList.add('open');
     document.body.style.overflow = "hidden";
+
+    let currentImageIndex = 0;
+
+    // Hàm hiển thị ảnh theo chỉ số
+    function showImage(index) {
+        const images = document.querySelectorAll('.carousel-image');
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+    }
+
+    // Hàm chuyển đến ảnh tiếp theo
+    function nextImage() {
+        const images = document.querySelectorAll('.carousel-image');
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        showImage(currentImageIndex);
+    }
+
+    // Hàm chuyển đến ảnh trước đó
+    function prevImage() {
+        const images = document.querySelectorAll('.carousel-image');
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        showImage(currentImageIndex);
+    }
+
+    // Gắn sự kiện cho các nút điều hướng
+    document.querySelector('.carousel-prev').addEventListener('click', prevImage);
+    document.querySelector('.carousel-next').addEventListener('click', nextImage);
+
+    // Hiển thị ảnh đầu tiên khi modal mở
+    showImage(currentImageIndex);
+
     // Cập nhật giá tiền khi tăng số lượng sản phẩm
     let tgbtn = document.querySelectorAll('.is-form');
     let qty = document.querySelector('.product-control .input-qty');
@@ -121,55 +182,65 @@ function detailProduct(index) {
             priceText.innerHTML = vnd(price);
         });
     });
-    // Them san pham vao gio hang
-    let productbtn = document.querySelector('.button-dat');
-    productbtn.addEventListener('click', (e) => {
-        if (localStorage.getItem('currentuser')) {
-            addCart(infoProduct.id);
-        } else {
-            toast({title: 'Warning', message: 'Chưa đăng nhập tài khoản !', type: 'warning', duration: 3000});
-        }
-
-    })
-    // Mua ngay san pham
-    dathangngay();
 }
+function addToCart(productId) {
+    // Lấy dữ liệu sản phẩm từ localStorage
+    let products = JSON.parse(localStorage.getItem('products'));
+    let product = products.find(sp => sp.id === productId);
 
-function animationCart() {
-    document.querySelector(".count-product-cart").style.animation = "slidein ease 1s"
-    setTimeout(() => {
-        document.querySelector(".count-product-cart").style.animation = "none"
-    }, 1000)
-}
+    if (!product) return;
 
-// Them SP vao gio hang
-function addCart(index) {
-    let currentuser = localStorage.getItem('currentuser') ? JSON.parse(localStorage.getItem('currentuser')) : [];
-    let soluong = document.querySelector('.input-qty').value;
-    let popupDetailNote = document.querySelector('#popup-detail-note').value;
-    let note = popupDetailNote == "" ? "Không có ghi chú" : popupDetailNote;
-    let productcart = {
-        id: index,
-        soluong: parseInt(soluong),
-        note: note
-    }
-    let vitri = currentuser.cart.findIndex(item => item.id == productcart.id);
-    if (vitri == -1) {
-        currentuser.cart.push(productcart);
+    // Lấy số lượng từ input trong modal
+    let quantityInput = document.querySelector('.input-qty');
+    let quantity = parseInt(quantityInput.value) || 1;
+
+
+    let currentuser = localStorage.getItem('currentuser') ? JSON.parse(localStorage.getItem('currentuser')) : null;
+
+    // Cập nhật giỏ hàng trong localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let existingProduct = cart.find(item => item.title === product.title);
+
+    if (existingProduct) {
+        existingProduct.quantity += quantity; // Tăng số lượng nếu đã có sản phẩm
     } else {
-        currentuser.cart[vitri].soluong = parseInt(currentuser.cart[vitri].soluong) + parseInt(productcart.soluong);
+        cart.push({
+            img: product.img,
+            title: product.title,
+            price: product.price,
+            quantity: quantity
+        });
     }
-    localStorage.setItem('currentuser', JSON.stringify(currentuser));
-    updateAmount();
-    closeModal();
-    // toast({ title: 'Success', message: 'Thêm thành công sản phẩm vào giỏ hàng', type: 'success', duration: 3000 });
+
+    // Lưu giỏ hàng vào localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Cập nhật số lượng hiển thị trên giỏ hàng
+    updateCartCount();
+
+    alert('Đã thêm sản phẩm vào giỏ hàng!');
+    }
+function handleOrderNow(productId) {
+    addToCart(productId); // Gọi hàm thêm sản phẩm vào giỏ hàng
+    setTimeout(() => {
+        window.location.href = "shoppingcart.html"; // Chuyển hướng sau 100ms
+    }, 100);
 }
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+    // Cập nhật hiển thị số lượng giỏ hàng trên thanh điều hướng
+    document.querySelector('.cart-count').innerText = cartCount; // Đảm bảo bạn có một phần tử với class 'cart-count'
+}
+
 function closeModal() {
     document.querySelectorAll('.modal').forEach(item => {
         item.classList.remove('open');
     });
     document.body.style.overflow = "auto";
 }
+
 
 // Hiển thị sản phẩm
 function renderProducts(showProduct) {
@@ -577,4 +648,3 @@ function logOut() {
 
 // Thực thi kiểm tra khi DOM đã sẵn sàng
 document.addEventListener('DOMContentLoaded', kiemtradangnhap);
-
