@@ -411,3 +411,19 @@ h1 {
   }
   
 }
+.item-image {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.item {
+  display: flex; /* Sử dụng flexbox để căn chỉnh ảnh và thông tin sản phẩm */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-bottom: 15px; /* Khoảng cách giữa các sản phẩm */
+}
+
+.item-details {
+  flex-grow: 1;
+}

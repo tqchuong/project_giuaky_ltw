@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
 
 
-
 </head>
 
 <body>
@@ -26,9 +25,9 @@
                 </div>
                 <div class="header-top-right">
                     <ul class="header-top-list">
-                        <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Cửa hàng</a></li>
-                        <li><a href="#">Chính sách</a></li>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Cửa hàng</a></li>
+                        <li><a href="">Chính sách</a></li>
                     </ul>
                 </div>
             </div>
@@ -196,10 +195,17 @@
             </div>
             <div class="page-nav">
                 <ul class="page-nav-list">
-
                 </ul>
+                <div class="detail-order-content">
+                </div>
             </div>
-           
+            <div class="modal product-detail">
+                <button class="modal-close close-popup"><i class="fa-thin fa-xmark"></i></button>
+                <div class="modal-container mdl-cnt" id="product-detail-content">
+                </div>
+
+
+            </div>
         </div>
         <div class="container" id="account-user" style="display: none;">
             <div class="main-account">
@@ -257,16 +263,17 @@
                 <div class="main-account-body-row">
                     <div>
                         <button id="save-info-user" onclick="changeInformation()"><i
-                                class="fa-regular fa-floppy-disk"></i> Lưu thay đổi</button>
+                                class="fa-regular fa-floppy-disk"></i> Lưu thay đổi
+                        </button>
                     </div>
                     <div>
                         <button id="save-password" onclick="changePassword()"><i class="fa-regular fa-key"></i> Đổi
-                            mật khẩu</button>
+                            mật khẩu
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="container" id="order-history" style="display: none;">
             <div class="main-account">
                 <div class="main-account-header">
@@ -280,12 +287,7 @@
             </div>
         </div>
     </main>
-    <div class="modal product-detail">
-        <button class="modal-close close-popup"><i class="fa-thin fa-xmark"></i></button>
-        <div class="modal-container mdl-cnt" id="product-detail-content">
-        </div>
-    </div>
-    
+
 
     <footer class="footer">
         <div class="container">
@@ -427,7 +429,8 @@
     <script src="../js/listProduct.js"></script>
     <script src="../js/home.js"></script>
     <script src="../js/login.js"></script>
-    <script src="../js/shoppingcart.js"></script>
+    <script src="../js/shopingcart.js"></script>
+
 </body>
 
 </html>
