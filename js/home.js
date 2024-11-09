@@ -183,6 +183,7 @@ function detailProduct(index) {
         });
     });
 }
+
 function addToCart(productId) {
     // Lấy dữ liệu sản phẩm từ localStorage
     let products = JSON.parse(localStorage.getItem('products'));
@@ -219,13 +220,15 @@ function addToCart(productId) {
     updateCartCount();
 
     alert('Đã thêm sản phẩm vào giỏ hàng!');
-    }
+}
+
 function handleOrderNow(productId) {
     addToCart(productId); // Gọi hàm thêm sản phẩm vào giỏ hàng
     setTimeout(() => {
         window.location.href = "shoppingcart.html"; // Chuyển hướng sau 100ms
     }, 100);
 }
+
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let cartCount = cart.reduce((total, item) => total + item.quantity, 0);
