@@ -26,9 +26,9 @@
                 </div>
                 <div class="header-top-right">
                     <ul class="header-top-list">
-                        <li><a href="">Giới thiệu</a></li>
-                        <li><a href="">Cửa hàng</a></li>
-                        <li><a href="">Chính sách</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Cửa hàng</a></li>
+                        <li><a href="#">Chính sách</a></li>
                     </ul>
                 </div>
             </div>
@@ -59,10 +59,11 @@
                             <i class="fa-solid fa-user"></i>
                             <div class="auth-container">
                                 <span class="text-dndk">Đăng nhập / Đăng ký</span>
-                                <span class="text-tk" id="user-fullname">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                                <span class="text-tk" id="user-fullname">Tài khoản <i
+                                        class="fa-sharp fa-solid fa-caret-down"></i></span>
                             </div>
-                            
-                            
+
+
                             <!-- Menu sẽ được cập nhật bằng JavaScript -->
                             <ul class="header-middle-right-menu" id="user-menu" style="display: none;"></ul>
 
@@ -198,6 +199,7 @@
 
                 </ul>
             </div>
+           
         </div>
         <div class="container" id="account-user" style="display: none;">
             <div class="main-account">
@@ -264,6 +266,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container" id="order-history" style="display: none;">
             <div class="main-account">
                 <div class="main-account-header">
@@ -277,6 +280,11 @@
             </div>
         </div>
     </main>
+    <div class="modal product-detail">
+        <button class="modal-close close-popup"><i class="fa-thin fa-xmark"></i></button>
+        <div class="modal-container mdl-cnt" id="product-detail-content">
+        </div>
+    </div>
     
 
     <footer class="footer">
@@ -419,6 +427,7 @@
     <script src="../js/listProduct.js"></script>
     <script src="../js/home.js"></script>
     <script src="../js/login.js"></script>
+    <script src="../js/shoppingcart.js"></script>
 </body>
 
 </html>

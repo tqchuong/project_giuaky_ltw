@@ -3,6 +3,56 @@ function vnd(price) {
     return price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
 }
 
+// Close popup 
+const body = document.querySelector("body");
+let modalContainer = document.querySelectorAll('.modal');
+let modalBox = document.querySelectorAll('.mdl-cnt');
+let formLogSign = document.querySelector('.forms');
+
+// Click vùng ngoài sẽ tắt Popup
+modalContainer.forEach(item => {
+    item.addEventListener('click', closeModal);
+});
+
+modalBox.forEach(item => {
+    item.addEventListener('click', function (event) {
+        event.stopPropagation();
+    })
+});
+
+function closeModal() {
+    modalContainer.forEach(item => {
+        item.classList.remove('open');
+    });
+    console.log(modalContainer)
+    body.style.overflow = "auto";
+}
+
+function increasingNumber(e) {
+    let qty = e.parentNode.querySelector('.input-qty');
+    if (parseInt(qty.value) < qty.max) {
+        qty.value = parseInt(qty.value) + 1;
+    } else {
+        qty.value = qty.max;
+    }
+}
+
+function decreasingNumber(e) {
+    let qty = e.parentNode.querySelector('.input-qty');
+    if (qty.value > qty.min) {
+        qty.value = parseInt(qty.value) - 1;
+    } else {
+        qty.value = qty.min;
+    }
+}
+
+
+
+
+
+
+
+
 
 // Open Search Advanced
 document.querySelector(".filter-btn").addEventListener("click",(e) => {
@@ -389,4 +439,13 @@ function logOut() {
 
 // Thực thi kiểm tra khi DOM đã sẵn sàng
 document.addEventListener('DOMContentLoaded', kiemtradangnhap);
+
+
+
+
+
+
+
+
+
 
