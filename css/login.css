@@ -380,10 +380,105 @@ img {
   color: var(--first-color);  /* Changes to blue on hover */
   text-decoration: none;  /* No underline on hover */
 }
+.login__box {
+  width: 100%; /* Đảm bảo tất cả các khối input chiếm toàn bộ chiều rộng */
+  display: flex;
+  flex-direction: column; /* Đảm bảo nhãn nằm phía trên input */
+}
 
+.login__input {
+  width: 100%; /* Đảm bảo input chiếm toàn bộ chiều rộng khối cha */
+  padding: 1.5rem 2.5rem 1.5rem 1.25rem; /* Giữ nguyên padding nếu cần */
+  border-radius: 1rem;
+  font-weight: var(--font-semi-bold);
+}
 
+.login__label {
+  width: 100%; /* Đảm bảo nhãn có chiều rộng bằng với input */
+  display: block;
+  margin-bottom: 0.5rem; /* Khoảng cách giữa nhãn và input */
+}
 
+}
+/* Khoảng cách giữa các ô nhập liệu trong form đăng ký */
+.login__form {
+  display: grid;
+  row-gap: 1.5rem; /* Khoảng cách dọc giữa các ô */
+}
 
+/* Thiết lập lại các khối input để đảm bảo chiều rộng đầy đủ và khoảng cách hợp lý */
+.login__box {
+  width: 100%; /* Bảo đảm khối input chiếm toàn bộ chiều rộng */
+  display: flex;
+  flex-direction: column;
+}
 
+/* Giãn cách padding cho ô input và icon */
+.login__input {
+  width: 100%;
+  padding: 1.25rem 2.5rem 1.25rem 1rem; /* Điều chỉnh padding cho khoảng cách hợp lý */
+  border-radius: 0.75rem; /* Bo góc nhẹ nhàng hơn */
+  font-weight: var(--font-semi-bold);
+  margin-top: 0.5rem; /* Khoảng cách trên giữa nhãn và input */
+}
 
+/* Căn chỉnh lại nhãn cho khoảng cách dễ nhìn */
+.login__label {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.5rem; /* Khoảng cách nhỏ giữa nhãn và input */
+}
+
+/* Đảm bảo khoảng cách và kích thước hợp lý của các icon trong input */
+.login__icon {
+  position: absolute;
+  right: 1.25rem;
+  font-size: 1.25rem;
+  transition: color .4s;
+  color: var(--text-color);
+}
+
+.login__password {
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Cải thiện button với khoảng cách và hiệu ứng hover */
+.login__button {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  padding-block: 1.5rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color .4s, box-shadow .4s;
+}
+
+.login__button:hover {
+  background-color: var(--first-color-alt);
+  box-shadow: 0 8px 24px hsla(208, 92%, 32%, .3);
+}
+
+/* Tạo khoảng cách giữa các phần chuyển đổi trang và điều chỉnh text */
+.login__switch {
+  text-align: center;
+  font-size: var(--small-font-size);
+  margin-top: 1.5rem; /* Khoảng cách trên cho phần chuyển đổi */
+}
+
+.login__switch button {
+  background: none;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: color .4s;
+}
+
+.login__switch button:hover {
+  color: var(--first-color-alt);
 }
