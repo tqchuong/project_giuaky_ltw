@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Hot Products</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="../css/home.css" rel="stylesheet">
+  <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
+
+
+
+</head>
+
+<body>
+<header>
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top-left">
+        <ul class="header-top-list">
+          <li><a href=""><i class="fa-regular fa-phone"></i> 0123 456 789 (miễn phí)</a></li>
+          <li><a href=""><i class="fa-light fa-location-dot"></i> Xem vị trí cửa hàng</a></li>
+        </ul>
+      </div>
+      <div class="header-top-right">
+        <ul class="header-top-list">
+          <li><a href="">Giới thiệu</a></li>
+          <li><a href="">Cửa hàng</a></li>
+          <li><a href="">Chính sách</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header-middle">
+    <div class="container">
+      <div class="header-middle-left">
+
+        <div class="logo">
+          <a href="home.html">
+            <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
+                 style="width: 250px; height: auto;">
+          </a>
+
+        </div>
+      </div>
+      <div class="header-middle-center">
+        <form action="" class="form-search">
+          <span class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input class="form-search-input" oninput="searchProducts()" placeholder="Tìm kiếm món ăn..."
+                 type="text">
+          <button class="filter-btn"><i class="fa-solid fa-filter"></i><span>Lọc</span></button>
+        </form>
+      </div>
+      <div class="header-middle-right">
+        <ul class="header-middle-right-list">
+          <li class="header-middle-right-item dropdown open">
+            <i class="fa-solid fa-user"></i>
+            <div class="auth-container">
+              <span class="text-dndk">Đăng nhập / Đăng ký</span>
+              <span class="text-tk" id="user-fullname">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+            </div>
+
+
+            <!-- Menu sẽ được cập nhật bằng JavaScript -->
+            <ul class="header-middle-right-menu" id="user-menu" style="display: none;"></ul>
+
+            <!-- Các mục đăng nhập và đăng ký sẽ ẩn đi nếu người dùng đã đăng nhập -->
+            <ul class="header-middle-right-menu" id="auth-options">
+              <li><a href="login.html" id="login"><i
+                      class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a></li>
+              <li><a href="login.html?registerForm" id="signup"><i class="fa-solid fa-user-plus"></i>
+                Đăng ký</a></li>
+            </ul>
+          </li>
+          <li class="header-middle-right-item open">
+            <a href="shoppingcart.html">
+              <div class="cart-icon-menu">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span class="count-product-cart">0</span>
+              </div>
+              <span>Giỏ hàng</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</header>
+<nav class="header-bottom">
+  <div class="container">
+    <ul class="menu-list">
+      <li class="menu-list-item"><a class="menu-link" href="home.html">Trang chủ</a></li>
+      <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
+      <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
+      <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
+      <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+
+      <li class="menu-list-item"><a class="hotpro-link" href="hotproducts.html">hot
+        <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i></a></li>
+
+    </ul>
+
+  </div>
+</nav>
+<div class="advanced-search">
+  <div class="container">
+    <div class="advanced-search-category">
+      <span>Phân loại </span>
+      <select id="advanced-search-category-select" name="" onchange="searchProducts()">
+        <option>Tất cả</option>
+        <option>Gạo</option>
+        <option>Lúa mì</option>
+        <option>Bắp</option>
+        <option>Cao lương</option>
+        <option>Kê</option>
+        <option>Khác</option>
+      </select>
+    </div>
+    <div class="advanced-search-price">
+      <span>Giá từ</span>
+      <input id="min-price" onchange="searchProducts()" placeholder="tối thiểu" type="number">
+      <span>đến</span>
+      <input id="max-price" onchange="searchProducts()" placeholder="tối đa" type="number">
+      <button id="advanced-search-price-btn"><i class="fa-solid fa-magnifying-glass-dollar"></i></button>
+    </div>
+    <div class="advanced-search-control">
+      <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-solid fa-arrow-up-short-wide"></i>
+      </button>
+      <button id="sort-descending" onclick="searchProducts(2)"><i
+              class="fa-solid fa-arrow-down-wide-short"></i>
+      </button>
+      <button id="reset-search" onclick="searchProducts(0)"><i class="fa-solid fa-arrow-rotate-right"></i>
+      </button>
+      <button onclick="closeSearchAdvanced()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+</div>
+<main class="main-wrapper">
+  <div class="container" id="trangchu">
+
+
+    <div class="home-title-block" id="home-title">
+      <h2 class="home-title">Khám phá sản phẩm Hot</h2>
+    </div>
+
+    <div class="home-products" id="home-products">
+    </div>
+    <div class="page-nav">
+      <ul class="page-nav-list">
+
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-top-content">
+        <div class="logo">
+          <a href="">
+            <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
+                 style="width: 250px; height: auto;">
+          </a>
+
+        </div>
+        <div class="footer-top-subbox">
+          <div class="footer-top-subs">
+            <h2 class="footer-top-subs-title">Đăng ký nhận tin</h2>
+            <p class="footer-top-subs-text">Nhận thông tin mới nhất từ chúng tôi</p>
+          </div>
+          <form class="form-ground">
+            <input class="form-ground-input" placeholder="Nhập email của bạn" type="email">
+            <button class="form-ground-btn">
+              <span>ĐĂNG KÝ</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="widget-area">
+    <div class="container">
+      <div class="widget-row">
+        <div class="widget-row-col-1">
+          <h3 class="widget-title">Về chúng tôi</h3>
+          <div class="widget-row-col-content">
+            <p>Chúng tôi cam kết kiểm soát chất lượng nghiêm ngặt
+              và không ngừng cải tiến sản phẩm để đáp ứng nhu cầu
+              của khách hàng. Sức khỏe và sự hài lòng của bạn là
+              ưu tiên hàng đầu của chúng tôi.</p>
+          </div>
+          <div class="widget-social">
+            <div class="widget-social-item">
+              <a href="">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+            <div class="widget-social-item">
+              <a href="">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <div class="widget-social-item">
+              <a href="">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            <div class="widget-social-item">
+              <a href="">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="widget-row-col">
+          <h3 class="widget-title">Liên kết</h3>
+          <ul class="widget-contact">
+            <li class="widget-contact-item">
+              <a href="">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Về chúng tôi</span>
+              </a>
+            </li>
+            <li class="widget-contact-item">
+              <a href="">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Thực đơn</span>
+              </a>
+            </li>
+            <li class="widget-contact-item">
+              <a href="">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Điều khoản</span>
+              </a>
+            </li>
+            <li class="widget-contact-item">
+              <a href="">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Liên hệ</span>
+              </a>
+            </li>
+            <li class="widget-contact-item">
+              <a href="">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Tin tức</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="widget-row-col-1">
+          <h3 class="widget-title">Liên hệ</h3>
+          <div class="contact">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-content">
+                <span>FIT_NLUHCM</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-content contact-item-phone">
+                <span>0123 456 789</span>
+                <br>
+                <span>0987 654 321</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-content conatct-item-email">
+                <span>abc@domain.com</span><br />
+                <span>xyz@domain.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="back-to-top">
+  <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
+<script src="../js/listProduct.js"></script>
+<script src="../js/listHotProduct.js"></script>
+<script src="../js/hotproducts.js"></script>
+<script src="../js/login.js"></script>
+</body>
+</html>

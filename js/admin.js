@@ -678,5 +678,23 @@ function deleteAcount(phone) {
     showUser();
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Kiểm tra trạng thái đăng nhập và cập nhật tên người dùng
+    const currentUser = localStorage.getItem('currentuser');
+    if (currentUser) {
+        const user = JSON.parse(currentUser);
+
+        // Cập nhật tên người dùng vào sidebar
+        const userNameElement = document.getElementById("user-name");
+        if (userNameElement) {
+            userNameElement.querySelector('.hidden-sidebar').textContent = user.fullname;
+        }
+
+
+    }
+});
+
+
+
 
 

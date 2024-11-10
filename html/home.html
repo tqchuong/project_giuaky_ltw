@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>FoodMart Store</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="../css/home.css" rel="stylesheet">
+    <link href="../css/hotproducts.css" rel="stylesheet">
     <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
 
 
@@ -68,7 +68,7 @@
 
                         <!-- Các mục đăng nhập và đăng ký sẽ ẩn đi nếu người dùng đã đăng nhập -->
                         <ul class="header-middle-right-menu" id="auth-options">
-                            <li><a href="login.html?loginForm" id="login"><i
+                            <li><a href="login.html" id="login"><i
                                     class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a></li>
                             <li><a href="login.html?registerForm" id="signup"><i class="fa-solid fa-user-plus"></i>
                                 Đăng ký</a></li>
@@ -93,21 +93,16 @@
     <div class="container">
         <ul class="menu-list">
             <li class="menu-list-item"><a class="menu-link" href="">Trang chủ</a></li>
-            <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a>
-            </li>
-            <li class="menu-list-item" onclick="showCategory('Lúa mì')"><a class="menu-link" href="javascript:">Lúa
-                mì</a></li>
-            <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a>
-            </li>
-            <li class="menu-list-item" onclick="showCategory('Cao lương')"><a class="menu-link"
-                                                                              href="javascript:">Cao lương</a></li>
-            <li class="menu-list-item" onclick="showCategory('Kê')"><a class="menu-link" href="javascript:">Kê</a>
-            </li>
-            <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link"
-                                                                         href="javascript:">Khác</a>
-            </li>
+            <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
+            <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
+            <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
+            <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+
+            <li class="menu-list-item"><a class="hotpro-link" href="hotproducts.html">hot
+                <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i></a></li>
 
         </ul>
+
     </div>
 </nav>
 <div class="advanced-search">
@@ -235,7 +230,6 @@
                     <form action="" class="change-password">
                         <!-- Các trường mật khẩu -->
                         <div class="form-group">
-                            <label for="" class="form-label">Mật khẩu hiện tại</label>
                             <input class="form-control" type="password" name="" id="password-cur-info"
                                    placeholder="Nhập mật khẩu hiện tại">
                         </div>

@@ -34,14 +34,14 @@ function createProduct() {
             status: 1,
             title: 'Khoai mì',
             img: '../image/img-pro/khoai%20mi.jpg',
-            category: 'Khác',
+            category: 'Khoai',
             price: 20000
         }, {
             id: 6,
             status: 1,
             title: 'Khoai lang tím',
             img: '../image/img-pro/khoai%20lang%20tim.jpg',
-            category: 'Khác',
+            category: 'Khoai',
             price: 15000
         }, {
             id: 7,
@@ -62,7 +62,7 @@ function createProduct() {
             status: 1,
             title: 'Hạt kê',
             img: '../image/img-pro/hat%20ke2.jpg',
-            category: 'Kê',
+            category: 'Khác',
             price: 40000
         }, {
             id: 10,
@@ -91,7 +91,7 @@ function createProduct() {
             status: 1,
             title: 'Khoai sọ',
             img: '../image/img-pro/khoai-so.jpg',
-            category: 'Khác',
+            category: 'Khoai',
             price: 16000
         }, {
             id: 14,
@@ -738,7 +738,7 @@ function createProduct() {
                 status: 1,
                 title: 'Gạo thơm thái',
                 img: '../image/riceproducts/gao-thom-thai-300x300.jpg',
-                category: 'Khác',
+                category: 'Gạo',
                 price: 17500
             },
             {
@@ -746,7 +746,7 @@ function createProduct() {
                 status: 1,
                 title: 'Gạo thơm lài sữa',
                 img: '../image/riceproducts/gao-thom-lai-sua-300x300.jpg',
-                category: 'Khác',
+                category: 'Gạo',
                 price: 17500
             },
             {
@@ -754,7 +754,7 @@ function createProduct() {
                 status: 1,
                 title: 'Gạo thơm lài',
                 img: '../image/riceproducts/gao-thom-lai-300x300.jpg',
-                category: 'Khác',
+                category: 'Gạo',
                 price: 19500
             },
             {
@@ -762,7 +762,7 @@ function createProduct() {
                 status: 1,
                 title: 'Gạo tám thơm',
                 img: '../image/riceproducts/gao-tam-thom-300x300.jpg',
-                category: 'Khác',
+                category: 'Gạo',
                 price: 15500
             },
             {
@@ -770,7 +770,7 @@ function createProduct() {
                 status: 1,
                 title: 'Gạo nếp than',
                 img: '../image/riceproducts/gao-nep-than-300x300.jpg',
-                category: 'Khác',
+                category: 'Gạo',
                 price: 16500
             },
             {
@@ -778,7 +778,7 @@ function createProduct() {
                 status: 1,
                 title: 'Gạo nàng hoa',
                 img: '../image/riceproducts/gao-nang-hoa-300x300.jpg',
-                category: 'Khác',
+                category: 'Gạo',
                 price: 14500
             },
             {
@@ -786,7 +786,7 @@ function createProduct() {
                 status: 1,
                 title: 'Gạo long châu',
                 img: '../image/riceproducts/gao-long-chau-66-moi-300x300.jpg',
-                category: 'Khác',
+                category: 'Gạo',
                 price: 12500
             }
 

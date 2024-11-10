@@ -2,8 +2,6 @@
 function vnd(price) {
     return price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
 }
-
-
 // Open Search Advanced
 document.querySelector(".filter-btn").addEventListener("click",(e) => {
     e.preventDefault();
@@ -21,8 +19,9 @@ function closeSearchAdvanced() {
 }
 
 
-// Page
+//Page
 function renderProducts(showProduct) {
+
     let productHtml = '';
     if(showProduct.length == 0) {
         document.getElementById("home-title").style.display = "none";
@@ -49,7 +48,7 @@ function renderProducts(showProduct) {
                         </div>
                     <div class="product-buy">
                         <button onclick="detailProduct(${product.id})" class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
-                    </div> 
+                    </div>
                 </div>
                 </div>
             </article>
@@ -60,9 +59,15 @@ function renderProducts(showProduct) {
 }
 
 
+
+
 // Find Product
 var productAll = JSON.parse(localStorage.getItem('products')).filter(item => item.status == 1);
+
 function searchProducts(mode) {
+    let productAll = products.filter(item =>
+        item.status == 1 && hotProducts.some(hp => hp.id === item.id)
+    );
     let valeSearchInput = document.querySelector('.form-search-input').value;
     let valueCategory = document.getElementById("advanced-search-category-select").value;
     let minPrice = document.getElementById("min-price").value;
@@ -105,8 +110,9 @@ function searchProducts(mode) {
     }
     showHomeProduct(result)
 }
+
 // Phân trang
-let perPage = 12;
+let perPage = 20;
 let currentPage = 1;
 let totalPage = 0;
 let perProducts = [];
@@ -118,13 +124,22 @@ function displayList(productAll, perPage, currentPage) {
     renderProducts(productShow);
 }
 
-function showHomeProduct(products) {
-    let productAll = products.filter(item => item.status == 1)
+function showHomeProduct() {
+
+    let products = JSON.parse(localStorage.getItem('products')) || [];
+    let hotProducts = JSON.parse(localStorage.getItem('hotProducts')) || [];
+
+    // Lọc các sản phẩm có status == 1 và có id nằm trong hotProducts
+    let productAll = products.filter(item =>
+        item.status == 1 && hotProducts.some(hp => hp.id === item.id)
+    );
+
+    // Hiển thị sản phẩm với phân trang
     displayList(productAll, perPage, currentPage);
     setupPagination(productAll, perPage, currentPage);
 }
 
-window.onload = showHomeProduct(JSON.parse(localStorage.getItem('products')))
+window.onload = showHomeProduct;
 
 function setupPagination(productAll, perPage) {
     document.querySelector('.page-nav-list').innerHTML = '';
@@ -176,6 +191,7 @@ function showCategory(category) {
 }
 
 
+
 // Ẩn tất cả các phần
 function hideAllSections() {
     document.getElementById('trangchu').style.display = 'none';
@@ -189,89 +205,4 @@ function showHomePage() {
     document.getElementById('trangchu').style.display = 'block';
 }
 
-// Hiển thị thông tin tài khoản khi nhấn vào "Tài khoản của tôi"
-function showAccountInfo() {
-    hideAllSections();
-    document.getElementById('account-user').style.display = 'block';
-}
-
-// Hiển thị lịch sử đơn hàng khi nhấn vào "Đơn hàng đã mua"
-function showOrderHistory() {
-    hideAllSections();
-    document.getElementById('order-history').style.display = 'block';
-}
-
-// Kiểm tra trạng thái đăng nhập và hiển thị thông tin tài khoản
-function kiemtradangnhap() {
-    const currentUser = localStorage.getItem('currentuser');
-    if (currentUser) {
-        const user = JSON.parse(currentUser);
-
-        // Cập nhật tên người dùng
-        const userFullnameElement = document.getElementById("user-fullname");
-        if (userFullnameElement) {
-            userFullnameElement.innerHTML = `${user.fullname} <i class="fa-sharp fa-solid fa-caret-down"></i>`;
-        }
-
-        // Ẩn Đăng nhập / Đăng ký nếu đã đăng nhập
-        const textDndkElement = document.querySelector('.text-dndk');
-        const authOptions = document.getElementById("auth-options");
-        if (textDndkElement && authOptions) {
-            textDndkElement.style.display = 'none';
-            authOptions.style.display = 'none';
-        }
-
-        // Hiển thị menu quản lý nếu là admin
-        let menuHtml = '';
-        if (user.userType === 1) {
-            menuHtml += `<li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a></li>`;
-        }
-
-        menuHtml += `
-            <li><a href="javascript:void(0);" onclick="showAccountInfo()"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
-            <li><a href="javascript:void(0);" onclick="showOrderHistory()"><i class="fa-solid fa-bag-shopping"></i> Đơn hàng đã mua</a></li>
-            <li class="border"><a id="logout" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Thoát tài khoản</a></li>
-        `;
-
-        const userMenuElement = document.getElementById('user-menu');
-        if (userMenuElement) {
-            userMenuElement.innerHTML = menuHtml;
-            userMenuElement.style.display = 'none'; // Ẩn menu mặc định
-        }
-
-        // Thêm sự kiện đăng xuất
-        const logoutElement = document.getElementById('logout');
-        if (logoutElement) {
-            logoutElement.addEventListener('click', logOut);
-        }
-
-        // Hiển thị menu khi click vào auth-container
-        const authContainer = document.querySelector('.auth-container');
-        if (authContainer) {
-            authContainer.addEventListener('click', (event) => {
-                event.stopPropagation(); // Ngăn chặn sự kiện nổi bọt
-                userMenuElement.style.display = userMenuElement.style.display === 'block' ? 'none' : 'block';
-            });
-        }
-
-        // Đóng menu khi click bên ngoài
-        document.addEventListener('click', (event) => {
-            if (!authContainer.contains(event.target)) {
-                userMenuElement.style.display = 'none';
-            }
-        });
-    }
-}
-
-// Xử lý sự kiện đăng xuất
-function logOut() {
-    localStorage.removeItem('currentuser');
-    window.location.href = "login.html"; // Quay lại login sau khi đăng xuất
-}
-
-// Thực thi kiểm tra khi DOM đã sẵn sàng
-document.addEventListener('DOMContentLoaded', () => {
-
-    kiemtradangnhap();
-});
 
