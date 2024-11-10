@@ -35,27 +35,8 @@
                     '../image/productdetails/gaost25-4.png',
                     '../image/productdetails/gaost25-3.png'
                 ],
-                category: 'Gạo',
                 price: 200000,
-                rating: 4,  // Đánh giá trung bình
-                views: 1234,  // Lượt truy cập
                 desc: "Gạo ST25 2kg – Gạo ngon nhất Thế Giới có hạt dài, trắng trong, không bạc bụng, khi nấu cơm dẻo thơm, khi để nguội cơm vẫn ngon, không bị cứng. Hàm lượng đạm trong gạo cao (10% protein), cao gắp rưởi gạo thường, vì vậy sẽ no trước khi đầy bụng.",
-                kho: "8245",
-                brand: "Gạo Ông Cua",
-                type: "Gạo Trắng",
-                weight: "5kg",
-                shelf_life: "6 tháng",
-                origin: "Việt Nam",
-                expiry_date: "25-09-2025",
-                quantity: "còn 1000",
-                manufacture_date: "25-04-2025",
-                manufacturer: "Việt Nam",
-                ship_from: "Tp.Hồ Chí Minh ",
-                reviews: [
-                    {customer: 'Khách hàng A', comment: 'Sản phẩm rất ngon và chất lượng.'},
-                    {customer: 'Khách hàng B', comment: 'Dịch vụ tốt, sẽ mua lại.'}
-                ]
-
             }, {
                 id: 4,
                 status: 1,
@@ -371,12 +352,46 @@
                     price: 23000
                 }
 
-            ]
+            ];
+
             localStorage.setItem('products', JSON.stringify(products));
 
         }
     }
+    const detailedInfo = {
+        3: {
+            category: 'Gạo',
+            kho: "8246",
+            brand: "Gạo Ông Cua",
+            type: "Gạo Trắng",
+            weight: "5kg",
+            shelf_life: "6 tháng",
+            origin: "Việt Nam",
+            expiry_date: "25-09-2025",
+            quantity: "còn 1000",
+            manufacture_date: "25-04-2025",
+            manufacturer: "Việt Nam",
+            ship_from: "Tp.Hồ Chí Minh"
+        },
+        // Thêm thông tin chi tiết cho các sản phẩm khác nếu cần
+    };
 
+    // Đánh giá của các sản phẩm, sử dụng productId làm key
+    const reviews = {
+        3: [
+            { User_id: 13, rating: 5, comment: 'Sản phẩm rất ngon và chất lượng.' },
+            { User_id: 2, rating: 4, comment: 'Dịch vụ tốt, sẽ mua lại.' }
+        ],
+        // Thêm đánh giá cho các sản phẩm khác nếu cần
+    };
+    function getProductDetail(id) {
+        return detailedInfo[id] || {}; // Trả về chi tiết sản phẩm hoặc object rỗng nếu không tìm thấy
+    }
+
+    // Hàm lấy đánh giá sản phẩm dựa trên productId
+    function getProductReviews(id) {
+        return reviews[id] || []; // Trả về đánh giá hoặc mảng rỗng nếu không tìm thấy
+    }
 
     function createAdminAccount() {
         console.log("Running createAdminAccount");
@@ -387,6 +402,7 @@
 
         if (!adminExists) {
             accounts.push({
+                User_id:1,
                 fullname: "tuquangchuong",
                 phone: "0123456789",
                 password: "123456",
@@ -410,6 +426,8 @@
     window.onload = function () {
         createAdminAccount();
         createProduct();
+        getProductDetail(productId);
+        getProductReviews(productId);
     };
 
 
