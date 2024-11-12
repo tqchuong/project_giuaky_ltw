@@ -37,7 +37,7 @@ html {
 
 .icon {
   background: url(https://s.cdpn.io/6035/glyphicons-halflings-white.png)
-    no-repeat;
+  no-repeat;
   display: inline-block;
   display: inline-block;
   width: 14px;
@@ -268,17 +268,17 @@ input {
   height: 40px;
 }
 .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px;
-    background-color: #e6e1dd;
-    height: 150px;
-    margin-bottom: 80px;
-    position: fixed;
-    width: 100%;
-    margin-top: -200px;
-    z-index: 99999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  background-color: #e6e1dd;
+  height: 150px;
+  margin-bottom: 80px;
+  position: fixed;
+  width: 100%;
+  margin-top: -200px;
+  z-index: 99999;
 }
 .login a {
   text-decoration: none;
@@ -292,9 +292,9 @@ h1 {
   font-size: 4em;
 }
 .summary-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
 
@@ -383,33 +383,33 @@ h1 {
   }
   .delivery-payment {
     margin-top: 60px;
-}
+  }
   .coupon {
     flex-direction: column;
     padding: 30px 0px;
-}
+  }
   .coupon h3 {
     margin: 0;
-}
+  }
   .btn-checkout {
     font-size: 1.6em;
-}
+  }
   .logo {
     width: 50%;
-}
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .btn-checkout {
     font-size: 1.2em;
-}
+  }
   .container {
-  padding: 0 30px;
-}
+    padding: 0 30px;
+  }
   .btn-remove {
     font-size: 1.2em;
   }
-  
+
 }
 .item-image {
   width: 100px;

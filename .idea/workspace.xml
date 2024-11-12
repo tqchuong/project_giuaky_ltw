@@ -5,21 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc169b4d-c39b-40cc-966d-618cafac9b50" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/css/hotproducts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/hotproducts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/hotproducts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/listHotProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project_giuaky_ltw-hmc.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shoppingcart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/et --hard HEAD@{5}" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/hotproducts.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/hotproducts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shoppingcart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/hotproducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/hotproducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/listHotProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listHotProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tash pop" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +85,11 @@
       <workItem from="1731085212473" duration="1422000" />
       <workItem from="1731086671106" duration="879000" />
       <workItem from="1731133631363" duration="19408000" />
+      <workItem from="1731239296347" duration="14250000" />
+      <workItem from="1731308009561" duration="11348000" />
+      <workItem from="1731337597378" duration="4282000" />
+      <workItem from="1731379611533" duration="5375000" />
+      <workItem from="1731422573645" duration="2574000" />
     </task>
     <servers />
   </component>

@@ -25,8 +25,21 @@ function createHotProducts() {
     }
 }
 
+function updateHotProducts() {
+
+    let viewProducts = JSON.parse(localStorage.getItem('viewProducts')) || [];
+    viewProducts.sort((a, b) => b.view - a.view);
+
+    // Lấy top 20 sản phẩm có view cao nhất
+    let topProducts = viewProducts.slice(0, 20);
+
+    // Lưu danh sách sản phẩm hot vào localStorage
+    localStorage.setItem('hotProducts', JSON.stringify(topProducts));
+}
+
+
 
 window.onload = function () {
 
-    createHotProducts();
+
 };
