@@ -1,4 +1,4 @@
-
+localStorage.removeItem('products'); // Thay 'key' bằng tên của mục bạn muốn xóa
 
     function createProduct() {
 

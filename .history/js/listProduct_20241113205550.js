@@ -1,5 +1,4 @@
 
-
     function createProduct() {
 
         if (localStorage.getItem('products') == null) {
