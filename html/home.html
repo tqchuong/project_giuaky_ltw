@@ -93,19 +93,13 @@
     <div class="container">
         <ul class="menu-list">
             <li class="menu-list-item"><a class="menu-link" href="">Trang chủ</a></li>
-            <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a>
-            </li>
-            <li class="menu-list-item" onclick="showCategory('Lúa mì')"><a class="menu-link" href="javascript:">Lúa
-                mì</a></li>
-            <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a>
-            </li>
-            <li class="menu-list-item" onclick="showCategory('Cao lương')"><a class="menu-link"
-                                                                              href="javascript:">Cao lương</a></li>
-            <li class="menu-list-item" onclick="showCategory('Kê')"><a class="menu-link" href="javascript:">Kê</a>
-            </li>
-            <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link"
-                                                                         href="javascript:">Khác</a>
-            </li>
+            <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
+            <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
+            <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
+            <li class="menu-list-item" onclick="showCategory('Lương Khô')"><a class="menu-link" href="javascript:">Lương Khô</a></li>
+            <li class="menu-list-item" onclick="showCategory('Ngũ Cốc')"><a class="menu-link" href="javascript:">Ngũ Cốc</a></li>
+            <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+
 
         </ul>
     </div>
@@ -117,10 +111,10 @@
             <select id="advanced-search-category-select" name="" onchange="searchProducts()">
                 <option>Tất cả</option>
                 <option>Gạo</option>
-                <option>Lúa mì</option>
+                <option>Khoai</option>
                 <option>Bắp</option>
-                <option>Cao lương</option>
-                <option>Kê</option>
+                <option>Lương Khô</option>
+                <option>Ngũ Cốc</option>
                 <option>Khác</option>
             </select>
         </div>
@@ -149,6 +143,7 @@
             <img alt="" src="../image/banner/Banner.png">
 
         </div>
+
         <div class="home-service" id="home-service">
             <div class="home-service-item">
                 <div class="home-service-item-icon">
@@ -198,7 +193,7 @@
             </ul>
             <div class="detail-order-content">
             </div>
-            </div>
+        </div>
         <div class="modal product-detail">
             <button class="modal-close close-popup"><i class="fa-thin fa-xmark"></i></button>
             <div class="modal-container mdl-cnt" id="product-detail-content">

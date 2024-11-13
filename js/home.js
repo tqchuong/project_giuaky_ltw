@@ -366,14 +366,14 @@ function closeSearchAdvanced() {
 }
 
 // Find Product
+// Find Product
 var productAll = JSON.parse(localStorage.getItem('products')).filter(item => item.status == 1);
-
 function searchProducts(mode) {
     let valeSearchInput = document.querySelector('.form-search-input').value;
     let valueCategory = document.getElementById("advanced-search-category-select").value;
     let minPrice = document.getElementById("min-price").value;
     let maxPrice = document.getElementById("max-price").value;
-    if (parseInt(minPrice) > parseInt(maxPrice) && minPrice != "" && maxPrice != "") {
+    if(parseInt(minPrice) > parseInt(maxPrice) && minPrice != "" && maxPrice != "") {
         alert("Giá đã nhập sai !");
     }
 
@@ -385,29 +385,28 @@ function searchProducts(mode) {
         return item.title.toString().toUpperCase().includes(valeSearchInput.toString().toUpperCase());
     })
 
-    if (minPrice == "" && maxPrice != "") {
+    if(minPrice == "" && maxPrice != "") {
         result = result.filter((item) => item.price <= maxPrice);
     } else if (minPrice != "" && maxPrice == "") {
         result = result.filter((item) => item.price >= minPrice);
-    } else if (minPrice != "" && maxPrice != "") {
+    } else if(minPrice != "" && maxPrice != "") {
         result = result.filter((item) => item.price <= maxPrice && item.price >= minPrice);
     }
 
     document.getElementById("home-service").scrollIntoView();
-    switch (mode) {
+    switch (mode){
         case 0:
-            result = JSON.parse(localStorage.getItem('products'));
-            ;
+            result = JSON.parse(localStorage.getItem('products'));;
             document.querySelector('.form-search-input').value = "";
             document.getElementById("advanced-search-category-select").value = "Tất cả";
             document.getElementById("min-price").value = "";
             document.getElementById("max-price").value = "";
             break;
         case 1:
-            result.sort((a, b) => a.price - b.price)
+            result.sort((a,b) => a.price - b.price)
             break;
         case 2:
-            result.sort((a, b) => b.price - a.price)
+            result.sort((a,b) => b.price - a.price)
             break;
     }
     showHomeProduct(result)
@@ -472,13 +471,17 @@ window.onscroll = () => {
 }
 
 // Hiển thị chuyên mục
+
 function showCategory(category) {
     document.getElementById('trangchu').classList.remove('hide');
 
-    let productSearch = productAll.filter(value => {
-        return value.category.toString().toUpperCase().includes(category.toUpperCase());
-    })
-    let currentPageSeach = 1;
+    const productSearch = productAll.filter(value => {
+        return value.category && value.category.toString().toUpperCase().includes(category.toUpperCase());
+    });
+
+    console.log("Sản phẩm tìm thấy theo danh mục:", productSearch);
+
+    const currentPageSeach = 1;
     displayList(productSearch, perPage, currentPageSeach);
     setupPagination(productSearch, perPage, currentPageSeach);
     document.getElementById("home-service").scrollIntoView();
