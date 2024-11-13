@@ -126,7 +126,7 @@ img {
   transition: border-color .4s;
 }
 
-.login__input:autofill {
+.login__input:-webkit-autofill {
   transition: background-color 6000s, color 6000s;
 }
 
@@ -237,7 +237,7 @@ img {
   color: var(--first-color-alt);
 }
 
-.login__access, 
+.login__access,
 .login__register {
   position: absolute;
   left: 0;
@@ -330,7 +330,7 @@ img {
     width: 460px;
     margin: initial;
   }
-  .login__access, 
+  .login__access,
   .login__register {
     width: 600px;
   }
@@ -355,49 +355,49 @@ img {
     transform: translate(0rem, 0rem);
   }
 
-#registerForm, #forgotPasswordForm {
-  display: none;
-}
+  #registerForm, #forgotPasswordForm {
+    display: none;
+  }
 
 
-.forgotPasswordLink {
-  display: inline-block;
-  background: none;
-  border: none;
-  color: var(--text-color);  /* Same color as the password label */
-  font-size: var(--small-font-size);
-  font-weight: var(--font-semi-bold);
-  cursor: pointer;
-  margin-top: 20px;  /* Adjust margin to position below password field */
-  margin-bottom: 5px;  /* Adds space before the login button */
-  padding-right: 10px;
-  text-align: right;
-  float: right;
-  transition: color 0.3s;
-}
+  .forgotPasswordLink {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: var(--text-color);  /* Same color as the password label */
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    cursor: pointer;
+    margin-top: 20px;  /* Adjust margin to position below password field */
+    margin-bottom: 5px;  /* Adds space before the login button */
+    padding-right: 10px;
+    text-align: right;
+    float: right;
+    transition: color 0.3s;
+  }
 
-.forgotPasswordLink:hover {
-  color: var(--first-color);  /* Changes to blue on hover */
-  text-decoration: none;  /* No underline on hover */
-}
-.login__box {
-  width: 100%; /* Đảm bảo tất cả các khối input chiếm toàn bộ chiều rộng */
-  display: flex;
-  flex-direction: column; /* Đảm bảo nhãn nằm phía trên input */
-}
+  .forgotPasswordLink:hover {
+    color: var(--first-color);  /* Changes to blue on hover */
+    text-decoration: none;  /* No underline on hover */
+  }
+  .login__box {
+    width: 100%; /* Đảm bảo tất cả các khối input chiếm toàn bộ chiều rộng */
+    display: flex;
+    flex-direction: column; /* Đảm bảo nhãn nằm phía trên input */
+  }
 
-.login__input {
-  width: 100%; /* Đảm bảo input chiếm toàn bộ chiều rộng khối cha */
-  padding: 1.5rem 2.5rem 1.5rem 1.25rem; /* Giữ nguyên padding nếu cần */
-  border-radius: 1rem;
-  font-weight: var(--font-semi-bold);
-}
+  .login__input {
+    width: 100%; /* Đảm bảo input chiếm toàn bộ chiều rộng khối cha */
+    padding: 1.5rem 2.5rem 1.5rem 1.25rem; /* Giữ nguyên padding nếu cần */
+    border-radius: 1rem;
+    font-weight: var(--font-semi-bold);
+  }
 
-.login__label {
-  width: 100%; /* Đảm bảo nhãn có chiều rộng bằng với input */
-  display: block;
-  margin-bottom: 0.5rem; /* Khoảng cách giữa nhãn và input */
-}
+  .login__label {
+    width: 100%; /* Đảm bảo nhãn có chiều rộng bằng với input */
+    display: block;
+    margin-bottom: 0.5rem; /* Khoảng cách giữa nhãn và input */
+  }
 
 }
 /* Khoảng cách giữa các ô nhập liệu trong form đăng ký */

@@ -158,37 +158,17 @@ function createId(arr) {
     return id;
 }
 // Xóa sản phẩm
-
-
-function showToast(type, title, message, duration = 3000) {
-    toast({ title, message, type, duration });
-}
-// Xóa sản phẩm (đánh dấu sản phẩm là đã xóa thay vì xóa hẳn khỏi mảng)
 function deleteProduct(id) {
     let products = JSON.parse(localStorage.getItem("products"));
-    let index = products.findIndex(item => item.id === id);
-
-    if (index !== -1) {
-        if (confirm("Bạn có chắc muốn xóa sản phẩm này không?")) {
-            products[index].status = 0;
-            localStorage.setItem("products", JSON.stringify(products));
-            showToast('success', 'Success', 'Sản phẩm đã được đánh dấu là xóa thành công!');
-            showProduct();
-        }
-    } else {
-        showToast('error', 'Error', 'Sản phẩm không tồn tại!');
+    let index = products.findIndex(item => {
+        return item.id == id;
+    })
+    if (confirm("Bạn có chắc muốn xóa?") == true) {
+        products[index].status = 0;
+        toast({ title: 'Success', message: 'Xóa sản phẩm thành công !', type: 'success', duration: 3000 });
     }
-}
-function changeStatusProduct(id) {
-    let products = JSON.parse(localStorage.getItem("products"));
-    let index = products.findIndex(item => item.id == id);
-
-    if (confirm("Bạn có chắc chắn muốn hủy xóa?")) {
-        products[index].status = 1;
-        localStorage.setItem("products", JSON.stringify(products));
-        showToast('success', 'Success', 'Khôi phục sản phẩm thành công!');
-        showProduct();
-    }
+    localStorage.setItem("products", JSON.stringify(products));
+    showProduct();
 }
 function changeStatusProduct(id) {
     let products = JSON.parse(localStorage.getItem("products"));
