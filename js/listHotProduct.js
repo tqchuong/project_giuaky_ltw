@@ -8,7 +8,7 @@ function createHotProducts() {
             return {
                 id: product.id,  // Chỉ lấy id từ sản phẩm gốc
                 view: Math.floor(Math.random() * 101),  // Giá trị ngẫu nhiên từ 0 tới 100 cho view
-                date: '', // Lấy thời gian hiện tại cho thuộc tính date
+                date: [], // Lấy thời gian hiện tại cho thuộc tính date
             };
         });
 

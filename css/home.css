@@ -455,11 +455,13 @@ header {
     display: flex;
     height: 49px;
     white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+    /*overflow-x: auto;*/
+    /*overflow-y: hidden;*/
 }
 
-.menu-link , .hotpro-link {
+.menu-link ,
+.hotpro-link ,
+.menu-Category{
     color: var(--black);
     display: inline-block;
     padding: 15px 20px;
@@ -468,13 +470,19 @@ header {
     font-size: 15px;
 }
 
-.menu-link:hover::after,.hotpro-link:hover::after {
+.menu-link:hover::after,
+.hotpro-link:hover::after,
+.menu-Category:hover::after
+{
     visibility: visible;
     transform: scale(1);
     opacity: 1;
 }
 
-.menu-link::after,.hotpro-link::after {
+.menu-link::after,
+.hotpro-link::after,
+.menu-Category::after
+{
     content: "";
     position: absolute;
     height: 2px;
@@ -501,6 +509,51 @@ header {
     }
 }
 
+/*menu-category*/
+/* Đặt CSS cho menu chính */
+.menu-list-item {
+
+    position: relative;
+}
+
+/* Ẩn menu con mặc định */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng với độ trong suốt 80% */
+    box-shadow: none; /* Bỏ shadow nếu không muốn hiển thị */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /*margin: 0 20px; !* Thụt lùi vào 20px từ hai bên *!*/
+    /*width: calc(100% - 40px); !* Giảm chiều rộng đi 40px để phù hợp với margin *!*/
+    z-index: 1;
+    text-align: center;
+}
+
+/* Thiết lập CSS cho từng mục con */
+.dropdown-menu li {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hiển thị menu con khi hover vào menu chính */
+.menu-list-item:hover .dropdown-menu {
+    display: block !important;
+}
 
 
 .advanced-search{

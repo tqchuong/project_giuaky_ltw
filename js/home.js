@@ -192,7 +192,11 @@ function detailProduct(index) {
     // Tăng lượt xem trong localStorage
     infoProduct2.view = (infoProduct2.view || 0) + 1;
 
-    // Lưu lại sản phẩm vào localStorage sau khi tăng lượt xem
+    // Thêm ngày hiện tại vào mảng `dates` trong `infoProduct2`
+    const currentDate = new Date().toLocaleDateString(); // Lấy ngày hiện tại dưới dạng chuỗi
+    infoProduct2.date.push(currentDate); // Thêm ngày vào mảng `dates`
+
+    // Lưu lại sản phẩm vào localStorage sau khi tăng lượt xem và cập nhật ngày
     viewProducts = viewProducts.map(sp => sp.id === index ? infoProduct2 : sp);
     localStorage.setItem('viewProducts', JSON.stringify(viewProducts));
 
@@ -470,8 +474,12 @@ window.onscroll = () => {
 function showCategory(category) {
     document.getElementById('trangchu').classList.remove('hide');
 
-    const productSearch = productAll.filter(value => {
-        return value.category && value.category.toString().toUpperCase().includes(category.toUpperCase());
+    // const productSearch = productAll.filter(value => {
+    //     return value.category && value.category.toString().toUpperCase().includes(category.toUpperCase());
+    // });
+
+    let productSearch = category === "Tất cả" ? productAll : productAll.filter(item => {
+        return item.category && item.category.toString().toUpperCase().includes(category.toUpperCase());
     });
 
     console.log("Sản phẩm tìm thấy theo danh mục:", productSearch);

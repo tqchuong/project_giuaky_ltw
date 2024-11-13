@@ -93,13 +93,27 @@
   <div class="container">
     <ul class="menu-list">
       <li class="menu-list-item"><a class="menu-link" href="home.html">Trang chủ</a></li>
-      <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
-      <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
-      <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
-      <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
 
-      <li class="menu-list-item"><a class="hotpro-link" href="hotproducts.html">hot
-        <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i></a></li>
+      <li class="menu-list-item"><a class="menu-Category" href="#"><i class="fa-solid fa-bars" style="padding-right: 5px;"></i>Sản phẩm</a>
+        <ul class="dropdown-menu">
+          <li class="menu-list-item" onclick="showCategory('Tất cả')"><a class="menu-link" href="javascript:">Tất cả</a></li>
+          <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
+          <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
+          <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
+          <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+
+        </ul>
+      </li>
+      <li class="menu-list-item">
+        <a class="hotpro-link" href="hotproducts.html">
+          <i class="fa-solid fa-bars" style="padding-right: 5px;"></i>hot<i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="menu-list-item" onclick="showHomeProduct('tuần')" ><a class="menu-link" href="javascript:">tuần</a></li>
+          <li class="menu-list-item" onclick="showHomeProduct('tháng')" ><a class="menu-link" href="javascript:">tháng</a></li>
+          <li class="menu-list-item" onclick="showHomeProduct('Hot nhất')" ><a class="menu-link" href="javascript:">Hot nhất</a></li>
+        </ul>
+      </li>
 
     </ul>
 
@@ -143,6 +157,7 @@
     <div class="home-title-block" id="home-title">
       <h2 class="home-title">Khám phá sản phẩm Hot</h2>
     </div>
+
 
     <div class="home-products" id="home-products">
     </div>
@@ -383,5 +398,6 @@
     updateHotProducts();
   });
 </script>
+
 </body>
 </html>

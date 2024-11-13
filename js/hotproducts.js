@@ -121,20 +121,78 @@ function displayList(productAll, perPage, currentPage) {
     renderProducts(productShow);
 }
 
-function showHomeProduct() {
+// function showHomeProduct() {
+//
+//     let products = JSON.parse(localStorage.getItem('products')) || [];
+//     let hotProducts = JSON.parse(localStorage.getItem('hotProducts')) || [];
+//
+//     // Lọc các sản phẩm có status == 1 và có id nằm trong hotProducts
+//     let productAll = products.filter(item =>
+//         item.status == 1 && hotProducts.some(hp => hp.id === item.id)
+//     );
+//
+//     // Hiển thị sản phẩm với phân trang
+//     displayList(productAll, perPage, currentPage);
+//     setupPagination(productAll, perPage, currentPage);
+// }
+function showHomeProduct(filterType = 'Hot nhất') {
 
     let products = JSON.parse(localStorage.getItem('products')) || [];
     let hotProducts = JSON.parse(localStorage.getItem('hotProducts')) || [];
+
+    // Hàm kiểm tra xem ngày có nằm trong tuần hiện tại không
+    function isDateInCurrentWeek(date) {
+        const currentDate = new Date();
+        const currentDayOfWeek = currentDate.getDay();
+        const startOfWeek = new Date(currentDate);
+        const endOfWeek = new Date(currentDate);
+
+        startOfWeek.setDate(currentDate.getDate() - currentDayOfWeek);
+        endOfWeek.setDate(currentDate.getDate() + (6 - currentDayOfWeek));
+
+        const targetDate = new Date(date.split('/').reverse().join('-'));
+        return targetDate >= startOfWeek && targetDate <= endOfWeek;
+    }
+
+    // Hàm kiểm tra xem ngày có nằm trong tháng hiện tại không
+    function isDateInCurrentMonth(date) {
+        const currentDate = new Date();
+        const currentMonth = currentDate.getMonth();
+        const currentYear = currentDate.getFullYear();
+
+        const targetDate = new Date(date.split('/').reverse().join('-'));
+        return targetDate.getMonth() === currentMonth && targetDate.getFullYear() === currentYear;
+    }
 
     // Lọc các sản phẩm có status == 1 và có id nằm trong hotProducts
     let productAll = products.filter(item =>
         item.status == 1 && hotProducts.some(hp => hp.id === item.id)
     );
 
+    // Lọc sản phẩm hot theo tuần, tháng hoặc tất cả sản phẩm
+    switch (filterType) {
+        case 'tuần':
+            productAll = productAll.filter(item =>
+                hotProducts.some(hp => hp.id === item.id && hp.dates.some(date => isDateInCurrentWeek(date)))
+            );
+            break;
+        case 'tháng':
+            productAll = productAll.filter(item =>
+                hotProducts.some(hp => hp.id === item.id && hp.dates.some(date => isDateInCurrentMonth(date)))
+            );
+            break;
+        case 'Hot nhất':
+            // Giữ nguyên danh sách productAll (tất cả sản phẩm hot từ khi bán)
+            break;
+        default:
+            break;
+    }
+
     // Hiển thị sản phẩm với phân trang
     displayList(productAll, perPage, currentPage);
     setupPagination(productAll, perPage, currentPage);
 }
+
 
 window.onload = showHomeProduct;
 
@@ -182,11 +240,18 @@ function showCategory(category) {
     let productAll = products.filter(item =>
         item.status == 1 && hotProducts.some(hp => hp.id === item.id)
     );
+
+
+
     document.getElementById('trangchu').classList.remove('hide');
 
-    let productSearch = productAll.filter(value => {
-        return value.category.toString().toUpperCase().includes(category.toUpperCase());
-    })
+    // let productSearch = productAll.filter(value => {
+    //     return value.category.toString().toUpperCase().includes(category.toUpperCase());
+    // })
+    let productSearch = category === "Tất cả" ? productAll : productAll.filter(item => {
+        return item.category && item.category.toString().toUpperCase().includes(category.toUpperCase());
+    });
+
     let currentPageSeach = 1;
     displayList(productSearch, perPage, currentPageSeach);
     setupPagination(productSearch, perPage, currentPageSeach);
@@ -332,7 +397,11 @@ function detailProduct(index) {
     // Tăng lượt xem trong localStorage
     infoProduct2.view = (infoProduct2.view || 0) + 1;
 
-    // Lưu lại sản phẩm vào localStorage sau khi tăng lượt xem
+    // Thêm ngày hiện tại vào mảng `dates` trong `infoProduct2`
+    const currentDate = new Date().toLocaleDateString(); // Lấy ngày hiện tại dưới dạng chuỗi
+    infoProduct2.date.push(currentDate); // Thêm ngày vào mảng `dates`
+
+    // Lưu lại sản phẩm vào localStorage sau khi tăng lượt xem và cập nhật ngày
     viewProducts = viewProducts.map(sp => sp.id === index ? infoProduct2 : sp);
     localStorage.setItem('viewProducts', JSON.stringify(viewProducts));
 
