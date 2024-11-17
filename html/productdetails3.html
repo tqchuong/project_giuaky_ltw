@@ -24,30 +24,12 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="../css/a.css">
-    <link href="../css/style.css" rel="stylesheet">
+
 
 
 </head>
-
 <body>
 <header>
-    <div class="header-top">
-        <div class="container">
-            <div class="header-top-left">
-                <ul class="header-top-list">
-                    <li><a href=""><i class="fa-regular fa-phone"></i> 0123 456 789 (miễn phí)</a></li>
-                    <li><a href=""><i class="fa-light fa-location-dot"></i> Xem vị trí cửa hàng</a></li>
-                </ul>
-            </div>
-            <div class="header-top-right">
-                <ul class="header-top-list">
-                    <li><a href="">Giới thiệu</a></li>
-                    <li><a href="">Cửa hàng</a></li>
-                    <li><a href="">Chính sách</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="header-middle">
         <div class="container">
             <div class="header-middle-left">
@@ -95,190 +77,91 @@
         </div>
     </div>
 </header>
-<nav class="header-bottom">
-    <div class="container">
-        <ul class="menu-list">
-            <li class="menu-list-item"><a class="menu-link" href="home.html">Trang chủ</a></li>
-            <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a>
-            </li>
-            <li class="menu-list-item" onclick="showCategory('Lúa mì')"><a class="menu-link" href="javascript:">Lúa
-                mì</a></li>
-            <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a>
-            </li>
-            <li class="menu-list-item" onclick="showCategory('Cao lương')"><a class="menu-link" href="javascript:">Cao
-                lương</a></li>
-            <li class="menu-list-item" onclick="showCategory('Kê')"><a class="menu-link" href="javascript:">Kê</a></li>
-            <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a>
-            </li>
-
-        </ul>
-    </div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb-links">
+        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="#">Gạo</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gạo Ông Cua ST25 Organic chuẩn USDA Mỹ (hộp 2kg)</li>
+    </ol>
 </nav>
-<div class="advanced-search">
-    <div class="container">
-        <div class="advanced-search-category">
-            <span>Phân loại </span>
-            <select id="advanced-search-category-select" name="" onchange="searchProducts()">
-                <option>Tất cả</option>
-                <option>Gạo</option>
-                <option>Lúa mì</option>
-                <option>Bắp</option>
-                <option>Cao lương</option>
-                <option>Kê</option>
-                <option>Khác</option>
-            </select>
-        </div>
-        <div class="advanced-search-price">
-            <span>Giá từ</span>
-            <input id="min-price" onchange="searchProducts()" placeholder="tối thiểu" type="number">
-            <span>đến</span>
-            <input id="max-price" onchange="searchProducts()" placeholder="tối đa" type="number">
-            <button id="advanced-search-price-btn"><i class="fa-solid fa-magnifying-glass-dollar"></i></button>
-        </div>
-        <div class="advanced-search-control">
-            <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-solid fa-arrow-up-short-wide"></i>
-            </button>
-            <button id="sort-descending" onclick="searchProducts(2)"><i class="fa-solid fa-arrow-down-wide-short"></i>
-            </button>
-            <button id="reset-search" onclick="searchProducts(0)"><i class="fa-solid fa-arrow-rotate-right"></i>
-            </button>
-            <button onclick="closeSearchAdvanced()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-    </div>
-</div>
-
-<section id="selling-product" class="single-product mt-0 mt-md-5">
+<section id="selling-product" class="single-product mt-0 mt-md-5  ">
     <div class="container-fluid">
-        <div class="row g-5">
-            <div class="col-lg-7">
-                <div class="row flex-column-reverse flex-lg-row">
-                    <div class="col-md-12 col-lg-2">
-                        <!-- Product thumbnail images -->
-                        <div class="product-thumbnails">
-                            <img src="../image/productdetails/gaost25.jpg" alt="Thumbnail 1"
-                                 class="thumb-image img-fluid"
-                                 onclick="changeImage('../image/productdetails/gaost25.jpg')">
-                            <img src="../image/productdetails/gaost25-1.jpg" alt="Thumbnail 2"
-                                 class="thumb-image img-fluid"
-                                 onclick="changeImage('../image/productdetails/gaost25-1.jpg')">
-                            <img src="../image/productdetails/gaost25-2.png" alt="Thumbnail 3"
-                                 class="thumb-image img-fluid"
-                                 onclick="changeImage('../image/productdetails/gaost25-2.png')">
-                            <img src="../image/productdetails/gaost25-3.png" alt="Thumbnail 4"
-                                 class="thumb-image img-fluid"
-                                 onclick="changeImage('../image/productdetails/gaost25-3.png')">
-                            <img src="../image/productdetails/gaost25-4.png" alt="Thumbnail 5"
-                                 class="thumb-image img-fluid"
-                                 onclick="changeImage('../image/productdetails/gaost25-4.png')">
+        <div class="product-details">
+            <div class="row">
+                <!-- Product Images -->
+                <div class="product-images col-md-6 d-flex flex-column align-items-center">
+                    <div class="row flex-column-reverse flex-lg-row">
+                        <div class="col-md-12 col-lg-2">
+                            <div class="product-thumbnails">
+                                <img src="../image/productdetails/gaost25.jpg" alt="Thumbnail 1" class="thumb-image img-fluid" onclick="changeImage('../image/productdetails/gaost25.jpg')" data-large-img="../image/productdetails/gaost25.jpg">
+                                <img src="../image/productdetails/gaost25-1.jpg" alt="Thumbnail 2" class="thumb-image img-fluid" onclick="changeImage('../image/productdetails/gaost25-1.jpg')" data-large-img="../image/productdetails/gaost25-1.jpg">
+                                <img src="../image/productdetails/gaost25-2.png" alt="Thumbnail 3" class="thumb-image img-fluid" onclick="changeImage('../image/productdetails/gaost25-2.png')" data-large-img="../image/productdetails/gaost25-2.png">
+                                <img src="../image/productdetails/gaost25-3.png" alt="Thumbnail 4" class="thumb-image img-fluid" onclick="changeImage('../image/productdetails/gaost25-3.png')" data-large-img="../image/productdetails/gaost25-3.png">
+                                <img src="../image/productdetails/gaost25-4.png" alt="Thumbnail 5" class="thumb-image img-fluid" onclick="changeImage('../image/productdetails/gaost25-4.png')" data-large-img="../image/productdetails/gaost25-4.png">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12 col-lg-10">
-                        <!-- Main product image -->
-                        <div class="product-main-image">
-                            <img id="mainImage" src="../image/productdetails/gaost25.jpg" alt="Main Product"
-                                 class="img-fluid">
+                        <div class="col-md-12 col-lg-10">
+                            <div class="product-main-image">
+                                <img id="mainImage" src="../image/productdetails/gaost25.jpg" alt="Main Product" class="img-fluid" data-large-img="../image/productdetails/gaost25.jpg">
+                                <div class="zoom-lens"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="product-info">
-                    <div class="element-header">
+                <!-- Product Info -->
+                <div class="product-info col-md-5">
+                            <div class="product-info-content">
+                                <div class="recommendation pt-3">
+                                    <span class="tag-likes">Yêu Thích</span>
+                                    <div class="recommended-product">
+                                <div class="element-header">
+                                    <h2 itemprop="name" class="display-6">Gạo Ông Cua ST25 Organic chuẩn USDA Mỹ (hộp 2kg)</h2>
+                                    <div class="rating-container d-flex align-items-center">
+                                        <span class="rating-score">4.9</span>
+                                        <div class="rating">
+                                            <span class="text-primary">&#9733;</span>
+                                            <span class="text-primary">&#9733;</span>
+                                            <span class="text-primary">&#9733;</span>
+                                            <span class="text-primary">&#9733;</span>
+                                            <span class="text-primary">&#9733;</span>
+                                        </div>
+                                        <div class="separator"></div>
+                                        <span class="review-count">5k Đánh Giá</span>
+                                        <div class="separator"></div>
+                                        <span class="sales-count ms-3">22.5k Đã Bán</span>
+                                    </div>
 
-                        <h2 itemprop="name" class="display-6">Gạo Ông Cua ST25 Organic chuẩn USDA Mỹ (hộp 2kg)</h2>
-                        <div class="rating-container d-flex gap-0 align-items-center">
-                            <div class="rating" data-rating="1">
-                                <span class="text-primary" style="font-size: 32px;">★</span><!-- Ký tự sao màu chính -->
-                            </div>
-                            <div class="rating" data-rating="2">
-                                <span class="text-primary" style="font-size: 32px;">★</span>
-                            </div>
-                            <div class="rating" data-rating="3">
-                                <span class="text-primary" style="font-size: 32px;">★</span>
-                            </div>
-                            <div class="rating" data-rating="4">
-                                <span class="text-primary" style="font-size: 32px;">★</span>
-                                <!-- Ký tự sao màu chính cho sao thứ 4 -->
-                            </div>
-                            <div class="rating" data-rating="5">
-                                <span class="text-secondary" style="font-size: 32px;">☆</span>
-                                <!-- Ký tự sao rỗng cho nửa sao -->
-                            </div>
-                            <span class="rating-count">(4.5)</span>
-                        </div>
+                                    <div class="product-price-container">
+                                        <div class="product-price">
+                                            <strong class="current-price">đ135.000</strong>
+                                            <del class="old-price">đ140.000</del>
+                                            <span class="discount">-4%</span>
+                                        </div>
+                                    </div>
 
-                        <div class="product-price pt-3 pb-3">
-                            <strong class="text-primary display-6 fw-bold">₫ 190.000</strong>
-                            <del class="ms-2">230.000₫</del>
-                        </div>
+                                    <p>Gạo Ông Cua ST25 Organic (Hữu Cơ) đạt chuẩn gạo hữu cơ của Mỹ (Organic USDA), gạo không biến đổi gen. Gạo ST25 là gạo đạt danh hiệu GẠO NGON NHẤT THẾ GIỚI</p>
 
-                        <p>Gạo Ông Cua ST25 Organic (Hữu Cơ) đạt chuẩn gạo hữu cơ của Mỹ (Organic USDA), gạo không biến
-                            đổi gen.Gạo ST25 là gạo đạt danh hiệu GẠO NGON NHẤT THẾ GIỚI</p>
+                                    <div class="purchase-options">
+                                        <div class="quantity-group">
+                                            <label for="quantity">Số Lượng:</label>
+                                            <div class="quantity-control">
+                                                <button type="button" class="quantity-left-minus btn">-</button>
+                                                <input type="text" id="quantity" name="quantity" class="quantity-input" value="1" min="1" max="100" readonly>
+                                                <button type="button" class="quantity-right-plus btn">+</button>
+                                            </div>
+                                            <div class="stock-number">Còn 4 sản phẩm</div>
+                                        </div>
 
-                        <div class="product-quantity pt-3">
-                            <div class="stock-number text-dark"><em>Còn 4 sản phẩm</em></div>
+                                        <div class="button-group">
+                                            <button type="button" class="btn btn-secondary add-to-cart">
+                                                <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
+                                            </button>
+                                            <button type="button" class="btn btn-primary buy-now">Mua Ngay</button>
+                                        </div>
+                                    </div>
 
-                            <div class="stock-button-wrap">
-                                <div class="input-group product-qty" style="max-width: 150px;">
-    <span class="input-group-btn">
-        <!-- Nút trừ số lượng -->
-        <button type="button" class="quantity-left-minus btn btn-danger btn-number" onclick="changeQuantity(-1)"
-                data-type="minus" data-field="">
-            -
-        </button>
-    </span>
-
-                                    <!-- Input nhập số lượng sản phẩm -->
-                                    <input type="text" id="quantity" name="quantity"
-                                           class="form-control input-number text-center" value="1" min="1" max="100">
-
-                                    <span class="input-group-btn">
-        <!-- Nút cộng số lượng -->
-        <button type="button" class="quantity-right-plus btn btn-success btn-number" onclick="changeQuantity(1)"
-                data-type="plus" data-field="">
-            +
-        </button>
-    </span>
-                                </div>
-
-                                <!-- Nút hành động: Mua ngay hoặc Thêm vào giỏ hàng -->
-                                <div class="qty-button d-flex flex-wrap pt-3">
-                                    <button type="submit" class="btn btn-primary py-3 px-4 text-uppercase me-3 mt-3">Mua
-                                        Ngay
-                                    </button>
-                                    <button type="submit" name="add-to-cart" value="1269"
-                                            class="btn btn-dark py-3 px-4 text-uppercase mt-3">Thêm vào giỏ hàng
-                                    </button>
                                 </div>
                             </div>
-
-                        </div>
-                    </div>
-                    <div class="meta-product py-2">
-                        <div class="meta-item d-flex align-items-baseline">
-                            <h6 class="item-title no-margin pe-2">Mã Sản Phẩm:</h6>
-                            <ul class="select-list list-unstyled d-flex">
-                                <li data-value="S" class="select-item">1223</li>
-                            </ul>
-                        </div>
-                        <div class="meta-item d-flex align-items-baseline">
-                            <h6 class="item-title no-margin pe-2">Category:</h6>
-                            <ul class="select-list list-unstyled d-flex">
-                                <li data-value="S" class="select-item">
-                                    <a href="javascript:">Gạo</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="meta-item d-flex align-items-baseline">
-                            <h6 class="item-title no-margin pe-2">Tags:</h6>
-                            <ul class="select-list list-unstyled d-flex">
-                                <li data-value="S" class="select-item">
-                                    <a>Tươi ngon</a>,
-                                </li>
-                                <li data-value="S" class="select-item">
-                                    <a>Hữu cơ</a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -286,8 +169,6 @@
         </div>
     </div>
 </section>
-
-
 <section class="product-info-tabs py-5">
     <div class="container-fluid">
         <div class="row">
@@ -368,6 +249,19 @@
                             <li>Khối lượng: 2 kg</li>
                             <li>Đóng gói: Hộp giúp bảo quản gạo tốt hơn và giữ được hương vị thơm ngon.</li>
                             <li>Dinh dưỡng:Giàu tinh bột và các vitamin khoáng chất</li>
+                            <li>Danh Mục: Gạo</li>
+                            <li>Kho: 81071</li>
+                            <li>Thương hiệu: Gạo ST25</li>
+                            <li>Chế độ ăn uống: Hữu cơ</li>
+                            <li>Loại gạo: Gạo trắng</li>
+                            <li>Trọng lượng: 5kg</li>
+                            <li>Hạn sử dụng: 6 tháng</li>
+                            <li>Xuất xứ: Việt Nam</li>
+                            <li>Ngày hết hạn: 25-09-2024</li>
+                            <li>Số lượng: 10000</li>
+                            <li>Ngày sản xuất: 25-04-2024</li>
+                            <li>Tên tổ chức chịu trách nhiệm sản xuất: Việt Nam</li>
+                            <li>Gửi từ: TP. Hồ Chí Minh</li>
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="v-pills-reviews" role=
@@ -384,9 +278,9 @@
                                 <div class="col-md-8">
                                     <div class="review-content">
                                         <div class="rating-container d-flex align-items-center">
-                                            <span class="text-primary" style="font-size: 24px;">★★★★☆</span>
+                                            <span class="text-primary" style="font-size: 24px;">★★★★★</span>
                                             <!-- Ký tự sao -->
-                                            <span class="rating-count">(4)</span>
+                                            <span class="rating-count">(5)</span>
                                         </div>
                                         <div class="review-header">
                                             <span class="author-name">Tan Trung</span>
@@ -419,11 +313,73 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="add-review mt-5">
+                            <h3>Đánh giá của bạn </h3>
+                            <p>Email bạn sẽ bị ẩn đi.
+                                Vui lòng điền những dòng *</p>
+                            <form id="form" class="form-group" name="form">
+                                <div class="pb-3">
+                                    <div class="review-rating">
+                                        <span>Đánh giá *</span>
+                                        <div class=
+                                                     "rating-container d-flex align-items-center">
+                                            <div class="rating" data-rating="1">
+                                                <svg width="24" height="24" class=
+                                                        "text-primary">
+                                                    <use xlink:href="#star-solid">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                            <div class="rating" data-rating="2">
+                                                <svg width="24" height="24" class=
+                                                        "text-primary">
+                                                    <use xlink:href="#star-solid">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                            <div class="rating" data-rating="3">
+                                                <svg width="24" height="24" class=
+                                                        "text-primary">
+                                                    <use xlink:href="#star-solid">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                            <div class="rating" data-rating="4">
+                                                <svg width="24" height="24" class=
+                                                        "text-secondary">
+                                                    <use xlink:href="#star-solid">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                            <div class="rating" data-rating="5">
+                                                <svg width="24" height="24" class=
+                                                        "text-secondary">
+                                                    <use xlink:href="#star-solid">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                            <span class=
+                                                          "rating-count">(3.5)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pb-3">
+                                    <label>Thêm nhận xét *</label>
+                                    <textarea class="form-control" placeholder=
+                                            "Write your review here"></textarea>
+                                </div>
+                                <button type="submit" name="submit" class=
+                                        "btn btn-dark btn-large text-uppercase w-100">Submit
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </section>
 <section id="related-products" class="py-5">
     <div class="container">

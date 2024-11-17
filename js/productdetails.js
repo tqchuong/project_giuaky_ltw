@@ -15,19 +15,91 @@
       }
     }
   }
-  // Lấy id từ URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get('id');
+  const minusButton = document.querySelector('.quantity-left-minus');
+  const plusButton = document.querySelector('.quantity-right-plus');
+  const quantityInput = document.querySelector('.quantity-input');
 
+  minusButton.addEventListener('click', () => {
+    let currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+      quantityInput.value = currentValue - 1;
+    }
+  });
 
-  const products = JSON.parse(localStorage.getItem('products'));
-  const productDetail = products.find(product => product.id === parseInt(productId));
+  plusButton.addEventListener('click', () => {
+    let currentValue = parseInt(quantityInput.value);
+    let maxValue = parseInt(quantityInput.getAttribute('max'));
+    if (currentValue < maxValue) {
+      quantityInput.value = currentValue + 1;
+    }
+  });
+  const mainImage = document.getElementById('mainImage');
+  const zoomLens = document.querySelector('.zoom-lens');
+  const imageContainer = document.querySelector('.product-main-image');
+  const thumbnails = document.querySelectorAll('.thumb-image');
 
+  // Tính toán kích thước khung zoom dựa trên tỉ lệ zoom
+  const zoomLevel = 2.4; // Mức độ zoom
+  const lensWidth = imageContainer.offsetWidth / zoomLevel;
+  const lensHeight = imageContainer.offsetHeight / zoomLevel;
+  zoomLens.style.width = lensWidth + 'px';
+  zoomLens.style.height = lensHeight + 'px';
 
-  if (productDetail) {
-    document.getElementById('product-title').innerText = productDetail.title;
-    document.getElementById('product-image').src = productDetail.img;
-    document.getElementById('product-price').innerText = vnd(productDetail.price);
+  // Khởi tạo biến lưu kích thước ảnh gốc
+  let imgWidth, imgHeight;
 
+  // Hàm cập nhật kích thước ảnh gốc
+  function updateImageSize() {
+    const imgRect = mainImage.getBoundingClientRect();
+    imgWidth = imgRect.width;
+    imgHeight = imgRect.height;
   }
 
+  // Gọi hàm cập nhật kích thước ảnh ban đầu
+  updateImageSize();
+  mainImage.addEventListener('mousemove', (e) => {
+    // Tính toán vị trí chuột so với ảnh chính
+    const { left, top } = imageContainer.getBoundingClientRect();
+    let x = e.clientX - left - lensWidth / 2;
+    let y = e.clientY - top - lensHeight / 2;
+
+    // Giới hạn vị trí khung zoom trong phạm vi ảnh
+    x = Math.max(0, Math.min(x, imgWidth - lensWidth));
+    y = Math.max(0, Math.min(y, imgHeight - lensHeight));
+
+    // Cập nhật vị trí khung zoom
+    zoomLens.style.left = x + 'px';
+    zoomLens.style.top = y + 'px';
+
+    // Tính toán vị trí tương ứng trên ảnh lớn (nếu có)
+    const largeImg = mainImage.dataset.largeImg; // Lấy đường dẫn ảnh lớn từ thuộc tính data-large-img
+    if (largeImg) {
+      // Tính toán tỉ lệ vị trí chuột so với ảnh gốc
+      const ratioX = imgWidth / lensWidth;
+      const ratioY = imgHeight / lensHeight;
+      const bgX = -x * ratioX;
+      const bgY = -y * ratioY;
+
+      // Cập nhật background của khung zoom
+      zoomLens.style.backgroundImage = `url(${largeImg})`;
+      zoomLens.style.backgroundPosition = `${bgX}px ${bgY}px`;
+      zoomLens.style.backgroundSize = `${imgWidth * zoomLevel}px ${imgHeight * zoomLevel}px`;
+    }
+  });
+
+  // Ẩn khung zoom khi chuột ra khỏi ảnh
+  imageContainer.addEventListener('mouseleave', () => {
+    zoomLens.style.display = 'none';
+  });
+
+  // Hiển thị khung zoom khi chuột vào ảnh
+  imageContainer.addEventListener('mouseenter', () => {
+    zoomLens.style.display = 'block';
+  });
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', () => {
+      mainImage.src = thumbnail.src;
+      mainImage.dataset.largeImg = thumbnail.dataset.largeImg; // Lấy đường dẫn ảnh lớn từ thumbnail
+      updateImageSize(); // Cập nhật kích thước ảnh gốc
+    });
+  });
