@@ -313,63 +313,24 @@ function resetInterval() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Lấy các phần tử HTML
-    const accountLink = document.querySelector("a[onclick='showAccountInfo()']");
-    const orderHistoryLink = document.querySelector("a[onclick='showOrderHistory()']");
-    const accountUserSection = document.getElementById("account-user");
-    const orderHistorySection = document.getElementById("order-history");
-    const homeSection = document.getElementById("trangchu");
+$(document).ready(function () {
+    // Ẩn tất cả các phần khi tải trang
+    $("#account-user, #order-history").hide();
 
-    // Hàm hiển thị phần "Tài khoản của tôi" và ẩn các phần khác
-    function showAccountInfo() {
-        accountUserSection.style.display = "block";
-        orderHistorySection.style.display = "none";
-        homeSection.style.display = "none";
-    }
+    // Hiển thị "Thông tin tài khoản" khi click
+    $("#user-fullname").on("click", function () {
+        $("#account-user").show(); // Hiển thị phần thông tin tài khoản
+        $("#order-history").hide(); // Ẩn phần lịch sử đơn hàng nếu đang mở
+    });
 
-    // Hàm hiển thị phần "Đơn hàng đã mua" và ẩn các phần khác
-    function showOrderHistory() {
-        accountUserSection.style.display = "none";
-        orderHistorySection.style.display = "block";
-        homeSection.style.display = "none";
-    }
+    // Hiển thị "Lịch sử đơn hàng" khi click
+    $("a[onclick='showOrderHistory()']").on("click", function () {
+        $("#order-history").show(); // Hiển thị phần lịch sử đơn hàng
+        $("#account-user").hide(); // Ẩn phần thông tin tài khoản nếu đang mở
+    });
 
-    // Gắn sự kiện click cho các liên kết
-    if (accountLink) {
-        accountLink.addEventListener("click", function (e) {
-            e.preventDefault(); // Ngăn chặn hành động mặc định
-            showAccountInfo();
-        });
-    }
-
-    if (orderHistoryLink) {
-        orderHistoryLink.addEventListener("click", function (e) {
-            e.preventDefault(); // Ngăn chặn hành động mặc định
-            showOrderHistory();
-        });
-    }
+    // Ẩn tất cả các phần khác khi thoát
+    $("#logout").on("click", function () {
+        $("#account-user, #order-history").hide();
+    });
 });
-
-
-//chuyển động sản phẩm
-const carousel = document.querySelector('.carousel');
-const items = Array.from(carousel.children);
-
-// Nhân đôi các mục trong carousel để tạo hiệu ứng vô tận
-items.forEach(item => {
-    const clone = item.cloneNode(true);
-    carousel.appendChild(clone);
-});
-
-let scrollPosition = 0;
-
-function autoScroll() {
-    scrollPosition += 1;
-    if (scrollPosition >= carousel.scrollWidth / 2) {
-        scrollPosition = 0;
-    }
-    carousel.scrollLeft = scrollPosition;
-    requestAnimationFrame(autoScroll);
-}
-autoScroll();

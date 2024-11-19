@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+// Doi sang dinh dang tien VND
+function vnd(price) {
+    return price.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
+}
+
+
+function increasingNumber(e) {
+    let qty = e.parentNode.querySelector('.input-qty');
+    if (parseInt(qty.value) < qty.max) {
+        qty.value = parseInt(qty.value) + 1;
+    } else {
+        qty.value = qty.max;
+    }
+}
+
+function decreasingNumber(e) {
+    let qty = e.parentNode.querySelector('.input-qty');
+    if (qty.value > qty.min) {
+        qty.value = parseInt(qty.value) - 1;
+    } else {
+        qty.value = qty.min;
+    }
+}
+=======
 
 
 // Open Search Advanced
@@ -20,6 +45,7 @@ function closeSearchAdvanced() {
 
 
 
+>>>>>>> 5b0c51689d982c1276ae8060cf3f229ed3094db1
 
 // Close popup
 
@@ -39,12 +65,61 @@ modalBox.forEach(item => {
 });
 
 function closeModal() {
-    document.querySelectorAll('.modal').forEach(item => {
+    modalContainer.forEach(item => {
         item.classList.remove('open');
     });
-    document.body.style.overflow = "auto";
+    console.log(modalContainer)
+    body.style.overflow = "auto";
 }
 
+
+// Phân trang
+let perPage = 12;
+let currentPage = 1;
+let totalPage = 0;
+let perProducts = [];
+
+function displayList(productAll, perPage, currentPage) {
+    let start = (currentPage - 1) * perPage;
+    let end = (currentPage - 1) * perPage + perPage;
+    let productShow = productAll.slice(start, end);
+    renderProducts(productShow);
+}
+
+function showHomeProduct(products) {
+    let productAll = products.filter(item => item.status == 1)
+    displayList(productAll, perPage, currentPage);
+    setupPagination(productAll, perPage, currentPage);
+}
+
+window.onload = showHomeProduct(JSON.parse(localStorage.getItem('products')))
+
+function setupPagination(productAll, perPage) {
+    document.querySelector('.page-nav-list').innerHTML = '';
+    let page_count = Math.ceil(productAll.length / perPage);
+    for (let i = 1; i <= page_count; i++) {
+        let li = paginationChange(i, productAll, currentPage);
+        document.querySelector('.page-nav-list').appendChild(li);
+    }
+}
+
+function paginationChange(page, productAll, currentPage) {
+    let node = document.createElement(`li`);
+    node.classList.add('page-nav-item');
+    node.innerHTML = `<a href="javascript:;">${page}</a>`;
+    if (currentPage == page) node.classList.add('active');
+    node.addEventListener('click', function () {
+        currentPage = page;
+        displayList(productAll, perPage, currentPage);
+        let t = document.querySelectorAll('.page-nav-item.active');
+        for (let i = 0; i < t.length; i++) {
+            t[i].classList.remove('active');
+        }
+        node.classList.add('active');
+        document.getElementById("home-service").scrollIntoView();
+    })
+    return node;
+}
 
 // Back to top
 window.onscroll = () => {
@@ -55,7 +130,6 @@ window.onscroll = () => {
         backtopTop.classList.remove("active");
     }
 }
-
 
 
 // Hiển thị trang chủ
@@ -313,63 +387,15 @@ function resetInterval() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Lấy các phần tử HTML
-    const accountLink = document.querySelector("a[onclick='showAccountInfo()']");
-    const orderHistoryLink = document.querySelector("a[onclick='showOrderHistory()']");
-    const accountUserSection = document.getElementById("account-user");
-    const orderHistorySection = document.getElementById("order-history");
-    const homeSection = document.getElementById("trangchu");
-
-    // Hàm hiển thị phần "Tài khoản của tôi" và ẩn các phần khác
-    function showAccountInfo() {
-        accountUserSection.style.display = "block";
-        orderHistorySection.style.display = "none";
-        homeSection.style.display = "none";
-    }
-
-    // Hàm hiển thị phần "Đơn hàng đã mua" và ẩn các phần khác
-    function showOrderHistory() {
-        accountUserSection.style.display = "none";
-        orderHistorySection.style.display = "block";
-        homeSection.style.display = "none";
-    }
-
-    // Gắn sự kiện click cho các liên kết
-    if (accountLink) {
-        accountLink.addEventListener("click", function (e) {
-            e.preventDefault(); // Ngăn chặn hành động mặc định
-            showAccountInfo();
-        });
-    }
-
-    if (orderHistoryLink) {
-        orderHistoryLink.addEventListener("click", function (e) {
-            e.preventDefault(); // Ngăn chặn hành động mặc định
-            showOrderHistory();
-        });
-    }
-});
 
 
-//chuyển động sản phẩm
-const carousel = document.querySelector('.carousel');
-const items = Array.from(carousel.children);
 
-// Nhân đôi các mục trong carousel để tạo hiệu ứng vô tận
-items.forEach(item => {
-    const clone = item.cloneNode(true);
-    carousel.appendChild(clone);
-});
 
-let scrollPosition = 0;
 
-function autoScroll() {
-    scrollPosition += 1;
-    if (scrollPosition >= carousel.scrollWidth / 2) {
-        scrollPosition = 0;
-    }
-    carousel.scrollLeft = scrollPosition;
-    requestAnimationFrame(autoScroll);
-}
-autoScroll();
+
+
+
+
+
+
+

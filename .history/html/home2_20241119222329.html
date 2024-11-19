@@ -8,7 +8,7 @@
     <title>FoodMart Store</title>
     <link href="../css/products.css" rel="stylesheet">
     <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/a.css">
 
 
 </head>
@@ -57,8 +57,8 @@
                     <li class="header-middle-right-item dropdown open">
                         <i class="fa-solid fa-user"></i>
                         <div class="auth-container">
-                            <span class="text-dndk">Đăng nhập / Đăng ký</span>
-                            <span class="text-tk" id="user-fullname">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+
+                            <span class="text-tk" id="user-fullname">TQC <i class="fa-sharp fa-solid fa-caret-down"></i></span>
                         </div>
 
 
@@ -67,10 +67,10 @@
 
                         <!-- Các mục đăng nhập và đăng ký sẽ ẩn đi nếu người dùng đã đăng nhập -->
                         <ul class="header-middle-right-menu" id="auth-options">
-                            <li><a href="login.html?loginForm" id="login"><i
-                                    class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a></li>
-                            <li><a href="login.html?registerForm" id="signup"><i class="fa-solid fa-user-plus"></i>
-                                Đăng ký</a></li>
+                            <li><a href="admin.html"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a></li>
+                            <li><a href="javascript:void(0);" onclick="showAccountInfo()"><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
+                            <li><a href="javascript:void(0);" onclick="showOrderHistory()"><i class="fa-solid fa-bag-shopping"></i> Đơn hàng đã mua</a></li>
+                            <li class="border"><a id="logout" href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Thoát tài khoản</a></li>
                         </ul>
                     </li>
                     <li class="header-middle-right-item open">
@@ -169,6 +169,234 @@
             </div>
         </div>
     </div>
+    <div class="container" id="account-user" style="display: none;">
+        <div class="main-account">
+            <div class="main-account-header">
+                <h3>Thông tin tài khoản của bạn</h3>
+                <p>Quản lý thông tin để bảo mật tài khoản</p>
+            </div>
+            <div class="main-account-body">
+                <div class="main-account-body-col">
+                    <form action="" class="info-user">
+                        <!-- Các trường thông tin -->
+                        <div class="form-group">
+                            <label for="infoname" class="form-label">Họ và tên</label>
+                            <input class="form-control" type="text" name="infoname" id="infoname"
+                                placeholder="Thêm họ và tên">
+                        </div>
+                        <div class="form-group">
+                            <label for="infophone" class="form-label">Số điện thoại</label>
+                            <input class="form-control" type="text" name="infophone" id="infophone" disabled="true"
+                                placeholder="Thêm số điện thoại">
+                        </div>
+                        <div class="form-group">
+                            <label for="infoemail" class="form-label">Email</label>
+                            <input class="form-control" type="email" name="infoemail" id="infoemail"
+                                placeholder="Thêm địa chỉ email của bạn">
+                        </div>
+                        <div class="form-group">
+                            <label for="infoaddress" class="form-label">Địa chỉ</label>
+                            <input class="form-control" type="text" name="infoaddress" id="infoaddress"
+                                placeholder="Thêm địa chỉ giao hàng của bạn">
+                        </div>
+                    </form>
+                </div>
+                <div class="main-account-body-col">
+                    <form action="" class="change-password">
+                        <!-- Các trường mật khẩu -->
+                        <div class="form-group">
+                            <label for="" class="form-label">Mật khẩu hiện tại</label>
+                            <input class="form-control" type="password" name="" id="password-cur-info"
+                                placeholder="Nhập mật khẩu hiện tại">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Mật khẩu mới</label>
+                            <input class="form-control" type="password" name="" id="password-after-info"
+                                placeholder="Nhập mật khẩu mới">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Xác nhận mật khẩu mới</label>
+                            <input class="form-control" type="password" name="" id="password-comfirm-info"
+                                placeholder="Nhập lại mật khẩu mới">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="main-account-body-row">
+                <div>
+                    <button id="save-info-user" onclick="changeInformation()"><i
+                            class="fa-regular fa-floppy-disk"></i> Lưu thay đổi</button>
+                </div>
+                <div>
+                    <button id="save-password" onclick="changePassword()"><i class="fa-regular fa-key"></i> Đổi
+                        mật khẩu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="order-history" style="display: none;">
+        <div class="main-account">
+            <div class="main-account-header">
+                <h3>Quản lý đơn hàng của bạn</h3>
+                <p>Xem chi tiết, trạng thái của những đơn hàng đã đặt.</p>
+            </div>
+            <div class="main-account-body">
+                <div class="order-history-section"><div class="order-history-group"><div class="order-history">
+                    <div class="order-history-left">
+                        <img src="./assets/img/products/rau-xao-ngu-sac.png" alt="">
+                        <div class="order-history-info">
+                            <h4>Rau xào ngũ sắc!</h4>
+                            <p class="order-history-note"><i class="fa-light fa-pen"></i> Không có ghi chú</p>
+                            <p class="order-history-quantity">x1</p>
+                        </div>
+                    </div>
+                    <div class="order-history-right">
+                        <div class="order-history-price">
+                            <span class="order-history-current-price">180.000&nbsp;₫</span>
+                        </div>                         
+                    </div>
+                </div><div class="order-history-control">
+                <div class="order-history-status">
+                    <span class="order-history-status-sp no-complete">Đang xử lý</span>
+                    <button id="order-history-detail" onclick="detailOrder('DH8')"><i class="fa-regular fa-eye"></i> Xem chi tiết</button>
+                </div>
+                <div class="order-history-total">
+                    <span class="order-history-total-desc">Tổng tiền: </span>
+                    <span class="order-history-toltal-price">180.000&nbsp;₫</span>
+                </div>
+            </div></div><div class="order-history-group"><div class="order-history">
+                    <div class="order-history-left">
+                        <img src="./assets/img/products/rau-xao-ngu-sac.png" alt="">
+                        <div class="order-history-info">
+                            <h4>Rau xào ngũ sắc!</h4>
+                            <p class="order-history-note"><i class="fa-light fa-pen"></i> Không có ghi chú</p>
+                            <p class="order-history-quantity">x1</p>
+                        </div>
+                    </div>
+                    <div class="order-history-right">
+                        <div class="order-history-price">
+                            <span class="order-history-current-price">180.000&nbsp;₫</span>
+                        </div>                         
+                    </div>
+                </div><div class="order-history-control">
+                <div class="order-history-status">
+                    <span class="order-history-status-sp no-complete">Đang xử lý</span>
+                    <button id="order-history-detail" onclick="detailOrder('DH7')"><i class="fa-regular fa-eye"></i> Xem chi tiết</button>
+                </div>
+                <div class="order-history-total">
+                    <span class="order-history-total-desc">Tổng tiền: </span>
+                    <span class="order-history-toltal-price">180.000&nbsp;₫</span>
+                </div>
+            </div></div><div class="order-history-group"><div class="order-history">
+                    <div class="order-history-left">
+                        <img src="./assets/img/products/banh_lava_pho_mai_nuong.jpeg" alt="">
+                        <div class="order-history-info">
+                            <h4>Bánh lava phô mai nướng!</h4>
+                            <p class="order-history-note"><i class="fa-light fa-pen"></i> Không có ghi chú</p>
+                            <p class="order-history-quantity">x1</p>
+                        </div>
+                    </div>
+                    <div class="order-history-right">
+                        <div class="order-history-price">
+                            <span class="order-history-current-price">180.000&nbsp;₫</span>
+                        </div>                         
+                    </div>
+                </div><div class="order-history-control">
+                <div class="order-history-status">
+                    <span class="order-history-status-sp no-complete">Đang xử lý</span>
+                    <button id="order-history-detail" onclick="detailOrder('DH6')"><i class="fa-regular fa-eye"></i> Xem chi tiết</button>
+                </div>
+                <div class="order-history-total">
+                    <span class="order-history-total-desc">Tổng tiền: </span>
+                    <span class="order-history-toltal-price">180.000&nbsp;₫</span>
+                </div>
+            </div></div><div class="order-history-group"><div class="order-history">
+                    <div class="order-history-left">
+                        <img src="./assets/img/products/com_chien_cua.png" alt="">
+                        <div class="order-history-info">
+                            <h4>Cơm chiên cua!</h4>
+                            <p class="order-history-note"><i class="fa-light fa-pen"></i> Không có ghi chú</p>
+                            <p class="order-history-quantity">x1</p>
+                        </div>
+                    </div>
+                    <div class="order-history-right">
+                        <div class="order-history-price">
+                            <span class="order-history-current-price">280.000&nbsp;₫</span>
+                        </div>                         
+                    </div>
+                </div><div class="order-history-control">
+                <div class="order-history-status">
+                    <span class="order-history-status-sp no-complete">Đang xử lý</span>
+                    <button id="order-history-detail" onclick="detailOrder('DH5')"><i class="fa-regular fa-eye"></i> Xem chi tiết</button>
+                </div>
+                <div class="order-history-total">
+                    <span class="order-history-total-desc">Tổng tiền: </span>
+                    <span class="order-history-toltal-price">280.000&nbsp;₫</span>
+                </div>
+            </div></div><div class="order-history-group"><div class="order-history">
+                    <div class="order-history-left">
+                        <img src="./assets/img/products/com_chien_cua.png" alt="">
+                        <div class="order-history-info">
+                            <h4>Cơm chiên cua!</h4>
+                            <p class="order-history-note"><i class="fa-light fa-pen"></i> Không có ghi chú</p>
+                            <p class="order-history-quantity">x1</p>
+                        </div>
+                    </div>
+                    <div class="order-history-right">
+                        <div class="order-history-price">
+                            <span class="order-history-current-price">280.000&nbsp;₫</span>
+                        </div>                         
+                    </div>
+                </div><div class="order-history-control">
+                <div class="order-history-status">
+                    <span class="order-history-status-sp complete">Đã xử lý</span>
+                    <button id="order-history-detail" onclick="detailOrder('DH4')"><i class="fa-regular fa-eye"></i> Xem chi tiết</button>
+                </div>
+                <div class="order-history-total">
+                    <span class="order-history-total-desc">Tổng tiền: </span>
+                    <span class="order-history-toltal-price">280.000&nbsp;₫</span>
+                </div>
+            </div></div><div class="order-history-group"><div class="order-history">
+                    <div class="order-history-left">
+                        <img src="./assets/img/products/banh_lava_pho_mai_nuong.jpeg" alt="">
+                        <div class="order-history-info">
+                            <h4>Bánh lava phô mai nướng!</h4>
+                            <p class="order-history-note"><i class="fa-light fa-pen"></i> Không có ghi chú</p>
+                            <p class="order-history-quantity">x1</p>
+                        </div>
+                    </div>
+                    <div class="order-history-right">
+                        <div class="order-history-price">
+                            <span class="order-history-current-price">180.000&nbsp;₫</span>
+                        </div>                         
+                    </div>
+                </div><div class="order-history">
+                    <div class="order-history-left">
+                        <img src="./assets/img/products/lau_thai.jpg" alt="">
+                        <div class="order-history-info">
+                            <h4>Set lẩu thái Tomyum!</h4>
+                            <p class="order-history-note"><i class="fa-light fa-pen"></i> Không có ghi chú</p>
+                            <p class="order-history-quantity">x1</p>
+                        </div>
+                    </div>
+                    <div class="order-history-right">
+                        <div class="order-history-price">
+                            <span class="order-history-current-price">699.000&nbsp;₫</span>
+                        </div>                         
+                    </div>
+                </div><div class="order-history-control">
+                <div class="order-history-status">
+                    <span class="order-history-status-sp complete">Đã xử lý</span>
+                    <button id="order-history-detail" onclick="detailOrder('DH3')"><i class="fa-regular fa-eye"></i> Xem chi tiết</button>
+                </div>
+                <div class="order-history-total">
+                    <span class="order-history-total-desc">Tổng tiền: </span>
+                    <span class="order-history-toltal-price">879.000&nbsp;₫</span>
+                </div>
+            </div></div></div>
+            </div>
+        </div>
+    </div>
 
     <div class="container2" >
         <h3>Về chúng tôi</h3>
@@ -199,60 +427,36 @@
         <h2>SẢN PHẨM MỚI</h2>
         <div class="carousel">
             <div class="carousel-item">
-                <img src="../image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg">
+                <img src="../image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg" >
                 <p>Đậu nành lông đông lạnh</p>
                 <span style="color: #B5292F;font-weight: bold;">45.000&nbsp;₫</span>
             </div>
             <div class="carousel-item">
-                <img src="../image/riceproducts/gao-ST21_AAN-300x300.jpg">
+                <img src="../image/riceproducts/gao-ST21_AAN-300x300.jpg" >
                 <p>Gạo ST21</p>
                 <span style="color: #B5292F;font-weight: bold;">29.000&nbsp;₫</span>
             </div>
             <div class="carousel-item">
-                <img src="../image/riceproducts/yen mach.jpg">
+                <img src="../image/riceproducts/yen mach.jpg" >
                 <p>Yến mạch Oatmeal</p>
                 <span style="color: #B5292F;font-weight: bold;">90.000&nbsp;₫</span>
             </div>
             <div class="carousel-item">
-                <img src="../image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg">
+                <img src="../image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg" >
                 <p>Mì 3 miền gà sợi phở</p>
                 <span style="color: #B5292F;font-weight: bold;">5.000&nbsp;₫</span>
             </div>
             <div class="carousel-item">
-                <img src="../image/dong-goi/mi-hao-hao-chua-cay.jpg">
+                <img src="../image/dong-goi/mi-hao-hao-chua-cay.jpg" >
                 <p>Mì hảo hảo chua cay</p>
                 <span style="color: #B5292F;font-weight: bold;">6.000&nbsp;₫</span>
             </div>
             <div class="carousel-item">
-                <img src="../image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg">
+                <img src="../image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg" >
                 <p>Ngũ cốc cho bé</p>
                 <span style="color: #B5292F;font-weight: bold;">60.000&nbsp;₫</span>
             </div>
-        <div class="carousel-item">
-                <img src="../image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg">
-                <p>Đậu nành lông đông lạnh</p>
-                <span style="color: #B5292F;font-weight: bold;">45.000&nbsp;₫</span>
-            </div><div class="carousel-item">
-                <img src="../image/riceproducts/gao-ST21_AAN-300x300.jpg">
-                <p>Gạo ST21</p>
-                <span style="color: #B5292F;font-weight: bold;">29.000&nbsp;₫</span>
-            </div><div class="carousel-item">
-                <img src="../image/riceproducts/yen mach.jpg">
-                <p>Yến mạch Oatmeal</p>
-                <span style="color: #B5292F;font-weight: bold;">90.000&nbsp;₫</span>
-            </div><div class="carousel-item">
-                <img src="../image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg">
-                <p>Mì 3 miền gà sợi phở</p>
-                <span style="color: #B5292F;font-weight: bold;">5.000&nbsp;₫</span>
-            </div><div class="carousel-item">
-                <img src="../image/dong-goi/mi-hao-hao-chua-cay.jpg">
-                <p>Mì hảo hảo chua cay</p>
-                <span style="color: #B5292F;font-weight: bold;">6.000&nbsp;₫</span>
-            </div><div class="carousel-item">
-                <img src="../image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg">
-                <p>Ngũ cốc cho bé</p>
-                <span style="color: #B5292F;font-weight: bold;">60.000&nbsp;₫</span>
-            </div></div>
+        </div>
     </div>
 
     <div class="new-container">
@@ -418,8 +622,7 @@
 </div>
 
 <script src="../js/home.js"></script>
-
-
+<script src="../js/a.js"></script>
 
 </body>
 

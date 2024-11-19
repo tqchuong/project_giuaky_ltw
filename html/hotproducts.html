@@ -5,13 +5,9 @@
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Hot Products</title>
-
-  <link href="../css/home.css" rel="stylesheet">
+  <title>FoodMart Store</title>
+  <link href="../css/products.css" rel="stylesheet">
   <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
-
-
-
 </head>
 
 <body>
@@ -38,7 +34,7 @@
       <div class="header-middle-left">
 
         <div class="logo">
-          <a href="home.html">
+          <a href="">
             <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
                  style="width: 250px; height: auto;">
           </a>
@@ -92,14 +88,33 @@
 <nav class="header-bottom">
   <div class="container">
     <ul class="menu-list">
-      <li class="menu-list-item"><a class="menu-link" href="home.html">Trang chủ</a></li>
-      <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
-      <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
-      <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
-      <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+      <li class="menu-list-item">
+        <a class="menu-link" href="home.html">
+          <i class="fa-sharp fa-regular fa-house " style="color: #B5292F;"></i>
+          Trang chủ
+        </a>
+      </li>
 
-      <li class="menu-list-item"><a class="hotpro-link" href="hotproducts.html">hot
-        <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i></a></li>
+
+      <li class="menu-list-item">
+        <a class="menu-Category" href="products.html">
+          <i class="fa-solid fa-shop" style="padding-right: 5px;color: #B5292F;"></i>
+          Sản phẩm
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="menu-list-item" onclick="showCategory('Tất cả')"><a class="menu-link" href="javascript:">Tất cả</a></li>
+          <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
+          <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
+          <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
+          <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+
+        </ul>
+      </li>
+      <li class="menu-list-item"><a class="hotpro-link" href="hotproducts.html">
+        <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
+        hot</a>
+      </li>
 
     </ul>
 
@@ -138,143 +153,845 @@
 </div>
 <main class="main-wrapper">
   <div class="container" id="trangchu">
+    <div class="home-slider">
+      <div class="slides">
+        <img alt="" src="../image/banner/Banner.png">
+        <img alt="" src="../image/banner/baner2.png">
 
-
+      </div>
+      <div class="controls">
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+      </div>
+    </div>
+    <div class="home-service" id="home-service">
+      <div class="home-service-item">
+        <div class="home-service-item-icon">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div class="home-service-item-content">
+          <h4 class="home-service-item-content-h">GIAO HÀNG NHANH</h4>
+          <p class="home-service-item-content-desc">Cho tất cả đơn hàng</p>
+        </div>
+      </div>
+      <div class="home-service-item">
+        <div class="home-service-item-icon">
+          <i class="fa-solid fa-shield-check"></i>
+        </div>
+        <div class="home-service-item-content">
+          <h4 class="home-service-item-content-h">SẢN PHẨM AN TOÀN</h4>
+          <p class="home-service-item-content-desc">Cam kết chất lượng</p>
+        </div>
+      </div>
+      <div class="home-service-item">
+        <div class="home-service-item-icon">
+          <i class="fa-duotone fa-solid fa-user-headset"></i>
+        </div>
+        <div class="home-service-item-content">
+          <h4 class="home-service-item-content-h">HỖ TRỢ 24/7</h4>
+          <p class="home-service-item-content-desc">Tất cả ngày trong tuần</p>
+        </div>
+      </div>
+      <div class="home-service-item">
+        <div class="home-service-item-icon">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <div class="home-service-item-content">
+          <h4 class="home-service-item-content-h">HOÀN LẠI TIỀN</h4>
+          <p class="home-service-item-content-desc">Nếu không hài lòng</p>
+        </div>
+      </div>
+    </div>
     <div class="home-title-block" id="home-title">
-      <h2 class="home-title">Khám phá sản phẩm Hot</h2>
+      <h2 class="home-title">Khám phá sản phẩm hot của chúng tôi</h2>
     </div>
 
     <div class="home-products" id="home-products">
-    </div>
-    <div class="page-nav">
+
+      <div class="col-product" data-id="6" data-loai="Khoai">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-pro/khoai%20lang%20tim.jpg" alt="Khoai lang tím">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Khoai lang tím</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">15.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">13.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="7" data-loai="Gạo">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-pro/gao%20lut%20dien%20bien.jpg" alt="Gạo lứt đen">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Gạo lứt đen</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">32.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">27.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="11" data-loai="Gạo">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-pro/gao-thien-long.jpg" alt="Gạo thiên long">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Gạo thiên long</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">27.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">23.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="19" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-luongkho/LUONG-KHO-GOLFMAN-2-300x300.jpg" alt="Lương khô Golf Man">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Lương khô Golf Man</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">34.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">29.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="20" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-luongkho/LUONG-KHO-HAPPY-6-300x300.jpg" alt="Lương khô Happy">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Lương khô Happy</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">23.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">20.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="21" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-luongkho/LUONG-KHO-HUONG-QUE-6-300x300.jpg" alt="Lương khô Hương Quê">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Lương khô Hương Quê</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">54.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">46.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-product" data-id="30" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-luongkho/vn-11134207-7r98o-lkkkcys97f6807-300x300.jpg" alt="Lương khô Ruốc Thịt">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Lương khô Ruốc Thịt</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">23.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">20.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="31" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-luongkho/vn-11134207-7r98o-ll2yx5oqggy31a-300x300.jpg" alt="Lương khô Sochola Chip">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Lương khô Sochola Chip</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">50.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">43.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="32" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-luongkho/vn-11134207-7r98o-llf5oh10d2uu86-300x300.jpg" alt="Lương khô Mix vị">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Lương khô Mix vị</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">23.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">20.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="33" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-luongkho/vn-11134207-7r98o-lmrsss8ocp9bb1-300x300.jpg" alt="Lương khô Ăn Kiêng Gạo Lứt">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Lương khô Ăn Kiêng Gạo Lứt</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">24.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">20.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+      <div class="col-product" data-id="59" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-dokho/mien_dong_symply_food_chay_tot_market_d77a32bfcd604c39826413bac3f60794_large.jpg" alt="Miến dong">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Miến dong</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="60" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/cereal/bot-ngu-coc-dinh-duong-damtuh-han-quoc-50-goi-5(1).jpg" alt="Bột ngũ cốc dinh dưỡng">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Bột ngũ cốc dinh dưỡng</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="61" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/cereal/Bot-ngu-coc-minmin-29-hat-8.jpg" alt="Bột ngũ cốc minmin">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Bột ngũ cốc minmin</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="62" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/cereal/ngu-coc-abalanca.jpg" alt="Ngũ cốc abalanca">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Ngũ cốc abalanca</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="63" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/cereal/ngu-coc-an-chay.jpg" alt="Ngũ cốc ăn chay">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Ngũ cốc ăn chay</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="64" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/cereal/ngu-coc-an-chay2.jpg" alt="Ngũ cốc ăn chay">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Ngũ cốc ăn chay</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="65" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/cereal/Ngu-coc-an-kieng-EURO-DIET-CEREAL-20-goi-600x600.jpg" alt="Ngũ cốc ăn kiêng">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Ngũ cốc ăn kiêng</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="66" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/cereal/ngu-coc-calbe.jpg" alt="Ngũ cốc Calbe">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Ngũ cốc Calbe</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="67" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg" alt="Ngũ cốc cho bé">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Ngũ cốc cho bé</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">19.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">17.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-product" data-id="75" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/dong-goi/chao-tuoi-luon-dau-xanh-cay-thi-goi-260g-202401021618587467.jpg" alt="Cháo tươi lươn đậu xanh">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Cháo tươi lươn đậu xanh</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">17.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">15.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="76" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/dong-goi/chao-tuoi-thit-bo-cay-thi-goi-260g-202309032058365692.jpg" alt="Cháo tươi thịt bò cà rốt">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Cháo tươi thịt bò cà rốt</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">16.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">14.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-product" data-id="85" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/dong-goi/mi-gau-do-tom-va-ga-goi-63g-202407061656540859.jpg" alt="Mì gấu đỏ tôm và gà">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Mì gấu đỏ tôm và gà</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">18.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">16.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="86" data-loai="Khác">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/dong-goi/mi-hao-hao-chua-cay.jpg" alt="Mì hảo hảo chua cay">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">Mì hảo hảo chua cay</a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">14.500&nbsp;₫</span>&nbsp;
+                <span class="current-price">12.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+      <div class="col-product" data-id="135" data-loai="Khoai">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-khoai1/KHOAI TÂY CẮT THẲNG FARM FRITES FINEST 7MM.jpg" alt="KHOAI TÂY CẮT THẲNG FARM 7mm ">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">KHOAI TÂY CẮT THẲNG FARM 7mm </a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">73.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">62.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="136" data-loai="Khoai">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-khoai1/KHOAI TÂY CẮT THẲNG FARM FRITES FINEST 10MM.jpg" alt="KHOAI TÂY CẮT THẲNG FARM 10mm ">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">KHOAI TÂY CẮT THẲNG FARM 10mm </a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">85.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">72.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="137" data-loai="Khoai">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-khoai1/KHOAI TÂY CẮT THẲNG POMMES FRITES JULIENNE 14 - 7MM.jpg" alt="KHOAI TÂY CẮT THẲNG POMMES ">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">KHOAI TÂY CẮT THẲNG POMMES </a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">48.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">41.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="138" data-loai="Khoai">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-khoai1/KHOAI TÂY CẮT THẲNG POMMES FRITES  38 - 9.5MM.jpg" alt="KHOAI TÂY CẮT THẲNG POMMES 9.5mm ">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">KHOAI TÂY CẮT THẲNG POMMES 9.5mm </a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">29.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">25.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-product" data-id="139" data-loai="Khoai">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-khoai1/KHOAI TÂY CẮT THẲNG SIÊU GIÒN AVIKO SUPERCRUNCH THICK CUT 18MM.jpg" alt="KHOAI TÂY CẮT THẲNG SIÊU GIÒN AVIKO ">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">KHOAI TÂY CẮT THẲNG SIÊU GIÒN AVIKO </a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">56.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">48.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-product" data-id="145" data-loai="Khoai">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-khoai1/KHOAI TÂY CẮT THẲNG 11MM SIÊU DÀI AVIKO-11 AVIKO SUPER LONG AAA-2,5KG.jpg" alt="KHOAI TÂY CẮT THẲNG 11MM SIÊU DÀI AVIKO ">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">KHOAI TÂY CẮT THẲNG 11MM SIÊU DÀI AVIKO </a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">45.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">38.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-product" data-id="150" data-loai="Khoai">
+        <article class="card-product">
+          <div class="card-header">
+            <a href="#" class="card-image-link">
+              <img class="card-image" src="../image/img-khoai1/KHOAI TÂY GRATIN TOMATO &amp; MOZZARELA.jpg" alt="KHOAI TÂY GRATIN TOMATO ">
+            </a>
+          </div>
+          <div class="food-info">
+            <div class="card-content">
+              <div class="card-title">
+                <a href="#" class="card-title-link">KHOAI TÂY GRATIN TOMATO </a>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-price">
+                <span class="current-price" style="text-decoration: line-through; color: #999;">48.000&nbsp;₫</span>&nbsp;
+                <span class="current-price">41.000&nbsp;₫</span>
+              </div>
+              <div class="product-buy">
+                <button class="card-button order-item"><i class="fa-solid fa-cart-plus"></i> Đặt hàng</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div></div>
+
+    <div class="page-nav" id="page-nav">
       <ul class="page-nav-list">
       </ul>
-      <div class="detail-order-content">
-      </div>
     </div>
-    <div class="modal product-detail">
-      <button class="modal-close close-popup"><i class="fa-thin fa-xmark"></i></button>
-      <div class="modal-container mdl-cnt" id="product-detail-content">
-      </div>
-    </div>
+
+
   </div>
-  <div class="container" id="account-user" style="display: none;">
-    <div class="main-account">
-      <div class="main-account-header">
-        <h3>Thông tin tài khoản của bạn</h3>
-        <p>Quản lý thông tin để bảo mật tài khoản</p>
-      </div>
-      <div class="main-account-body">
-        <div class="main-account-body-col">
-          <form action="" class="info-user">
-            <!-- Các trường thông tin -->
-            <div class="form-group">
-              <label for="infoname" class="form-label">Họ và tên</label>
-              <input class="form-control" type="text" name="infoname" id="infoname"
-                     placeholder="Thêm họ và tên">
-            </div>
-            <div class="form-group">
-              <label for="infophone" class="form-label">Số điện thoại</label>
-              <input class="form-control" type="text" name="infophone" id="infophone" disabled="true"
-                     placeholder="Thêm số điện thoại">
-            </div>
-            <div class="form-group">
-              <label for="infoemail" class="form-label">Email</label>
-              <input class="form-control" type="email" name="infoemail" id="infoemail"
-                     placeholder="Thêm địa chỉ email của bạn">
-            </div>
-            <div class="form-group">
-              <label for="infoaddress" class="form-label">Địa chỉ</label>
-              <input class="form-control" type="text" name="infoaddress" id="infoaddress"
-                     placeholder="Thêm địa chỉ giao hàng của bạn">
-            </div>
-          </form>
-        </div>
-        <div class="main-account-body-col">
-          <form action="" class="change-password">
-            <!-- Các trường mật khẩu -->
-            <div class="form-group">
-              <label for="" class="form-label">Mật khẩu hiện tại</label>
-              <input class="form-control" type="password" name="" id="password-cur-info"
-                     placeholder="Nhập mật khẩu hiện tại">
-            </div>
-            <div class="form-group">
-              <label for="" class="form-label">Mật khẩu mới</label>
-              <input class="form-control" type="password" name="" id="password-after-info"
-                     placeholder="Nhập mật khẩu mới">
-            </div>
-            <div class="form-group">
-              <label for="" class="form-label">Xác nhận mật khẩu mới</label>
-              <input class="form-control" type="password" name="" id="password-comfirm-info"
-                     placeholder="Nhập lại mật khẩu mới">
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="main-account-body-row">
-        <div>
-          <button id="save-info-user" onclick="changeInformation()"><i
-                  class="fa-regular fa-floppy-disk"></i> Lưu thay đổi</button>
-        </div>
-        <div>
-          <button id="save-password" onclick="changePassword()"><i class="fa-regular fa-key"></i> Đổi
-            mật khẩu</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container" id="order-history" style="display: none;">
-    <div class="main-account">
-      <div class="main-account-header">
-        <h3>Quản lý đơn hàng của bạn</h3>
-        <p>Xem chi tiết, trạng thái của những đơn hàng đã đặt.</p>
-      </div>
-      <div class="main-account-body">
-        <div class="order-history-section">
-        </div>
-      </div>
-    </div>
-  </div>
+
+
 </main>
 
 <footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-top-content">
-        <div class="logo">
-          <a href="">
-            <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
-                 style="width: 250px; height: auto;">
-          </a>
 
-        </div>
-        <div class="footer-top-subbox">
-          <div class="footer-top-subs">
-            <h2 class="footer-top-subs-title">Đăng ký nhận tin</h2>
-            <p class="footer-top-subs-text">Nhận thông tin mới nhất từ chúng tôi</p>
-          </div>
-          <form class="form-ground">
-            <input class="form-ground-input" placeholder="Nhập email của bạn" type="email">
-            <button class="form-ground-btn">
-              <span>ĐĂNG KÝ</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="widget-area">
     <div class="container">
       <div class="widget-row">
-        <div class="widget-row-col-1">
-          <h3 class="widget-title">Về chúng tôi</h3>
-          <div class="widget-row-col-content">
-            <p>Chúng tôi cam kết kiểm soát chất lượng nghiêm ngặt
-              và không ngừng cải tiến sản phẩm để đáp ứng nhu cầu
-              của khách hàng. Sức khỏe và sự hài lòng của bạn là
-              ưu tiên hàng đầu của chúng tôi.</p>
+        <div class="widget-row-col">
+          <div class="logo">
+            <a href="">
+              <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
+                   style="width: 250px; height: auto;">
+            </a>
           </div>
+          <h4 style="padding: 5px 0 5px 10px">Kết nối với chúng tôi</h4>
           <div class="widget-social">
             <div class="widget-social-item">
               <a href="">
@@ -299,73 +1016,62 @@
           </div>
         </div>
         <div class="widget-row-col">
-          <h3 class="widget-title">Liên kết</h3>
+          <h3 class="widget-title">Liên hệ</h3>
+          <p><b>Trụ sở chính:</b> VQCR+GP6, khu phố 6, Thủ Đức, Hồ Chí Minh, Việt Nam</p>
+          <p><b>Điện thoại:</b> 0123 456 789 </p>
+          <p><b>Fax:</b>  1234 567 890</p>
+          <p><b>Email:</b> abc@domain.com</p>
+        </div>
+        <div class="widget-row-col">
+          <h3 class="widget-title">Chính sách</h3>
           <ul class="widget-contact">
             <li class="widget-contact-item">
               <a href="">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>Về chúng tôi</span>
+                <span>Chính sách thanh toán</span>
               </a>
             </li>
             <li class="widget-contact-item">
               <a href="">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>Thực đơn</span>
+                <span>Chính sách giao hàng</span>
               </a>
             </li>
             <li class="widget-contact-item">
               <a href="">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>Điều khoản</span>
+                <span>Chính sách đổi trả</span>
               </a>
             </li>
             <li class="widget-contact-item">
               <a href="">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>Liên hệ</span>
+                <span>Chính sách xuất hoá đơn GTGT</span>
               </a>
             </li>
-            <li class="widget-contact-item">
-              <a href="">
-                <i class="fa-solid fa-arrow-right"></i>
-                <span>Tin tức</span>
-              </a>
-            </li>
+
           </ul>
         </div>
 
-        <div class="widget-row-col-1">
-          <h3 class="widget-title">Liên hệ</h3>
-          <div class="contact">
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="contact-content">
-                <span>FIT_NLUHCM</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="contact-content contact-item-phone">
-                <span>0123 456 789</span>
-                <br>
-                <span>0987 654 321</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="contact-content conatct-item-email">
-                <span>abc@domain.com</span><br />
-                <span>xyz@domain.com</span>
-              </div>
-            </div>
-          </div>
+        <div class="widget-row-col">
+          <h3 class="widget-title">Chăm sóc khách hàng</h3>
+          <ul class="widget-contact">
+            <li class="widget-contact-item">
+              <a href="">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Điều khoản sử dụng</span>
+              </a>
+            </li>
+            <li class="widget-contact-item">
+              <a href="">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Hướng dẫn mua hàng</span>
+              </a>
+            </li>
+
+          </ul>
         </div>
+
 
       </div>
     </div>
@@ -374,14 +1080,14 @@
 <div class="back-to-top">
   <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
 </div>
-<script src="../js/listProduct.js"></script>
-<script src="../js/listHotProduct.js"></script>
-<script src="../js/hotproducts.js"></script>
-<script src="../js/login.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    updateHotProducts();
-  });
-</script>
+
+<div class="chat-box">
+  <a href="#">💬</a>
+</div>
+
+<script src="../js/home.js"></script>
+
+
 </body>
+
 </html>

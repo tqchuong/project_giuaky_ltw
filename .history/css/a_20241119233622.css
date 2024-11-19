@@ -74,44 +74,31 @@ ul li {
 /*san pham tu chay*/
 
 .carousel-container {
-    width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
-    padding: 20px 0;
-}
-
-.carousel-container h2 {
-    color: #B5292F;
-    margin-bottom: 20px;
 }
 
 .carousel {
     display: flex;
     overflow: hidden;
-    position: relative;
-    width: 100%;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
 
 .carousel-item {
-    min-width: 200px;
+    flex: 0 0 auto;
+    width: 200px;
     margin: 0 10px;
     text-align: center;
-    flex-shrink: 0;
-    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item img {
-    width: 150px;
-    height: 130px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-.carousel-item p {
-    font-size: 14px;
-    font-weight: bold;
-    color: #555;
-}
 
 
 /*new-container*/

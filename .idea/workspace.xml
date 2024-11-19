@@ -5,22 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc169b4d-c39b-40cc-966d-618cafac9b50" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/html/home2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/a.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shoppingcart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/et --hard HEAD@{5}" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/a.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/a.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/about.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin-responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/hotproducts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/checkout.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/hotproducts.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/hotproducts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shoppingcart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/productdetails3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/productdetails4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/productdetails7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/checkout.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/hotproducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/hotproducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/listHotProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listHotProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tash pop" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/hotproducts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/listHotProduct.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/productdetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/shoppingcart.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="TypeScript File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
@@ -47,26 +64,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.admin.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.hotproducts.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hmc&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;V:/LTW/Project&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.about.html.executor": "Run",
+    "JavaScript Debug.admin.html.executor": "Run",
+    "JavaScript Debug.home.html.executor": "Run",
+    "JavaScript Debug.home1.html.executor": "Run",
+    "JavaScript Debug.home2.html.executor": "Run",
+    "JavaScript Debug.hotproducts.html.executor": "Run",
+    "JavaScript Debug.login.html.executor": "Run",
+    "JavaScript Debug.productdetails3.html.executor": "Run",
+    "JavaScript Debug.products.html.executor": "Run",
+    "JavaScript Debug.shoppingcart.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "hmc",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "V:/LTW/Project/html",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="V:\LTW\Project\html" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -89,7 +117,20 @@
       <workItem from="1731308009561" duration="11348000" />
       <workItem from="1731337597378" duration="4282000" />
       <workItem from="1731379611533" duration="5375000" />
-      <workItem from="1731422573645" duration="2574000" />
+      <workItem from="1731422573645" duration="3530000" />
+      <workItem from="1731465074334" duration="17906000" />
+      <workItem from="1731593393330" duration="4776000" />
+      <workItem from="1731599020463" duration="180000" />
+      <workItem from="1731599216487" duration="107000" />
+      <workItem from="1731599336108" duration="76000" />
+      <workItem from="1731599520150" duration="358000" />
+      <workItem from="1731728937014" duration="1582000" />
+      <workItem from="1731752622314" duration="3765000" />
+      <workItem from="1731775691934" duration="4740000" />
+      <workItem from="1731812152883" duration="2204000" />
+      <workItem from="1731828396441" duration="12482000" />
+      <workItem from="1731904808170" duration="30522000" />
+      <workItem from="1731987329587" duration="21127000" />
     </task>
     <servers />
   </component>

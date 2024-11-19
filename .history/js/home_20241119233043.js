@@ -351,8 +351,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-//chuyển động sản phẩm
 const carousel = document.querySelector('.carousel');
 const items = Array.from(carousel.children);
 
@@ -367,9 +365,14 @@ let scrollPosition = 0;
 function autoScroll() {
     scrollPosition += 1;
     if (scrollPosition >= carousel.scrollWidth / 2) {
+        // Khi cuộn đến hết nửa đầu, quay lại vị trí ban đầu
         scrollPosition = 0;
     }
-    carousel.scrollLeft = scrollPosition;
-    requestAnimationFrame(autoScroll);
+    carousel.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+    });
 }
-autoScroll();
+
+// Tự động cuộn mỗi 30ms
+setInterval(autoScroll, 30);
