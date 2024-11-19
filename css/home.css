@@ -1779,3 +1779,47 @@ textarea {
     height: 100px;
     font-size: 16px;
 }
+.header-middle-center {
+    display: flex;
+    align-items: center;
+}
+
+.form-search {
+    display: flex;
+    flex-grow: 1; /* Để kéo dài vào không gian còn lại */
+}
+
+.form-search-input {
+    flex-grow: 1; /* Để ô tìm kiếm chiếm không gian còn lại */
+}
+
+.discount-code-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #f0ad4e;
+    border-radius: 5px;
+    padding: 10px;
+    color: #333;
+    margin-left: auto; /* Tạo khoảng cách với ô tìm kiếm */
+    margin-right: 20px;
+    transition: background-color 0.3s;
+    font-size: 12px;  /* Giảm kích thước chữ nếu cần */
+}
+
+.discount-code-button:hover {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.icon {
+    background-color: #f0ad4e;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px; /* Điều chỉnh khoảng cách */
+}
+
+.text {
+    font-size: 12px; /* Giảm kích thước chữ */
+}
