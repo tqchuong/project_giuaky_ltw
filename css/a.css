@@ -1030,20 +1030,19 @@ header {
 }
 
 .breadcrumb-links {
-    background-color: #f8f9fa; /* Màu nền sáng cho breadcrumb */
-    padding: 15px;
+    background-color: #f8f9fa; /* Màu nền sáng */
+    padding: 15px 15px 15px 250px; /* Dịch sang trái bằng cách tăng padding bên trái */
     border-radius: 5px; /* Bo góc */
     display: flex;
-    justify-content: center; /* Căn sang trái */
-    margin-right: 450px;
+    justify-content: flex-start; /* Căn trái */
     text-align: left;
-    margin-top: 10px; /* Khoảng cách phía trên để tránh chồng lên logo */
-
+    margin-top: 10px; /* Khoảng cách phía trên */
+    box-sizing: border-box; /* Gồm padding trong kích thước */
 }
 
 .breadcrumb-item {
     display: inline;
-    font-size: 17px; /* Tăng kích thước chữ */
+    font-size: 20px; /* Tăng kích thước chữ */
 
 }
 
@@ -1085,36 +1084,37 @@ header {
 }
 
 .rating-container {
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử ngang hàng */
+    align-items: center; /* Căn giữa theo trục dọc */
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    flex-wrap: nowrap; /* Ngăn nội dung xuống dòng */
 }
 
 .rating-score {
     font-size: 24px; /* Tăng kích thước điểm số */
     font-weight: bold;
     color: #ffcc00; /* Màu vàng cho điểm số */
-    margin-right: 5px;
+    white-space: nowrap; /* Ngăn xuống dòng */
 }
 
-.rating span {
+.rating {
+    display: flex; /* Sao cũng được sắp xếp ngang */
     color: #ffcc00; /* Màu vàng cho các sao */
-    font-size: 24px; /* Tăng kích thước sao */
+    font-size: 20px; /* Kích thước sao */
+}
+
+.separator {
+    width: 1px; /* Độ rộng đường phân cách */
+    height: 20px; /* Chiều cao đường phân cách */
+    background-color: #e0e0e0; /* Màu xám cho đường phân cách */
+    flex-shrink: 0; /* Giữ nguyên kích thước, không co lại */
 }
 
 .review-count,
 .sales-count {
-    margin-left: 10px;
-    color: #6c757d; /* Màu xám cho số lượng đánh giá và bán */
-    font-size: 20px; /* Tăng kích thước cho lượt đánh giá và bán */
-}
-
-/* Đường gạch ngang */
-.separator {
-    width: 1px;
-    height: 30px; /* Tăng chiều cao đường gạch ngang */
-    background-color: #e0e0e0; /* Màu sắc của đường gạch ngang */
-    margin: 0 15px; /* Khoảng cách bên trái và bên phải */
+    font-size: 20px; /* Kích thước chữ */
+    color: #6c757d; /* Màu xám */
+    white-space: nowrap; /* Không cho xuống dòng */
 }
 
 .col-lg-5 {
@@ -1302,24 +1302,7 @@ header {
     font-size: 16px;
 }
 
-/* CSS cho màn hình lớn (máy tính) */
-.product-image {
-    width: 500px;
-    height: auto;
-}
 
-/* CSS cho màn hình nhỏ (điện thoại) */
-@media (max-width: 768px) {
-    .product-image {
-        width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng màn hình */
-        height: auto;
-    }
-
-
-    .button-group .btn {
-        width: 100%; /* Các nút chiếm toàn bộ chiều rộng */
-    }
-}
 
 .product-main-image {
     position: relative; /* Để định vị khung zoom */
@@ -1332,6 +1315,7 @@ header {
     border: 1px solid #ccc;
     /* Ban đầu ẩn khung zoom */
     display: none;
+
     /* ... thêm các thuộc tính CSS cho khung zoom (kích thước, background, ...) */
 }
 
@@ -1369,21 +1353,23 @@ header {
 }
 
 .single-product.mt-0.mt-md-5 {
-    margin-right: 140px;
+    margin-right: 170px;
     margin-left: 100px;
     margin-bottom: 50px;
 }
 
 .product-images {
     display: flex;
-    flex-direction: column; /* Hình ảnh thumbnail xếp dọc */
-    justify-content: center; /* Căn giữa hình ảnh trong phần của nó */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 
 .product-main-image {
     max-height: 1000px; /* Đặt chiều cao tối đa cho ảnh chính */
+
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1391,13 +1377,13 @@ header {
 
 img.img-fluid {
     max-height: 100%; /* Đảm bảo hình ảnh không bị vỡ */
-    max-width: 100%;
+    max-width: 110%;
     object-fit: contain; /* Đảm bảo ảnh giữ tỷ lệ */
 }
 
 .product-thumbnails img {
-    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
-    height: calc(566px / 5 - 8px);
+    width: 190%; /* Chiếm toàn bộ chiều rộng của container */
+    height: calc(600px / 5 - 8px);
     object-fit: cover; /* Thay đổi object-fit */
     margin-bottom: 10px;
     border-radius: 5px; /* Bo tròn góc ảnh (nếu muốn) */
@@ -1405,18 +1391,14 @@ img.img-fluid {
 }
 
 .product-main-image img {
-    width: 100%;
-    height: 566px; /* Chiều cao cố định */
-    object-fit: cover; /* Lấp đầy vùng chứa, có thể cắt một chút hình ảnh */
+    width: 700px;
+    height: 600px; /* Chiều cao cố định */
+    object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-    .product-main-image img {
-        height: auto; /* Để hình ảnh tự co giãn trên màn hình nhỏ */
-    }
-}
+
 .image-holder {
     width: 100%; /* Đặt chiều rộng cố định */
     height: 100%; /* Đặt chiều cao cố định */
@@ -1433,3 +1415,80 @@ margin-right: 120px ;
     margin-left: 80px;
 }
 
+.stars {
+    display: flex;
+    direction: ltr; /* Các ngôi sao nằm ngang */
+    cursor: pointer;
+}
+
+.stars span {
+    font-size: 2rem; /* Kích thước ngôi sao */
+    color: #ddd; /* Màu xám cho các ngôi sao chưa chọn */
+    transition: color 0.2s ease-in-out;
+}
+
+.stars span.hovered,
+.stars span.selected {
+    color: #ffcc00; /* Màu vàng cho các ngôi sao khi hover hoặc được chọn */
+}
+
+.btn-dark {
+width: 50% !important;
+
+}
+
+.form-control{
+    width: 50% !important;
+
+}
+.btn-dark {
+    --bs-btn-color: #fff; /* Text color */
+    --bs-btn-bg: var(--red); /* Red background */
+    --bs-btn-border-color: #d32f2f; /* Red border */
+    --bs-btn-hover-color: #fff; /* Text color on hover */
+    --bs-btn-hover-bg: #c62828; /* Darker red on hover */
+    --bs-btn-hover-border-color: #b71c1c; /* Darker red border on hover */
+    --bs-btn-focus-shadow-rgb: 211, 47, 47; /* Focus shadow color */
+    --bs-btn-active-color: #fff; /* Text color when active */
+    --bs-btn-active-bg: #b71c1c; /* Darker red background when active */
+    --bs-btn-active-border-color: #b71c1c; /* Darker red border when active */
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff; /* Text color for disabled state */
+    --bs-btn-disabled-bg: #d32f2f; /* Red background for disabled state */
+    --bs-btn-disabled-border-color: #d32f2f; /* Red border for disabled state */
+}
+
+.goback-button {
+
+    background-color: white; /* Màu nền nút */
+    border-radius: 50%; /* Tạo hình tròn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    cursor: pointer; /* Con trỏ chuột dạng tay */
+    display: flex; /* Dùng để căn giữa icon */
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.goback-button img {
+    width: 64px;
+    height: 64px;
+}
+
+.goback-button:hover {
+    background-color: #f0f0f0; /* Hiệu ứng hover */
+}
+.goback-button {
+
+    top: 20px; /* Điều chỉnh giá trị top */
+    left: 15px; /* Điều chỉnh giá trị left */
+    z-index: 1000;
+}
+.quantity-group{
+    margin-top: 20px;
+}
+
+.rating-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}

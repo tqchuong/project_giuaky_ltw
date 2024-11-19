@@ -39,7 +39,7 @@
   const thumbnails = document.querySelectorAll('.thumb-image');
 
   // Tính toán kích thước khung zoom dựa trên tỉ lệ zoom
-  const zoomLevel = 2.4; // Mức độ zoom
+  const zoomLevel = 2.5; // Mức độ zoom
   const lensWidth = imageContainer.offsetWidth / zoomLevel;
   const lensHeight = imageContainer.offsetHeight / zoomLevel;
   zoomLens.style.width = lensWidth + 'px';
@@ -86,7 +86,6 @@
       zoomLens.style.backgroundSize = `${imgWidth * zoomLevel}px ${imgHeight * zoomLevel}px`;
     }
   });
-
   // Ẩn khung zoom khi chuột ra khỏi ảnh
   imageContainer.addEventListener('mouseleave', () => {
     zoomLens.style.display = 'none';
@@ -103,3 +102,45 @@
       updateImageSize(); // Cập nhật kích thước ảnh gốc
     });
   });
+
+  // Lấy tất cả các ngôi sao và phần hiển thị số sao được chọn
+  const stars = document.querySelectorAll("#starRating span");
+  const ratingValue = document.getElementById("ratingValue");
+
+  // Thêm sự kiện click cho từng ngôi sao
+  stars.forEach((star, index) => {
+    star.addEventListener("click", () => {
+      const value = star.getAttribute("data-value"); // Lấy giá trị sao được chọn
+      ratingValue.textContent = value; // Hiển thị số sao được chọn
+
+      // Xóa trạng thái selected khỏi tất cả các ngôi sao
+      stars.forEach((s) => s.classList.remove("selected"));
+
+      // Thêm trạng thái selected cho các ngôi sao từ đầu đến ngôi sao được chọn
+      for (let i = 0; i <= index; i++) {
+        stars[i].classList.add("selected");
+      }
+    });
+  });
+
+  // Thêm hiệu ứng hover qua từng ngôi sao
+  stars.forEach((star, index) => {
+    star.addEventListener("mouseover", () => {
+      // Xóa trạng thái hovered khỏi tất cả các ngôi sao
+      stars.forEach((s) => s.classList.remove("hovered"));
+
+      // Thêm trạng thái hovered cho các ngôi sao từ đầu đến ngôi sao được hover
+      for (let i = 0; i <= index; i++) {
+        stars[i].classList.add("hovered");
+      }
+    });
+
+    star.addEventListener("mouseout", () => {
+      // Xóa trạng thái hovered khi chuột rời
+      stars.forEach((s) => s.classList.remove("hovered"));
+    });
+  });
+
+  function goBack() {
+    window.history.back(); // Quay lại trang trước đó
+  }

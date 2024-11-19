@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="author" content="">
@@ -77,19 +78,25 @@
         </div>
     </div>
 </header>
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb-links">
-        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-        <li class="breadcrumb-item"><a href="#">Gạo</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Gạo Ông Cua ST25 Organic chuẩn USDA Mỹ (hộp 2kg)</li>
-    </ol>
-</nav>
+<!--<div class="breadcrumb-container">-->
+<!--    <nav aria-label="breadcrumb">-->
+<!--        <ol class="breadcrumb-links">-->
+<!--            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>-->
+<!--            <li class="breadcrumb-item"><a href="#">Gạo</a></li>-->
+<!--            <li class="breadcrumb-item active" aria-current="page">Gạo Ông Cua ST25 Organic chuẩn USDA Mỹ (hộp 2kg)</li>-->
+<!--        </ol>-->
+<!--    </nav>-->
+<!--</div>-->
 <section id="selling-product" class="single-product mt-0 mt-md-5  ">
+
     <div class="container-fluid">
+
         <div class="product-details">
+
             <div class="row">
                 <!-- Product Images -->
                 <div class="product-images col-md-6 d-flex flex-column align-items-center">
+
                     <div class="row flex-column-reverse flex-lg-row">
                         <div class="col-md-12 col-lg-2">
                             <div class="product-thumbnails">
@@ -107,6 +114,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- Product Info -->
                 <div class="product-info col-md-5">
@@ -315,59 +323,21 @@
                         </div>
                         <div class="add-review mt-5">
                             <h3>Đánh giá của bạn </h3>
-                            <p>Email bạn sẽ bị ẩn đi.
-                                Vui lòng điền những dòng *</p>
+                            <p>Vui lòng điền những dòng *</p>
                             <form id="form" class="form-group" name="form">
-                                <div class="pb-3">
-                                    <div class="review-rating">
-                                        <span>Đánh giá *</span>
-                                        <div class=
-                                                     "rating-container d-flex align-items-center">
-                                            <div class="rating" data-rating="1">
-                                                <svg width="24" height="24" class=
-                                                        "text-primary">
-                                                    <use xlink:href="#star-solid">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                            <div class="rating" data-rating="2">
-                                                <svg width="24" height="24" class=
-                                                        "text-primary">
-                                                    <use xlink:href="#star-solid">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                            <div class="rating" data-rating="3">
-                                                <svg width="24" height="24" class=
-                                                        "text-primary">
-                                                    <use xlink:href="#star-solid">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                            <div class="rating" data-rating="4">
-                                                <svg width="24" height="24" class=
-                                                        "text-secondary">
-                                                    <use xlink:href="#star-solid">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                            <div class="rating" data-rating="5">
-                                                <svg width="24" height="24" class=
-                                                        "text-secondary">
-                                                    <use xlink:href="#star-solid">
-                                                    </use>
-                                                </svg>
-                                            </div>
-                                            <span class=
-                                                          "rating-count">(3.5)</span>
-                                        </div>
-                                    </div>
+                                <div class="stars" id="starRating">
+                                    <span data-value="1">&#9733;</span>
+                                    <span data-value="2">&#9733;</span>
+                                    <span data-value="3">&#9733;</span>
+                                    <span data-value="4">&#9733;</span>
+                                    <span data-value="5">&#9733;</span>
                                 </div>
+                                <p>Đánh giá: <span id="ratingValue">0</span> sao</p>
 
                                 <div class="pb-3">
                                     <label>Thêm nhận xét *</label>
                                     <textarea class="form-control" placeholder=
-                                            "Write your review here"></textarea>
+                                            "Thêm nhận xét của bạn"></textarea>
                                 </div>
                                 <button type="submit" name="submit" class=
                                         "btn btn-dark btn-large text-uppercase w-100">Submit
