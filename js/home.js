@@ -101,8 +101,6 @@ function setupPagination(productAll, perPage) {
     let startPage = currentPage > 3 ? currentPage - 2 : 1;
     let endPage = Math.min(startPage + pageLimit - 1, pageCount);
 
-
-
     // Thêm nút "<" để chuyển sang trang trước
     let prevButton = document.createElement("li");
     prevButton.classList.add("page-nav-item");
@@ -149,9 +147,7 @@ function paginationChange(page, productAll) {
 
     node.addEventListener("click", function () {
         currentPage = page;
-
         displayList(productAll, perPage, currentPage);
-
 
         // Xóa class active khỏi các nút khác
         document.querySelectorAll(".page-nav-item.active").forEach(item => {
@@ -162,7 +158,6 @@ function paginationChange(page, productAll) {
 
         // Cuộn về đầu phần sản phẩm
         window.scrollTo(0, 600);
-
         setupPagination(productAll, perPage);
     });
 
@@ -319,6 +314,45 @@ function resetInterval() {
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy các phần tử HTML
+    const accountLink = document.querySelector("a[onclick='showAccountInfo()']");
+    const orderHistoryLink = document.querySelector("a[onclick='showOrderHistory()']");
+    const accountUserSection = document.getElementById("account-user");
+    const orderHistorySection = document.getElementById("order-history");
+    const homeSection = document.getElementById("trangchu");
+
+    // Hàm hiển thị phần "Tài khoản của tôi" và ẩn các phần khác
+    function showAccountInfo() {
+        accountUserSection.style.display = "block";
+        orderHistorySection.style.display = "none";
+        homeSection.style.display = "none";
+    }
+
+    // Hàm hiển thị phần "Đơn hàng đã mua" và ẩn các phần khác
+    function showOrderHistory() {
+        accountUserSection.style.display = "none";
+        orderHistorySection.style.display = "block";
+        homeSection.style.display = "none";
+    }
+
+    // Gắn sự kiện click cho các liên kết
+    if (accountLink) {
+        accountLink.addEventListener("click", function (e) {
+            e.preventDefault(); // Ngăn chặn hành động mặc định
+            showAccountInfo();
+        });
+    }
+
+    if (orderHistoryLink) {
+        orderHistoryLink.addEventListener("click", function (e) {
+            e.preventDefault(); // Ngăn chặn hành động mặc định
+            showOrderHistory();
+        });
+    }
+});
+
+
 //chuyển động sản phẩm
 const carousel = document.querySelector('.carousel');
 const items = Array.from(carousel.children);
@@ -340,17 +374,3 @@ function autoScroll() {
     requestAnimationFrame(autoScroll);
 }
 autoScroll();
-
-
-
-
-
-
-
-
-
-
-
-
-
-

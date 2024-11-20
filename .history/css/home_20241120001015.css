@@ -1,0 +1,693 @@
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --text-color: #333;
+    --red: #B5292F;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+    /* height:50px; */
+}
+
+.home-service::-webkit-scrollbar, .menu-list::-webkit-scrollbar {
+    height: 4px;
+    max-width: 10px;
+}
+
+.home-service::-webkit-scrollbar-track,  .menu-list::-webkit-scrollbar-track,  body::-webkit-scrollbar-track {
+    background-color: #fafafa;
+}
+
+
+.home-service::-webkit-scrollbar-thumb,  .menu-list::-webkit-scrollbar-thumb,  body::-webkit-scrollbar-thumb {
+    /* background: rgba(0, 0, 0, 0); */
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    max-width: 1250px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container2 h3 {
+    text-align: center;
+    font-size: 28px;
+    color: #B5292F;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.content h4 {
+    margin-top: 20px;
+    color: #B5292F;
+    font-size: 22px;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    line-height: 1.6;
+    color: #666;
+}
+
+#save-info-user,
+#save-password {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #d9534f;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+#save-info-user i,
+#save-password i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+#save-info-user:hover,
+#save-password:hover {
+    background-color: #c9302c;
+}
+
+
+
+/*san pham tu chay*/
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.carousel-container h2 {
+    color: #B5292F;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 200px;
+    margin: 0 10px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 150px;
+    height: 130px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+
+/*new-container*/
+.new-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1250px; /* Giới hạn độ rộng tối đa */
+    margin: 0 auto;
+}
+
+.news-section {
+    flex: 3;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.news-section h2 {
+    color: #B5292F;
+    margin-bottom: 15px;
+    display: inline-block;  /* Hoặc sử dụng inline */
+    margin-right: 0px;
+}
+
+.main-news {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.date {
+    background: #B5292F;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 70px;
+    max-width: 70px;
+    display: inline-block;  /* Hoặc sử dụng inline */
+    margin-right: 10px;
+}
+
+.date span:first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news-content img {
+    max-width: 750px;
+    border-radius: 8px;
+}
+
+.news-content h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.news-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+.sub-news {
+    list-style: none;
+    padding: 0;
+}
+
+.sub-news li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sub-news a {
+    text-decoration: none;
+    color: #B5292F;
+    font-size: 14px;
+}
+
+.label {
+    background: #ff0000;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.notification-section {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.date-time {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.notifications h3 {
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.notifications img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    margin-bottom: 10px;
+}
+
+.notifications ul a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Order History */
+.order-history-section {
+    padding-top: 20px;
+    width: 100%;
+}
+
+.order-history-group {
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.order-history {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.order-history-left {
+    display: flex;
+}
+
+.order-history-left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 14px;
+    border-radius: 5px;
+}
+
+.order-history-info p {
+    margin-top: 7px;
+}
+
+.order-history-info h4 {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.order-history-note {
+    color: #0000008a;
+    font-size: 14px;
+}
+
+.order-history-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order-history-old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #808080;
+}
+
+.order-history-current-price {
+    color: var(--red);
+    font-weight: 500;
+}
+
+.order-history-control {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#order-history-detail,
+.order-history-status-sp {
+    background-color: #eee;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-control:disabled {
+    background-color: #e9ecef;
+}
+
+.main-account-body-row {
+    display: flex;
+    justify-content: space-between; /* Đặt khoảng cách đều giữa các nút */
+    padding-top: 20px;
+}
+
+.main-account-body-row > div {
+    flex: 1;
+    margin-right: 10px; /* Khoảng cách giữa hai nút */
+}
+
+.main-account-body-row > div:last-child {
+    margin-right: 0; /* Xóa khoảng cách phải cho nút cuối */
+}
+
+#save-info-user,
+#save-password {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #d9534f;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+#save-info-user i,
+#save-password i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+#save-info-user:hover,
+#save-password:hover {
+    background-color: #c9302c;
+}
+
+
+.header-middle-right-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    width: 200px;
+}
+
+.header-middle-right-item:hover .header-middle-right-menu {
+    display: block;
+}
+
+.header-middle-right-menu li {
+    padding: 10px;
+}
+
+.header-middle-right-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.header-middle-right-menu li a:hover {
+    color: #007bff;
+}
+
+/* Modal cấu trúc chung */
+.modal {
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal.open {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal-container {
+    background-color: var(--white);
+    max-width: 800px; /* Đặt lại chiều rộng modal */
+    max-height: 90vh;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.open .modal-container {
+    transform: scale(1);
+}
+
+/* Modal Header với carousel */
+.modal-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100%;
+    height: 400px; /* Đặt chiều cao cho carousel */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.carousel-image {
+    min-width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 20px;
+}
+
+.product-title {
+    color: var(--black);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.priceBox .current-price {
+    color: var(--red);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.product-description {
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.product-details {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Đánh giá và nhận xét */
+.product-rating, .product-reviews {
+    margin-top: 20px;
+}
+
+.product-reviews .review {
+    margin: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.review strong {
+    font-size: 14px;
+    color: var(--black);
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    background-color: var(--white);
+}
+
+.modal-footer-control button {
+    background-color: var(--red);
+    border: none;
+    outline: none;
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modal-footer-control button:hover {
+    background-color: #a8232a;
+}
+
+/* Scrollbar trong modal */
+.modal-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.modal-container:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    font-size: 16px;
+}
+.header-middle-center {
+    display: flex;
+    align-items: center;
+}
+
+.form-search {
+    display: flex;
+    flex-grow: 1; /* Để kéo dài vào không gian còn lại */
+}
+
+.form-search-input {
+    flex-grow: 1; /* Để ô tìm kiếm chiếm không gian còn lại */
+}
+
+.discount-code-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #f0ad4e;
+    border-radius: 5px;
+    padding: 10px;
+    color: #333;
+    margin-left: auto; /* Tạo khoảng cách với ô tìm kiếm */
+    margin-right: 20px;
+    transition: background-color 0.3s;
+    font-size: 12px;  /* Giảm kích thước chữ nếu cần */
+}
+
+.discount-code-button:hover {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.icon {
+    background-color: #f0ad4e;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px; /* Điều chỉnh khoảng cách */
+}
+
+.text {
+    font-size: 12px; /* Giảm kích thước chữ */
+}

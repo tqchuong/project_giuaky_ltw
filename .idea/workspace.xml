@@ -5,16 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc169b4d-c39b-40cc-966d-618cafac9b50" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/home_20241113203121.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/home_20241113203250.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119160757.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161222.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161234.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161539.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161548.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161603.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161917.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119162138.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119162213.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/listProduct_20241113203121.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/listProduct_20241113203334.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/Contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/coupon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/productdetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Voucher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/productdetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/Banner3.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/Banner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/Banner5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/Banner6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product/circled-left-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/coupon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241119210242.css" beforeDir="false" afterPath="$PROJECT_DIR$/.history/css/products_20241119210242.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119160216.html" beforeDir="false" afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119160216.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113203213.js" beforeDir="false" afterPath="$PROJECT_DIR$/.history/js/listProduct_20241113203213.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113205550.js" beforeDir="false" afterPath="$PROJECT_DIR$/.history/js/listProduct_20241113205550.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/a.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/a.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shoppingcart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/home2.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/hotproducts.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/hotproducts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shoppingcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/productdetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/productdetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/shoppingcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shoppingcart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,43 +73,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.about.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.admin.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home1.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home2.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.hotproducts.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.productdetails3.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.products.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.shoppingcart.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hmc&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;V:/LTW/Project/html&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.about.html.executor": "Run",
+    "JavaScript Debug.admin.html.executor": "Run",
+    "JavaScript Debug.home.html.executor": "Run",
+    "JavaScript Debug.home1.html.executor": "Run",
+    "JavaScript Debug.home2.html.executor": "Run",
+    "JavaScript Debug.hotproducts.html.executor": "Run",
+    "JavaScript Debug.login.html.executor": "Run",
+    "JavaScript Debug.productdetails3.html.executor": "Run",
+    "JavaScript Debug.products.html.executor": "Run",
+    "JavaScript Debug.shoppingcart.html.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/project_AI",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="V:\LTW\Project\html" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -108,24 +134,11 @@
       <workItem from="1731812152883" duration="2204000" />
       <workItem from="1731828396441" duration="12482000" />
       <workItem from="1731904808170" duration="30522000" />
-      <workItem from="1731987329587" duration="21388000" />
-      <workItem from="1732025470021" duration="4906000" />
-      <workItem from="1732082123857" duration="3391000" />
+      <workItem from="1731987329587" duration="21127000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
