@@ -5,38 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc169b4d-c39b-40cc-966d-618cafac9b50" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/html/home2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/a.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/home_20241113203121.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/home_20241113203250.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119160757.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161222.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161234.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161539.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161548.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161603.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119161917.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119162138.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119162213.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/listProduct_20241113203121.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/listProduct_20241113203334.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/Contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/coupon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/productdetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/Voucher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/productdetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/Banner3.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/Banner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/Banner5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/Banner6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/product/circled-left-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/coupon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241119210242.css" beforeDir="false" afterPath="$PROJECT_DIR$/.history/css/products_20241119210242.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119160216.html" beforeDir="false" afterPath="$PROJECT_DIR$/.history/html/productdetail_20241119160216.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113203213.js" beforeDir="false" afterPath="$PROJECT_DIR$/.history/js/listProduct_20241113203213.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113205550.js" beforeDir="false" afterPath="$PROJECT_DIR$/.history/js/listProduct_20241113205550.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/a.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/a.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/about.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/admin-responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/checkout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/hotproducts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shoppingcart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/hotproducts.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/hotproducts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/productdetails3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/productdetails4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/productdetails7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/checkout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/hotproducts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/listHotProduct.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/productdetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/shoppingcart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/home2.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shoppingcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/listProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/listProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/productdetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/productdetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/shoppingcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shoppingcart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +86,12 @@
     "JavaScript Debug.productdetails3.html.executor": "Run",
     "JavaScript Debug.products.html.executor": "Run",
     "JavaScript Debug.shoppingcart.html.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "hmc",
+    "git-widget-placeholder": "Merging main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "V:/LTW/Project/html",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/project_AI",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -94,13 +105,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="V:\LTW\Project\html" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
