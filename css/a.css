@@ -61,6 +61,7 @@ ul li {
 
 .carousel {
     display: flex;
+    flex-wrap: nowrap;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -72,6 +73,7 @@ ul li {
     text-align: center;
     flex-shrink: 0;
     transition: transform 0.5s ease-in-out;
+
 }
 
 .carousel-item img {
@@ -109,7 +111,7 @@ ul li {
     color: #B5292F;
     margin-bottom: 15px;
     display: inline-block;  /* Hoặc sử dụng inline */
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .main-news {

@@ -17,7 +17,7 @@ a {
 }
 
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
     /* height:50px; */
 }
 
@@ -167,7 +167,7 @@ input[type="checkbox"]:checked+label:before {
 }
 
 .container {
-    max-width: 1250px;
+    max-width: 1400px;
     padding: 0 10px;
     margin: 0 auto;
 }
@@ -646,14 +646,13 @@ header {
 
 .home-slider {
     display: flex;
-
     position: relative;
-    width: 80%;
-    height: auto;
+    width: 100%;
+    height: 500px;
     object-fit: cover;
     border-radius: 5px;
     overflow: hidden;
-    margin: auto;
+
 }
 .slides {
     display: flex;
@@ -785,7 +784,7 @@ header {
 }
 
 .col-product {
-    width: 25%;
+    width: 20%;
     padding: 10px;
     overflow: hidden;
 }
@@ -926,7 +925,7 @@ header {
     opacity: 0;
     transform: scale(0) rotate(180deg);
     position: fixed;
-    right: 40px;
+    right: 19px;
     bottom: 70px;
     height: 40px;
     width: 40px;
@@ -1357,31 +1356,9 @@ header {
     margin-top: 15px;
 }
 
-.product-details {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
 
-.detail-item {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
 
-/* Đánh giá và nhận xét */
-.product-rating, .product-reviews {
-    margin-top: 20px;
-}
 
-.product-reviews .review {
-    margin: 5px 0;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 10px 0;
-}
-
-.review strong {
-    font-size: 14px;
-    color: var(--black);
-}
 
 /* Modal Footer */
 .modal-footer {
@@ -1431,7 +1408,7 @@ textarea {
 .chat-box {
     position: fixed;
     bottom: 200px;
-    right: 25px;
+    right: 7px;
     background-color: var(--red);
     color: white;
     padding: 15px;

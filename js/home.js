@@ -66,7 +66,7 @@ function showHomePage() {
 
 
 // Số sản phẩm hiển thị mỗi trang
-let perPage = 16;
+let perPage = 20;
 let currentPage = 1; // Trang hiện tại
 
 // Lấy danh sách sản phẩm từ DOM
@@ -100,6 +100,8 @@ function setupPagination(productAll, perPage) {
     let pageLimit = 5;
     let startPage = currentPage > 3 ? currentPage - 2 : 1;
     let endPage = Math.min(startPage + pageLimit - 1, pageCount);
+
+
 
     // Thêm nút "<" để chuyển sang trang trước
     let prevButton = document.createElement("li");
@@ -147,7 +149,9 @@ function paginationChange(page, productAll) {
 
     node.addEventListener("click", function () {
         currentPage = page;
+
         displayList(productAll, perPage, currentPage);
+
 
         // Xóa class active khỏi các nút khác
         document.querySelectorAll(".page-nav-item.active").forEach(item => {
@@ -158,6 +162,8 @@ function paginationChange(page, productAll) {
 
         // Cuộn về đầu phần sản phẩm
         window.scrollTo(0, 600);
+
+        setupPagination(productAll, perPage);
     });
 
     return node;
@@ -311,6 +317,29 @@ function resetInterval() {
     clearInterval(autoSlide);
     autoSlide = setInterval(nextSlide, 2000);
 }
+
+
+//chuyển động sản phẩm
+const carousel = document.querySelector('.carousel');
+const items = Array.from(carousel.children);
+
+// Nhân đôi các mục trong carousel để tạo hiệu ứng vô tận
+items.forEach(item => {
+    const clone = item.cloneNode(true);
+    carousel.appendChild(clone);
+});
+
+let scrollPosition = 0;
+
+function autoScroll() {
+    scrollPosition += 1;
+    if (scrollPosition >= carousel.scrollWidth / 2) {
+        scrollPosition = 0;
+    }
+    carousel.scrollLeft = scrollPosition;
+    requestAnimationFrame(autoScroll);
+}
+autoScroll();
 
 
 
