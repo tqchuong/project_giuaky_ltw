@@ -306,6 +306,18 @@ body {
   cursor: pointer; /* Con trỏ khi hover */
 }
 
+
+
+/* Bố trí chung cho hàng chứa checkbox và nút xoá */
+.actions {
+  display: flex; /* Sử dụng Flexbox */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Đẩy nút "Sửa" sang bên trái */
+  margin-bottom: 10px; /* Khoảng cách bên dưới */
+  gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+
 /* CSS cho checkbox "Chọn tất cả" */
 label {
   display: flex;
@@ -337,4 +349,34 @@ label input[type="checkbox"]:checked {
 .productCheckbox {
   margin-right: 10px;
 }
+.deleteItem {
+  padding: 5px 15px; /* Khoảng cách bên trong nút */
+  font-size: 14px; /* Kích thước chữ */
+  background-color: #ff4d4d; /* Màu nền đỏ */
+  color: white; /* Màu chữ trắng */
+  border: 2px solid #ff4d4d; /* Viền đỏ */
+  border-radius: 5px; /* Viền bo góc */
+  cursor: pointer; /* Con trỏ chuột khi di chuột vào nút */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+.deleteItem:hover {
+  background-color: white; /* Màu nền khi hover */
+  color: #ff4d4d; /* Màu chữ khi hover */
+  border-color: #ff4d4d; /* Màu viền khi hover */
+}
+
+.deleteItem:active {
+  background-color: #e60000; /* Màu nền khi nhấn */
+  border-color: #e60000; /* Màu viền khi nhấn */
+}
+
+
+
+
+
+
+
+
+
 

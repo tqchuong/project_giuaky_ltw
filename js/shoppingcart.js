@@ -14,6 +14,7 @@ $(document).ready(function () {
             $(".gio-hang-trong").hide(); // Ẩn nếu có sản phẩm nhưng không chọn
         } else if (!hasItems) {
             $(".gio-hang-trong").show(); // Hiển thị nếu không có sản phẩm nào
+            $(".actions").hide();
         } else {
             $(".gio-hang-trong").hide(); // Ẩn nếu có sản phẩm được chọn
         }
@@ -126,6 +127,29 @@ $(document).ready(function () {
     $(".quantity_field").on("input", function () {
         calculateTotal();
     });
+
+
+
+
+    //  sự kiện nhấn nút "Xoá"
+    $(".deleteItem").click(function () {
+        // Lặp qua tất cả các checkbox và chỉ xóa những sản phẩm được chọn
+        $(".cart-list .item").each(function () {
+            const $item = $(this);
+            const checkbox = $item.find(".productCheckbox");  // Tìm checkbox trong sản phẩm
+
+            // Kiểm tra nếu checkbox được chọn
+            if (checkbox.prop("checked")) {
+                $item.remove();  // Xóa sản phẩm
+            }
+        });
+
+        calculateTotal();  // Tính lại tổng tiền sau khi xóa
+        checkEmptyCart();  // Kiểm tra nếu giỏ hàng trống
+    });
+
+
+
 
 
 
