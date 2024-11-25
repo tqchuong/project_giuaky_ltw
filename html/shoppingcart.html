@@ -41,21 +41,42 @@
                     <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                     <p>Giỏ hàng của bạn trống</p>
                 </div>
-
+                <div>
+                    <label>
+                        <input type="checkbox" id="selectAll" /> Chọn tất cả
+                    </label>
+                </div>
                 <!-- List of Cart Items -->
                 <ul class="cart-list">
+
                     <li class="item">
+                        <input type="checkbox" class="productCheckbox"  />
                         <img src="../image/img-pro/gaost25.jpg" alt="Gạo Thơm Hữu Cơ ST25" class="item-image">
                         <h4>Gạo Thơm Hữu Cơ ST25</h4>
-                        <p class="item-price">135.000&nbsp;₫</p>
+                        <p class="item-price">130.000&nbsp;₫</p>
                         <div class="quantity-controls">
                             <button class="btn-quantity minus">-</button>
-                            <input type="number" class="quantity_field" value="1" data-price="135000" min="1">
+                            <input type="number" class="quantity_field" value="1" data-price="130000" min="1">
                             <button class="btn-quantity plus">+</button>
                         </div>
                         <button class="btn-remove"><i class="fas fa-trash"></i></button>
                     </li>
                 </ul>
+                <ul class="cart-list">
+                    <li class="item">
+                        <input type="checkbox" class="productCheckbox"  />
+                        <img src="../image/img-luongkho/LUONG-KHO-BAY-4-300x300.jpg" alt="Lương khô bay" class="item-image">
+                        <h4>Lương khô bay</h4>
+                        <p class="item-price">30.000&nbsp;₫</p>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity minus">-</button>
+                            <input type="number" class="quantity_field" value="1" data-price="30000" min="1">
+                            <button class="btn-quantity plus">+</button>
+                        </div>
+                        <button class="btn-remove"><i class="fas fa-trash"></i></button>
+                    </li>
+                </ul>
+
             </div>
 
             <!-- Delivery & Payment Details -->

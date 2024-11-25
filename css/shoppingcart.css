@@ -305,3 +305,36 @@ body {
   text-decoration: none;
   cursor: pointer; /* Con trỏ khi hover */
 }
+
+/* CSS cho checkbox "Chọn tất cả" */
+label {
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Kích thước chữ */
+  font-weight: 500; /* Độ đậm chữ */
+  color: #333; /* Màu chữ */
+  margin: 10px 0; /* Khoảng cách trên dưới */
+  cursor: pointer; /* Con trỏ hiển thị như liên kết */
+}
+
+/* Khoảng cách giữa checkbox và chữ */
+label input[type="checkbox"] {
+  margin-right: 10px; /* Khoảng cách từ checkbox tới chữ */
+  transform: scale(1.2); /* Phóng to checkbox một chút */
+}
+
+/* Khi hover vào dòng chữ */
+label:hover {
+  color: #007bff; /* Màu chữ khi hover */
+}
+
+/* Checkbox khi được chọn */
+label input[type="checkbox"]:checked {
+  accent-color: #007bff; /* Màu xanh cho checkbox (trình duyệt hỗ trợ modern) */
+}
+
+
+.productCheckbox {
+  margin-right: 10px;
+}
+
