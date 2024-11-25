@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
+    <title>Checkout</title>
+</head>
+
+<body>
+    <div class="checkout-page">
+        <div class="checkout-header">
+            <button class="checkout-return"><i class="fa-regular fa-chevron-left"></i></button>
+            <h2 class="checkout-title">Thanh toán</h2>
+        </div>
+        <main class="checkout-section container">
+            <div class="checkout-col-left">
+                <!-- Hình thức giao nhận -->
+                <div class="content-group">
+                    <p class="checkout-content-label">Hình thức giao nhận</p>
+                    <div class="checkout-type-order">
+                        <button class="type-order-btn active" id="giaotannoi">
+                            <i class="fa-duotone fa-moped"></i> Giao tận nơi
+                        </button>
+                        <button class="type-order-btn" id="tudenlay">
+                            <i class="fa-duotone fa-box-heart"></i> Tự đến lấy
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ngày giao hàng -->
+                <div class="content-group">
+                    <p class="checkout-content-label">Ngày giao hàng</p>
+                    <div class="date-order"></div>
+                </div>
+
+                <!-- Thời gian giao hàng -->
+                <div class="content-group chk-ship" id="giaotannoi-group">
+                    <p class="checkout-content-label">Thời gian giao hàng</p>
+                    <div class="delivery-time">
+                        <input type="radio" name="giaongay" id="giaongay" class="radio">
+                        <label for="giaongay">Giao ngay khi xong</label>
+                    </div>
+                    <div class="delivery-time">
+                        <input type="radio" name="giaongay" id="deliverytime" class="radio">
+                        <label for="deliverytime">Giao vào giờ</label>
+                        <select class="choise-time">
+                            <option value="08:00" selected>08:00 - 09:00</option>
+                            <option value="09:00">09:00 - 10:00</option>
+                            <option value="10:00">10:00 - 11:00</option>
+                            <option value="11:00">11:00 - 12:00</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Lấy hàng tại chi nhánh -->
+                <div class="content-group" id="tudenlay-group" style="display: none;">
+                    <p class="checkout-content-label">Lấy hàng tại chi nhánh</p>
+                    <div class="delivery-time">
+                        <input type="radio" name="chinhanh" id="chinhanh-1" class="radio">
+                        <label for="chinhanh-1">Khu phố 6, Linh Trung, TP Thủ Đức</label>
+                    </div>
+                    <div class="delivery-time">
+                        <input type="radio" name="chinhanh" id="chinhanh-2" class="radio">
+                        <label for="chinhanh-2">Nhơn Tân, An Nhơn, Bình Định</label>
+                    </div>
+                </div>
+
+                <!-- Ghi chú đơn hàng -->
+                <div class="content-group">
+                    <p class="checkout-content-label">Ghi chú đơn hàng</p>
+                    <textarea class="note-order" placeholder="Nhập ghi chú"></textarea>
+                </div>
+            </div>
+
+            <div class="checkout-col-right">
+                <!-- Thông tin đơn hàng -->
+                <p class="checkout-content-label">Đơn hàng</p>
+                <div class="bill-total">
+                    <div class="food-total">
+                        <div class="count">2x</div>
+                        <div class="info-food">
+                            <div class="name-food">Gạo Thơm Hữu Cơ ST25</div>
+                            <div class="price">400.000&nbsp;₫</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tổng tiền -->
+                <div class="total-checkout">
+                    <div class="text">Tổng tiền</div>
+                    <div class="price-bill">
+                        <div class="price-final" id="checkout-cart-price-final">430.000&nbsp;₫</div>
+                    </div>
+                </div>
+                <button class="complete-checkout-btn">Đặt hàng</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/checkout.js"></script>
+</body>
+
+</html>
