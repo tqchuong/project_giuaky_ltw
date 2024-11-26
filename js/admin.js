@@ -236,3 +236,41 @@ document.getElementById("the-loai").addEventListener("change", function () {
         }
     });
 });
+
+// Lấy các phần tử
+const selectAllCheckbox = document.getElementById("selectAll");
+const productCheckboxes = document.querySelectorAll(".productCheckbox");
+
+// Sự kiện "Chọn tất cả"
+selectAllCheckbox.addEventListener("change", () => {
+    productCheckboxes.forEach(checkbox => {
+        checkbox.checked = selectAllCheckbox.checked; // Đồng bộ trạng thái
+    });
+    calculateTotal(); // Tính lại tổng tiền
+    checkEmptyCart(); // Kiểm tra trạng thái giỏ hàng
+});
+
+// Kiểm tra nếu tất cả checkbox sản phẩm được chọn
+productCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+        const allChecked = Array.from(productCheckboxes).every(cb => cb.checked);
+        selectAllCheckbox.checked = allChecked; // Cập nhật trạng thái "Chọn tất cả"
+        calculateTotal(); // Tính lại tổng tiền
+        checkEmptyCart(); // Kiểm tra trạng thái giỏ hàng
+    });
+});
+//  sự kiện nhấn nút "Xoá"
+$(".deleteItem").click(function () {
+    // Lặp qua tất cả các checkbox và chỉ xóa những sản phẩm được chọn
+    $(".cart-list .item").each(function () {
+        const $item = $(this);
+        const checkbox = $item.find(".productCheckbox");  // Tìm checkbox trong sản phẩm
+
+        // Kiểm tra nếu checkbox được chọn
+        if (checkbox.prop("checked")) {
+            $item.remove();  // Xóa sản phẩm
+        }
+    });
+
+
+});
