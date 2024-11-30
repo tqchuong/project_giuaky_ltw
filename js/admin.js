@@ -86,44 +86,7 @@ function showToast(type, title, message, duration = 3000) {
 
 
 
-// Phân trang 
-let perPage = 12;
-let currentPage = 1;
-let totalPage = 0;
-let perProducts = [];
 
-function displayList(productAll, perPage, currentPage) {
-    let start = (currentPage - 1) * perPage;
-    let end = (currentPage - 1) * perPage + perPage;
-    let productShow = productAll.slice(start, end);
-    showProductArr(productShow);
-}
-
-function setupPagination(productAll, perPage) {
-    document.querySelector('.page-nav-list').innerHTML = '';
-    let page_count = Math.ceil(productAll.length / perPage);
-    for (let i = 1; i <= page_count; i++) {
-        let li = paginationChange(i, productAll, currentPage);
-        document.querySelector('.page-nav-list').appendChild(li);
-    }
-}
-
-function paginationChange(page, productAll, currentPage) {
-    let node = document.createElement(`li`);
-    node.classList.add('page-nav-item');
-    node.innerHTML = `<a href="#">${page}</a>`;
-    if (currentPage == page) node.classList.add('active');
-    node.addEventListener('click', function () {
-        currentPage = page;
-        displayList(productAll, perPage, currentPage);
-        let t = document.querySelectorAll('.page-nav-item.active');
-        for (let i = 0; i < t.length; i++) {
-            t[i].classList.remove('active');
-        }
-        node.classList.add('active');
-    })
-    return node;
-}
 
 
 function showToast(type, title, message, duration = 3000) {
@@ -237,40 +200,85 @@ document.getElementById("the-loai").addEventListener("change", function () {
     });
 });
 
-// Lấy các phần tử
-const selectAllCheckbox = document.getElementById("selectAll");
-const productCheckboxes = document.querySelectorAll(".productCheckbox");
 
-// Sự kiện "Chọn tất cả"
-selectAllCheckbox.addEventListener("change", () => {
-    productCheckboxes.forEach(checkbox => {
-        checkbox.checked = selectAllCheckbox.checked; // Đồng bộ trạng thái
+// Số sản phẩm hiển thị mỗi trang
+let perPage = 4; // Số sản phẩm mỗi trang
+let currentPage = 1; // Trang hiện tại
+
+// Lấy danh sách sản phẩm từ DOM
+const products = Array.from(document.querySelectorAll(".list"));
+
+// Hiển thị sản phẩm theo trang
+function displayProducts(productList, perPage, currentPage) {
+    let startIndex = (currentPage - 1) * perPage;
+    let endIndex = currentPage * perPage;
+
+    // Ẩn tất cả sản phẩm
+    productList.forEach(product => {
+        product.style.display = "none";
     });
-    calculateTotal(); // Tính lại tổng tiền
-    checkEmptyCart(); // Kiểm tra trạng thái giỏ hàng
-});
 
-// Kiểm tra nếu tất cả checkbox sản phẩm được chọn
-productCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", () => {
-        const allChecked = Array.from(productCheckboxes).every(cb => cb.checked);
-        selectAllCheckbox.checked = allChecked; // Cập nhật trạng thái "Chọn tất cả"
-        calculateTotal(); // Tính lại tổng tiền
-        checkEmptyCart(); // Kiểm tra trạng thái giỏ hàng
+    // Hiển thị sản phẩm trong phạm vi của trang hiện tại
+    productList.slice(startIndex, endIndex).forEach(product => {
+        product.style.display = "block";
     });
-});
-//  sự kiện nhấn nút "Xoá"
-$(".deleteItem").click(function () {
-    // Lặp qua tất cả các checkbox và chỉ xóa những sản phẩm được chọn
-    $(".cart-list .item").each(function () {
-        const $item = $(this);
-        const checkbox = $item.find(".productCheckbox");  // Tìm checkbox trong sản phẩm
+}
 
-        // Kiểm tra nếu checkbox được chọn
-        if (checkbox.prop("checked")) {
-            $item.remove();  // Xóa sản phẩm
+// Cài đặt phân trang
+function setupPagination(productList, perPage) {
+    const paginationContainer = document.querySelector(".page-nav-list");
+    paginationContainer.innerHTML = ""; // Xóa nội dung phân trang cũ
+
+    let totalPages = Math.ceil(productList.length / perPage);
+
+    // Nút "Trang trước"
+    if (currentPage > 1) {
+        const prevButton = createPaginationButton('<i class="fa-solid fa-left" style="color: #B5292F;"></i>', () => {
+            currentPage--;
+            displayProducts(productList, perPage, currentPage);
+            setupPagination(productList, perPage);
+        });
+        paginationContainer.appendChild(prevButton);
+    }
+
+    // Các nút số trang
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = createPaginationButton(i, () => {
+            currentPage = i;
+            displayProducts(productList, perPage, currentPage);
+            setupPagination(productList, perPage);
+        });
+        if (i === currentPage) {
+            pageButton.classList.add("active");
         }
-    });
+        paginationContainer.appendChild(pageButton);
+    }
 
+    // Nút "Trang sau"
+    if (currentPage < totalPages) {
+        const nextButton = createPaginationButton('<i class="fa-solid fa-right" style="color: #B5292F;"></i>', () => {
+            currentPage++;
+            displayProducts(productList, perPage, currentPage);
+            setupPagination(productList, perPage);
+        });
+        paginationContainer.appendChild(nextButton);
+    }
+}
 
+// Tạo nút phân trang
+function createPaginationButton(label, onClick) {
+    const button = document.createElement("li");
+    button.classList.add("page-nav-item");
+    button.innerHTML = `<a href="javascript:void(0);">${label}</a>`;
+    button.addEventListener("click", onClick);
+    return button;
+}
+
+// Khi DOM đã tải xong
+document.addEventListener("DOMContentLoaded", () => {
+    displayProducts(products, perPage, currentPage); // Hiển thị sản phẩm ban đầu
+    setupPagination(products, perPage); // Cài đặt phân trang
 });
+
+
+

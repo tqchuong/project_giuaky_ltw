@@ -629,6 +629,7 @@ tbody tr td {
 .list-left {
     display: flex;
     width: 80%;
+
 }
 
 .list-left img {
@@ -696,6 +697,7 @@ tbody tr td {
 .list-current-price {
     color: var(--red);
     font-weight: 500;
+
 }
 
 .list-control {
