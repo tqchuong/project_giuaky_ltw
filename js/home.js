@@ -66,7 +66,7 @@ function showHomePage() {
 
 
 // Số sản phẩm hiển thị mỗi trang
-let perPage = 16;
+let perPage = 20;
 let currentPage = 1; // Trang hiện tại
 
 // Lấy danh sách sản phẩm từ DOM
@@ -158,6 +158,7 @@ function paginationChange(page, productAll) {
 
         // Cuộn về đầu phần sản phẩm
         window.scrollTo(0, 600);
+        setupPagination(productAll, perPage);
     });
 
     return node;

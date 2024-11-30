@@ -1,0 +1,221 @@
+
+.container2 {
+    padding: 20px;
+    background-color: #f7f8fa;
+    border-radius: 10px;
+    max-width: 1250px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container2 h3 {
+    text-align: center;
+    font-size: 28px;
+    color: #B5292F;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.content h4 {
+    margin-top: 20px;
+    color: #B5292F;
+    font-size: 22px;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    line-height: 1.6;
+    color: #666;
+}
+
+
+
+
+
+/*san pham tu chay*/
+
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.carousel-container h2 {
+    color: #B5292F;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 200px;
+    margin: 0 10px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.carousel-item img {
+    width: 150px;
+    height: 130px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+
+/*new-container*/
+.new-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1250px; /* Giới hạn độ rộng tối đa */
+    margin: 0 auto;
+}
+
+.news-section {
+    flex: 3;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.news-section h2 {
+    color: #B5292F;
+    margin-bottom: 15px;
+    display: inline-block;  /* Hoặc sử dụng inline */
+    margin-right: 0;
+}
+
+.main-news {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.date {
+    background: #B5292F;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 70px;
+    max-width: 70px;
+    display: inline-block;  /* Hoặc sử dụng inline */
+    margin-right: 10px;
+}
+
+.date span:first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news-content img {
+    max-width: 750px;
+    border-radius: 8px;
+}
+
+.news-content h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.news-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+.sub-news {
+    list-style: none;
+    padding: 0;
+}
+
+.sub-news li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sub-news a {
+    text-decoration: none;
+    color: #B5292F;
+    font-size: 14px;
+}
+
+.label {
+    background: #ff0000;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.notification-section {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.date-time {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.notifications h3 {
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.notifications img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    margin-bottom: 10px;
+}
+
+.notifications ul a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
