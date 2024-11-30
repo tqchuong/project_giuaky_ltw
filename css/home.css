@@ -70,7 +70,6 @@ ul li {
 }
 
 
-
 /*san pham tu chay*/
 
 .carousel-container {
@@ -134,7 +133,7 @@ ul li {
 .news-section h2 {
     color: #B5292F;
     margin-bottom: 15px;
-    display: inline-block;  /* Hoặc sử dụng inline */
+    display: inline-block; /* Hoặc sử dụng inline */
     margin-right: 0px;
 }
 
@@ -154,7 +153,7 @@ ul li {
     border-radius: 8px;
     max-height: 70px;
     max-width: 70px;
-    display: inline-block;  /* Hoặc sử dụng inline */
+    display: inline-block; /* Hoặc sử dụng inline */
     margin-right: 10px;
 }
 
@@ -245,16 +244,6 @@ ul li {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* Order History */
 .order-history-section {
     padding-top: 20px;
@@ -337,13 +326,13 @@ ul li {
     position: relative;
 }
 
-.order-history-status-sp.complete{
+.order-history-status-sp.complete {
     background-color: #27ae60;
     color: var(--white);
     padding-left: 35px;
 }
 
-.order-history-status-sp.complete::before{
+.order-history-status-sp.complete::before {
     content: "\f00c";
     font-family: "Font Awesome 6 Pro";
     position: absolute;
@@ -352,13 +341,13 @@ ul li {
     transform: translateY(-50%);
 }
 
-.order-history-status-sp.no-complete{
+.order-history-status-sp.no-complete {
     background-color: #f04e2e;
     color: var(--white);
     padding-left: 35px;
 }
 
-.order-history-status-sp.no-complete::before{
+.order-history-status-sp.no-complete::before {
     content: "\e1d4";
     font-family: "Font Awesome 6 Pro";
     position: absolute;
@@ -403,7 +392,7 @@ ul li {
     margin-left: auto; /* Tạo khoảng cách với ô tìm kiếm */
     margin-right: 20px;
     transition: background-color 0.3s;
-    font-size: 12px;  /* Giảm kích thước chữ nếu cần */
+    font-size: 12px; /* Giảm kích thước chữ nếu cần */
 }
 
 .discount-code-button:hover {
@@ -421,11 +410,13 @@ ul li {
 .text {
     font-size: 12px; /* Giảm kích thước chữ */
 }
+
 .avatar-preview img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .avatar-icon {
     width: 30px; /* Kích thước avatar */
     height: 30px;
@@ -435,3 +426,6 @@ ul li {
     cursor: pointer;
 }
 
+.change-password{
+    margin-top: 210px;
+}

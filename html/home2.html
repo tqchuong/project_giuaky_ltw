@@ -62,7 +62,7 @@
                 <div class="header-middle-right">
                     <ul class="header-middle-right-list">
                         <li class="header-middle-right-item dropdown open">
-                            <img id="avatarIcon" src="../image/productdetails/khach2.jpg" alt="Avatar" class="avatar-icon">
+                            <img id="avatarIcon" src="../image/productdetails/khach3.jpg" alt="Avatar" class="avatar-icon">
                             <div class="auth-container">
 
                                 <span class="text-tk" id="user-fullname">TQC <i
@@ -191,11 +191,27 @@
                     <h3>Thông tin tài khoản của bạn</h3>
                     <p>Quản lý thông tin để bảo mật tài khoản</p>
                 </div>
+
                 <div class="main-account-body">
                     <!-- Cột trái: Thông tin -->
                     <div class="main-account-body-col">
+
                         <form action="" class="info-user">
                             <!-- Các trường thông tin -->
+                            <!-- Ảnh đại diện -->
+                            <div class="avatar-upload text-center mt-4">
+                                <div class="avatar-preview mb-3">
+                                    <div class="rounded-circle border border-2 mx-auto" style="width: 150px; height: 150px; overflow: hidden;">
+                                        <img id="avatarPreview" src="placeholder-avatar.png" alt="Ảnh đại diện" class="img-fluid">
+                                    </div>
+                                </div>
+                                <label for="avatarInput" class="btn btn-outline-danger btn-sm mb-2">Chọn Ảnh</label>
+                                <input type="file" id="avatarInput" class="d-none" accept="image/*" onchange="previewAvatar(event)">
+                                <label for="save-info-user" class="form-label">Dung lượng tối đa 1 MB<br>Định dạng: JPEG, PNG</label>
+
+                            </div>
+
+
                             <div class="form-group">
                                 <label for="infoname" class="form-label">Họ và tên</label>
                                 <input class="form-control" type="text" name="infoname" id="infoname"
@@ -240,19 +256,7 @@
                             </div>
                         </form>
 
-                        <!-- Ảnh đại diện -->
-                        <div class="avatar-upload text-center mt-4">
-                            <div class="avatar-preview mb-3">
-                                <div class="rounded-circle border border-2 mx-auto" style="width: 150px; height: 150px; overflow: hidden;">
-                                    <img id="avatarPreview" src="placeholder-avatar.png" alt="Ảnh đại diện" class="img-fluid">
-                                </div>
-                            </div>
-                            <label for="avatarInput" class="btn btn-outline-danger btn-sm mb-2">Chọn Ảnh</label>
-                            <input type="file" id="avatarInput" class="d-none" accept="image/*" onchange="previewAvatar(event)">
-                            <p class="text-muted">Dung lượng tối đa 1 MB<br>Định dạng: JPEG, PNG</p>
-                        </div>
-                    </div>
-                </div>
+
 
                 <div class="main-account-body-row">
                     <div>

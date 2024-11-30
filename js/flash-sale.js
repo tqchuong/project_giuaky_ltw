@@ -55,57 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
             timerMessage.textContent = "Bắt đầu sau: " + nextSlot.message;
             timerElement.textContent = `${String(hoursLeft).padStart(2, '0')}:${String(minutesLeft).padStart(2, '0')}:${String(secondsLeft).padStart(2, '0')}`;
         } else {
-            timerMessage.textContent = "Không còn Flash Sale hôm nay.";
+            timerMessage.textContent = "Không còn Flash Sale ";
             timerElement.textContent = "--:--:--";
         }
     }
-
-    // Hiển thị sản phẩm theo khung giờ và danh mục
-    function filterProducts(category, currentSlotId) {
-        const allProducts = document.querySelectorAll('.col-product');
-        allProducts.forEach(product => {
-            const productCategory = product.getAttribute('data-loai');
-            const productSlot = product.getAttribute('data-slot');
-            product.style.display =
-                (category === 'all' || productCategory === category) &&
-                productSlot === currentSlotId ? 'block' : 'none';
-        });
-    }
-
-    let selectedSlotId = null; // Lưu khung giờ được chọn
-
-    // Xử lý sự kiện khi chọn khung giờ
-    const slotButtons = document.querySelectorAll('.slot-button');
-    slotButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            selectedSlotId = button.getAttribute('data-slot');
-            const activeCategory = document.querySelector('.category-button.active')?.getAttribute('data-loai') || 'all';
-
-            filterProducts(activeCategory, selectedSlotId);
-
-            // Đánh dấu nút khung giờ hiện tại
-            slotButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Xử lý sự kiện khi chọn danh mục
-    const categoryButtons = document.querySelectorAll('.category-button');
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            if (!selectedSlotId) {
-                alert("Vui lòng chọn khung giờ trước!");
-                return;
-            }
-
-            const category = button.getAttribute('data-loai');
-            filterProducts(category, selectedSlotId);
-
-            // Đánh dấu nút danh mục hiện tại
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
 
     // Xử lý sự kiện khi bấm "Đặt hàng"
     const orderButtons = document.querySelectorAll('.order-item');
@@ -170,4 +123,149 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         alert("Hiện không có khung giờ Flash Sale nào đang hoạt động.");
     }
+
 });
+let perPage = 8; // Số sản phẩm hiển thị mỗi trang
+let currentPage = 1; // Trang hiện tại
+
+// Lấy danh sách sản phẩm từ DOM
+let products = Array.from(document.querySelectorAll(".col-product"));
+
+// Hiển thị sản phẩm từng trang
+function displayList(productAll, perPage, currentPage) {
+    let start = (currentPage - 1) * perPage;
+    let end = currentPage * perPage;
+    let productShow = productAll.slice(start, end);
+
+    // Ẩn tất cả sản phẩm
+    products.forEach(product => (product.style.display = "none"));
+
+    // Hiển thị sản phẩm của trang hiện tại
+    productShow.forEach(product => (product.style.display = "block"));
+}
+
+// Hiển thị sản phẩm và thiết lập phân trang
+function showHomeProduct(products) {
+    displayList(products, perPage, currentPage);
+    setupPagination(products, perPage);
+}
+
+// Gắn trang
+function setupPagination(productAll, perPage) {
+    document.querySelector(".page-nav-list").innerHTML = ""; // Xóa phân trang cũ
+    let pageCount = Math.ceil(productAll.length / perPage);
+
+    // Giới hạn chỉ hiển thị tối đa 5 trang
+    let pageLimit = 5;
+    let startPage = currentPage > 3 ? currentPage - 2 : 1;
+    let endPage = Math.min(startPage + pageLimit - 1, pageCount);
+
+    // Thêm nút "<" để chuyển sang trang trước
+    let prevButton = document.createElement("li");
+    prevButton.classList.add("page-nav-item");
+    prevButton.innerHTML = `<a href="javascript:;"><i class="fa-solid fa-left" style="color: #B5292F;"></i></a>`;
+    prevButton.addEventListener("click", function () {
+        if (currentPage > 1) {
+            currentPage--;
+            setupPagination(productAll, perPage);
+            displayList(productAll, perPage, currentPage);
+            window.scrollTo(0, 600);
+        }
+    });
+    document.querySelector(".page-nav-list").appendChild(prevButton);
+
+    // Hiển thị các trang hiện tại
+    for (let i = startPage; i <= endPage; i++) {
+        let li = paginationChange(i, productAll);
+        document.querySelector(".page-nav-list").appendChild(li);
+    }
+
+    // Thêm nút ">" để chuyển sang trang sau
+    let nextButton = document.createElement("li");
+    nextButton.classList.add("page-nav-item");
+    nextButton.innerHTML = `<a href="javascript:;"><i class="fa-solid fa-right" style="color: #B5292F;"></i></a>`;
+    nextButton.addEventListener("click", function () {
+        if (currentPage < pageCount) {
+            currentPage++;
+            setupPagination(productAll, perPage);
+            displayList(productAll, perPage, currentPage);
+            window.scrollTo(0, 600);
+        }
+    });
+    document.querySelector(".page-nav-list").appendChild(nextButton);
+}
+
+// Tạo nút trang
+function paginationChange(page, productAll) {
+    let node = document.createElement("li");
+    node.classList.add("page-nav-item");
+    node.innerHTML = `<a href="javascript:;">${page}</a>`;
+
+    // Đặt trang hiện tại là active
+    if (currentPage === page) node.classList.add("active");
+
+    node.addEventListener("click", function () {
+        currentPage = page;
+        displayList(productAll, perPage, currentPage);
+
+        // Xóa class active khỏi các nút khác
+        document.querySelectorAll(".page-nav-item.active").forEach(item => {
+            item.classList.remove("active");
+        });
+
+        node.classList.add("active");
+
+        // Cuộn về đầu phần sản phẩm
+        window.scrollTo(0, 600);
+    });
+
+    return node;
+}
+
+// Hiển thị sản phẩm theo khung giờ và danh mục
+function filterProducts(category, currentSlotId) {
+    const allProducts = Array.from(document.querySelectorAll('.col-product'));
+    const filteredProducts = allProducts.filter(product => {
+        const productCategory = product.getAttribute('data-loai');
+        const productSlot = product.getAttribute('data-slot');
+        return (category === 'all' || productCategory === category) && productSlot === currentSlotId;
+    });
+
+    showHomeProduct(filteredProducts); // Hiển thị các sản phẩm đã lọc và phân trang
+}
+
+let selectedSlotId = null; // Lưu khung giờ được chọn
+
+// Xử lý sự kiện khi chọn khung giờ
+const slotButtons = document.querySelectorAll('.slot-button');
+slotButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        selectedSlotId = button.getAttribute('data-slot');
+        const activeCategory = document.querySelector('.category-button.active')?.getAttribute('data-loai') || 'all';
+
+        filterProducts(activeCategory, selectedSlotId);
+
+        // Đánh dấu nút khung giờ hiện tại
+        slotButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+// Xử lý sự kiện khi chọn danh mục
+const categoryButtons = document.querySelectorAll('.category-button');
+categoryButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        if (!selectedSlotId) {
+            alert("Vui lòng chọn khung giờ trước!");
+            return;
+        }
+
+        const category = button.getAttribute('data-loai');
+        filterProducts(category, selectedSlotId);
+
+        // Đánh dấu nút danh mục hiện tại
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
