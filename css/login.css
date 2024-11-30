@@ -346,7 +346,7 @@ img {
   }
   .login__blob {
     display: block;
-    height: 180vh;
+    height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
