@@ -594,6 +594,10 @@ tbody tr td {
     border-radius: 99px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Product */
 .product-all {
     padding: 20px 80px;
@@ -629,7 +633,6 @@ tbody tr td {
 .list-left {
     display: flex;
     width: 80%;
-
 }
 
 .list-left img {
@@ -697,7 +700,6 @@ tbody tr td {
 .list-current-price {
     color: var(--red);
     font-weight: 500;
-
 }
 
 .list-control {
@@ -742,6 +744,11 @@ tbody tr td {
     background-color: var(--red);
     color: white;
 }
+
+
+
+
+
 
 /* Modal */
 .modal {
@@ -1365,7 +1372,7 @@ label a {
 /* CSS for the images */
 .channel-logo img,
 .hidden-sidebar img {
-    display: block;                  /* Loại bỏ khoảng trống dưới ảnh */
+    /*display: block;                  !* Loại bỏ khoảng trống dưới ảnh *!*/
     height: 40px;                    /* Đặt chiều cao cho ảnh */
     margin: 0;                       /* Loại bỏ bất kỳ khoảng trống mặc định nào xung quanh ảnh */
     padding: 0;

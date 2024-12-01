@@ -215,12 +215,12 @@ function displayProducts(productList, perPage, currentPage) {
 
     // Ẩn tất cả sản phẩm
     productList.forEach(product => {
-        product.style.display = "none";
+        product.classList.add("hidden");
     });
 
     // Hiển thị sản phẩm trong phạm vi của trang hiện tại
     productList.slice(startIndex, endIndex).forEach(product => {
-        product.style.display = "block";
+        product.classList.remove("hidden");
     });
 }
 
@@ -279,6 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
     displayProducts(products, perPage, currentPage); // Hiển thị sản phẩm ban đầu
     setupPagination(products, perPage); // Cài đặt phân trang
 });
+
 
 
 
