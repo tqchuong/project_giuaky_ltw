@@ -202,80 +202,109 @@ document.getElementById("the-loai").addEventListener("change", function () {
 
 
 // Số sản phẩm hiển thị mỗi trang
-let perPage = 4; // Số sản phẩm mỗi trang
+let perPage = 5;
 let currentPage = 1; // Trang hiện tại
 
 // Lấy danh sách sản phẩm từ DOM
 const products = Array.from(document.querySelectorAll(".list"));
 
-// Hiển thị sản phẩm theo trang
-function displayProducts(productList, perPage, currentPage) {
-    let startIndex = (currentPage - 1) * perPage;
-    let endIndex = currentPage * perPage;
+// Hiển thị sản phẩm từng trang
+function displayList(productAll, perPage, currentPage) {
+    let start = (currentPage - 1) * perPage;
+    let end = currentPage * perPage;
+    let productShow = productAll.slice(start, end);
 
     // Ẩn tất cả sản phẩm
-    productList.forEach(product => {
-        product.classList.add("hidden");
-    });
+    products.forEach(product => (product.style.display = "none"));
 
-    // Hiển thị sản phẩm trong phạm vi của trang hiện tại
-    productList.slice(startIndex, endIndex).forEach(product => {
-        product.classList.remove("hidden");
-    });
+    // Hiển thị sản phẩm của trang hiện tại
+    productShow.forEach(product => (product.style.display = "flex"));
 }
 
-// Cài đặt phân trang
-function setupPagination(productList, perPage) {
-    const paginationContainer = document.querySelector(".page-nav-list");
-    paginationContainer.innerHTML = ""; // Xóa nội dung phân trang cũ
+// Hiển thị sản phẩm và thiết lập phân trang
+function showHomeProduct(products) {
+    displayList(products, perPage, currentPage);
+    setupPagination(products, perPage);
+}
 
-    let totalPages = Math.ceil(productList.length / perPage);
+// Gắn trang
+function setupPagination(productAll, perPage) {
+    document.querySelector(".page-nav-list").innerHTML = ""; // Xóa phân trang cũ
+    let pageCount = Math.ceil(productAll.length / perPage);
 
-    // Nút "Trang trước"
-    if (currentPage > 1) {
-        const prevButton = createPaginationButton('<i class="fa-solid fa-left" style="color: #B5292F;"></i>', () => {
+    // Giới hạn chỉ hiển thị tối đa 5 trang
+    let pageLimit = 5;
+    let startPage = currentPage > 3 ? currentPage - 2 : 1;
+    let endPage = Math.min(startPage + pageLimit - 1, pageCount);
+
+    // Thêm nút "<" để chuyển sang trang trước
+    let prevButton = document.createElement("li");
+    prevButton.classList.add("page-nav-item");
+    prevButton.innerHTML = `<a href="javascript:;"><i class="fa-solid fa-left" style="color: #B5292F;"></i></a>`;
+    prevButton.addEventListener("click", function () {
+        if (currentPage > 1) {
             currentPage--;
-            displayProducts(productList, perPage, currentPage);
-            setupPagination(productList, perPage);
-        });
-        paginationContainer.appendChild(prevButton);
-    }
-
-    // Các nút số trang
-    for (let i = 1; i <= totalPages; i++) {
-        const pageButton = createPaginationButton(i, () => {
-            currentPage = i;
-            displayProducts(productList, perPage, currentPage);
-            setupPagination(productList, perPage);
-        });
-        if (i === currentPage) {
-            pageButton.classList.add("active");
+            setupPagination(productAll, perPage);
+            displayList(productAll, perPage, currentPage);
+            window.scrollTo(0,600);
         }
-        paginationContainer.appendChild(pageButton);
+    });
+    document.querySelector(".page-nav-list").appendChild(prevButton);
+
+    // Hiển thị các trang hiện tại
+    for (let i = startPage; i <= endPage; i++) {
+        let li = paginationChange(i, productAll);
+        document.querySelector(".page-nav-list").appendChild(li);
     }
 
-    // Nút "Trang sau"
-    if (currentPage < totalPages) {
-        const nextButton = createPaginationButton('<i class="fa-solid fa-right" style="color: #B5292F;"></i>', () => {
+    // Thêm nút ">" để chuyển sang trang sau
+    let nextButton = document.createElement("li");
+    nextButton.classList.add("page-nav-item");
+    nextButton.innerHTML = `<a href="javascript:;"><i class="fa-solid fa-right" style="color: #B5292F;"></i></a>`;
+    nextButton.addEventListener("click", function () {
+        if (currentPage < pageCount) {
             currentPage++;
-            displayProducts(productList, perPage, currentPage);
-            setupPagination(productList, perPage);
+            setupPagination(productAll, perPage);
+            displayList(productAll, perPage, currentPage);
+            window.scrollTo(0,600);
+        }
+    });
+    document.querySelector(".page-nav-list").appendChild(nextButton);
+}
+
+// Tạo nút trang
+function paginationChange(page, productAll) {
+    let node = document.createElement("li");
+    node.classList.add("page-nav-item");
+    node.innerHTML = `<a href="javascript:;">${page}</a>`;
+
+    // Đặt trang hiện tại là active
+    if (currentPage === page) node.classList.add("active");
+
+    node.addEventListener("click", function () {
+        currentPage = page;
+        displayList(productAll, perPage, currentPage);
+
+        // Xóa class active khỏi các nút khác
+        document.querySelectorAll(".page-nav-item.active").forEach(item => {
+            item.classList.remove("active");
         });
-        paginationContainer.appendChild(nextButton);
-    }
+
+        node.classList.add("active");
+
+        // Cuộn về đầu phần sản phẩm
+        window.scrollTo(0, 600);
+        setupPagination(productAll, perPage);
+    });
+
+    return node;
 }
 
-// Tạo nút phân trang
-function createPaginationButton(label, onClick) {
-    const button = document.createElement("li");
-    button.classList.add("page-nav-item");
-    button.innerHTML = `<a href="javascript:void(0);">${label}</a>`;
-    button.addEventListener("click", onClick);
-    return button;
-}
-
-// Khi DOM đã tải xong
+// Khởi tạo khi DOM sẵn sàng
 document.addEventListener("DOMContentLoaded", () => {
-    displayProducts(products, perPage, currentPage); // Hiển thị sản phẩm ban đầu
-    setupPagination(products, perPage); // Cài đặt phân trang
+    showHomeProduct(products); // Hiển thị trang đầu tiên
 });
+
+
+
+

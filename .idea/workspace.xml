@@ -5,163 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ae1bec4-d365-4cca-b299-54fa8a891d9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.history/css/admin-responsive_20241130222257.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130202815.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130205126.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130211123.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130211152.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130211317.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130222522.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130222743.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130222910.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223132.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223500.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223556.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223635.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223656.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130224125.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130224357.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130224412.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130225754.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130225813.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130225851.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/coupon_20241130200131.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/coupon_20241130200134.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/flash-sale_20241130195323.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/flash-sale_20241130201052.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/flash-sale_20241130201841.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/home_20241130200143.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/home_20241130200204.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/home_20241130201035.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/home_20241130203904.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/login_20241130202828.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/products_20241130200331.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/products_20241130200336.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/products_20241130201545.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/products_20241130214100.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130200212.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130200215.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130200341.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130201113.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130201145.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130201230.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130201351.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130202841.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130200400.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130200908.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130210954.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130211108.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130211152.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130211327.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130222317.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130222826.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130223500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130223556.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130223646.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130223756.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130224125.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130224941.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225106.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225209.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225224.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225236.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225607.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225651.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/coupon_20241130200406.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/coupon_20241130200410.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/coupon_20241130204850.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/flash-sale_20241130195323.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/flash-sale_20241130201737.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/flash-sale_20241130232842.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130195404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130195432.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130203718.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130204041.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130204058.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130204106.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130204216.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130213924.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215344.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215506.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215559.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215622.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215737.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215753.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215808.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215856.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130220025.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130220035.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home_20241130200439.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home_20241130200444.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/home_20241130205324.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130195323.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130200427.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130200432.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214313.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214347.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214522.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214704.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214849.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130215029.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130215128.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/login_20241130200748.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130195926.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130195929.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203058.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203301.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203326.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203341.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203351.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203359.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203418.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203546.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/products_20241130195900.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/products_20241130195913.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241130195757.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241130195807.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241130200825.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241130201413.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130195716.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130195721.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130195730.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130200648.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130202149.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130211336.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130230021.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/flash-sale_20241130195323.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/flash-sale_20241130201804.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/home_20241130195600.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/home_20241130195623.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/home_20241130203920.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/shoppingcart_20241130195501.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/shoppingcart_20241130195507.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/shoppingcart_20241130195653.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.history/js/shoppingcart_20241130201411.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/banner/banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/banner/luongthuc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/css/Contact_20241120000918.css" beforeDir="false" afterPath="$PROJECT_DIR$/.history/css/Contact_20241120000918.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119205318.css" beforeDir="false" afterPath="$PROJECT_DIR$/.history/css/a_20241119205318.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/coupon.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/coupon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/productdetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/productdetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shoppingcart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/coupon.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/coupon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/home2.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/productdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/productdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shoppingcart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/flash-sale.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/flash-sale.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/shoppingcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shoppingcart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +20,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Merging npt",
+    "JavaScript Debug.admin.html.executor": "Run",
+    "git-widget-placeholder": "npt",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
