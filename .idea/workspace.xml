@@ -4,136 +4,180 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc169b4d-c39b-40cc-966d-618cafac9b50" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5ae1bec4-d365-4cca-b299-54fa8a891d9b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.history/css/admin-responsive_20241130222257.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130202815.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130205126.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130211123.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130211152.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130211317.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130222522.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130222743.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130222910.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223132.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223500.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223556.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223635.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130223656.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130224125.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130224357.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130224412.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130225754.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130225813.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/admin_20241130225851.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/coupon_20241130200131.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/coupon_20241130200134.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/flash-sale_20241130195323.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/flash-sale_20241130201052.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/flash-sale_20241130201841.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/home_20241130200143.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/home_20241130200204.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/home_20241130201035.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/home_20241130203904.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/login_20241130202828.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/products_20241130200331.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/products_20241130200336.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/products_20241130201545.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/products_20241130214100.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130200212.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130200215.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130200341.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130201113.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130201145.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130201230.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130201351.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/css/shoppingcart_20241130202841.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130200400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130200908.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130210954.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130211108.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130211152.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130211327.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130222317.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130222826.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130223500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130223556.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130223646.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130223756.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130224125.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130224941.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225106.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225209.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225224.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225236.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225607.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/admin_20241130225651.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/coupon_20241130200406.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/coupon_20241130200410.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/coupon_20241130204850.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/flash-sale_20241130195323.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/flash-sale_20241130201737.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/flash-sale_20241130232842.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130195404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130195432.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130203718.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130204041.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130204058.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130204106.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130204216.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130213924.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215344.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215506.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215559.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215622.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215737.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215753.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215808.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130215856.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130220025.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home2_20241130220035.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home_20241130200439.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home_20241130200444.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/home_20241130205324.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130195323.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130200427.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130200432.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214313.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214347.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214522.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214704.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130214849.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130215029.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/hotproducts_20241130215128.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/login_20241130200748.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130195926.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130195929.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203058.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203301.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203326.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203341.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203351.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203359.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203418.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/productdetail_20241130203546.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/products_20241130195900.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/products_20241130195913.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241130195757.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241130195807.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241130200825.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241130201413.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130195716.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130195721.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130195730.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130200648.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130202149.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130211336.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/admin_20241130230021.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/flash-sale_20241130195323.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/flash-sale_20241130201804.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/home_20241130195600.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/home_20241130195623.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/home_20241130203920.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/shoppingcart_20241130195501.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/shoppingcart_20241130195507.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/shoppingcart_20241130195653.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.history/js/shoppingcart_20241130201411.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/banner/luongthuc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/Contact_20241120000918.css" beforeDir="false" afterPath="$PROJECT_DIR$/.history/css/Contact_20241120000918.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119205318.css" beforeDir="false" afterPath="$PROJECT_DIR$/.history/css/a_20241119205318.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/coupon.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/coupon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/productdetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/productdetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shoppingcart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/coupon.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/coupon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/home2.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/productdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/productdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shoppingcart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/flash-sale.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/flash-sale.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/shoppingcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shoppingcart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="TypeScript File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2oZlvnTZGNdi7h7klzBUZ9e4qNM" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.about.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.admin.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home1.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home2.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.hotproducts.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.productdetails3.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.products.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.shoppingcart.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;npt&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/project_AI&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "Merging npt",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="V:\LTW\Project\html" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+}]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="bc169b4d-c39b-40cc-966d-618cafac9b50" name="Changes" comment="" />
-      <created>1731085211449</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1731085211449</updated>
-      <workItem from="1731085212473" duration="1422000" />
-      <workItem from="1731086671106" duration="879000" />
-      <workItem from="1731133631363" duration="19408000" />
-      <workItem from="1731239296347" duration="14250000" />
-      <workItem from="1731308009561" duration="11348000" />
-      <workItem from="1731337597378" duration="4282000" />
-      <workItem from="1731379611533" duration="5375000" />
-      <workItem from="1731422573645" duration="3530000" />
-      <workItem from="1731465074334" duration="17906000" />
-      <workItem from="1731593393330" duration="4776000" />
-      <workItem from="1731599020463" duration="180000" />
-      <workItem from="1731599216487" duration="107000" />
-      <workItem from="1731599336108" duration="76000" />
-      <workItem from="1731599520150" duration="358000" />
-      <workItem from="1731728937014" duration="1582000" />
-      <workItem from="1731752622314" duration="3765000" />
-      <workItem from="1731775691934" duration="4740000" />
-      <workItem from="1731812152883" duration="2204000" />
-      <workItem from="1731828396441" duration="12482000" />
-      <workItem from="1731904808170" duration="30522000" />
-      <workItem from="1731987329587" duration="21127000" />
-      <workItem from="1732190014646" duration="3254000" />
-      <workItem from="1732270866574" duration="162000" />
-      <workItem from="1732271036157" duration="14933000" />
-      <workItem from="1732448570798" duration="19235000" />
-      <workItem from="1732522569859" duration="3238000" />
-      <workItem from="1732535246128" duration="10409000" />
-      <workItem from="1732595712309" duration="2830000" />
-      <workItem from="1732624606137" duration="613000" />
-      <workItem from="1732626810395" duration="2639000" />
-      <workItem from="1732686461324" duration="1782000" />
-      <workItem from="1732798705715" duration="3000" />
-      <workItem from="1732798718376" duration="5000" />
-      <workItem from="1732891451351" duration="1834000" />
-      <workItem from="1732961225847" duration="8762000" />
-      <workItem from="1732974074238" duration="1937000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
