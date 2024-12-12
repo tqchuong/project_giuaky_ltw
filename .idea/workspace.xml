@@ -1,15 +1,1558 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="FoodMart:war" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc169b4d-c39b-40cc-966d-618cafac9b50" name="Changes" comment="">
+    <list default="true" id="2b456d60-5884-49d4-ad25-687dfb03df07" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.history/css/Contact_20241120000702.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/Contact_20241120000918.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119205318.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119210255.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119222043.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119222626.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119222825.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119223355.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119223930.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119231443.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119233622.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119234210.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/a_20241119234253.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin-responsive_20241120013809.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin-responsive_20241120013827.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241113202311.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241117211629.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241117214352.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241117214512.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241117214627.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241117214725.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241118133325.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241118133615.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241118220033.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241119111419.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241119210248.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241120013549.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/admin_20241120013603.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/checkout_20241113202311.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/checkout_20241113205007.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/checkout_20241113210108.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/checkout_20241119210501.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120000702.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120011213.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120223243.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120225924.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120230144.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120230423.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120230542.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120231004.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/coupon_20241120231209.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241109230134.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241111132215.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241111211342.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241111212609.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241112102026.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241112102318.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113203121.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113203250.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113205010.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113205739.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113210020.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113210027.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113210108.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113210603.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241113235009.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241114003936.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241118132022.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241118133838.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241118220032.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241120000902.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241120000907.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241120001015.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241120012528.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241120012731.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241120012823.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/home_20241120012844.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/login_20241113204400.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/login_20241113205012.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/login_20241113215721.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/login_20241113235009.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/login_20241119210439.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241119205318.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241119210242.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120154154.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120154251.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120154354.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120154543.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120154729.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120154805.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120154944.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120155107.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120155342.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120155542.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/products_20241120222335.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241109225809.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111215056.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111215248.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111215328.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111215340.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111215630.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111215647.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111215657.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111215917.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111220051.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111220230.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111220238.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111220251.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111220330.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111220342.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241111221107.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241113205015.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241113210108.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241113210554.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241119210234.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241120000837.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241120000847.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/shoppingcart_20241120001017.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/toast-message_20241112105545.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/css/toast-message_20241112105557.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241107134602.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241112111124.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115163413.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115163912.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115164323.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115164445.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115164603.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115164943.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115165109.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115165217.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115165550.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115184230.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115184514.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115230921.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115231043.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115231638.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241115231855.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241117204238.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241117204533.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241117204623.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241117204901.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241117204916.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241117205010.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241117205047.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241117205215.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118133143.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118222409.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118223241.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118223437.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118223545.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118224558.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118231115.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118235440.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241118235442.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119111131.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119111201.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119111255.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119111318.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119111419.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119151208.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119151426.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119151742.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119163025.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119165400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119165425.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119210156.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119234240.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241119235639.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/admin_20241120013756.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241107132804.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241111233826.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241111234253.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241112221633.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241112224322.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241113205017.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241113214533.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241115232052.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241115233025.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241116215809.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241116215845.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241116220030.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241118220027.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241118220029.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241119163025.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241119164727.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241119164744.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241119164809.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241119164856.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241119165002.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241119165009.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241119210146.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120000702.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120222753.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120222850.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120222911.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120222939.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120222948.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120223001.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120223014.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120223018.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120223027.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120223107.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120223121.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120223243.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120225924.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120230155.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120231243.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/coupon_20241120231256.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119205318.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119210310.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119211328.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119220857.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119221217.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119222143.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119222329.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119222527.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119223035.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119223101.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119224057.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119224151.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119235337.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119235346.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119235458.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241119235513.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241120010337.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241120010807.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241120011039.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241120012112.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241120012140.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241120012217.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home2_20241120012312.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241110100058.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241110101755.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241110104816.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241110104913.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241110105833.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241110110105.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241110152525.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241110153423.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111132059.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111133425.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111140252.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111211152.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111215056.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111215107.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111215248.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111215917.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111221105.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111222619.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111222636.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241111233927.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241112101212.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241112101630.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241112102026.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241112102051.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241112111205.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113205156.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113205723.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113210202.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113210222.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113211415.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113214533.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113215123.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113222513.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241113234704.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241114002559.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241114004338.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241114004413.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241114094856.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241114101846.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241118132345.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241118132432.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119154622.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119155244.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119155828.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119162630.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119165640.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119210038.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119210041.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119210308.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119211328.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119234735.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119235450.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119235721.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241119235845.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120010956.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120011008.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120011039.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120011052.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120011927.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120012017.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120012112.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120155638.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/home_20241120231351.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241110102043.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241110102049.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241110155709.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241113205003.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241113210243.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241113210246.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241113214533.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241113215238.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241113234755.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241116214754.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241116214828.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241117151647.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241119163025.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241119205904.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241119235858.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/login_20241120000012.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119160216.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119160757.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119161222.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119161234.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119161539.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119161548.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119161603.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119161917.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119162138.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241119162213.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241120155638.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241120155802.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241120155905.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241120155916.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/productdetail_20241120155935.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241119205318.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241119211328.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241119231445.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241119235306.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241119235455.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241120001541.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241120010337.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241120010807.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241120010904.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241120012938.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241120012946.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/products_20241120013022.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241109225642.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111135726.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111140045.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111215823.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111220440.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111220624.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111220704.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111220717.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111220730.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111220817.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111221024.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111221103.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111221921.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111222156.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111222219.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241111234256.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241113205005.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241113205640.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241113205739.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241113210253.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241113210306.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241113214533.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119153607.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119153641.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119153719.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119153820.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119153841.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154248.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154255.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154307.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154335.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154344.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154520.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154535.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154650.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119155224.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119155759.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119162333.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119162344.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119162442.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119162508.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119162546.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119162558.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119163025.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119163105.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119163831.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119201322.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119205939.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119211436.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241120000746.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241120000800.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241120001825.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241120001904.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241120001937.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241120004619.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241120004701.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/text_20241118222511.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/text_20241118223241.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/html/text_20241119222527.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119210951.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119211348.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119233043.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119233213.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119233231.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119233600.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119234210.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119234253.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119234450.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/a_20241119235024.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241108215402.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241112103455.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241112113153.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241113162552.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241113164012.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241113205117.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241113210609.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241113210705.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241113211415.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241113214533.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115163912.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115164026.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115164057.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115164109.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115164208.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115164526.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115164629.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115164755.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241115164943.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241116005244.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117150915.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117150932.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117150950.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117151028.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117151336.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117204238.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117205549.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117205717.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117205938.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117210036.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117210411.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117210551.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117210651.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241117210728.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241119162658.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241119162705.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241119163010.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241119205227.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/admin_20241119205426.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241107132947.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111133031.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111133425.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111134214.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111140256.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111230859.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111231843.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111232237.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111233012.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111233041.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111233826.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111234204.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241111234839.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112101212.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112215415.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112215727.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112221152.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112222203.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112223752.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112223814.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112223829.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112223844.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112224017.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112224216.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112224705.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112224721.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112225054.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112234823.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241112234907.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113141137.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113141951.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113142021.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113144152.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113144324.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113145027.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113145602.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113155056.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113155927.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113160007.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113160046.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113160115.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113161654.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113162014.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113163715.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113205115.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241113214533.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115232215.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115232257.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115232308.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115232318.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115232332.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115232850.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115232929.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233036.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233049.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233137.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233145.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233151.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233202.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233542.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233550.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233612.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233624.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233633.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233713.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233731.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233741.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241115233807.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241116005250.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241116215627.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241116215959.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241116220014.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241118220030.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241119162716.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241119162726.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241119163012.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/checkout_20241119205501.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241109230019.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110101636.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110102255.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110104351.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110110440.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110153229.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110153850.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110154513.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110161458.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110161629.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110161751.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110161807.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241110162624.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111132046.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111133712.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111133828.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111134043.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111134145.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111134214.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111135312.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111135358.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111135541.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111140257.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111205955.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111210006.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111210451.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111210550.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111211052.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111212344.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111213107.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111213419.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111222746.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111222812.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111223004.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111234204.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241111234839.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241112101630.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241112102026.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241112102318.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241112215109.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241112215156.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241112215805.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241112221152.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000024.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000045.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000110.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000222.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000349.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000448.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000532.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000820.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000840.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113000902.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113001005.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113001108.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113001204.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113001216.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113001324.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113001525.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113001759.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113002133.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113002219.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113141749.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113145027.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113204526.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113205019.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113205615.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113210421.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113210423.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113211415.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113215123.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113234559.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113234704.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113235009.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113235343.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241113235815.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241114000141.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241114000640.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241114000842.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241114001339.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241114001434.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241114002559.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241114003614.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241114003936.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119205534.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119205609.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119210306.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119220857.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119221217.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119221452.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119221736.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119233043.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119233129.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119233213.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119233231.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/home_20241119235458.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/hotproducts_20241113210149.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/hotproducts_20241113215014.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/hotproducts_20241119205622.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/initializeReviews_20241110103159.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/initializeReviews_20241110104351.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241109232118.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110101721.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110101732.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110102134.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110102144.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110103318.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110104908.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110105234.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110105833.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110151605.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110152001.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110152020.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110152416.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110152438.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110152503.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110153319.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110153424.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110153740.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110153931.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110154101.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110154123.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110154134.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110154332.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110154751.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110155158.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110155356.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110155452.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110155750.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110155810.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110160506.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110161230.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241110162343.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241111132102.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113203121.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113203213.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113203334.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113204320.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113205140.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113205156.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113205550.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113205918.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113205927.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113210432.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113210514.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113210528.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241113213426.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241114001845.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241114001906.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241114002159.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241114094824.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241114124159.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241115164629.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241115164715.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241115164742.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241118235441.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241119153607.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241119153652.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241119154425.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/listProduct_20241119154826.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113204415.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113204629.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113204642.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113205022.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113210500.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113210506.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113211415.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113215238.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113215721.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241113234627.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241116214508.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241119162734.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241119162738.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241119163014.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241119205837.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/login_20241120160731.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241109222312.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241110104351.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241110105534.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241110153236.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241110160817.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241110161235.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241110162212.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241111132102.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241113205109.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241119163019.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241119205852.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241120000721.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/productdetails_20241120001721.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/reivew_20241110161128.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/reivew_20241110161135.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/reivew_20241110162210.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241109225951.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111132102.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111140045.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111140213.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111140255.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111213728.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111213808.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111214954.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111221833.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111222156.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111222619.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111223004.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111223250.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111224019.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111224801.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111225149.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111225322.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111225503.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111225748.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111230246.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111230421.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241111233826.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241113143148.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241113205111.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241114000141.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241114002049.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119154826.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119155215.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119155350.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119155753.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119155813.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119162615.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119163831.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119163951.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119164605.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241119205845.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241120000811.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241120000815.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241120000933.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241120002036.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241120004352.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241120005908.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/shoppingcart_20241120010152.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/toast-message_20241112105512.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.history/js/toast-message_20241112105557.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin-responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/coupon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/productdetails.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/products.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shoppingcart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/SFPRODISPLAY/SFProDisplay-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/SFPRODISPLAY/SFProDisplay-Heavy.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/SFPRODISPLAY/SFProDisplay-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/SFPRODISPLAY/SFProDisplay-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/SFPRODISPLAY/SFProDisplay-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/SFPRODISPLAY/SFProDisplay-Semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/css/free.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/css/free.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/js/free.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/js/free.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/js/pro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/js/pro.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-v4compatibility.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-v4compatibility.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-292b12.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-292b12.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-50c900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-50c900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-90d968.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-90d968.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-9b80fe.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-9b80fe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-bc0b04.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-bc0b04.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-f6b769.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-f6b769.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-03c840.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-03c840.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-043e6a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-043e6a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-1e5361.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-1e5361.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-292b12.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-292b12.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-3523ab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-3523ab.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-50c900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-50c900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-51b08f.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-51b08f.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-6d2a10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-6d2a10.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-90d968.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-90d968.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-9b80fe.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-9b80fe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-b4a9ce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-b4a9ce.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-bc0b04.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-bc0b04.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-ca12ba.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-ca12ba.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-d5bbe9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-d5bbe9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-d85a6c.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-d85a6c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-e41116.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-e41116.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-e9d1d9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-e9d1d9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-ec38a0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-ec38a0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-03c840.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-03c840.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-043e6a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-043e6a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-1e5361.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-1e5361.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-292b12.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-292b12.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-3523ab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-3523ab.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-50c900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-50c900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-51b08f.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-51b08f.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-6d2a10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-6d2a10.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-90d968.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-90d968.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-9b80fe.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-9b80fe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-b4a9ce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-b4a9ce.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-bc0b04.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-bc0b04.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-ca12ba.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-ca12ba.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-d5bbe9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-d5bbe9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-d85a6c.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-d85a6c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-e41116.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-e41116.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-e9d1d9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-e9d1d9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-ec38a0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-ec38a0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-03c840.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-03c840.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-043e6a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-043e6a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-1e5361.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-1e5361.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-292b12.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-292b12.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-3523ab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-3523ab.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-50c900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-50c900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-51b08f.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-51b08f.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-6d2a10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-6d2a10.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-90d968.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-90d968.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-9b80fe.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-9b80fe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-b4a9ce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-b4a9ce.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-bc0b04.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-bc0b04.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-ca12ba.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-ca12ba.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-d5bbe9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-d5bbe9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-d85a6c.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-d85a6c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-e41116.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-e41116.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-e9d1d9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-e9d1d9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-ec38a0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-ec38a0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-03c840.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-03c840.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-043e6a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-043e6a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-1e5361.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-1e5361.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-292b12.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-292b12.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-3523ab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-3523ab.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-50c900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-50c900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-51b08f.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-51b08f.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-6d2a10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-6d2a10.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-90d968.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-90d968.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-9b80fe.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-9b80fe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-b4a9ce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-b4a9ce.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-bc0b04.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-bc0b04.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-ca12ba.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-ca12ba.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-d5bbe9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-d5bbe9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-d85a6c.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-d85a6c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-e41116.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-e41116.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-e9d1d9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-e9d1d9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-ec38a0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-ec38a0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-03c840.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-03c840.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-043e6a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-043e6a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-1e5361.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-1e5361.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-292b12.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-292b12.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-3523ab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-3523ab.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-50c900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-50c900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-51b08f.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-51b08f.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-6d2a10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-6d2a10.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-90d968.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-90d968.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-9b80fe.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-9b80fe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-b4a9ce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-b4a9ce.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-bc0b04.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-bc0b04.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-ca12ba.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-ca12ba.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-d5bbe9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-d5bbe9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-d85a6c.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-d85a6c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-e41116.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-e41116.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-e9d1d9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-e9d1d9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-ec38a0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-ec38a0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-03c840.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-03c840.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-043e6a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-043e6a.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-1e5361.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-1e5361.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-292b12.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-292b12.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-3523ab.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-3523ab.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-50c900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-50c900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-51b08f.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-51b08f.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-6d2a10.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-6d2a10.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-90d968.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-90d968.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-9b80fe.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-9b80fe.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-b4a9ce.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-b4a9ce.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-bc0b04.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-bc0b04.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-ca12ba.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-ca12ba.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-d5bbe9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-d5bbe9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-d85a6c.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-d85a6c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-e41116.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-e41116.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-e9d1d9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-e9d1d9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-ec38a0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-ec38a0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-v4compatibility.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-v4compatibility.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/coupon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/home2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/hotproducts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/productdetail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shoppingcart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/about/about_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/about/history.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/about/value.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin/blank-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin/s1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin/s2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/admin/s3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/banner/Banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/banner/Banner3.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/banner/Banner4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/banner/Banner5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/banner/Banner6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/banner/baner2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/banner/banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/banner/luongthuc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/Bot-ngu-coc-minmin-29-hat-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/Ngu-coc-an-kieng-EURO-DIET-CEREAL-20-goi-600x600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/Ngu-coc-dinh-duong-EURO-CEREAL-20-goi-xuat-Nhat-600x600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/Ngu-coc-dinh-duong-EURO-CEREAL-tui-hop-20-goi-600x600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/Ngu-coc-dinh-duong-GOLDEN-KARE-20-goi-600x600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/bot-ngu-coc-dinh-duong-damtuh-han-quoc-50-goi-5(1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-abalanca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-an-chay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-an-chay2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-an-king.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-calbe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-hena.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-tami.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu-coc-vital.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/cereal/ngu_coc_dinh_duong_hena-450x450.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/chao-thit-bo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/chao-tuoi-luon-dau-xanh-cay-thi-goi-260g-202401021618587467.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/chao-tuoi-thit-bo-cay-thi-goi-260g-202309032058365692.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/chao-tuoi-thit-heo-cay-thi-goi-260g-202407091435294691.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/chao-vifon-vi-ga-goi-50g-202306231013287313.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/chao-vifon-vi-thit-bam-goi-50g-202306231012172188.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-de-nhat-thit-bam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-gau-do-bo-bit-tet-goi-63g-202407121408410572.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-gau-do-ga-soi-pho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-gau-do-thit-bam-goi-63g-202407121411246247.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-gau-do-tom-va-ga-goi-63g-202407061656540859.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-hao-hao-chua-cay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-khoai-tay-omachi-tom-chua-cay-thai-goi-80g-202306061558151636.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-lau-thai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-siu-kay-x2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/mi-xao-hao-hao.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/nui-rau-cu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/dong-goi/nui-xoan-ba-bay-goi-500g-clone-202405271312145099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/20240912-114520_0e8d2bb5536f4f188e511efcdb22cce3_medium.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/banh-uop-kho-simply-food-chay-tot-market_a00054f60449463c9077095ba108b36c_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/banh_hoi_symply_food_bc5d4a00af7f4b6f97bfd1066af047b8_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/bun-gao-binh-tay-1-300x300_ba9b7c71594c45efbd9d86124a056615_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/bun-gao-nang-huong-bt-300x300_a4b2812151974f138d7d5fd7cb67d628_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/bun_chum_ngay_chay_tot_market_2c2b602e13984fb4aa6a28c30d34dbc7_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/bun_gac_cao_bang_chay_tot_market_9424ddc1acaf4397b81744a62e7008eb_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/bun_gao_lut_den-chay_tot_market_7f290f46971b4ee2bcb6f7a979d4afaa_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/bun_gao_lut_den-chay_tot_market_7f290f46971b4ee2bcb6f7a979d4afaa_medium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/bun_ngo_chay_tot_694a006d68754e34b2cd8300b9efdda7_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/hu-tieu-nam-vang-simply-food-chay-tot-market_af31271a96014c60981c8faeb3221d88_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/mi-quang-simply-food-chay-tot-market_eb63d1cbb82347b0b3086be0286050f7_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/mi_chu_gao_lut_chay_tot_market-removebg-preview_b39099b25cbc4d10a24e2b2a68f163be_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/mi_chu_rau_cu_e0ee9f8ce6604923ad6c49bf72545e9a_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/mien_dong_do-chay_tot_market_a673d07e97274811a4531ea1a5475e7a_large.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/mien_dong_symply_food_chay_tot_market_d77a32bfcd604c39826413bac3f60794_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-dokho/roll-rice-pho-noodles-500-g-4046_12da831c20ee4a58ab8e56d58d6a36d1_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ Khoai tây  McCain Cọng lớn  38 (~10mm) - McCain Straight Cut  Fries 38 (~10mm).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ Khoai tây  McCain Cọng nhỏ 14 (~6mm) - McCain Shoestring Fries 14 (~6mm) – 3kgbao.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ Khoai tây McCain Bít Tết 34 (~19mm) - McCain Steak Cut (Steak House) Fries 34 (~19mm) - 5kgbao.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ Khoai tây McCain Cắt múi tẩm tỏi  – McCain Country Potato Wedges -2.5kgbao .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/AVIKO FREEZE CHILL (POMMES FRITES) 916 - 15MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Bap dong hat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/BẮP HẠT ĐÔNG LẠNH BECO.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/BẮP HẠT ĐÔNG LẠNH DAT - SCHAUB (450GRGÓI- 24 GÓITHÙNG).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Bắp Hạt Đông Lạnh Corn Tomex.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Hành Tây Cắt Vòng Tẩm Bột Lutosa - Onion Rings Lutosa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/HẠT HỖN HỢP ĐÔNG LẠNH MIX TOMEX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/HẠT HỖN HỢP ĐÔNG LẠNH.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHAY KHOAI TÂY MỸ 500GR (MCCAIN CỌNG LỚN 38 ~10MM).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI LANG SWEET TREAT.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY AVIKO CẮT THẲNG 38 AA-38 AVIKO FOMMES FRIES AA-GÓI 1KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY AVIKO CẮT THẲNG 38 AA-38 AVIKO FOMMES FRIES AA-GÓI 2.5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY AVIKO HASHBROWN BÁNH TRÒN-AVIKO HASHBROWN-2.5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY AVIKO RĂNG CƯA-12 AVIKO CRINKCLE CUT AA-2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY BURGER RAU CỦ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY BÁNH CHURROS AVIKO-AVIKO CHURROS FRIES AAA-1KG .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY BÁNH TRÒN BABY AVIKO-AVIKO ROSTIBITE LAW SALT-GÓI 2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY COUNTRY POMMES FRITES 38 - 9,5MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT MÚI AVIKO TẨM GIA VỊ ỚT-AVIKO SPYCY JACKET WEDGE-2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT MÚI CAU.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT MÚI TẨM GIA VỊ TỎI VÀ THẢO MỘC-AVIKO GARLIC AND HERD WEDGES-2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT MÚI TẨM GIA VỊ-AVIKO JACKET WEDGES CUT-2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT MÚI TẨM VỊ ỚT - LUTOSA (750 GRAMGÓI - 12 GÓITHÙNG).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT RĂNG CƯA CRINKLE 12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG 11MM SIÊU DÀI AVIKO-11 AVIKO SUPER LONG AAA-2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG 14 AVIKO-14 AVIKO JULIENCE AA-2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG 14 SIÊU DÀI AVIKO-14 AVIKO SUPER LONG AAA-2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG 34 AVIKO-34 AVIKO STEAK HOUSE FRIES-GÓI 2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG 38 SIÊU DÀI AVIKO-38 AVIKO SUPER LONG AAA-2,5KG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG AVIKO POMMES FRITES JULIENNE SHOESTRING 7MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG COUNTRY HOUSE 14 - 7MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG CÓ VỎ SUPERLONG SKIN ON 11MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG FARM FRITES FINEST 10MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG FARM FRITES FINEST 7MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG POMMES FRITES  38 - 9.5MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG POMMES FRITES JULIENNE 14 - 7MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG SIÊU GIÒN AVIKO SUPERCRUNCH THICK CUT 18MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG STEAK HOUSE 34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG SUPERCRUNCH SALT 14 - 7MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG SUPERCRUNCH SALT 38 -9.5MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG SUPERLONG 14 - 7MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY CẮT THẲNG SUPERLONG 38- 9,5MM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY GRATIN TOMATO &amp; MOZZARELA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY HASH BROWN TAM GIÁC HIỆU MCCAIN MUA Ở ĐÂU.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY HASHBROWN TAM GIÁC AVIKO-AVIKO HASHBROWN TRIANGLE-2,5KG .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY KEM PHÔ MAI GRATIN CREAM &amp; CHEESE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY MINIGRATIN AARDPEER &amp; PASTINAAK.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY MINIGRATIN ASPERGE &amp; PARMEZAN.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY MÚI CAU VỊ CƠ BẢN MEGA WEDGES 8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY MÚI CAU VỊ TỎI VÀ LÁ MÙI GARLIC &amp;HERBS WEDGES 8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY MÚI CAU VỊ ỚT SPICY JACKET WEDGES 8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY NGHIỀN BI ÍT MUỐI ROSTI BITES LOW SALT.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY NGHIỀN MASHED POTATOES.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY NGHIỀN TAM GIÁC ROSTIKO'S TRIANGLES.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY NGHIỀN TRÒN HASH BROWN ROUNDS-FRYER.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY PHO MAI QUE AVIKO MOZZARELLA FINGER.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT 34” CẮT THẲNG EXTRA LONG FANCY BLUE RIBBON .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT 38 CẮT THẲNG EXTRA LONG FANCY BLUE RIBBON (NWSEAL).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT CẮT THẲNG ¼ EXTRA LONG FANCY BLUE RIBBON.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT GỢN SÓNG VỊ SỐT BBQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT GỢN SÓNG VỊ SỐT BUFFALO.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT HASHBROWN TAM GIÁC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT HASHBROWN VUÔNG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT MÚI CAU CÓ VỎ (8 MÚI).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY SIMPLOT SỢI MINHON 316” VỊ SỐT BUFFALO.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY XOẮN CHURROS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/KHOAI TÂY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khay khoai tây Mỹ 500gr - McCain Bít Tết 34 (~19mm).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây 14 Mc Cain - McCain Shoestring Fries 14 (3kg Bao,15kgThùng).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây 34 Steak House Fries Mc Cain (5kg Bao,15kgThùng).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây 38 Mc Cain - McCain Straight Cut Fries 38 (5kg Bao,15kgThùng).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây Bánh Hình Nút Chai - Cork Hash Browns.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây Chiên Cắt Thẳng Mydibel 38 (~10mm)  .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây Cắt Múi Tẩm Gia Vị Classic Wedges (1kgbao, 10kgthùng).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây Cắt Múi Tẩm Gia Vị Lamb Weston (2.27kggói – 13.62kgthùng).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây Hash Brown Bánh Tròn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây Nghiền Lamb’s Supreme Original Mashed Potato – Lamb Weston.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây Nghiền Mc Cain - Mc Cain Mashed Potatoes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai Tây Răng Cưa Mc Cain - McCain Crinkle Cut Fries (5kg Bao,15kgThùng).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai tây  McCain Cọng lớn  38 (~10mm) - McCain Straight Cut  Fries 38 (~10mm).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai tây  McCain Cọng nhỏ 14 (~6mm) - McCain Shoestring Fries 14 (~6mm) – 3kgbao.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai tây McCain  Răng cưa (13mm)  - McCain Crinkle Cut Fries (13mm) – 5kgbao .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai tây McCain Bít Tết 34 (~19mm) - McCain Steak Cut (Steak House) Fries 34 (~19mm) - 5kgbao.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Khoai tây McCain Cắt múi tẩm tỏi  – McCain Country Potato Wedges -2.5kgbao .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/RAU CỦ HỖN HỢP ĐÔNG LẠNH.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/RONG BIỂN TƯƠI WAKAME SEAWEED.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/bap hat tran gia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/dau ha lan dong lanh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ĐẬU GÀ CECI (DIVELLA) 400GR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ĐẬU HÀ LAN ĐÔNG LẠNH BECO.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ĐẬU HÀ LAN ĐÔNG LẠNH PEAS TOMEX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ĐẬU SỐT CÀ FIAMMA 400GRAMLON – 24 LONTHÙNG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ĐẬU TRẮNG TÂY BAN NHA FAGIOLI (DIVELLA) 400GR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/ĐẬU ĐỎ ROSSI KIDNEY LESSATI (DIVELLA) 400GR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Đậu Bơ Đóng Hộp Fiamma - Canned Butter Beans Fiamma .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Đậu Hà Lan Green Pea đông lạnh (450 gr gói).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Đậu Hà Lan Đóng Hộp Fiamma - Canned Green Peas Fiamma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Đậu Hỗn Hợp 4 Loại Fiamma - Canned Four Beans Salad Fiamma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Đậu Lăng Đóng Hộp Fiamma - Canned Lentils Fiamma .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Đậu Nành Đông Lạnh - Frozen Soybeans.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Đậu Răng Ngựa Đóng Hộp Fiamma - Canned Garbanzo Beans Fiamma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-khoai1/Đậu Trắng Đóng Hộp Fiamma - Canned White Beans Fiamma.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-BAY-4-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-BB-702-1-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-CACAO-5-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-DREAM-4-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-GOLFMAN-2-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-HAPPY-6-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-HUONG-QUE-6-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-MAN-4-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-MATCHA-8-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/LUONG-KHO-MIX-VI-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lkkh9v5ya67e93-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lkkkcys97f6807-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lkkkcys9a8b41e-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lkkkcys9bmvkd9-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lkkkcys9d1g0e0-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lkkkcys9eg0g24-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-ll2yx5oqggy31a-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-llf5oh10d2uu86-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lmrsss8ocp9bb1-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-ln5ovde5bp3s4b-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-ln5ovde5oc7s50-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lnx9fkfxq6zxb9-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lnx9fkfxt04t57-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lny8hy0nsby2c4-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lo5nrouci9aj9b-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lo5nroumf1877e-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lo5nroumroc792-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lo5nroun4bg73d-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lor7c7288s232f-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lqa1snbngxjm23-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-luongkho/vn-11134207-7r98o-lqqh91c3h0zb24-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/bap1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/bap2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao jap2an2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao japan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao japan1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao japan3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao japan4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao lut dien bien.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao nep ót.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao nep.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao thom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao-nep-cam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao-tam-thom-hai-hau.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao-thien-long.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gao1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gaohokkaido.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/gaost25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/hat ke1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/hat ke2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/hat ke3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/hat-ke-nep.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/khoai lang mat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/khoai lang tim.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/khoai mai.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/khoai mi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/khoai so.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/khoai-so.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/pho kho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/yen mach 2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/yen mach.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/img-pro/yen-mach-trai-cay-sunrise-vi-pho-mai-bich-300g-202306241735231539.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/login/bg-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/login/mask-blob.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logo/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logo/logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/new/Ngày-Pháp-luật-Việt-Nam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/new/thông-báo-giả-mạo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/product/cao lương.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/product/circled-left-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/product/gạo nếp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/product/kê.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/product/luong-thuc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/product/lúa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/product/ngô.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/product/rice.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/bap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/bap1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/bap2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/cart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaolut-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaolut-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaolut-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaolut-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaolut.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaost25-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaost25-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaost25-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaost25-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaost25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaotl1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaotl2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaotl21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaotl31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaotl41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gaotl51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/gạo nếp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/khach.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/khach2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/lúa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/productdetails/rice.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/Bắc-Đẩu-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/Thơm-Mỹ-25kg-2-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/bap1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/bap2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao jap2an2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao japan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao japan1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao japan3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao japan4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao lut dien bien.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao nep ót.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao nep.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao thom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-64-cho-dao-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-DaiThom_AAN-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-Japonica_AAN-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-Jasmine-thai-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ST21_AAN-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ST24-anpharice-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ST24_AAN-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ST25-baobi_moi-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ST25-hut-chan-khong-5kg-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ST25_AAN-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-co-may-4-mua-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-dai-loan-1-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-dai-loan-2-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-dai-loan-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-gia-si-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-hat-ngoc-thai-300x300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-hat-ngoc-troi-thien-long-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-huong-lai-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-huu-co-st25-ong-cua-hop-2kg-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-lai-mien-campuchia-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-long-chau-66-moi-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-lut-do-1-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-lut-huyet-rong-tui-2kg-300x300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-lut-tim-hat-ngoc-troi-3-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-mam-Vibigaba-300x300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-mam-st25-gaba-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-nang-hoa-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-nang-hoa-4-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-nep-than-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ngoc-sa-5kg-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ngoc-thuc-1-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-ong-cua-st25-lua-tom-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-st25-lua-tom-hop2kg-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-tam-bui-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-tam-thom-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-tam-thom-hai-hau.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-thien-long.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-thom-lai-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-thom-lai-sua-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-thom-thai-1-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-thom-thai-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao-tu-quy-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gao1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/gaost25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/hat ke1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/hat ke2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/hat ke3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/hat-ngoc-troi-thien-vuong-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/hat-ngoc-troi-tien-nu-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/hop-mam-nghe-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/hop-qua-tang-gao-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/khoai lang mat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/khoai lang tim.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/khoai mai.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/khoai mi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/khoai so.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/nep-cai-hoa-vang-tui-2kg-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/nep-cam-tay-bac-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/nep-ngong-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/pho kho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/tam-samo-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/yen mach 2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/yen mach.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/riceproducts/z2041531383285_c2cd7582beb6f7ce0241016b38350fa5-300x300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/shoppingcart/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/shoppingcart/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/shoppingcart/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/shoppingcart/ngo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/shoppingcart/shoppingcart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/checkout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/coupon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/productdetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/shoppingcart.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,102 +1562,237 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="TypeScript File" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
+        <option value="Class" />
+        <option value="Servlet" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2oZlvnTZGNdi7h7klzBUZ9e4qNM" />
+  <component name="ProjectId" id="2pqT7TqAXqecq2QTDFDQDy21vA2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.about.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.admin.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home1.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home2.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.hotproducts.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.productdetail.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.productdetails3.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.products.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.shoppingcart.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hmc&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/project_AI&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DBConnect.executor": "Debug",
+    "Application.JDBIConnect.executor": "Run",
+    "Application.UserDAO.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.31.executor": "Run",
+    "git-widget-placeholder": "hmc",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Trash/lab4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="V:\LTW\Project\html" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="V:\LTW\FoodMart\src\main\webapp\html" />
+      <recent name="V:\LTW\FoodMart\src\main\webapp" />
     </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.31">
+    <configuration name="DBConnect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.db.DBConnect" />
+      <module name="FoodMart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBIConnect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.db.JDBIConnect" />
+      <module name="FoodMart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.UserDAO" />
+      <module name="FoodMart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 10.1.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="FoodMart:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/FoodMart" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="ce19489e-94ba-406f-ae76-797e4ca2d225" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50704" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="FoodMart:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JDBIConnect" />
+      <item itemvalue="Application.UserDAO" />
+      <item itemvalue="Application.DBConnect" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.31" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JDBIConnect" />
+        <item itemvalue="Application.UserDAO" />
+        <item itemvalue="Application.DBConnect" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bc169b4d-c39b-40cc-966d-618cafac9b50" name="Changes" comment="" />
-      <created>1731085211449</created>
+      <changelist id="2b456d60-5884-49d4-ad25-687dfb03df07" name="Changes" comment="" />
+      <created>1733492441760</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1731085211449</updated>
-      <workItem from="1731085212473" duration="1422000" />
-      <workItem from="1731086671106" duration="879000" />
-      <workItem from="1731133631363" duration="19408000" />
-      <workItem from="1731239296347" duration="14250000" />
-      <workItem from="1731308009561" duration="11348000" />
-      <workItem from="1731337597378" duration="4282000" />
-      <workItem from="1731379611533" duration="5375000" />
-      <workItem from="1731422573645" duration="3530000" />
-      <workItem from="1731465074334" duration="17906000" />
-      <workItem from="1731593393330" duration="4776000" />
-      <workItem from="1731599020463" duration="180000" />
-      <workItem from="1731599216487" duration="107000" />
-      <workItem from="1731599336108" duration="76000" />
-      <workItem from="1731599520150" duration="358000" />
-      <workItem from="1731728937014" duration="1582000" />
-      <workItem from="1731752622314" duration="3765000" />
-      <workItem from="1731775691934" duration="4740000" />
-      <workItem from="1731812152883" duration="2204000" />
-      <workItem from="1731828396441" duration="12482000" />
-      <workItem from="1731904808170" duration="30522000" />
-      <workItem from="1731987329587" duration="21127000" />
-      <workItem from="1732186969442" duration="41000" />
-      <workItem from="1732542940293" duration="6172000" />
-      <workItem from="1732592981297" duration="1335000" />
-      <workItem from="1732810935273" duration="1460000" />
-      <workItem from="1732871285012" duration="1252000" />
-      <workItem from="1732881564213" duration="1511000" />
-      <workItem from="1732944273493" duration="2886000" />
-      <workItem from="1733028897317" duration="3617000" />
+      <updated>1733492441760</updated>
+      <workItem from="1733492442645" duration="62000" />
+      <workItem from="1733492526959" duration="2573000" />
+      <workItem from="1733496776655" duration="9335000" />
+      <workItem from="1733544152621" duration="332000" />
+      <workItem from="1733667968709" duration="613000" />
+      <workItem from="1733754311777" duration="5686000" />
+      <workItem from="1733762031242" duration="822000" />
+      <workItem from="1733840626387" duration="3281000" />
+      <workItem from="1733878892125" duration="21245000" />
+      <workItem from="1733926973682" duration="2116000" />
+      <workItem from="1733930746756" duration="546000" />
+      <workItem from="1733938215198" duration="55000" />
     </task>
     <servers />
   </component>
