@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,8 +7,8 @@
     <title>Danh sách mã giảm giá</title>
   
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/coupon.css">
-    <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/coupon.css">
+    <link rel="stylesheet" href="font/font-awesome-pro-v6-6.2.0/css/all.min.css"/>
    
    
    
@@ -19,12 +20,12 @@
 <header class="header">
     <div class="logo">
         <a href="home.jsp" aria-label="Homepage">
-            <img src="../image/shoppingcart/6.png" alt="Store Logo"/>
+            <img src="image/shoppingcart/6.png" alt="Store Logo"/>
         </a>
     </div>
     <div class="basket">
-<%--        <a href="shoppingcart.<%@attribute name="" type="" required=""%>" aria-label="Cart">--%>
-            <img src="../image/shoppingcart/shoppingcart.png" alt="Basket Icon"/>
+        <a href="shoppingcart.jsp" aria-label="Cart">
+            <img src="image/shoppingcart/shoppingcart.png" alt="Basket Icon"/>
         </a>
     </div>
 </header>
@@ -35,10 +36,10 @@
         <div class="home-slider">
             <div class="slider-images">
                 <!-- Các hình ảnh banner -->
-                <img alt="Banner 1" src="../image/banner/Banner3.PNG" class="slider-image">
-                <img alt="Banner 2" src="../image/banner/Banner4.png" class="slider-image"
+                <img alt="Banner 1" src="image/banner/Banner3.PNG" class="slider-image">
+                <img alt="Banner 2" src="image/banner/Banner4.png" class="slider-image"
                      style="width: 40%; height: 100%;">
-                <img alt="Banner 3" src="../image/banner/Banner5.png" class="slider-image">
+                <img alt="Banner 3" src="image/banner/Banner5.png" class="slider-image">
             </div>
 
             <!-- Điều khiển chuyển đổi banner -->
@@ -55,7 +56,7 @@
 <div class="voucher-container">
     <!-- Voucher mẫu 1 -->
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>20% Tổng giá trị đơn hàng <br> Đơn hàng có giá trị trên 200k</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">20TONGDON</span>
@@ -67,7 +68,7 @@
     </div>
 
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>15% Giảm giá cho đơn hàng đầu tiên <br> Áp dụng cho tất cả sản phẩm</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">DONDAU15</span>
@@ -78,7 +79,7 @@
         <div class="circle2"></div>
     </div>
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>Giảm ngay 10% cho đơn hàng từ 500k</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">GIAM10K</span>
@@ -89,7 +90,7 @@
         <div class="circle2"></div>
     </div>
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>Ưu đãi 20% khi mua sản phẩm mới</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">MOI20</span>
@@ -100,7 +101,7 @@
         <div class="circle2"></div>
     </div>
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>Miễn phí vận chuyển cho đơn hàng trên 300k</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">FREESHIP300</span>
@@ -111,7 +112,7 @@
         <div class="circle2"></div>
     </div>
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>Mua 2 tặng 1 áp dụng cho sản phẩm đồng giá</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">MUA2TANG1</span>
@@ -122,7 +123,7 @@
         <div class="circle2"></div>
     </div>
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>Giảm giá 5% cho tất cả sản phẩm</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">GIAM5</span>
@@ -133,7 +134,7 @@
         <div class="circle2"></div>
     </div>
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>Tặng kèm quà tặng bí mật cho đơn hàng trên 1 triệu</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">QUATANG</span>
@@ -144,7 +145,7 @@
         <div class="circle2"></div>
     </div>
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>Freeship cho đơn hàng trên 50k</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">FREESHIP50</span>
@@ -155,7 +156,7 @@
         <div class="circle2"></div>
     </div>
     <div class="coupon-card">
-        <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
+        <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo"/>
         <h3>Giảm giá 30k</h3>
         <div class="COUPON-ROW">
             <span id="cpnCode">GIAM30</span>
@@ -174,7 +175,7 @@
                 <div class="widget-row-col">
                     <div class="logo">
                         <a href="">
-                            <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
+                            <img alt="FoodMart Logo" src="image/shoppingcart/6.png"
                                 style="width: 250px; height: auto;">
                         </a>
                     </div>
@@ -266,6 +267,6 @@
 </footer>
 
 
-<script src="../js/coupon.js"></script>
+<script src="js/coupon.js"></script>
 </body>
 </html>

@@ -512,7 +512,7 @@ header {
     }
 }
 
- .fa-bolt {
+.fa-bolt {
     animation: flash 0.5s infinite;
 }
 
@@ -1443,7 +1443,7 @@ textarea {
     background-color: #7A1F21; /* Màu khi hover */
 }
 .chat-box:active {
-       transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .chat-box:hover::after {

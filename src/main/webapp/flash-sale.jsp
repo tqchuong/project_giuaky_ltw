@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +8,10 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>FoodMart Store</title>
-    <link href="../css/products.css" rel="stylesheet">
-    <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="../css/flash-sale.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link href="css/products.css" rel="stylesheet">
+    <link rel="stylesheet" href="font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/flash-sale.css">
+    <link rel="stylesheet" href="css/home.css">
 
 
 </head>
@@ -39,7 +41,7 @@
 
                 <div class="logo">
                     <a href="home.jsp">
-                        <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
+                        <img alt="FoodMart Logo" src="/image/shoppingcart/6.png"
                              style="width: 250px; height: auto;">
                     </a>
 
@@ -129,7 +131,7 @@
                 hot</a>
             </li>
 
-            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.html">
+            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a>
             </li>
@@ -183,7 +185,7 @@
 
         <!-- Banner -->
         <div class="banner">
-            <img src="../image/banner/banner7.png" alt="Flash Sale Banner">
+            <img src="image/banner/banner7.png" alt="Flash Sale Banner">
         </div>
 
         <!-- Time Slots -->
@@ -220,7 +222,7 @@
                 <article class="card-product">
                     <div class="card-header">
                         <a href="#" class="card-image-link">
-                            <img class="card-image" src="../image/dong-goi/mi-gau-do-tom-va-ga-goi-63g-202407061656540859.jpg" alt="Mì gấu đỏ tôm và gà">
+                            <img class="card-image" src="image/dong-goi/mi-gau-do-tom-va-ga-goi-63g-202407061656540859.jpg" alt="Mì gấu đỏ tôm và gà">
                         </a>
                     </div>
                     <div class="food-info">
@@ -961,7 +963,7 @@
 <div class="chat-box">
     <a href="#">💬</a>
 </div>
-    <script src="../js/flash-sale.js"></script>
+    <script src="js/flash-sale.js"></script>
 <!--<script src="../js/home.js"></script>-->
 
 

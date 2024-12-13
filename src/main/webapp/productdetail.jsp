@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,72 +15,48 @@
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="css/productdetails.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/home.css">
 
-    <link rel="stylesheet" href="../css/products.css">
-    <link rel="stylesheet" href="../css/productdetails.css">
-    <link rel="stylesheet" href="../css/home.css">
 
 
 </head>
 <body>
-    <header>
-        <div class="header-middle">
-            <div class="container">
-                <div class="header-middle-left">
-
-                    <div class="logo">
-                        <a href="home.jsp">
-                            <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
-                                style="width: 250px; height: auto;">
-                        </a>
-
-                    </div>
-                </div>
-                <div class="header-middle-center">
-                    <form action="" class="form-search">
-                        <span class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input class="form-search-input" oninput="searchProducts()" placeholder="Tìm kiếm món ăn..."
-                            type="text">
-                        <button class="filter-btn"><i class="fa-solid fa-filter"></i><span>Lọc</span></button>
-                    </form>
-                </div>
+    <jsp:include page="header.jsp"/>
+    <nav class="header-bottom">
+        <div class="container">
+            <ul class="menu-list">
+                <li class="menu-list-item">
+                    <a class="menu-link" href="home.jsp">
+                        <i class="fa-sharp fa-regular fa-house " style="color: #B5292F;"></i>
+                        Trang chủ
+                    </a>
+                </li>
 
 
-                <a href="coupon.jsp" class="discount-code-button">
-                    <div class="icon">
-                        <span class="vn">VND</span>
-                    </div>
-                    <span class="text">Mã Giảm Giá</span>
+                <li class="menu-list-item">
+                    <a class="menu-Category" href="products.jsp">
+                        <i class="fa-solid fa-shop" style="padding-right: 5px;color: #B5292F;"></i>
+                        Sản phẩm
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+
+                </li>
+                <li class="menu-list-item"><a class="hotpro-link" href="hotproducts.jsp">
+                    <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
+                    hot</a>
+                </li>
+
+                <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
+                    <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
                 </a>
-                <div class="header-middle-right">
-                    <ul class="header-middle-right-list">
+                </li>
 
-                        <li class="header-middle-right-item dropdown open">
-                            <i class="fa-solid fa-user"></i>
-                            <div class="auth-container">
-                                <span class="text-dndk">Đăng nhập / Đăng ký</span>
-                                <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
-                            </div>
-                            <ul class="header-middle-right-menu">
-                                <li><a href="javascript:" id="login"><i class="fa-solid fa-right-to-bracket"></i> Đăng
-                                        nhập</a>
-                                </li>
-                                <li><a href="javascript:" id="signup"><i class="fa-solid fa-user-plus"></i> Đăng ký</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="header-middle-right-item open">
-                            <div class="cart-icon-menu">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <span class="count-product-cart">0</span>
-                            </div>
-                            <span>Giỏ hàng</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </ul>
+
         </div>
-    </header>
+    </nav>
     <!--<div class="breadcrumb-container">-->
     <!--    <nav aria-label="breadcrumb">-->
     <!--        <ol class="breadcrumb-links">-->
@@ -104,32 +79,32 @@
                         <div class="row flex-column-reverse flex-lg-row">
                             <div class="col-md-12 col-lg-2">
                                 <div class="product-thumbnails">
-                                    <img src="../image/productdetails/gaost25.jpg" alt="Thumbnail 1"
-                                         class="thumb-image img-fluid"
-                                         onclick="changeImage('../image/productdetails/gaost25.jpg')"
-                                         data-large-img="../image/productdetails/gaost25.jpg">
-                                    <img src="../image/productdetails/gaost25-1.jpg" alt="Thumbnail 2"
-                                         class="thumb-image img-fluid"
-                                         onclick="changeImage('../image/productdetails/gaost25-1.jpg')"
-                                         data-large-img="../image/productdetails/gaost25-1.jpg">
-                                    <img src="../image/productdetails/gaost25-2.png" alt="Thumbnail 3"
-                                         class="thumb-image img-fluid"
-                                         onclick="changeImage('../image/productdetails/gaost25-2.png')"
-                                         data-large-img="../image/productdetails/gaost25-2.png">
-                                    <img src="../image/productdetails/gaost25-3.png" alt="Thumbnail 4"
-                                         class="thumb-image img-fluid"
-                                         onclick="changeImage('../image/productdetails/gaost25-3.png')"
-                                         data-large-img="../image/productdetails/gaost25-3.png">
-                                    <img src="../image/productdetails/gaost25-4.png" alt="Thumbnail 5"
-                                         class="thumb-image img-fluid"
-                                         onclick="changeImage('../image/productdetails/gaost25-4.png')"
-                                         data-large-img="../image/productdetails/gaost25-4.png">
+                                    <img src="image/productdetails/gaost25.jpg" alt="Thumbnail 1"
+                                        class="thumb-image img-fluid"
+                                        onclick="changeImage('image/productdetails/gaost25.jpg')"
+                                        data-large-img="image/productdetails/gaost25.jpg">
+                                    <img src="image/productdetails/gaost25-1.jpg" alt="Thumbnail 2"
+                                        class="thumb-image img-fluid"
+                                        onclick="changeImage('image/productdetails/gaost25-1.jpg')"
+                                        data-large-img="image/productdetails/gaost25-1.jpg">
+                                    <img src="image/productdetails/gaost25-2.png" alt="Thumbnail 3"
+                                        class="thumb-image img-fluid"
+                                        onclick="changeImage('image/productdetails/gaost25-2.png')"
+                                        data-large-img="image/productdetails/gaost25-2.png">
+                                    <img src="image/productdetails/gaost25-3.png" alt="Thumbnail 4"
+                                        class="thumb-image img-fluid"
+                                        onclick="changeImage('image/productdetails/gaost25-3.png')"
+                                        data-large-img="image/productdetails/gaost25-3.png">
+                                    <img src="image/productdetails/gaost25-4.png" alt="Thumbnail 5"
+                                        class="thumb-image img-fluid"
+                                        onclick="changeImage('image/productdetails/gaost25-4.png')"
+                                        data-large-img="image/productdetails/gaost25-4.png">
                                 </div>
                             </div>
                             <div class="col-md-12 col-lg-10">
                                 <div class="product-main-image">
-                                    <img id="mainImage" src="../image/productdetails/gaost25.jpg" alt="Main Product"
-                                         class="img-fluid" data-large-img="../image/productdetails/gaost25.jpg">
+                                    <img id="mainImage" src="image/productdetails/gaost25.jpg" alt="Main Product"
+                                        class="img-fluid" data-large-img="image/productdetails/gaost25.jpg">
                                     <div class="zoom-lens"></div>
                                 </div>
                             </div>
@@ -186,12 +161,12 @@
 
                                             <div class="button-group">
                                                 <button type="button" class="btn btn-secondary add-to-cart"
-                                                    onclick="window.location.href='shoppingcart.html'">
+                                                    onclick="window.location.href='shoppingcart.jsp'">
                                                     <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
                                                 </button>
 
                                                 <button type="button" class="btn btn-primary buy-now"
-                                                    onclick="window.location.href='checkout.html'">Mua Ngay</button>
+                                                    onclick="window.location.href='checkout.jsp'">Mua Ngay</button>
 
                                             </div>
                                         </div>
@@ -302,8 +277,8 @@
                                 <div class="col-lg-6 d-flex flex-wrap gap-3">
                                     <div class="col-md-2">
                                         <div class="image-holder">
-                                            <img src="../image/productdetails/khach.jpg" alt="review"
-                                                 class="img-fluid rounded-circle">
+                                            <img src="image/productdetails/khach.jpg" alt="review"
+                                                class="img-fluid rounded-circle">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -325,8 +300,8 @@
                                 <div class="col-lg-6 d-flex flex-wrap gap-3">
                                     <div class="col-md-2">
                                         <div class="image-holder">
-                                            <img src="../image/productdetails/khach2.jpg" alt="review"
-                                                 class="img-fluid rounded-circle">
+                                            <img src="image/productdetails/khach2.jpg" alt="review"
+                                                class="img-fluid rounded-circle">
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -379,8 +354,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <a href="productdetails4.html" title="Gạo Thiên Long 5kg">
-                            <img src="../image/productdetails/gaotl1.jpg" class="card-img-top" alt="Gạo nếp">
+                        <a href="productdetails4.jsp" title="Gạo Thiên Long 5kg">
+                            <img src="image/productdetails/gaotl1.jpg" class="card-img-top" alt="Gạo nếp">
                             <div class="card-body">
                                 <h5 class="card-title">Gạo Thiên Long 5kg</h5>
                                 <span class="price">₫ 190.000</span>
@@ -390,8 +365,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <a href="productdetails7.html" title="Gạo Lứt Đen Điện Biên">
-                            <img src="../image/productdetails/gaolut.jpg" class="card-img-top" alt="gaolut">
+                        <a href="productdetails7.jsp" title="Gạo Lứt Đen Điện Biên">
+                            <img src="image/productdetails/gaolut.jpg" class="card-img-top" alt="gaolut">
                             <div class="card-body">
                                 <h5 class="card-title">Gạo Lứt Đen Điện Biên</h5>
                                 <span class="price">₫ 190.000</span>
@@ -403,110 +378,10 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
-
-        <div class="widget-area">
-            <div class="container">
-                <div class="widget-row">
-                    <div class="widget-row-col">
-                        <div class="logo">
-                            <a href="">
-                                <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
-                                    style="width: 250px; height: auto;">
-                            </a>
-                        </div>
-                        <h4 style="padding: 5px 0 5px 10px">Kết nối với chúng tôi</h4>
-                        <div class="widget-social">
-                            <div class="widget-social-item">
-                                <a href="">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </div>
-                            <div class="widget-social-item">
-                                <a href="">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                            <div class="widget-social-item">
-                                <a href="">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                            <div class="widget-social-item">
-                                <a href="">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="widget-row-col">
-                        <h3 class="widget-title">Liên hệ</h3>
-                        <p><b>Trụ sở chính:</b> VQCR+GP6, khu phố 6, Thủ Đức, Hồ Chí Minh, Việt Nam</p>
-                        <p><b>Điện thoại:</b> 0123 456 789 </p>
-                        <p><b>Fax:</b> 1234 567 890</p>
-                        <p><b>Email:</b> abc@domain.com</p>
-                    </div>
-                    <div class="widget-row-col">
-                        <h3 class="widget-title">Chính sách</h3>
-                        <ul class="widget-contact">
-                            <li class="widget-contact-item">
-                                <a href="">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    <span>Chính sách thanh toán</span>
-                                </a>
-                            </li>
-                            <li class="widget-contact-item">
-                                <a href="">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    <span>Chính sách giao hàng</span>
-                                </a>
-                            </li>
-                            <li class="widget-contact-item">
-                                <a href="">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    <span>Chính sách đổi trả</span>
-                                </a>
-                            </li>
-                            <li class="widget-contact-item">
-                                <a href="">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    <span>Chính sách xuất hoá đơn GTGT</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <div class="widget-row-col">
-                        <h3 class="widget-title">Chăm sóc khách hàng</h3>
-                        <ul class="widget-contact">
-                            <li class="widget-contact-item">
-                                <a href="">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    <span>Điều khoản sử dụng</span>
-                                </a>
-                            </li>
-                            <li class="widget-contact-item">
-                                <a href="">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    <span>Hướng dẫn mua hàng</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="back-to-top">
-        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
-    </div>
+    <jsp:include page="footer.jsp"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/home.js"></script>
-    <script src="../js/productdetails.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/productdetails.js"></script>
 
 
 </body>

@@ -484,8 +484,8 @@ body,input,button,textarea,pre {
     min-width: 290px;
     position: relative;
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
-    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
-    5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+        inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+        5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     margin: 12px;
 }
@@ -594,9 +594,7 @@ tbody tr td {
     border-radius: 99px;
 }
 
-.hidden {
-    display: none;
-}
+
 
 /* Product */
 .product-all {
@@ -1315,7 +1313,7 @@ label a {
 
 .order-statistical-item{
     box-shadow: 0px 1px 5px 2px #f1f1f1;
-    width: 32.1%;
+    width: 32.1%;   
     display: flex;
     padding: 20px 40px;
     align-items: center;
@@ -1384,4 +1382,6 @@ div.hidden-sidebar {
     padding: 0;
     margin: 0;
 }
+
+
 
