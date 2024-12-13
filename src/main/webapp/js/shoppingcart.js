@@ -163,8 +163,4 @@ $(document).ready(function () {
     function vnd(value) {
         return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(value);
     }
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6

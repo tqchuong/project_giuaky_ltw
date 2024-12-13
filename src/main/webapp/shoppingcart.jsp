@@ -56,11 +56,7 @@
 
                     <li class="item">
                         <input type="checkbox" class="productCheckbox"  />
-<<<<<<<< HEAD:src/main/webapp/shoppingcart.jsp
                         <img src="image/img-pro/gaost25.jpg" alt="Gạo Thơm Hữu Cơ ST25" class="item-image">
-========
-                        <img src="../image/img-pro/gaost25.jpg" alt="Gạo Thơm Hữu Cơ ST25" class="item-image">
->>>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6:target/project-1.0-SNAPSHOT/html/shoppingcart.jsp
                         <h4>Gạo Thơm Hữu Cơ ST25</h4>
                         <p class="item-price">130.000&nbsp;₫</p>
                         <div class="quantity-controls">
@@ -74,11 +70,7 @@
                 <ul class="cart-list">
                     <li class="item">
                         <input type="checkbox" class="productCheckbox"  />
-<<<<<<<< HEAD:src/main/webapp/shoppingcart.jsp
                         <img src="image/img-luongkho/LUONG-KHO-BAY-4-300x300.jpg" alt="Lương khô bay" class="item-image">
-========
-                        <img src="../image/img-luongkho/LUONG-KHO-BAY-4-300x300.jpg" alt="Lương khô bay" class="item-image">
->>>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6:target/project-1.0-SNAPSHOT/html/shoppingcart.jsp
                         <h4>Lương khô bay</h4>
                         <p class="item-price">30.000&nbsp;₫</p>
                         <div class="quantity-controls">

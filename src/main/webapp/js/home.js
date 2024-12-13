@@ -66,11 +66,7 @@ function showHomePage() {
 
 
 // Số sản phẩm hiển thị mỗi trang
-<<<<<<< HEAD
 let perPage = 20;
-=======
-let perPage = 16;
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6
 let currentPage = 1; // Trang hiện tại
 
 // Lấy danh sách sản phẩm từ DOM
@@ -162,10 +158,7 @@ function paginationChange(page, productAll) {
 
         // Cuộn về đầu phần sản phẩm
         window.scrollTo(0, 600);
-<<<<<<< HEAD
         setupPagination(productAll, perPage);
-=======
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6
     });
 
     return node;
@@ -380,20 +373,4 @@ function autoScroll() {
     carousel.scrollLeft = scrollPosition;
     requestAnimationFrame(autoScroll);
 }
-<<<<<<< HEAD
 autoScroll();
-=======
-autoScroll();
-function previewAvatar(event) {
-    const avatarPreview = document.getElementById('avatarPreview');
-    const file = event.target.files[0];
-
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            avatarPreview.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-}
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6

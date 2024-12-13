@@ -76,8 +76,6 @@ public class DBConnect {
             if (users != null) {
                 for (Users user : users) {
                     System.out.println(user);  // In thông tin người dùng
-
-
                 }
             } else {
                 System.out.println("Không có người dùng nào.");

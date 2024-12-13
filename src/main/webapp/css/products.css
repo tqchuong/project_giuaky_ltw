@@ -461,10 +461,6 @@ header {
 
 .menu-link ,
 .hotpro-link ,
-<<<<<<< HEAD
-=======
-.flashsale-link,
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6
 .menu-Category{
     color: var(--black);
     display: inline-block;
@@ -476,10 +472,6 @@ header {
 
 .menu-link:hover::after,
 .hotpro-link:hover::after,
-<<<<<<< HEAD
-=======
-.flashsale-link:hover::after,
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6
 .menu-Category:hover::after
 {
     visibility: visible;
@@ -489,10 +481,6 @@ header {
 
 .menu-link::after,
 .hotpro-link::after,
-<<<<<<< HEAD
-=======
-.flashsale-link::after,
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6
 .menu-Category::after
 {
     content: "";
@@ -508,25 +496,7 @@ header {
     background-color: var(--red);
     transition: all 0.3s ease;
 }
-.fa-bolt {
-    margin-left: 5px;
-    animation: blink 0.65s infinite;
-}
-@keyframes flash {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-}
 
-<<<<<<< HEAD
-=======
- .fa-bolt {
-    animation: flash 0.5s infinite;
-}
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6
 
 .hotpro-link .fa-fire  {
     margin-left: 5px;
@@ -1715,11 +1685,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
 }
 
 
 
-=======
-}
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6

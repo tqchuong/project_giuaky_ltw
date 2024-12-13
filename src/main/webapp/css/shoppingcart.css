@@ -369,7 +369,6 @@ label input[type="checkbox"]:checked {
 .deleteItem:active {
   background-color: #e60000; /* Màu nền khi nhấn */
   border-color: #e60000; /* Màu viền khi nhấn */
-<<<<<<< HEAD
 }
 
 
@@ -381,6 +380,3 @@ label input[type="checkbox"]:checked {
 
 
 
-=======
-}
->>>>>>> f4fe86fbd4d4c7912462b64c3f6985604126baf6
