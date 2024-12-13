@@ -1,4 +1,4 @@
-package com.example.project.database;
+package fit.hcmuaf.edu.vn.foodmart.database;
 
 import java.sql.*;
 

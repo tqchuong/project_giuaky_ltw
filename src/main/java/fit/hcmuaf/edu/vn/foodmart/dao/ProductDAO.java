@@ -1,8 +1,8 @@
-package com.example.project.dao;
+package fit.hcmuaf.edu.vn.foodmart.dao;
 
-import com.example.project.database.DBConnect;
-import com.example.project.model.Category;
-import com.example.project.model.Products;
+import fit.hcmuaf.edu.vn.foodmart.database.DBConnect;
+import fit.hcmuaf.edu.vn.foodmart.model.Category;
+import fit.hcmuaf.edu.vn.foodmart.model.Products;
 
 import java.sql.*;
 import java.util.ArrayList;

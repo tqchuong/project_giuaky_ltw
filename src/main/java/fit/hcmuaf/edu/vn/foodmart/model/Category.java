@@ -1,4 +1,4 @@
-package com.example.project.model;
+package fit.hcmuaf.edu.vn.foodmart.model;
 
 public class Category {
     private int categoryID;

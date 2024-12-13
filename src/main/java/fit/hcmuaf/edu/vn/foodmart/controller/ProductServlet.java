@@ -1,8 +1,7 @@
-package com.example.project.controller;
+package fit.hcmuaf.edu.vn.foodmart.controller;
 
-import com.example.project.dao.ProductDAO;
-import com.example.project.model.Products;
-import jakarta.servlet.RequestDispatcher;
+import fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO;
+import fit.hcmuaf.edu.vn.foodmart.model.Products;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
