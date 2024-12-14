@@ -1,75 +1,96 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
+import java.sql.Timestamp;
+
 public class Products {
-    private int ProductID;
-    private String ProductName;
-    private int CategoryID;
-    private double Price;
-    private String ImageURL;
+    private int productID;
+    private String productName;
+    private int categoryID;
+    private double price;
+    private String imageURL;
+    private Timestamp uploadDate;
+    private int StockQuantity;
 
     // Constructor
-    public Products(int ProductID, String ProductName, int CategoryID, double Price, String ImageURL) {
-        this.ProductID = ProductID;
-        this.ProductName = ProductName;
-        this.CategoryID = CategoryID;
-        this.Price = Price;
-        this.ImageURL = ImageURL;
+    public Products(int productID, String productName, int categoryID, double price, String imageURL, Timestamp uploadDate, int stockQuantity) {
+        this.productID = productID;
+        this.productName = productName;
+        this.categoryID = categoryID;
+        this.price = price;
+        this.imageURL = imageURL;
+        this.uploadDate = uploadDate;
+        this.StockQuantity = stockQuantity;
     }
 
     public Products() {
-
     }
 
-    // Getters and setters
     public int getProductID() {
-        return ProductID;
+        return productID;
     }
 
-    public void setProductID(int ProductID) {
-        this.ProductID = ProductID;
+    public void setProductID(int productID) {
+        this.productID = productID;
     }
 
     public String getProductName() {
-        return ProductName;
+        return productName;
     }
 
-    public void setProductName(String ProductName) {
-        this.ProductName = ProductName;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public int getCategoryID() {
-        return CategoryID;
+        return categoryID;
     }
 
-    public void setCategoryID(int CategoryID) {
-        this.CategoryID = CategoryID;
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
     }
 
     public double getPrice() {
-        return Price;
+        return price;
     }
 
-    public void setPrice(double Price) {
-        this.Price = Price;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getImageURL() {
-        return ImageURL;
+        return imageURL;
     }
 
-    public void setImageURL(String ImageURL) {
-        this.ImageURL = ImageURL;
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    public Timestamp getUploadDate() {
+        return uploadDate;
+    }
+
+    public void setUploadDate(Timestamp uploadDate) {
+        this.uploadDate = uploadDate;
+    }
+
+    public int getStockQuantity() {
+        return StockQuantity;
+    }
+
+    public void setStockQuantity(int stockQuantity) {
+        StockQuantity = stockQuantity;
     }
 
     @Override
     public String toString() {
         return "Products{" +
-                "ProductID=" + ProductID +
-                ", ProductName='" + ProductName + '\'' +
-                ", CategoryID=" + CategoryID +
-                ", Price=" + Price +
-                ", ImageURL='" + ImageURL + '\'' +
+                "productID=" + productID +
+                ", productName='" + productName + '\'' +
+                ", categoryID=" + categoryID +
+                ", price=" + price +
+                ", imageURL='" + imageURL + '\'' +
+                ", uploadDate=" + uploadDate +
+                ", StockQuantity=" + StockQuantity +
                 '}';
     }
 }
-

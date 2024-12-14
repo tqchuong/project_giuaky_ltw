@@ -10,932 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="370446ab-6aff-4b57-b1b8-e347465c3a0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/FlashSaleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/FlashSaleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/coupon.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/hotproducts.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/productdetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/css/home_20241111211342.css" beforeDir="false" afterPath="$PROJECT_DIR$/.history/css/home_20241111211342.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/html/checkout_20241116220030.html" beforeDir="false" afterPath="$PROJECT_DIR$/.history/html/checkout_20241116220030.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/html/login_20241117151647.html" beforeDir="false" afterPath="$PROJECT_DIR$/.history/html/login_20241117151647.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154650.html" beforeDir="false" afterPath="$PROJECT_DIR$/.history/html/shoppingcart_20241119154650.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project/controller/ProductServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project/database/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/db/DBConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project/database/DBProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/project/model/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/admin-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin-responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/coupon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/coupon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/productdetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/productdetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/shoppingcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/shoppingcart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/css/all.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/css/all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/css/all.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/css/free.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/css/free.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/css/free.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/css/free.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/js/free.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/js/free.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/js/pro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/js/pro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/admin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/coupon.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/flash-sale.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/home2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/hotproducts.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/productdetail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html/products.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html/shoppingcart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/banner/banner7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/img-khoai1/Khoai tây  McCain Cọng lớn  38 (~10mm) - McCain Straight Cut  Fries 38 (~10mm) (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/img-khoai1/Khoai tây  McCain Cọng nhỏ 14 (~6mm) - McCain Shoestring Fries 14 (~6mm) – 3kgbao (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/img-khoai1/Khoai tây McCain Bít Tết 34 (~19mm) - McCain Steak Cut (Steak House) Fries 34 (~19mm) - 5kgbao (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/img-khoai1/Khoai tây McCain Cắt múi tẩm tỏi  – McCain Country Potato Wedges -2.5kgbao  (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/login/mask-blob.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/image/login/mask-blob.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/productdetails/khach3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/shoppingcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/shoppingcart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shoppingcart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/src/main/resources/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjectWeb/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/project/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/project/controller/ProductServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/project/dao/ProductDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/project/database/DBConnect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/project/database/DBProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/project/model/Products.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/classpath.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/com/example/project/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/com/example/project/controller/ProductServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/com/example/project/dao/ProductDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/com/example/project/database/DBConnect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/com/example/project/database/DBProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/com/example/project/model/Products.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/database.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/classes/login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/geantyref-1.3.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/jakarta.activation-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/jakarta.el-api-4.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/jakarta.xml.bind-api-3.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/jdbi3-core-3.41.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-j-8.0.33.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/protobuf-java-3.21.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.36.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/admin-responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/checkout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/flash-sale.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/productdetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/productdetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/shoppingcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/css/shoppingcart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/SFPRODISPLAY/SFProDisplay-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/SFPRODISPLAY/SFProDisplay-Heavy.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/SFPRODISPLAY/SFProDisplay-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/SFPRODISPLAY/SFProDisplay-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/SFPRODISPLAY/SFProDisplay-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/SFPRODISPLAY/SFProDisplay-Semibold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/css/all.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/css/all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/css/free.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/css/free.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/js/free.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/js/free.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/js/pro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/js/pro.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-v4compatibility.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/free-fa-v4compatibility.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-292b12.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-292b12.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.1.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.10.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.11.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.12.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.2.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.3.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.5.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.0.9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.1.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.10.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.11.2.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.12.1.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.13.1.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.14.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.1.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.15.4.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.2.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.3.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.4.2.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.6.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.7.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.1.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.8.2.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-5.9.0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-50c900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-50c900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-90d968.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-90d968.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-9b80fe.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-9b80fe.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-bc0b04.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-bc0b04.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-f6b769.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-brands-400-f6b769.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-03c840.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-03c840.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-043e6a.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-043e6a.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-1e5361.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-1e5361.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-292b12.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-292b12.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-3523ab.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-3523ab.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-50c900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-50c900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-51b08f.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-51b08f.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-6d2a10.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-6d2a10.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-90d968.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-90d968.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-9b80fe.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-9b80fe.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-b4a9ce.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-b4a9ce.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-bc0b04.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-bc0b04.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-ca12ba.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-ca12ba.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-d5bbe9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-d5bbe9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-d85a6c.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-d85a6c.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-e41116.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-e41116.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-e9d1d9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-e9d1d9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-ec38a0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-duotone-900-ec38a0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-03c840.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-03c840.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-043e6a.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-043e6a.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-1e5361.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-1e5361.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-292b12.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-292b12.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-3523ab.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-3523ab.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-50c900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-50c900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-51b08f.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-51b08f.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-6d2a10.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-6d2a10.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-90d968.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-90d968.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-9b80fe.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-9b80fe.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-b4a9ce.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-b4a9ce.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-bc0b04.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-bc0b04.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-ca12ba.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-ca12ba.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-d5bbe9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-d5bbe9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-d85a6c.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-d85a6c.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-e41116.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-e41116.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-e9d1d9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-e9d1d9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-ec38a0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-light-300-ec38a0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-03c840.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-03c840.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-043e6a.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-043e6a.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-1e5361.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-1e5361.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-292b12.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-292b12.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-3523ab.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-3523ab.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-50c900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-50c900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-51b08f.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-51b08f.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-6d2a10.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-6d2a10.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-90d968.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-90d968.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-9b80fe.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-9b80fe.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-b4a9ce.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-b4a9ce.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-bc0b04.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-bc0b04.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-ca12ba.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-ca12ba.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-d5bbe9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-d5bbe9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-d85a6c.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-d85a6c.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-e41116.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-e41116.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-e9d1d9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-e9d1d9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-ec38a0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-regular-400-ec38a0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-03c840.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-03c840.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-043e6a.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-043e6a.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-1e5361.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-1e5361.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-292b12.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-292b12.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-3523ab.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-3523ab.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-50c900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-50c900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-51b08f.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-51b08f.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-6d2a10.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-6d2a10.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-90d968.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-90d968.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-9b80fe.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-9b80fe.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-b4a9ce.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-b4a9ce.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-bc0b04.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-bc0b04.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-ca12ba.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-ca12ba.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-d5bbe9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-d5bbe9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-d85a6c.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-d85a6c.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-e41116.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-e41116.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-e9d1d9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-e9d1d9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-ec38a0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-sharp-solid-900-ec38a0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-03c840.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-03c840.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-043e6a.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-043e6a.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-1e5361.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-1e5361.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-292b12.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-292b12.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-3523ab.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-3523ab.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-50c900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-50c900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-51b08f.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-51b08f.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-6d2a10.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-6d2a10.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-90d968.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-90d968.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-9b80fe.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-9b80fe.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-b4a9ce.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-b4a9ce.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-bc0b04.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-bc0b04.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-ca12ba.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-ca12ba.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-d5bbe9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-d5bbe9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-d85a6c.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-d85a6c.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-e41116.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-e41116.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-e9d1d9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-e9d1d9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-ec38a0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-solid-900-ec38a0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-03c840.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-03c840.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-043e6a.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-043e6a.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-1e5361.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-1e5361.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-292b12.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-292b12.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-3523ab.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-3523ab.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-50c900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-50c900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-51b08f.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-51b08f.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-6d2a10.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-6d2a10.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-90d968.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-90d968.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-9b80fe.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-9b80fe.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-b4a9ce.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-b4a9ce.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-bc0b04.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-bc0b04.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-ca12ba.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-ca12ba.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-d5bbe9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-d5bbe9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-d85a6c.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-d85a6c.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-e41116.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-e41116.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-e9d1d9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-e9d1d9.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-ec38a0.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-thin-100-ec38a0.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-v4compatibility.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/font/font-awesome-pro-v6-6.2.0/webfonts/pro-fa-v4compatibility.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/admin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/coupon.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/flash-sale.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/home2.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/hotproducts.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/productdetail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/products.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/html/shoppingcart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/about/about_img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/about/history.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/about/value.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/admin/blank-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/admin/s1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/admin/s2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/admin/s3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/Banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/Banner3.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/Banner4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/Banner5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/Banner6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/baner2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/banner2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/banner7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/banner/luongthuc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/Bot-ngu-coc-minmin-29-hat-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/Ngu-coc-an-kieng-EURO-DIET-CEREAL-20-goi-600x600.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/Ngu-coc-dinh-duong-EURO-CEREAL-20-goi-xuat-Nhat-600x600.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/Ngu-coc-dinh-duong-EURO-CEREAL-tui-hop-20-goi-600x600.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/Ngu-coc-dinh-duong-GOLDEN-KARE-20-goi-600x600.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/bot-ngu-coc-dinh-duong-damtuh-han-quoc-50-goi-5(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-abalanca.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-an-chay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-an-chay2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-an-king.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-calbe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-hena.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-tami.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu-coc-vital.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/cereal/ngu_coc_dinh_duong_hena-450x450.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/chao-thit-bo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/chao-tuoi-luon-dau-xanh-cay-thi-goi-260g-202401021618587467.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/chao-tuoi-thit-bo-cay-thi-goi-260g-202309032058365692.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/chao-tuoi-thit-heo-cay-thi-goi-260g-202407091435294691.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/chao-vifon-vi-ga-goi-50g-202306231013287313.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/chao-vifon-vi-thit-bam-goi-50g-202306231012172188.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-de-nhat-thit-bam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-gau-do-bo-bit-tet-goi-63g-202407121408410572.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-gau-do-ga-soi-pho.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-gau-do-thit-bam-goi-63g-202407121411246247.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-gau-do-tom-va-ga-goi-63g-202407061656540859.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-hao-hao-chua-cay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-khoai-tay-omachi-tom-chua-cay-thai-goi-80g-202306061558151636.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-lau-thai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-siu-kay-x2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/mi-xao-hao-hao.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/nui-rau-cu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/dong-goi/nui-xoan-ba-bay-goi-500g-clone-202405271312145099.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/20240912-114520_0e8d2bb5536f4f188e511efcdb22cce3_medium.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/banh-uop-kho-simply-food-chay-tot-market_a00054f60449463c9077095ba108b36c_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/banh_hoi_symply_food_bc5d4a00af7f4b6f97bfd1066af047b8_large.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/bun-gao-binh-tay-1-300x300_ba9b7c71594c45efbd9d86124a056615_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/bun-gao-nang-huong-bt-300x300_a4b2812151974f138d7d5fd7cb67d628_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/bun_chum_ngay_chay_tot_market_2c2b602e13984fb4aa6a28c30d34dbc7_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/bun_gac_cao_bang_chay_tot_market_9424ddc1acaf4397b81744a62e7008eb_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/bun_gao_lut_den-chay_tot_market_7f290f46971b4ee2bcb6f7a979d4afaa_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/bun_gao_lut_den-chay_tot_market_7f290f46971b4ee2bcb6f7a979d4afaa_medium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/bun_ngo_chay_tot_694a006d68754e34b2cd8300b9efdda7_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/hu-tieu-nam-vang-simply-food-chay-tot-market_af31271a96014c60981c8faeb3221d88_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/mi-quang-simply-food-chay-tot-market_eb63d1cbb82347b0b3086be0286050f7_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/mi_chu_gao_lut_chay_tot_market-removebg-preview_b39099b25cbc4d10a24e2b2a68f163be_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/mi_chu_rau_cu_e0ee9f8ce6604923ad6c49bf72545e9a_large.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/mien_dong_do-chay_tot_market_a673d07e97274811a4531ea1a5475e7a_large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/mien_dong_symply_food_chay_tot_market_d77a32bfcd604c39826413bac3f60794_large.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-dokho/roll-rice-pho-noodles-500-g-4046_12da831c20ee4a58ab8e56d58d6a36d1_large.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/AVIKO FREEZE CHILL (POMMES FRITES) 916 - 15MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Bap dong hat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/BẮP HẠT ĐÔNG LẠNH BECO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/BẮP HẠT ĐÔNG LẠNH DAT - SCHAUB (450GRGÓI- 24 GÓITHÙNG).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Bắp Hạt Đông Lạnh Corn Tomex.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Hành Tây Cắt Vòng Tẩm Bột Lutosa - Onion Rings Lutosa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/HẠT HỖN HỢP ĐÔNG LẠNH MIX TOMEX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/HẠT HỖN HỢP ĐÔNG LẠNH.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHAY KHOAI TÂY MỸ 500GR (MCCAIN CỌNG LỚN 38 ~10MM).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI LANG SWEET TREAT.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY AVIKO CẮT THẲNG 38 AA-38 AVIKO FOMMES FRIES AA-GÓI 1KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY AVIKO CẮT THẲNG 38 AA-38 AVIKO FOMMES FRIES AA-GÓI 2.5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY AVIKO HASHBROWN BÁNH TRÒN-AVIKO HASHBROWN-2.5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY AVIKO RĂNG CƯA-12 AVIKO CRINKCLE CUT AA-2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY BURGER RAU CỦ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY BÁNH CHURROS AVIKO-AVIKO CHURROS FRIES AAA-1KG .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY BÁNH TRÒN BABY AVIKO-AVIKO ROSTIBITE LAW SALT-GÓI 2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY COUNTRY POMMES FRITES 38 - 9,5MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT MÚI AVIKO TẨM GIA VỊ ỚT-AVIKO SPYCY JACKET WEDGE-2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT MÚI CAU.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT MÚI TẨM GIA VỊ TỎI VÀ THẢO MỘC-AVIKO GARLIC AND HERD WEDGES-2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT MÚI TẨM GIA VỊ-AVIKO JACKET WEDGES CUT-2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT MÚI TẨM VỊ ỚT - LUTOSA (750 GRAMGÓI - 12 GÓITHÙNG).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT RĂNG CƯA CRINKLE 12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG 11MM SIÊU DÀI AVIKO-11 AVIKO SUPER LONG AAA-2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG 14 AVIKO-14 AVIKO JULIENCE AA-2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG 14 SIÊU DÀI AVIKO-14 AVIKO SUPER LONG AAA-2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG 34 AVIKO-34 AVIKO STEAK HOUSE FRIES-GÓI 2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG 38 SIÊU DÀI AVIKO-38 AVIKO SUPER LONG AAA-2,5KG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG AVIKO POMMES FRITES JULIENNE SHOESTRING 7MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG COUNTRY HOUSE 14 - 7MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG CÓ VỎ SUPERLONG SKIN ON 11MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG FARM FRITES FINEST 10MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG FARM FRITES FINEST 7MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG POMMES FRITES  38 - 9.5MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG POMMES FRITES JULIENNE 14 - 7MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG SIÊU GIÒN AVIKO SUPERCRUNCH THICK CUT 18MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG STEAK HOUSE 34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG SUPERCRUNCH SALT 14 - 7MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG SUPERCRUNCH SALT 38 -9.5MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG SUPERLONG 14 - 7MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY CẮT THẲNG SUPERLONG 38- 9,5MM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY GRATIN TOMATO &amp; MOZZARELA.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY HASH BROWN TAM GIÁC HIỆU MCCAIN MUA Ở ĐÂU.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY HASHBROWN TAM GIÁC AVIKO-AVIKO HASHBROWN TRIANGLE-2,5KG .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY KEM PHÔ MAI GRATIN CREAM &amp; CHEESE.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY MINIGRATIN AARDPEER &amp; PASTINAAK.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY MINIGRATIN ASPERGE &amp; PARMEZAN.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY MÚI CAU VỊ CƠ BẢN MEGA WEDGES 8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY MÚI CAU VỊ TỎI VÀ LÁ MÙI GARLIC &amp;HERBS WEDGES 8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY MÚI CAU VỊ ỚT SPICY JACKET WEDGES 8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY NGHIỀN BI ÍT MUỐI ROSTI BITES LOW SALT.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY NGHIỀN MASHED POTATOES.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY NGHIỀN TAM GIÁC ROSTIKO'S TRIANGLES.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY NGHIỀN TRÒN HASH BROWN ROUNDS-FRYER.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY PHO MAI QUE AVIKO MOZZARELLA FINGER.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT 34” CẮT THẲNG EXTRA LONG FANCY BLUE RIBBON .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT 38 CẮT THẲNG EXTRA LONG FANCY BLUE RIBBON (NWSEAL).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT CẮT THẲNG ¼ EXTRA LONG FANCY BLUE RIBBON.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT GỢN SÓNG VỊ SỐT BBQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT GỢN SÓNG VỊ SỐT BUFFALO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT HASHBROWN TAM GIÁC.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT HASHBROWN VUÔNG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT MÚI CAU CÓ VỎ (8 MÚI).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY SIMPLOT SỢI MINHON 316” VỊ SỐT BUFFALO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY XOẮN CHURROS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/KHOAI TÂY.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khay khoai tây Mỹ 500gr - McCain Bít Tết 34 (~19mm).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây 14 Mc Cain - McCain Shoestring Fries 14 (3kg Bao,15kgThùng).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây 34 Steak House Fries Mc Cain (5kg Bao,15kgThùng).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây 38 Mc Cain - McCain Straight Cut Fries 38 (5kg Bao,15kgThùng).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây Bánh Hình Nút Chai - Cork Hash Browns.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây Chiên Cắt Thẳng Mydibel 38 (~10mm)  .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây Cắt Múi Tẩm Gia Vị Classic Wedges (1kgbao, 10kgthùng).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây Cắt Múi Tẩm Gia Vị Lamb Weston (2.27kggói – 13.62kgthùng).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây Hash Brown Bánh Tròn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây Nghiền Lamb’s Supreme Original Mashed Potato – Lamb Weston.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây Nghiền Mc Cain - Mc Cain Mashed Potatoes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai Tây Răng Cưa Mc Cain - McCain Crinkle Cut Fries (5kg Bao,15kgThùng).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây  McCain Cọng lớn  38 (~10mm) - McCain Straight Cut  Fries 38 (~10mm) (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây  McCain Cọng lớn  38 (~10mm) - McCain Straight Cut  Fries 38 (~10mm).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây  McCain Cọng nhỏ 14 (~6mm) - McCain Shoestring Fries 14 (~6mm) – 3kgbao (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây  McCain Cọng nhỏ 14 (~6mm) - McCain Shoestring Fries 14 (~6mm) – 3kgbao.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây McCain  Răng cưa (13mm)  - McCain Crinkle Cut Fries (13mm) – 5kgbao .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây McCain Bít Tết 34 (~19mm) - McCain Steak Cut (Steak House) Fries 34 (~19mm) - 5kgbao (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây McCain Bít Tết 34 (~19mm) - McCain Steak Cut (Steak House) Fries 34 (~19mm) - 5kgbao.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây McCain Cắt múi tẩm tỏi  – McCain Country Potato Wedges -2.5kgbao  (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Khoai tây McCain Cắt múi tẩm tỏi  – McCain Country Potato Wedges -2.5kgbao .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/RAU CỦ HỖN HỢP ĐÔNG LẠNH.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/RONG BIỂN TƯƠI WAKAME SEAWEED.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/bap hat tran gia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/dau ha lan dong lanh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/ĐẬU GÀ CECI (DIVELLA) 400GR.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/ĐẬU HÀ LAN ĐÔNG LẠNH BECO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/ĐẬU HÀ LAN ĐÔNG LẠNH PEAS TOMEX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/ĐẬU SỐT CÀ FIAMMA 400GRAMLON – 24 LONTHÙNG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/ĐẬU TRẮNG TÂY BAN NHA FAGIOLI (DIVELLA) 400GR.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/ĐẬU ĐỎ ROSSI KIDNEY LESSATI (DIVELLA) 400GR.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Đậu Bơ Đóng Hộp Fiamma - Canned Butter Beans Fiamma .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Đậu Hà Lan Green Pea đông lạnh (450 gr gói).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Đậu Hà Lan Đóng Hộp Fiamma - Canned Green Peas Fiamma.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Đậu Hỗn Hợp 4 Loại Fiamma - Canned Four Beans Salad Fiamma.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Đậu Lăng Đóng Hộp Fiamma - Canned Lentils Fiamma .jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Đậu Nành Đông Lạnh - Frozen Soybeans.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Đậu Răng Ngựa Đóng Hộp Fiamma - Canned Garbanzo Beans Fiamma.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-khoai1/Đậu Trắng Đóng Hộp Fiamma - Canned White Beans Fiamma.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-BAY-4-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-BB-702-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-CACAO-5-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-DREAM-4-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-GOLFMAN-2-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-HAPPY-6-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-HUONG-QUE-6-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-MAN-4-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-MATCHA-8-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/LUONG-KHO-MIX-VI-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lkkh9v5ya67e93-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lkkkcys97f6807-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lkkkcys9a8b41e-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lkkkcys9bmvkd9-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lkkkcys9d1g0e0-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lkkkcys9eg0g24-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-ll2yx5oqggy31a-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-llf5oh10d2uu86-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lmrsss8ocp9bb1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-ln5ovde5bp3s4b-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-ln5ovde5oc7s50-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lnx9fkfxq6zxb9-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lnx9fkfxt04t57-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lny8hy0nsby2c4-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lo5nrouci9aj9b-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lo5nroumf1877e-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lo5nroumroc792-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lo5nroun4bg73d-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lor7c7288s232f-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lqa1snbngxjm23-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-luongkho/vn-11134207-7r98o-lqqh91c3h0zb24-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/bap1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/bap2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao jap2an2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao japan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao japan1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao japan3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao japan4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao lut dien bien.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao nep ót.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao nep.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao thom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao-nep-cam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao-tam-thom-hai-hau.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao-thien-long.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gao1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gaohokkaido.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/gaost25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/hat ke1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/hat ke2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/hat ke3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/hat-ke-nep.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/khoai lang mat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/khoai lang tim.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/khoai mai.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/khoai mi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/khoai so.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/khoai-so.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/pho kho.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/yen mach 2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/yen mach.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/img-pro/yen-mach-trai-cay-sunrise-vi-pho-mai-bich-300g-202306241735231539.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/login/bg-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/login/mask-blob.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/logo/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/logo/logo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/new/Ngày-Pháp-luật-Việt-Nam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/new/thông-báo-giả-mạo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/product/cao lương.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/product/circled-left-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/product/gạo nếp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/product/kê.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/product/luong-thuc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/product/lúa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/product/ngô.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/product/rice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/bap.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/bap1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/bap2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/cart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaolut-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaolut-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaolut-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaolut-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaolut.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaost25-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaost25-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaost25-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaost25-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaost25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaotl1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaotl2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaotl21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaotl31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaotl41.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gaotl51.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/gạo nếp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/khach.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/khach2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/khach3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/lúa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/productdetails/rice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/Bắc-Đẩu-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/Thơm-Mỹ-25kg-2-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/bap1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/bap2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao jap2an2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao japan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao japan1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao japan3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao japan4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao lut dien bien.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao nep ót.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao nep.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao thom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-64-cho-dao-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-DaiThom_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-Japonica_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-Jasmine-thai-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ST21_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ST24-anpharice-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ST24_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ST25-baobi_moi-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ST25-hut-chan-khong-5kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ST25_AAN-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-co-may-4-mua-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-dai-loan-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-dai-loan-2-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-dai-loan-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-gia-si-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-hat-ngoc-thai-300x300.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-hat-ngoc-troi-thien-long-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-huong-lai-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-huu-co-st25-ong-cua-hop-2kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-lai-mien-campuchia-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-long-chau-66-moi-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-lut-do-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-lut-huyet-rong-tui-2kg-300x300.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-lut-tim-hat-ngoc-troi-3-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-mam-Vibigaba-300x300.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-mam-st25-gaba-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-nang-hoa-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-nang-hoa-4-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-nep-than-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ngoc-sa-5kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ngoc-thuc-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-ong-cua-st25-lua-tom-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-st25-lua-tom-hop2kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-tam-bui-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-tam-thom-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-tam-thom-hai-hau.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-thien-long.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-thom-lai-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-thom-lai-sua-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-thom-thai-1-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-thom-thai-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao-tu-quy-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gao1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/gaost25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/hat ke1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/hat ke2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/hat ke3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/hat-ngoc-troi-thien-vuong-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/hat-ngoc-troi-tien-nu-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/hop-mam-nghe-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/hop-qua-tang-gao-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/khoai lang mat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/khoai lang tim.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/khoai mai.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/khoai mi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/khoai so.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/nep-cai-hoa-vang-tui-2kg-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/nep-cam-tay-bac-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/nep-ngong-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/pho kho.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/tam-samo-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/yen mach 2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/yen mach.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/riceproducts/z2041531383285_c2cd7582beb6f7ce0241016b38350fa5-300x300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/shoppingcart/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/shoppingcart/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/shoppingcart/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/shoppingcart/ngo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/image/shoppingcart/shoppingcart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/coupon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/flash-sale.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/js/productdetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/project-1.0-SNAPSHOT/src/main/resources/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/projectweb-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/classpath.index" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/HomeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/DiscountDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Discount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/ProductStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/FlashSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/FlashSaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/FlashSaleDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/flashsale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/flashsale.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -945,8 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Servlet" />
         <option value="Class" />
+        <option value="Enum" />
+        <option value="Servlet" />
       </list>
     </option>
   </component>
@@ -975,26 +61,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.31.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Merging tqc&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3034483&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DiscountDAO.executor": "Debug",
+    "Application.ProductDAO.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 10.1.31.executor": "Debug",
+    "git-widget-placeholder": "tqc",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3034483",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Smart Tomcat.Tomcat: FoodMart">
+    <configuration name="DiscountDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.DiscountDAO" />
+      <module name="FoodMart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" />
+      <module name="FoodMart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.1.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -1162,6 +276,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat: FoodMart" type="com.poratu.idea.plugins.tomcat" temporary="true">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/FoodMart" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.31" />
+          <option name="path" value="C:/tomcat/tomcat-10/apache-tomcat-10.1.31" />
+          <option name="version" value="10.1.31.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DiscountDAO" />
+        <item itemvalue="Smart Tomcat.Tomcat: FoodMart" />
+        <item itemvalue="Application.ProductDAO" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -1185,10 +331,86 @@
       <workItem from="1734024904602" duration="834000" />
       <workItem from="1734064210830" duration="2149000" />
       <workItem from="1734095811694" duration="7879000" />
+      <workItem from="1734154247709" duration="20326000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/flashsale.jsp</url>
+          <line>125</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/flashsale.jsp</url>
+          <line>126</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/flashsale.jsp</url>
+          <line>128</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/flashsale.jsp</url>
+          <line>131</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/flashsale.jsp</url>
+          <line>132</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/flashsale.jsp</url>
+          <line>133</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/DiscountDAO.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/DiscountDAO.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/DiscountDAO.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/DiscountDAO.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/DiscountDAO.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/flashsale.jsp</url>
+          <line>121</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/DiscountDAO.java</url>
+          <line>15</line>
+          <properties class="fit.hcmuaf.edu.vn.foodmart.dao.DiscountDAO" method="getActiveDiscounts">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
