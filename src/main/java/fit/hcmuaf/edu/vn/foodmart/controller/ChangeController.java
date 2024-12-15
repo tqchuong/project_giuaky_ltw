@@ -61,6 +61,7 @@ public class ChangeController extends HttpServlet {
             }
 
 
+
             // Kiểm tra mật khẩu tối thiểu 6 ký tự
             if (passwordNew == null || passwordNew.length() < 6) {
                 request.setAttribute("error", "Mật khẩu phải có ít nhất 6 ký tự.");
