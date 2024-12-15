@@ -1,65 +1,94 @@
 package fit.hcmuaf.edu.vn.foodmart.dao.db;
 
-import java.sql.*;
+import org.jdbi.v3.core.Jdbi;
+import org.jdbi.v3.core.Handle;
+import fit.hcmuaf.edu.vn.foodmart.model.Products;
+import fit.hcmuaf.edu.vn.foodmart.model.Users;
+
+import java.util.List;
 
 public class DBConnect {
-    static Connection conn;
 
-    static String url = "jdbc:mysql://" + DBProperties.host() + ":" + DBProperties.port() + "/" + DBProperties.dbname() + "?" + DBProperties.option();
+    private static Jdbi jdbi;
 
-    // Trả về một đối tượng Connection
-    public static Connection getConnection() {
+    static {
         try {
-            if (conn == null || conn.isClosed()) {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                conn = DriverManager.getConnection(url, DBProperties.username(), DBProperties.password());
-                System.out.println("Kết nối đến CSDL thành công!");
-            }
-            return conn;
-        } catch (SQLException | ClassNotFoundException e) {
+            // Cấu hình thông tin kết nối MySQL trực tiếp trong lớp DBConnect
+            String host = "localhost";  // Địa chỉ host MySQL
+            int port = 3306;  // Cổng kết nối MySQL
+            String dbname = "test1";  // Tên cơ sở dữ liệu
+            String username = "root";  // Tên đăng nhập MySQL
+            String password = "";  // Mật khẩu MySQL
+            String options = "useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";  // Các tùy chọn kết nối
+
+            // Tạo URL kết nối
+            String url = "jdbc:mysql://" + host + ":" + port + "/" + dbname + "?" + options;
+            Class.forName("com.mysql.cj.jdbc.Driver");  // Nạp driver MySQL
+            // Tạo đối tượng Jdbi từ thông tin cấu hình
+            jdbi = Jdbi.create(url, username, password);
+            System.out.println("Kết nối đến CSDL thành công!");
+        } catch (Exception e) {
+            System.err.println("Không thể kết nối đến CSDL: " + e.getMessage());
             e.printStackTrace();
-            System.out.println("Không thể kết nối đến CSDL. Vui lòng kiểm tra cấu hình!");
-            return null;
         }
     }
 
-    // Trả về một đối tượng Statement
-    public static Statement getStatement() {
-        try {
-            if (conn == null || conn.isClosed()) {
-                conn = getConnection();
+    // Trả về đối tượng Jdbi
+    public static Jdbi getJdbi() {
+        return jdbi;
+    }
+
+    // Lấy thông tin sản phẩm và hiển thị ra màn hình
+    public static void displayProducts() {
+        String sql = "SELECT * FROM products";  // Truy vấn toàn bộ bảng Products
+
+        try (Handle handle = jdbi.open()) {
+            // Truy vấn dữ liệu và ánh xạ kết quả thành đối tượng Products
+            List<Products> products = handle.select(sql)
+                    .mapToBean(Products.class)
+                    .list();  // Lấy danh sách các sản phẩm
+
+            // In danh sách sản phẩm ra màn hình
+            if (products != null) {
+                for (Products product : products) {
+                    System.out.println(product);  // In thông tin sản phẩm
+                }
+            } else {
+                System.out.println("Không có sản phẩm nào.");
             }
-            return conn.createStatement();
-        } catch (SQLException e) {
+        } catch (Exception e) {
+            System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
             e.printStackTrace();
-            return null;
         }
     }
 
-    // Test kết nối
-    public static void main(String[] args) throws SQLException {
-        Statement statement = getStatement();
-        if (statement != null) {
-            ResultSet rs = statement.executeQuery("SELECT * FROM products");
-            while (rs.next()) {
-                System.out.println(rs.getInt("ProductID") + " " +
-                        rs.getString("ProductName") + " " +
-                        rs.getInt("CategoryID") + " " +
-                        rs.getDouble("Price") + " " +
-                        rs.getString("ImageURL") + " " +
-                        rs.getString("Description"));
-            }
-            ResultSet rsUsers = statement.executeQuery("SELECT * FROM users");
+    // Lấy thông tin người dùng và hiển thị ra màn hình
+    public static void displayUsers() {
+        String sql = "SELECT * FROM users";  // Truy vấn toàn bộ bảng Users
 
-            while (rsUsers.next()) {
-                System.out.println(
-                        rsUsers.getString("username") + " " +
-                        rsUsers.getString("password") + " " +
-                        rsUsers.getString("name"));
+        try (Handle handle = jdbi.open()) {
+            // Truy vấn dữ liệu và ánh xạ kết quả thành đối tượng Users
+            List<Users> users = handle.select(sql)
+                    .mapToBean(Users.class)
+                    .list();  // Lấy danh sách các người dùng
+
+            // In danh sách người dùng ra màn hình
+            if (users != null) {
+                for (Users user : users) {
+                    System.out.println(user);  // In thông tin người dùng
+                }
+            } else {
+                System.out.println("Không có người dùng nào.");
             }
-        } else {
-            System.out.println("Không thể tạo Statement. Vui lòng kiểm tra cấu hình!");
+        } catch (Exception e) {
+            System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
+    public static void main(String[] args) {
+        // Hiển thị các sản phẩm và người dùng khi chạy chương trình
+//        displayProducts();
+        displayUsers();
+    }
 }

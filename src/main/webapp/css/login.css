@@ -104,7 +104,7 @@ img {
   font-size: var(--big-font-size);
   color: var(--title-color);
   text-align: center;
-  margin-bottom: 2rem;
+
 }
 
 .login__box {
@@ -163,19 +163,19 @@ img {
   color: var(--first-color);
 }
 
-.login__button {
-  width: 100%;
-  display: inline-flex;
-  justify-content: center;
-  background-color: var(--first-color);
-  color: var(--white-color);
-  font-weight: var(--font-semi-bold);
-  padding-block: 1.5rem;
-  border-radius: 4rem;
-  margin-block: 2rem;
-  cursor: pointer;
-  transition: background-color .4s, box-shadow .4s;
-}
+/*.login__button {*/
+/*  width: 100%;*/
+/*  display: inline-flex;*/
+/*  justify-content: center;*/
+/*  background-color: var(--first-color);*/
+/*  color: var(--white-color);*/
+/*  font-weight: var(--font-semi-bold);*/
+/*  padding-block: 1.5rem;*/
+/*  border-radius: 4rem;*/
+
+/*  cursor: pointer;*/
+/*  transition: background-color .4s, box-shadow .4s;*/
+/*}*/
 
 .login__button:hover {
   background-color: var(--first-color-alt);
@@ -339,7 +339,7 @@ img {
     margin-bottom: 3rem;
   }
   .login__button {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   .login__group {
     grid-template-columns: repeat(2, 1fr);
@@ -455,7 +455,7 @@ img {
   font-weight: var(--font-semi-bold);
   padding-block: 1.5rem;
   border-radius: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   cursor: pointer;
   transition: background-color .4s, box-shadow .4s;
 }
@@ -469,7 +469,7 @@ img {
 .login__switch {
   text-align: center;
   font-size: var(--small-font-size);
-  margin-top: 1.5rem; /* Khoảng cách trên cho phần chuyển đổi */
+
 }
 
 .login__switch button {

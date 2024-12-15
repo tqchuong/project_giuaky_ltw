@@ -25,8 +25,14 @@
 
     <!--=============== LOGIN ===============-->
     <div class="login container grid" id="loginAccessRegister">
+        <%
+            // Kiểm tra nếu thuộc tính showRegisterForm tồn tại và có giá trị true
+            boolean showRegisterForm = request.getAttribute("showRegisterForm") != null
+                    && (boolean) request.getAttribute("showRegisterForm");
+        %>
+
         <!--===== LOGIN ACCESS =====-->
-        <div id="loginForm" class="login__access">
+        <div id="loginForm" class="login__access" style="display: <%= showRegisterForm ? "none" : "block" %>;">
             <h1 class="login__title">Đăng nhập vào tài khoản của bạn.</h1>
             <!-- Hiển thị thông báo lỗi nếu có -->
             <c:if test="${not empty loginError}">
@@ -63,12 +69,15 @@
         </div>
 
         <!--===== LOGIN REGISTER =====-->
-        <div id="registerForm" class="login__register" style="display: none;">
+        <div id="registerForm" class="login__register" style="display: <%= showRegisterForm ? "block" : "none" %>;">
             <h1 class="login__title">Tạo tài khoản mới.</h1>
             <div class="login__area">
-                <form action="" class="login__form">
+                <form action="login?action=res" method="post" class="login__form">
+                    <c:if test="${not empty error}">
+                        <div style="color: red;">${error}</div>
+                    </c:if>
                     <div class="login__box">
-                        <input type="text" id="names" name="names" required placeholder=" " class="login__input" aria-label="Names">
+                        <input type="text" id="names" name="username" required placeholder=" " class="login__input" aria-label="Names">
                         <label for="names" class="login__label">Tên đăng nhập</label>
                         <i class="ri-id-card-fill login__icon"></i>
                         <span class="form-message-name form-message"></span>
@@ -80,13 +89,13 @@
                         <span class="form-message-phone form-message"></span>
                     </div>
                     <div class="login__box">
-                        <input type="email" id="emailCreate" name="emailCreate" required placeholder=" " class="login__input" aria-label="Email">
+                        <input type="email" id="emailCreate" name="email" required placeholder=" " class="login__input" aria-label="Email">
                         <label for="emailCreate" class="login__label">Email</label>
                         <i class="ri-mail-fill login__icon"></i>
                         <span class="form-message-email form-message"></span>
                     </div>
                     <div class="login__box">
-                        <input type="password" id="passwordCreate" name="passwordCreate" required placeholder=" " class="login__input" aria-label="Password">
+                        <input type="text" id="passwordCreate" name="password" required placeholder=" " class="login__input" aria-label="Password">
                         <label for="passwordCreate" class="login__label">Mật khẩu</label>
                         <i class="ri-eye-off-fill login__icon login__password" id="loginPasswordCreate"></i>
                         <span class="form-message-password form-message"></span>
@@ -104,9 +113,16 @@
         <div id="forgotPasswordForm" class="forgot-password" style="display: none;">
             <h1 class="login__title">Quên Mật khẩu?</h1>
             <div class="login__area">
-                <form action="" class="login__form">
+                <form action="login?action=forgetPass" class="login__form">
                     <div class="login__box">
-                        <input type="email" id="emailForgot" required placeholder=" " class="login__input" aria-label="Email">
+                        <!-- Username Field -->
+                        <input type="text" id="usernameForgot" name="username" required placeholder=" " class="login__input" aria-label="Username">
+                        <label for="usernameForgot" class="login__label">Tên đăng nhập</label>
+                        <i class="ri-user-fill login__icon"></i>
+                        <span class="form-message username"></span>
+                    </div>
+                    <div class="login__box">
+                        <input type="email" id="emailForgot" name="email" required placeholder=" " class="login__input" aria-label="Email">
                         <label for="emailForgot" class="login__label">Email</label>
                         <i class="ri-mail-fill login__icon"></i>
                         <span class="form-message mail"></span>

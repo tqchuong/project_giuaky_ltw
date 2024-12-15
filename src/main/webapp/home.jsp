@@ -97,156 +97,157 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="container2">
+                <h3>Về chúng tôi</h3>
+                <div class="content">
+                    <p>Chào mừng bạn đến với <strong>FoodMart</strong> – nơi cung cấp những sản phẩm lương thực chất lượng
+                        cao, giàu dinh dưỡng và an toàn cho mọi gia đình!
+                        Với nguồn gốc rõ ràng và quy trình kiểm soát nghiêm ngặt, chúng tôi cam kết mang đến sự an tâm cho
+                        từng bữa ăn.</p>
 
-        <div class="container2">
-            <h3>Về chúng tôi</h3>
-            <div class="content">
-                <p>Chào mừng bạn đến với <strong>FoodMart</strong> – nơi cung cấp những sản phẩm lương thực chất lượng
-                    cao, giàu dinh dưỡng và an toàn cho mọi gia đình!
-                    Với nguồn gốc rõ ràng và quy trình kiểm soát nghiêm ngặt, chúng tôi cam kết mang đến sự an tâm cho
-                    từng bữa ăn.</p>
+                    <h4>Sứ mệnh của chúng tôi</h4>
+                    <p>FoodMart hướng tới việc cung cấp các loại lương thực đảm bảo tiêu chí sạch, bền vững và tốt cho sức
+                        khỏe, góp phần xây dựng một cộng đồng sống xanh và lành mạnh.</p>
 
-                <h4>Sứ mệnh của chúng tôi</h4>
-                <p>FoodMart hướng tới việc cung cấp các loại lương thực đảm bảo tiêu chí sạch, bền vững và tốt cho sức
-                    khỏe, góp phần xây dựng một cộng đồng sống xanh và lành mạnh.</p>
+                    <h4>Tại sao nên chọn FoodMart?</h4>
+                    <ul>
+                        <li><strong>Chất lượng hàng đầu:</strong> Các sản phẩm lương thực được chọn lọc kỹ càng từ những
+                            vùng trồng trọt đạt chuẩn.</li>
+                        <li><strong>An toàn thực phẩm:</strong> Đảm bảo không sử dụng chất bảo quản hay hóa chất độc hại.
+                        </li>
+                        <li><strong>Giàu dinh dưỡng:</strong> Sản phẩm giữ nguyên giá trị dinh dưỡng tự nhiên, phù hợp với
+                            mọi đối tượng.</li>
+                        <li><strong>Dịch vụ tin cậy:</strong> Đội ngũ hỗ trợ tận tâm và giao hàng nhanh chóng.</li>
+                    </ul>
 
-                <h4>Tại sao nên chọn FoodMart?</h4>
-                <ul>
-                    <li><strong>Chất lượng hàng đầu:</strong> Các sản phẩm lương thực được chọn lọc kỹ càng từ những
-                        vùng trồng trọt đạt chuẩn.</li>
-                    <li><strong>An toàn thực phẩm:</strong> Đảm bảo không sử dụng chất bảo quản hay hóa chất độc hại.
-                    </li>
-                    <li><strong>Giàu dinh dưỡng:</strong> Sản phẩm giữ nguyên giá trị dinh dưỡng tự nhiên, phù hợp với
-                        mọi đối tượng.</li>
-                    <li><strong>Dịch vụ tin cậy:</strong> Đội ngũ hỗ trợ tận tâm và giao hàng nhanh chóng.</li>
-                </ul>
+                    <h4>Hành trình của chúng tôi</h4>
+                    <p>Khởi đầu với mong muốn nâng cao chất lượng lương thực trong từng bữa ăn, FoodMart đã không ngừng phát
+                        triển để trở thành đối tác tin cậy của hàng ngàn gia đình và tổ chức trên khắp cả nước.</p>
+                </div>
 
-                <h4>Hành trình của chúng tôi</h4>
-                <p>Khởi đầu với mong muốn nâng cao chất lượng lương thực trong từng bữa ăn, FoodMart đã không ngừng phát
-                    triển để trở thành đối tác tin cậy của hàng ngàn gia đình và tổ chức trên khắp cả nước.</p>
+
             </div>
 
 
-        </div>
-
-
-        <div class="carousel-container">
-            <h2>SẢN PHẨM MỚI</h2>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg">
-                    <p>Đậu nành lông đông lạnh</p>
-                    <span style="color: #B5292F;font-weight: bold;">45.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/riceproducts/gao-ST21_AAN-300x300.jpg">
-                    <p>Gạo ST21</p>
-                    <span style="color: #B5292F;font-weight: bold;">29.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/riceproducts/yen mach.jpg">
-                    <p>Yến mạch Oatmeal</p>
-                    <span style="color: #B5292F;font-weight: bold;">90.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg">
-                    <p>Mì 3 miền gà sợi phở</p>
-                    <span style="color: #B5292F;font-weight: bold;">5.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/dong-goi/mi-hao-hao-chua-cay.jpg">
-                    <p>Mì hảo hảo chua cay</p>
-                    <span style="color: #B5292F;font-weight: bold;">6.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg">
-                    <p>Ngũ cốc cho bé</p>
-                    <span style="color: #B5292F;font-weight: bold;">60.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg">
-                    <p>Đậu nành lông đông lạnh</p>
-                    <span style="color: #B5292F;font-weight: bold;">45.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/riceproducts/gao-ST21_AAN-300x300.jpg">
-                    <p>Gạo ST21</p>
-                    <span style="color: #B5292F;font-weight: bold;">29.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/riceproducts/yen mach.jpg">
-                    <p>Yến mạch Oatmeal</p>
-                    <span style="color: #B5292F;font-weight: bold;">90.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg">
-                    <p>Mì 3 miền gà sợi phở</p>
-                    <span style="color: #B5292F;font-weight: bold;">5.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/dong-goi/mi-hao-hao-chua-cay.jpg">
-                    <p>Mì hảo hảo chua cay</p>
-                    <span style="color: #B5292F;font-weight: bold;">6.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg">
-                    <p>Ngũ cốc cho bé</p>
-                    <span style="color: #B5292F;font-weight: bold;">60.000&nbsp;₫</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="new-container">
-            <div class="news-section">
-
-                <div class="date">
-                    <span>09</span>
-                    <span>Th11</span>
-                </div>
-                <h2>TIN MỚI NHẤT</h2>
-                <div class="main-news">
-
-                    <div class="news-content">
-                        <img src="image/new/Ngày-Pháp-luật-Việt-Nam.jpg" alt="Tin tức">
-                        <h3>
-                            FoodMart nhiệt liệt hưởng ứng Ngày Pháp luật nước Cộng hòa xã hội chủ nghĩa Việt Nam
-                        </h3>
-                        <p>1. Mục đích của Ngày Pháp luật Việt Nam 09/11 hàng năm nhằm tôn vinh...</p>
+            <div class="carousel-container">
+                <h2>SẢN PHẨM MỚI</h2>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg">
+                        <p>Đậu nành lông đông lạnh</p>
+                        <span style="color: #B5292F;font-weight: bold;">45.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/riceproducts/gao-ST21_AAN-300x300.jpg">
+                        <p>Gạo ST21</p>
+                        <span style="color: #B5292F;font-weight: bold;">29.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/riceproducts/yen mach.jpg">
+                        <p>Yến mạch Oatmeal</p>
+                        <span style="color: #B5292F;font-weight: bold;">90.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg">
+                        <p>Mì 3 miền gà sợi phở</p>
+                        <span style="color: #B5292F;font-weight: bold;">5.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/dong-goi/mi-hao-hao-chua-cay.jpg">
+                        <p>Mì hảo hảo chua cay</p>
+                        <span style="color: #B5292F;font-weight: bold;">6.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg">
+                        <p>Ngũ cốc cho bé</p>
+                        <span style="color: #B5292F;font-weight: bold;">60.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg">
+                        <p>Đậu nành lông đông lạnh</p>
+                        <span style="color: #B5292F;font-weight: bold;">45.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/riceproducts/gao-ST21_AAN-300x300.jpg">
+                        <p>Gạo ST21</p>
+                        <span style="color: #B5292F;font-weight: bold;">29.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/riceproducts/yen mach.jpg">
+                        <p>Yến mạch Oatmeal</p>
+                        <span style="color: #B5292F;font-weight: bold;">90.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg">
+                        <p>Mì 3 miền gà sợi phở</p>
+                        <span style="color: #B5292F;font-weight: bold;">5.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/dong-goi/mi-hao-hao-chua-cay.jpg">
+                        <p>Mì hảo hảo chua cay</p>
+                        <span style="color: #B5292F;font-weight: bold;">6.000&nbsp;₫</span>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg">
+                        <p>Ngũ cốc cho bé</p>
+                        <span style="color: #B5292F;font-weight: bold;">60.000&nbsp;₫</span>
                     </div>
                 </div>
-                <ul class="sub-news">
-                    <li>
-                        <a href="#">Giá lúa gạo hôm nay 19/11/2024: Giá lúa tăng 100 – 200 đồng/kg; giá gạo giảm 50-100
-                            đồng/kg</a>
-                        <span class="label">MỚI</span>
-                    </li>
-                    <li>
-                        <a href="#">Nguồn cung gạo căng thẳng do ảnh hưởng thời tiết...</a>
-                        <span class="label">MỚI</span>
-                    </li>
-                    <li>
-                        <a href="#">Xuất khẩu ngũ cốc Việt Nam đạt kỷ lục mới</a>
-                        <span class="label">MỚI</span>
-                    </li>
-
-                </ul>
             </div>
-            <div class="notification-section">
-                <div class="date-time">
-                    <p>Thứ Ba, ngày 19 tháng 11 năm 2024</p>
-                </div>
-                <div class="notifications">
-                    <h3>THÔNG BÁO</h3>
-                    <img src="image/new/thông-báo-giả-mạo.jpg" alt="Thông báo">
-                    <ul>
-                        <li><a href="#">Thông báo: Giả mạo website FoodMart</a></li>
-                        <li><a href="#">Thông báo: về việc lựa chọn Tổ chức đấu giá tài sản</a></li>
-                        <li><a href="#">QĐ phê duyệt kế hoạch lựa chọn nhà thầu tư vấn dự án...</a></li>
+
+            <div class="new-container">
+                <div class="news-section">
+
+                    <div class="date">
+                        <span>09</span>
+                        <span>Th11</span>
+                    </div>
+                    <h2>TIN MỚI NHẤT</h2>
+                    <div class="main-news">
+
+                        <div class="news-content">
+                            <img src="image/new/Ngày-Pháp-luật-Việt-Nam.jpg" alt="Tin tức">
+                            <h3>
+                                FoodMart nhiệt liệt hưởng ứng Ngày Pháp luật nước Cộng hòa xã hội chủ nghĩa Việt Nam
+                            </h3>
+                            <p>1. Mục đích của Ngày Pháp luật Việt Nam 09/11 hàng năm nhằm tôn vinh...</p>
+                        </div>
+                    </div>
+                    <ul class="sub-news">
+                        <li>
+                            <a href="#">Giá lúa gạo hôm nay 19/11/2024: Giá lúa tăng 100 – 200 đồng/kg; giá gạo giảm 50-100
+                                đồng/kg</a>
+                            <span class="label">MỚI</span>
+                        </li>
+                        <li>
+                            <a href="#">Nguồn cung gạo căng thẳng do ảnh hưởng thời tiết...</a>
+                            <span class="label">MỚI</span>
+                        </li>
+                        <li>
+                            <a href="#">Xuất khẩu ngũ cốc Việt Nam đạt kỷ lục mới</a>
+                            <span class="label">MỚI</span>
+                        </li>
+
                     </ul>
+                </div>
+                <div class="notification-section">
+                    <div class="date-time">
+                        <p>Thứ Ba, ngày 19 tháng 11 năm 2024</p>
+                    </div>
+                    <div class="notifications">
+                        <h3>THÔNG BÁO</h3>
+                        <img src="image/new/thông-báo-giả-mạo.jpg" alt="Thông báo">
+                        <ul>
+                            <li><a href="#">Thông báo: Giả mạo website FoodMart</a></li>
+                            <li><a href="#">Thông báo: về việc lựa chọn Tổ chức đấu giá tài sản</a></li>
+                            <li><a href="#">QĐ phê duyệt kế hoạch lựa chọn nhà thầu tư vấn dự án...</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+
+
 
 
     </main>
@@ -282,7 +283,6 @@
 
     <jsp:include page="footer.jsp"/>
     <script src="js/home.js"></script>
-
 
 
 </body>

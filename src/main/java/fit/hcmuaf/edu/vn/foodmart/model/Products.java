@@ -15,6 +15,9 @@ public class Products {
         this.Price = Price;
         this.ImageURL = ImageURL;
     }
+    public Products() {
+
+    }
 
     // Getters and setters
     public int getProductID() {
