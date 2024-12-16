@@ -125,7 +125,6 @@
                             <div class="card-content">
                                 <div class="card-title">
                                     <a href="<c:url value='/productDetail?id=${discount.product.productID}'/>" class="card-title-link">${discount.product.productName}</a>
-                                </div>
                             </div>
                             <div class="card-footer">
                                 <div class="product-price">
