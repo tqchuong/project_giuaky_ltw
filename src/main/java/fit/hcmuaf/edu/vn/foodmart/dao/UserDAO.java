@@ -148,19 +148,6 @@ public class UserDAO implements ObjectDAO {
         // Lấy thông tin user từ userList
         Users user = userList.get(username);
 
-//        // Kiểm tra xem user có tồn tại không
-//        if (user == null) {
-//            System.out.println("User không tồn tại: " + username);
-//            return false;
-//        }
-//
-//        // Kiểm tra mật khẩu cũ
-//        if (!user.getPassword().equals(oldPassword)) {
-//            System.out.println("Mật khẩu cũ không đúng cho user: " + username);
-//            return false;
-//        }
-
-
         // Cập nhật mật khẩu mới
         user.setPassword(newPassword);
         userList.replace(user.getUsername(), user);
@@ -185,6 +172,44 @@ public class UserDAO implements ObjectDAO {
             return false;
         }
     }
+
+    public boolean changeInfor(String username, String fullName, String phone, String email, String address) {
+        Users user = userList.get(username);
+
+        user.setFullName(fullName);
+        user.setPhone(phone);
+        user.setEmail(email);
+        user.setAddress(address);
+
+        userList.replace(user.getUsername(), user);
+
+        // Cập nhật vào cơ sở dữ liệu
+        StringBuilder sql = new StringBuilder("UPDATE users ");
+        sql.append("SET fullName = ?, phone = ?, email = ?, address = ?");
+        sql.append(" WHERE username = ?");
+
+        try (Handle handle = jdbi.open()) {
+            int rowsAffected = handle.createUpdate(sql)
+                    .bind(0, fullName)
+                    .bind(1, phone)
+                    .bind(2, email)
+                    .bind(3, address)
+                    .bind(4, username)
+                    .execute();
+
+            if (rowsAffected > 0) {
+                System.out.println("Đổi thông tin thành công cho user: " + username);
+                return true;
+            } else {
+                System.out.println("Không đổi được thông tin trong cơ sở dữ liệu cho user: " + username);
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public boolean userExists(String username) {
         String sql = "SELECT COUNT(*) FROM users WHERE username = ?";
         try (Handle handle = jdbi.open()) {
@@ -237,6 +262,33 @@ public class UserDAO implements ObjectDAO {
         return false;
     }
 
+    public boolean addAdmin(Object obj) {
+        Users user = (Users) obj;
+
+        // Thêm vào danh sách trong bộ nhớ
+        userList.put(user.getUsername(), user);
+
+        // Câu lệnh SQL để thêm người dùng vào cơ sở dữ liệu
+        String sql = "INSERT INTO `users` (`Username`, `Password`, `Email`, `Phone`, `Role`) \n" +
+                "VALUES (?, ?, ?, ?,?)";
+
+        try (Handle handle = jdbi.open()) {
+            handle.createUpdate(sql)
+                    .bind(0, user.getUsername())
+                    .bind(1, user.getPassword())
+                    .bind(2, user.getEmail())
+                    .bind(3, user.getPhone())
+                    .bind(4, user.getRole())
+                    .execute();
+            return true;
+        } catch (Exception e) {
+            // Ghi lỗi vào log thay vì in ra console
+            System.err.println("Lỗi khi thêm người dùng: " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     // Phương thức main để kiểm tra và truy vấn dữ liệu
     public static void main(String[] args) {
         // Lấy danh sách người dùng từ cơ sở dữ liệu
@@ -249,13 +301,13 @@ public class UserDAO implements ObjectDAO {
 
         // Kiểm tra đăng nhập
         UserDAO dao = new UserDAO();
-//        Users user = new Users("hcm","123","hmc","22130029@st.hcmuaf.edu.vn");
+//        Users userAdmin = new Users("admin","admin123","admin@gmail.com","admin","Admin");
 //        System.out.println(dao.checkLogin("tqc", "123"));
 //        System.out.println(dao.checkLogin("tqc", "1234"));
 //        System.out.println(dao.checkLogin("tqcc", "123"));
-//        System.out.println(dao.add(user));
+//        System.out.println(dao.addAdmin(user));
         //System.out.println(dao.userExists("hmc2"));
 //        System.out.println(dao.passwordRecorvery("tqc","gatrong015@gmail.com"));
-
+   //     System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
     }
 }

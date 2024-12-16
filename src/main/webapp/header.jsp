@@ -42,7 +42,9 @@
               <c:if test="${sessionScope.auth != null }">
                 <h4 ><c:out value="${sessionScope.auth.username}"/> </h4>
                 <ul class="header-middle-right-menu" id="auth-options">
-                  <li><a href="admin.jsp"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a></li>
+                  <c:if test="${sessionScope.auth.role == 'Admin'}">
+                    <li><a href="admin.jsp"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a></li>
+                  </c:if>
                   <li><a href="changeInfor.jsp"  ><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
                   <li><a href="changeInfor.jsp" ><i class="fa-solid fa-bag-shopping"></i> Đơn hàng đã mua</a></li>
                   <li class="border" style="display: flex; justify-content: center; align-items: center;">

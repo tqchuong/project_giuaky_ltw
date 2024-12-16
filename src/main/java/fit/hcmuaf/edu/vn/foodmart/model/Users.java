@@ -24,17 +24,22 @@ public class Users implements Serializable {
         this.phone = phone;
     }
 
-    public Users(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-    //    public Users( String phone, String email, String address, String fullName) {
+//    public Users( String phone, String email, String address, String fullName,boolean isActive) {
 //
 //        this.phone = phone;
 //        this.email = email;
 //        this.address = address;
-//        this.fullName = fullName;
-//    }
+//       this.fullName = fullName;
+//   }
+
+
+    public Users(String username, String password, String email, String phone, String role) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phone = phone;
+        this.role = role;
+    }
 
     public String getUsername() {
         return username;
@@ -109,6 +114,8 @@ public class Users implements Serializable {
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
                 ", fullName='" + fullName + '\'' +
+                ", role='" + role + '\'' +
+                ", userStatus='" + userStatus + '\'' +
                 '}';
     }
 }

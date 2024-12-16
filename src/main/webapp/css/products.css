@@ -1082,7 +1082,7 @@ header {
 .main-account-body {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .main-account-body-col {

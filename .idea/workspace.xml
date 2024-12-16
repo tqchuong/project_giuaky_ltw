@@ -9,7 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b456d60-5884-49d4-ad25-687dfb03df07" name="Changes" comment="" />
+    <list default="true" id="2b456d60-5884-49d4-ad25-687dfb03df07" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ChangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ChangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/changeInfor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/changeInfor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,9 +245,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PasswordUtils" />
-        <item itemvalue="Application.DBConnect" />
         <item itemvalue="Application.UserDAO" />
+        <item itemvalue="Application.DBConnect" />
+        <item itemvalue="Application.PasswordUtils" />
         <item itemvalue="Application.ProductDAO" />
       </list>
     </recent_temporary>
@@ -280,7 +288,9 @@
       <workItem from="1734159401520" duration="29794000" />
       <workItem from="1734228668300" duration="9122000" />
       <workItem from="1734275086305" duration="11367000" />
-      <workItem from="1734286514383" duration="337000" />
+      <workItem from="1734286514383" duration="421000" />
+      <workItem from="1734342786469" duration="789000" />
+      <workItem from="1734344774209" duration="10850000" />
     </task>
     <servers />
   </component>
