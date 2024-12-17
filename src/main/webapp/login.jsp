@@ -26,13 +26,17 @@
     <!--=============== LOGIN ===============-->
     <div class="login container grid" id="loginAccessRegister">
         <%
-            // Kiểm tra nếu thuộc tính showRegisterForm tồn tại và có giá trị true
-            boolean showRegisterForm = request.getAttribute("showRegisterForm") != null
-                    && (boolean) request.getAttribute("showRegisterForm");
+            // Kiểm tra các thuộc tính và gán giá trị vào biến showForm
+            String formType = "login"; // Mặc định hiển thị form login
+            if (request.getAttribute("showRegisterForm") != null && (boolean) request.getAttribute("showRegisterForm")) {
+                formType = "register";
+            } else if (request.getAttribute("showForgotPasswordForm") != null && (boolean) request.getAttribute("showForgotPasswordForm")) {
+                formType = "forgotPassword";
+            }
         %>
 
         <!--===== LOGIN ACCESS =====-->
-        <div id="loginForm" class="login__access" style="display: <%= showRegisterForm ? "none" : "block" %>;">
+        <div id="loginForm" class="login__access" style="display: <%= "login".equals(formType) ? "block" : "none" %>;">
             <h1 class="login__title">Đăng nhập vào tài khoản của bạn.</h1>
             <!-- Hiển thị thông báo lỗi nếu có -->
             <c:if test="${not empty loginError}">
@@ -69,7 +73,7 @@
         </div>
 
         <!--===== LOGIN REGISTER =====-->
-        <div id="registerForm" class="login__register" style="display: <%= showRegisterForm ? "block" : "none" %>;">
+        <div id="registerForm" class="login__register" style="display: <%= "register".equals(formType) ? "block" : "none" %>;">
             <h1 class="login__title">Tạo tài khoản mới.</h1>
             <div class="login__area">
                 <form action="login?action=res" method="post" class="login__form">
@@ -110,10 +114,13 @@
         </div>
 
         <!-- ===== FORGOT PASSWORD ===== -->
-        <div id="forgotPasswordForm" class="forgot-password" style="display: none;">
+        <div id="forgotPasswordForm" class="forgot-password" style="display: <%= "forgotPassword".equals(formType) ? "block" : "none" %>;">
             <h1 class="login__title">Quên Mật khẩu?</h1>
             <div class="login__area">
-                <form action="login?action=forgetPass" class="login__form">
+                <form action="login?action=forgetPass" method="post" class="login__form">
+                    <c:if test="${not empty errorMessage}">
+                        <div style="color: red;">${errorMessage}</div>
+                    </c:if>
                     <div class="login__box">
                         <!-- Username Field -->
                         <input type="text" id="usernameForgot" name="username" required placeholder=" " class="login__input" aria-label="Username">

@@ -11,12 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2b456d60-5884-49d4-ad25-687dfb03df07" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ChangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ChangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/changeInfor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/changeInfor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +133,8 @@
       </method>
     </configuration>
     <configuration name="UserDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-23" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.UserDAO" />
       <module name="FoodMart" />
       <extension name="coverage">
@@ -150,6 +149,7 @@
     </configuration>
     <configuration name="Tomcat 10.1.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dhttps.protocols=TLSv1.2 -Dmail.smtp.ssl.protocols=TLSv1.2 " />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="FoodMart:war">
@@ -290,7 +290,8 @@
       <workItem from="1734275086305" duration="11367000" />
       <workItem from="1734286514383" duration="421000" />
       <workItem from="1734342786469" duration="789000" />
-      <workItem from="1734344774209" duration="10850000" />
+      <workItem from="1734344774209" duration="11888000" />
+      <workItem from="1734457397582" duration="4789000" />
     </task>
     <servers />
   </component>

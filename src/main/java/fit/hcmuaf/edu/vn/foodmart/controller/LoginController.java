@@ -90,14 +90,33 @@ public class LoginController extends HttpServlet {
             HttpSession session = request.getSession();
             session.invalidate();  // Hủy session khi đăng xuất
             response.sendRedirect("home.jsp");  // Chuyển hướng người dùng về trang login
-        } else if(action.equals("forgetPass")){
+        } else if(action.equals("forgetPass")) {
             String username = request.getParameter("username");
             String email = request.getParameter("email");
-            UserDAO userDAO = new UserDAO();
-            if(userDAO.passwordRecorvery(username,email)){
 
+            // Khởi tạo đối tượng UserDAO để kiểm tra trong DB
+            UserDAO userDAO = new UserDAO();
+
+            // Kiểm tra xem username và email có tồn tại trong database không
+            if(userDAO.isUserExist(username, email)) {
+                // Nếu tồn tại, tiếp tục với việc phục hồi mật khẩu
+                if(userDAO.passwordRecorvery(username, email)) {
+                    request.setAttribute("errorMessage", "Lấy mật khẩu thành công");
+                    request.setAttribute("showForgotPasswordForm", true);
+                    request.getRequestDispatcher("login.jsp").forward(request, response);
+                } else {
+                    // Nếu không thể phục hồi mật khẩu (có thể là lỗi khác), hiển thị thông báo
+                    request.setAttribute("errorMessage", "Không thể phục hồi mật khẩu.");
+                    request.setAttribute("showForgotPasswordForm", true);
+                    request.getRequestDispatcher("login.jsp").forward(request, response);
+                }
+            } else {
+                // Nếu không tìm thấy username và email trong database
+                request.setAttribute("errorMessage", "Tên đăng nhập hoặc email không đúng.");
+                request.setAttribute("showForgotPasswordForm", true);
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
         }
+
     }
 }

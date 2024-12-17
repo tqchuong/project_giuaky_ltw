@@ -10,6 +10,8 @@ import org.jdbi.v3.core.Jdbi;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.security.SecureRandom;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -223,13 +225,30 @@ public class UserDAO implements ObjectDAO {
             return false; // Nếu không có dòng dữ liệu, trả về false
         }
     }
+    public boolean isUserExist(String username, String email) {
+        // Câu lệnh SQL kiểm tra sự tồn tại của người dùng
+        String sql = "SELECT COUNT(*) FROM users WHERE username = ? AND email = ?";
+        try (Handle handle = jdbi.open()) {
+            int count = handle.createQuery(sql)
+                    .bind(0, username)
+                    .bind(1,email)
+                    .mapTo(int.class)
+                    .first();
+            return count > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false; // Nếu không có dòng dữ liệu, trả về false
+        }
+    }
+
+
     public static boolean sendMail(String to, String subject, String text) {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.socketFactory.port", "465");
         props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "465");
+        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
         Session session = Session.getInstance(props, new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
@@ -245,21 +264,63 @@ public class UserDAO implements ObjectDAO {
             message.setText(text);
             Transport.send(message);
         } catch (MessagingException e) {
+            e.printStackTrace();
             return false;
         }
         return true;
+    }
+
+    // Hàm tạo mật khẩu ngẫu nhiên
+    private String generateRandomPassword() {
+        String chars = "0123456789";  // Chỉ chứa chữ cái thường
+        SecureRandom random = new SecureRandom();
+        StringBuilder password = new StringBuilder(6);
+
+        for (int i = 0; i < 6; i++) {
+            int index = random.nextInt(chars.length());
+            password.append(chars.charAt(index));
+        }
+
+        return password.toString();
     }
 
     public boolean passwordRecorvery(String username, String email) {
 
         Users user = userList.get(username);
         if (user != null) {
-            sendMail(email,"Khôi phục mật khẩu",user.getPassword());
-            return true;
+            // Tạo mật khẩu ngẫu nhiên mới
+            String newPassword = generateRandomPassword();
+
+            // Mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu
+            String newPasswordHash = PasswordUtils.hashPassword(newPassword);
+            user.setPassword(newPasswordHash);
+            userList.replace(user.getUsername(), user);
+
+            // Cập nhật mật khẩu vào cơ sở dữ liệu
+            String sql = "UPDATE users SET password = ? WHERE username = ?";
+            try (Handle handle = jdbi.open()) {
+                int rowsAffected = handle.createUpdate(sql)
+                        .bind(0, newPasswordHash)  // Gắn mật khẩu đã mã hóa
+                        .bind(1, username)         // Gắn tên người dùng
+                        .execute();
+
+                if (rowsAffected > 0) {
+                    // Gửi mật khẩu mới cho người dùng sau khi cập nhật thành công
+                    sendMail(email, "Khôi phục mật khẩu", "Mật khẩu mới của bạn là: " + newPassword);
+                    System.out.println("Đổi mật khẩu thành công cho user: " + username);
+                    return true;
+                } else {
+                    System.out.println("Không đổi được mật khẩu trong cơ sở dữ liệu cho user: " + username);
+                    return false;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return false;
+            }
         } else {
-            System.out.println("không có tài khoản");
+            System.out.println("Không tìm thấy tài khoản");
+            return false;
         }
-        return false;
     }
 
     public boolean addAdmin(Object obj) {
@@ -302,12 +363,12 @@ public class UserDAO implements ObjectDAO {
         // Kiểm tra đăng nhập
         UserDAO dao = new UserDAO();
 //        Users userAdmin = new Users("admin","admin123","admin@gmail.com","admin","Admin");
-//        System.out.println(dao.checkLogin("tqc", "123"));
+        System.out.println(dao.checkLogin("hmc", "524173"));
 //        System.out.println(dao.checkLogin("tqc", "1234"));
 //        System.out.println(dao.checkLogin("tqcc", "123"));
 //        System.out.println(dao.addAdmin(user));
         //System.out.println(dao.userExists("hmc2"));
-//        System.out.println(dao.passwordRecorvery("tqc","gatrong015@gmail.com"));
+//        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
    //     System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
     }
 }
