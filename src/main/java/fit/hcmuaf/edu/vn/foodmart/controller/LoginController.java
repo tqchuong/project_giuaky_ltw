@@ -6,14 +6,13 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-
 import java.io.IOException;
 
 @WebServlet(name = "LoginController", value = "/login")
 public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        // Xử lý các yêu cầu GET (nếu có)
     }
 
     @Override
@@ -31,24 +30,29 @@ public class LoginController extends HttpServlet {
             String password = request.getParameter("password");
 
             // Kiểm tra đăng nhập
-            if (new UserDAO().checkLogin(username, password)) {
-                // Nếu đăng nhập thành công
+            UserDAO userDAO = new UserDAO();
+            if (userDAO.checkLogin(username, password)) {
+                // Nếu đăng nhập thành công, lấy thông tin người dùng từ cơ sở dữ liệu
+                Users user = userDAO.getUserByUsername(username);
+
+                // Tạo session và lưu thông tin người dùng
                 HttpSession session = request.getSession();
-                Users user = UserDAO.userList.get(username);
                 session.setAttribute("userlogin", user);
+
                 // Chuyển hướng đến trang chủ sau khi đăng nhập thành công
                 response.sendRedirect("home.jsp");
             } else {
-                // Nếu đăng nhập không thành công
+                // Nếu đăng nhập không thành công, thông báo lỗi
                 request.setAttribute("loginError", "Tên đăng nhập hoặc mật khẩu không đúng!");
-                // Chuyển hướng người dùng quay lại trang đăng nhập
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
         } else if (action.equals("res")) {
             // Xử lý hành động đăng ký (nếu có)
         } else if (action.equals("logout")) {
-            // Xử lý hành động đăng xuất (nếu có)
+            // Xử lý hành động đăng xuất
+            HttpSession session = request.getSession();
+            session.invalidate();  // Hủy session khi đăng xuất
+            response.sendRedirect("login.jsp");  // Chuyển hướng người dùng về trang login
         }
     }
-
 }

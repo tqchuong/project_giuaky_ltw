@@ -1139,17 +1139,18 @@ header {
 }
 
 .current-price {
-    font-size: 24px; /* Giảm kích thước chữ cho giá chính */
+    font-size: 24px !important;; /* Giảm kích thước chữ cho giá chính */
     color: var(--red);
+    margin-left: 70px;
     display: block; /* Đưa giá chính thành khối */
 
 }
 
 .old-price {
-    font-size: 24px; /* Kích thước chữ cho giá đã giảm */
+    font-size: 24px!important; /* Kích thước chữ cho giá đã giảm */
     color: #999; /* Màu xám cho giá đã giảm */
     text-decoration: line-through; /* Đường gạch ngang cho giá đã giảm */
-    margin-left: 120px; /* Khoảng cách giữa giá chính và giá đã giảm */
+    margin-left: 120px;
     position: absolute;
     top: 0;
     left: 0;
@@ -1158,11 +1159,11 @@ header {
 }
 
 .discount {
-    font-size: 20px; /* Giảm kích thước chữ cho phần giảm giá */
+    font-size: 24px!important; /* Giảm kích thước chữ cho phần giảm giá */
     color: var(--red); /* Màu để làm nổi bật */
     position: absolute; /* Định vị phần giảm giá */
     right: 0; /* Nằm bên phải khung */
-    top: 5px; /* Đưa nó lên trên một chút */
+    top:0px;
 }
 
 .nav-pills .nav-link {
@@ -1411,7 +1412,7 @@ img.img-fluid {
     object-fit: cover; /* Giữ tỷ lệ ảnh và lấp đầy khung hình */
 }
 .product-info-tabs{
-margin-right: 120px ;
+    margin-right: 120px ;
     margin-left: 80px;
 }
 
@@ -1433,7 +1434,7 @@ margin-right: 120px ;
 }
 
 .btn-dark {
-width: 50% !important;
+    width: 50% !important;
 
 }
 

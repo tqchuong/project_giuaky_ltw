@@ -48,7 +48,7 @@
                 hot</a>
             </li>
 
-            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.html">
+            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a>
             </li>
@@ -145,10 +145,11 @@
         <%
             ProductDAO productDAO = new ProductDAO();
             List<Products> products = productDAO.getAllProducts();
+
         %>
         <div class="home-products" id="home-products">
             <% for (Products product : products) { %>
-            <div class="col-product" data-id="<%= product.getProductID() %>" data-loai="<%= product.getCategory().getCategoryName() %>">
+            <div class="col-product" data-id="<%= product.getID() %>" data-loai="<%= product.getCategory().getCategoryName() %>">
                 <article class="card-product">
                     <div class="card-header">
                         <a href="#" class="card-image-link">

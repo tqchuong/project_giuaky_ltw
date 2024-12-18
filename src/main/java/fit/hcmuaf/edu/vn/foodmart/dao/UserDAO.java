@@ -1,76 +1,90 @@
 package fit.hcmuaf.edu.vn.foodmart.dao;
 
-
-
 import fit.hcmuaf.edu.vn.foodmart.dao.db.DBConnect;
-import fit.hcmuaf.edu.vn.foodmart.model.Products;
 import fit.hcmuaf.edu.vn.foodmart.model.Users;
+import org.jdbi.v3.core.Handle;
+import org.jdbi.v3.core.Jdbi;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
 
 public class UserDAO {
 
-    public static Map<String, Users> userList = loadData();
+    private static Jdbi jdbi;
 
-    public UserDAO(){
+    static {
+        // Khởi tạo đối tượng Jdbi từ DBConnect
+        jdbi = DBConnect.getJdbi();
+    }
 
-    };
-
-    private static Map<String, Users> loadData() {
+    // Lấy danh sách người dùng từ cơ sở dữ liệu và lưu vào bộ nhớ
+    public static Map<String, Users> loadData() {
         Map<String, Users> userListTemp = new HashMap<>();
         String sql = "SELECT * FROM users";
-        try (Connection connection = DBConnect.getConnection();
-             PreparedStatement ps = connection.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()){
-            while (rs.next()) {
-                String username = rs.getString("username");
-                String password = rs.getString("password");
-                String name = rs.getString("name");
 
-                Users users = new Users(username, password,name);
-                userListTemp.put(users.getUsername(), users);
-            }
-
-        } catch (SQLException e) {
+        try (Handle handle = jdbi.open()) {
+            // Sử dụng JDBI để thực hiện truy vấn và ánh xạ kết quả vào danh sách người dùng
+            handle.select(sql)
+                    .mapToBean(Users.class)  // Ánh xạ kết quả vào đối tượng Users
+                    .forEach(user -> userListTemp.put(user.getUsername(), user));  // Thêm vào Map với key là username
+        } catch (Exception e) {
             System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
             e.printStackTrace();
         }
+
         return userListTemp;
     }
 
+    // Kiểm tra thông tin đăng nhập của người dùng
     public boolean checkLogin(String username, String password) {
-        Users user = userList.get(username);
-        if (user != null) {
-            if(user.getPassword().equals(password)) {
-                return true;
-            } else {
-                return false;
-            }
-        } else{
+        // Kiểm tra người dùng trong cơ sở dữ liệu
+        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+        try (Handle handle = jdbi.open()) {
+            // Truy vấn để kiểm tra đăng nhập
+            Users user = handle.createQuery(sql)
+                    .bind(0, username)
+                    .bind(1, password)
+                    .mapToBean(Users.class)
+                    .findOnly();  // Trả về đối tượng người dùng nếu tìm thấy
+
+            return user != null;  // Trả về true nếu tìm thấy người dùng, false nếu không
+        } catch (Exception e) {
+            System.out.println("Lỗi khi kiểm tra đăng nhập: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
     }
+    // Lấy thông tin người dùng theo tên người dùng
+    public Users getUserByUsername(String username) {
+        String sql = "SELECT * FROM users WHERE username = ?";
 
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind(0, username)
+                    .mapToBean(Users.class)
+                    .findOnly();  // Trả về đối tượng người dùng nếu tìm thấy
+        } catch (Exception e) {
+            System.out.println("Lỗi khi lấy thông tin người dùng: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    // Phương thức main để kiểm tra và truy vấn dữ liệu
     public static void main(String[] args) {
-        UserDAO dao = new UserDAO();
+        // Lấy danh sách người dùng từ cơ sở dữ liệu
         Map<String, Users> userList = loadData();
 
-        // In danh sách
+        // In danh sách người dùng
         for (Users user : userList.values()) {
             System.out.println(user);
         }
 
-        System.out.println(dao.userList);
-        System.out.println(dao.checkLogin("tqc","123"));
-        System.out.println(dao.checkLogin("tqc","1234"));
-        System.out.println(dao.checkLogin("tqcc","123"));
-
+        // Kiểm tra đăng nhập
+        UserDAO dao = new UserDAO();
+        System.out.println(dao.checkLogin("tqc", "123"));  // True nếu thành công
+        System.out.println(dao.checkLogin("tqc", "1234"));  // False nếu sai mật khẩu
+        System.out.println(dao.checkLogin("tqcc", "123"));  // False nếu không có người dùng
     }
 }
