@@ -7,6 +7,7 @@ public class Products {
     private double Price;
     private String ImageURL;
 
+
     // Constructor
     public Products(int ProductID, String ProductName, int CategoryID, double Price, String ImageURL) {
         this.ProductID = ProductID;
@@ -14,6 +15,7 @@ public class Products {
         this.CategoryID = CategoryID;
         this.Price = Price;
         this.ImageURL = ImageURL;
+
     }
     public Products() {
 

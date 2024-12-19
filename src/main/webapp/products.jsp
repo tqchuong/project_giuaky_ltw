@@ -143,7 +143,7 @@
         %>
         <div class="home-products" id="home-products">
             <% for (Products product : products) { %>
-            <div class="col-product" data-id="<%= product.getProductID() %>" data-loai="<%= product.getProductName() %>">
+            <div class="col-product" data-id="<%= product.getProductID() %>" data-loai="<%= product.getCategoryID() %>">
                 <article class="card-product">
                     <div class="card-header">
                         <a href="#" class="card-image-link">

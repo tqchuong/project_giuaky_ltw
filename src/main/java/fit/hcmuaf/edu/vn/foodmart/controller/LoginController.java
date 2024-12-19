@@ -82,6 +82,7 @@ public class LoginController extends HttpServlet {
                 response.sendRedirect("home.jsp");
             } else {
                 request.setAttribute("error", "Có lỗi xảy ra trong quá trình đăng ký.");
+                request.setAttribute("showRegisterForm", true);
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
 

@@ -13,7 +13,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +70,7 @@
     &quot;git-widget-placeholder&quot;: &quot;hmc&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;V:/LTW/FoodMart2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Trash/AI/score-4-master/score-4-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -291,7 +293,10 @@
       <workItem from="1734286514383" duration="421000" />
       <workItem from="1734342786469" duration="789000" />
       <workItem from="1734344774209" duration="11888000" />
-      <workItem from="1734457397582" duration="4789000" />
+      <workItem from="1734457397582" duration="5433000" />
+      <workItem from="1734510884601" duration="64000" />
+      <workItem from="1734513417677" duration="5590000" />
+      <workItem from="1734531515324" duration="5325000" />
     </task>
     <servers />
   </component>

@@ -45,6 +45,7 @@ public class UserDAO implements ObjectDAO {
         return userListTemp;
     }
 
+    //kiểm tra đăng nhập
     public boolean checkLogin(String username, String password) {
         Users user = userList.get(username); // Lấy thông tin người dùng từ danh sách
         if (user != null) {
@@ -146,6 +147,7 @@ public class UserDAO implements ObjectDAO {
         }
     }
 
+    //thay đổi mật khẩu
     public boolean changePassword(String username, String oldPassword, String newPassword) {
         // Lấy thông tin user từ userList
         Users user = userList.get(username);
@@ -175,6 +177,7 @@ public class UserDAO implements ObjectDAO {
         }
     }
 
+    //thay đổi thông tin người dùng
     public boolean changeInfor(String username, String fullName, String phone, String email, String address) {
         Users user = userList.get(username);
 
@@ -212,6 +215,7 @@ public class UserDAO implements ObjectDAO {
         }
     }
 
+    //kiểm tra username có tồn tại không
     public boolean userExists(String username) {
         String sql = "SELECT COUNT(*) FROM users WHERE username = ?";
         try (Handle handle = jdbi.open()) {
@@ -225,6 +229,8 @@ public class UserDAO implements ObjectDAO {
             return false; // Nếu không có dòng dữ liệu, trả về false
         }
     }
+
+    ////kiểm tra username, email có tồn tại không
     public boolean isUserExist(String username, String email) {
         // Câu lệnh SQL kiểm tra sự tồn tại của người dùng
         String sql = "SELECT COUNT(*) FROM users WHERE username = ? AND email = ?";
@@ -241,7 +247,7 @@ public class UserDAO implements ObjectDAO {
         }
     }
 
-
+    //gửi email
     public static boolean sendMail(String to, String subject, String text) {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -270,9 +276,9 @@ public class UserDAO implements ObjectDAO {
         return true;
     }
 
-    // Hàm tạo mật khẩu ngẫu nhiên
+    // Hàm tạo mật khẩu ngẫu nhiên 6 chữ số
     private String generateRandomPassword() {
-        String chars = "0123456789";  // Chỉ chứa chữ cái thường
+        String chars = "0123456789";  // Chỉ chứa số
         SecureRandom random = new SecureRandom();
         StringBuilder password = new StringBuilder(6);
 
@@ -284,6 +290,7 @@ public class UserDAO implements ObjectDAO {
         return password.toString();
     }
 
+    //gửi email cho người dùng quên mật khẩu
     public boolean passwordRecorvery(String username, String email) {
 
         Users user = userList.get(username);
@@ -323,6 +330,7 @@ public class UserDAO implements ObjectDAO {
         }
     }
 
+    //thêm acc admin
     public boolean addAdmin(Object obj) {
         Users user = (Users) obj;
 
@@ -362,13 +370,19 @@ public class UserDAO implements ObjectDAO {
 
         // Kiểm tra đăng nhập
         UserDAO dao = new UserDAO();
-//        Users userAdmin = new Users("admin","admin123","admin@gmail.com","admin","Admin");
-        System.out.println(dao.checkLogin("hmc", "524173"));
+
+        String passwordHash = PasswordUtils.hashPassword("admin123");
+        Users userAdmin = new Users("admin",passwordHash,"admin@gmail.com","admin","Admin");
+        System.out.println(dao.addAdmin(userAdmin));
+
+//        System.out.println(dao.checkLogin("hmc", "524173"));
 //        System.out.println(dao.checkLogin("tqc", "1234"));
 //        System.out.println(dao.checkLogin("tqcc", "123"));
-//        System.out.println(dao.addAdmin(user));
-        //System.out.println(dao.userExists("hmc2"));
+
+//        System.out.println(dao.userExists("hmc2"));
+
 //        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
-   //     System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
+
+//        System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
     }
 }
