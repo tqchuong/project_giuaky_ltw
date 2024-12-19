@@ -31,7 +31,7 @@
 
 
                 <li class="menu-list-item">
-                    <a class="menu-Category" href="products.jsp">
+                    <a class="menu-Category" href="products">
                         <i class="fa-solid fa-shop" style="padding-right: 5px;color: #B5292F;"></i>
                         Sản phẩm
                         <i class="fa-solid fa-caret-down"></i>

@@ -15,6 +15,7 @@ public class Products {
     private ProductsDetail productsDetail;
     private List<Reviews> reviews; // Danh sách đánh giá
     private int productViews;
+    private double averageRating; // Thêm thuộc tính averageRating
 
     // Constructor mặc định
     public Products() {}
@@ -31,7 +32,7 @@ public class Products {
                     List<ProductImages> images,
                     ProductsDetail productsDetail,
                     List<Reviews> reviews,
-                    int productViews) {
+                    int productViews,double averageRating) {
         this.ID = ID;
         this.productName = productName;
         this.categoryID = categoryID;
@@ -44,6 +45,14 @@ public class Products {
         this.productsDetail = productsDetail;
         this.reviews = reviews;       // Gán danh sách đánh giá
         this.productViews = productViews; // Gán số lượt xem
+        this.averageRating = averageRating;
+    }
+    public double getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(double averageRating) {
+        this.averageRating = averageRating;
     }
 
     public ProductsDetail getProductsDetail() {

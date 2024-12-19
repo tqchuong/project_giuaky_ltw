@@ -233,45 +233,41 @@ function searchProducts(mode) {
 }
 
 
-// Hiển thị chuyên mục
 function showCategory(category) {
     // Hiển thị phần tử 'trangchu'
     document.getElementById('trangchu').classList.remove('hide');
 
-    // Lấy danh sách sản phẩm từ DOM
-    const products = Array.from(document.querySelectorAll(".col-product"));
+    // Gửi yêu cầu AJAX đến máy chủ
+    fetch(`/project/products?category=${encodeURIComponent(category)}`)
+        .then(response => response.json()) // Parse JSON từ response
+        .then(products => {
+            console.log("Sản phẩm tìm thấy theo danh mục:", products);
 
-    // Ánh xạ danh sách sản phẩm
-    const productAll = products.map(product => {
+            // Tạo danh sách sản phẩm DOM từ dữ liệu JSON
+            const productElements = products.map(product => {
+                return `
+                    <div class="col-product" data-loai="${product.category}">
+                        <h3>${product.name}</h3>
+                        <p>Giá: ${product.price} VNĐ</p>
+                    </div>
+                `;
+            });
 
-        const category = product.dataset.loai || ""; // Lấy danh mục từ data-loai
+            // Hiển thị danh sách sản phẩm
+            const productContainer = document.getElementById("product-list");
+            productContainer.innerHTML = productElements.join("");
 
-        return {
-            element: product,
+            // Thiết lập phân trang
+            const filteredProducts = Array.from(document.querySelectorAll(".col-product"));
+            displayList(filteredProducts, perPage, currentPage);
+            setupPagination(filteredProducts, perPage);
 
-            category
-
-        };
-    });
-
-    // Lọc sản phẩm theo danh mục
-    const productSearch = category === "Tất cả"
-        ? productAll
-        : productAll.filter(item =>
-            item.category && item.category.toUpperCase() === category.toUpperCase()
-        );
-
-    console.log("Sản phẩm tìm thấy theo danh mục:", productSearch);
-
-    // Hiển thị danh sách sản phẩm đã lọc
-    currentPage = 1; // Đặt lại trang hiện tại là 1
-    const filteredProducts = productSearch.map(item => item.element); // Lấy danh sách DOM từ kết quả lọc
-    displayList(filteredProducts, perPage, currentPage);
-    setupPagination(filteredProducts, perPage);
-
-    // Cuộn tới phần tử hiển thị danh sách
-    window.scrollTo(0,600);
+            // Cuộn tới phần tử hiển thị danh sách
+            window.scrollTo(0, 600);
+        })
+        .catch(error => console.error("Lỗi khi tải sản phẩm:", error));
 }
+
 
 
 //chuyển động banner

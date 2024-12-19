@@ -47,6 +47,43 @@ public class ProductDAO {
             return null;
         }
     }
+    // Lấy danh sách sản phẩm theo danh mục
+    public List<Products> getProductsByCategory(String categoryName) {
+        String sql = """
+        SELECT p.ID AS id, p.ProductName AS productName, 
+               p.CategoryID AS categoryId, p.Price AS price, 
+               p.ImageURL AS imageUrl, c.CategoryName AS categoryName
+        FROM products p
+        INNER JOIN categories c ON p.CategoryID = c.CategoryID
+        WHERE c.CategoryName = :categoryName
+    """;
+
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind("categoryName", categoryName) // Gán tham số cho câu truy vấn
+                    .map((rs, ctx) -> {
+                        Category category = new Category();
+                        category.setCategoryID(rs.getInt("categoryId"));
+                        category.setCategoryName(rs.getString("categoryName"));
+
+                        Products product = new Products();
+                        product.setID(rs.getInt("id"));
+                        product.setProductName(rs.getString("productName"));
+                        product.setCategoryID(rs.getInt("categoryId"));
+                        product.setPrice(rs.getDouble("price"));
+                        product.setImageURL(rs.getString("imageUrl"));
+                        product.setCategory(category);
+
+                        return product;
+                    })
+                    .list();
+        } catch (Exception e) {
+            System.out.println("Lỗi khi truy vấn dữ liệu theo danh mục: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
     // Lấy chi tiết sản phẩm theo ID
     public Products getProductDetailsById(int productId) {

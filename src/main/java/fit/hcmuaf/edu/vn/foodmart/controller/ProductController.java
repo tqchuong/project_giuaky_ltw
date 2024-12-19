@@ -1,5 +1,6 @@
 package fit.hcmuaf.edu.vn.foodmart.controller;
 
+import fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO;
 import fit.hcmuaf.edu.vn.foodmart.model.Products;
 import fit.hcmuaf.edu.vn.foodmart.service.ProductService;
 import jakarta.servlet.ServletException;
@@ -7,43 +8,37 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
-
-@WebServlet(name = "ProductController", urlPatterns = {"/product-details"})
+import java.util.List;
+@WebServlet(name ="products",value ="/products")
 public class ProductController extends HttpServlet {
 
-    private final ProductService productService = new ProductService(); // Tầng service xử lý logic
-
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try {
-            // Lấy ID sản phẩm từ query parameter
-            String productIdParam = req.getParameter("id");
-            if (productIdParam == null || productIdParam.isEmpty()) {
-                resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Product ID is required");
-                return;
-            }
-            int productId = Integer.parseInt(productIdParam);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ProductService productService = new ProductService();
 
-            // Lấy thông tin chi tiết sản phẩm
-            Products product = productService.getProductDetailsById(productId);
-            if (product == null) {
-                resp.sendError(HttpServletResponse.SC_NOT_FOUND, "Product not found");
-                return;
-            }
+        List<Products> products = productService.getAllProducts();
 
-            // Gửi sản phẩm tới trang JSP
-            req.setAttribute("product", product);
+        // Đặt danh sách sản phẩm vào request scope
+        request.setAttribute("products", products);
 
-            // Chuyển hướng tới productdetails.jsp
-            req.getRequestDispatcher("productdetail.jsp").forward(req, resp);
+        // Chuyển tiếp đến trang JSP
+        request.getRequestDispatcher("products.jsp").forward(request, response);
+        String category = request.getParameter("category");
 
-        } catch (NumberFormatException e) {
-            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid Product ID");
-        } catch (Exception e) {
-            resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "An error occurred while processing the request");
-            e.printStackTrace();
+
+        if (category == null || category.equalsIgnoreCase("Tất cả")) {
+            products = productService.getAllProducts();
+        } else {
+            products = productService.getProductsByCategory(category); // Lọc theo danh mục
         }
+
+        // Trả về dữ liệu JSON
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        String json = new com.google.gson.Gson().toJson(products);
+        response.getWriter().write(json);
     }
+
+
 }

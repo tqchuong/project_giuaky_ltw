@@ -5,6 +5,8 @@
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Reviews" %>
 <%@ page import="java.util.List" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 
 
 <!DOCTYPE html>
@@ -74,24 +76,7 @@
     <!--            <li class="breadcrumb-item active" aria-current="page">Gạo Ông Cua ST25 Organic chuẩn USDA Mỹ (hộp 2kg)</li>-->
     <!--        </ol>-->
     <!--    </nav>-->
-    <!--</div>--><%
-        // Lấy thông tin sản phẩm theo ID = 3
-        ProductDAO productDAO = new ProductDAO();
-        Products productDetails = productDAO.getProductDetailsById(3);  // Lấy sản phẩm với ID = 3
-        List<ProductImages> images = null;
-        double averageRating = 0.0;
-        int reviewCount = 0;
-        int viewCount = 0;
-
-        if (productDetails != null) {
-            images = productDetails.getImages();  // Lấy danh sách ảnh sản phẩm
-            averageRating = productDAO.getAverageRating(3); // Lấy trung bình rating
-            reviewCount = productDetails.getReviews() != null ? productDetails.getReviews().size() : 0;
-            viewCount = productDetails.getProductViews();
-        }
-    %>
-
-    <section id="selling-product" class="single-product mt-0 mt-md-5  ">
+    <!--</div>--><section id="selling-product" class="single-product mt-0 mt-md-5">
         <div class="container-fluid">
             <div class="product-details">
                 <div class="row">
@@ -99,33 +84,23 @@
                         <div class="row flex-column-reverse flex-lg-row">
                             <div class="col-md-12 col-lg-2">
                                 <div class="product-thumbnails">
-                                    <%
-                                        // Kiểm tra xem danh sách ảnh có tồn tại và lặp qua để hiển thị ảnh
-                                        if (images != null && !images.isEmpty()) {
-                                            for (int i = 0; i < images.size(); i++) {
-                                                String imagePath = images.get(i).getImagePath();  // Lấy đường dẫn ảnh
-                                    %>
-                                    <img src="<%= imagePath %>" alt="Thumbnail <%= i+1 %>"
-                                         class="thumb-image img-fluid"
-                                         onclick="changeImage('<%= imagePath %>')"
-                                         data-large-img="<%= imagePath %>">
-                                    <%
-                                            }
-                                        }
-                                    %>
+                                    <c:if test="${not empty product.images}">
+                                        <c:forEach var="image" items="${product.images}" varStatus="loop">
+                                            <img src="${image.imagePath}" alt="Thumbnail ${loop.index + 1}"
+                                                 class="thumb-image img-fluid"
+                                                 onclick="changeImage('${image.imagePath}')"
+                                                 data-large-img="${image.imagePath}">
+                                        </c:forEach>
+                                    </c:if>
                                 </div>
                             </div>
                             <div class="col-md-12 col-lg-10">
                                 <div class="product-main-image">
-                                    <%
-                                        if (images != null && !images.isEmpty()) {
-                                            String mainImage = images.get(0).getImagePath();  // Lấy ảnh đầu tiên làm ảnh chính
-                                    %>
-                                    <img id="mainImage" src="<%= mainImage %>" alt="Main Product"
-                                         class="img-fluid" data-large-img="<%= mainImage %>">
-                                    <%
-                                        }
-                                    %>
+                                    <c:if test="${not empty product.images}">
+                                        <c:set var="mainImage" value="${product.images[0].imagePath}" />
+                                        <img id="mainImage" src="${mainImage}" alt="Main Product"
+                                             class="img-fluid" data-large-img="${mainImage}">
+                                    </c:if>
                                     <div class="zoom-lens"></div>
                                 </div>
                             </div>
@@ -137,65 +112,56 @@
                                 <span class="tag-likes">Yêu Thích</span>
                                 <div class="recommended-product">
                                     <div class="element-header">
-                                        <%-- Tên sản phẩm --%>
-                                        <h2 itemprop="name" class="display-6"><%= productDetails != null ? productDetails.getProductName() : "" %></h2>
+                                        <h2 itemprop="name" class="display-6">${product.productName}</h2>
                                         <div class="rating-container d-flex align-items-center">
-                                            <%-- Trung bình rating --%>
-                                            <span class="rating-score"><%= String.format("%.1f", averageRating) %></span>
+                                        <span class="rating-score">
+                                            <fmt:formatNumber type="number" maxFractionDigits="1" value="${averageRating}" />
+                                        </span>
                                             <div class="rating">
-                                                <%-- Hiển thị sao dựa trên trung bình rating (làm tròn đến 0.5) --%>
-                                                <% for (int i = 1; i <= 5; i++) {
-                                                    if (averageRating >= i) { %>
-                                                <span class="text-primary">&#9733;</span> <%-- Sao đầy --%>
-                                                <% } else if (averageRating >= i - 0.5) { %>
-                                                <span class="text-half-primary">&#9733;</span> <%-- Nửa sao (Unicode không có nửa sao, bạn có thể dùng icon khác) --%>
-                                                <% } else { %>
-                                                <span class="text-muted">&#9734;</span> <%-- Sao trống --%>
-                                                <% }
-                                                } %>
+                                                <c:forEach var="i" begin="1" end="5">
+                                                    <c:choose>
+                                                        <c:when test="${averageRating >= i}">
+                                                            <span class="text-primary star-icon">&#9733;</span>
+                                                        </c:when>
+                                                        <c:when test="${averageRating >= i - 0.5}">
+                                                            <span class="text-half-primary star-icon">&#9733;</span>
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <span class="text-muted star-icon">&#9734;</span>
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </c:forEach>
                                             </div>
                                             <div class="separator"></div>
-                                            <%-- Số lượt đánh giá --%>
-                                            <span class="review-count"><%= reviewCount %> Đánh Giá</span>
+                                            <span class="review-count">${reviewCount} Đánh Giá</span>
                                             <div class="separator"></div>
-                                            <%-- Số lượt xem --%>
-                                            <span class="sales-count ms-3"><%= viewCount %> Lượt Xem</span>
+                                            <span class="sales-count ms-3">${viewCount} Lượt Xem</span>
                                         </div>
-
                                         <div class="product-price-container">
                                             <div class="product-price">
-                                                <%-- Giá sản phẩm --%>
-                                                <strong class="current-price">đ<%= productDetails != null ? String.format("%,.0f", productDetails.getPrice()) : "" %></strong>
-                                                <%-- <del class="old-price">đ140.000</del>
-                                                <span class="discount">-4%</span> --%>
+                                                <strong class="current-price">
+                                                    <fmt:formatNumber type="number" pattern="#,##0" value="${product.price}" /> đ
+                                                </strong>
                                             </div>
                                         </div>
-                                        <%-- Mô tả ngắn --%>
-                                        <p><%= productDetails != null ? productDetails.getShortDescription() : "" %></p>
+                                        <p>${product.shortDescription}</p>
                                         <div class="purchase-options">
                                             <div class="quantity-group">
                                                 <label for="quantity">Số Lượng:</label>
                                                 <div class="quantity-control">
                                                     <button type="button" class="quantity-left-minus btn">-</button>
-                                                    <input type="text" id="quantity" name="quantity"
-                                                           class="quantity-input" value="1" min="1" max="100" readonly>
+                                                    <input type="text" id="quantity" name="quantity" class="quantity-input" value="1" min="1" max="100" readonly>
                                                     <button type="button" class="quantity-right-plus btn">+</button>
                                                 </div>
-                                                <div class="stock-number">Còn <%= productDetails.getStockQuantity() %> sản phẩm</div>
+                                                <div class="stock-number">Còn ${product.stockQuantity} sản phẩm</div>
                                             </div>
-
                                             <div class="button-group">
-                                                <button type="button" class="btn btn-secondary add-to-cart"
-                                                        onclick="window.location.href='shoppingcart.jsp'">
+                                                <button type="button" class="btn btn-secondary add-to-cart" onclick="window.location.href='shoppingcart.jsp'">
                                                     <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
                                                 </button>
-
-                                                <button type="button" class="btn btn-primary buy-now"
-                                                        onclick="window.location.href='checkout.jsp'">Mua Ngay</button>
-
+                                                <button type="button" class="btn btn-primary buy-now" onclick="window.location.href='checkout.jsp'">Mua Ngay</button>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -203,100 +169,75 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
+
     <section class="product-info-tabs py-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="d-flex flex-column flex-md-row align-items-start gap-5">
-                    <div class="nav flex-row flex-wrap flex-md-column nav-pills me-3 col-lg-3" id="v-pills-tab"
-                         role="tablist" aria-orientation="vertical">
-                        <button class="nav-link text-start active" id="v-pills-description-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-description" type="button" role="tab"
-                                aria-controls="v-pills-description" aria-selected="true">Mô tả sản phẩm
-                        </button>
-                        <button class="nav-link text-start" id="v-pills-additional-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-additional" type="button" role="tab"
-                                aria-controls="v-pills-additional" aria-selected="false">Thông tin bổ sung
-                        </button>
-                        <button class="nav-link text-start" id="v-pills-reviews-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-reviews" type="button" role="tab" aria-controls="v-pills-reviews"
-                                aria-selected="false">Đánh giá
-                        </button>
+                    <div class="nav flex-row flex-wrap flex-md-column nav-pills me-3 col-lg-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link text-start active" id="v-pills-description-tab" data-bs-toggle="pill" data-bs-target="#v-pills-description" type="button" role="tab" aria-controls="v-pills-description" aria-selected="true">Mô tả sản phẩm</button>
+                        <button class="nav-link text-start" id="v-pills-additional-tab" data-bs-toggle="pill" data-bs-target="#v-pills-additional" type="button" role="tab" aria-controls="v-pills-additional" aria-selected="false">Thông tin bổ sung</button>
+                        <button class="nav-link text-start" id="v-pills-reviews-tab" data-bs-toggle="pill" data-bs-target="#v-pills-reviews" type="button" role="tab" aria-controls="v-pills-reviews" aria-selected="false">Đánh giá</button>
                     </div>
                     <div class="tab-content" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active" id="v-pills-description" role="tabpanel"
-                             aria-labelledby="v-pills-description-tab" tabindex="0">
+                        <div class="tab-pane fade show active" id="v-pills-description" role="tabpanel" aria-labelledby="v-pills-description-tab" tabindex="0">
                             <h5>Chi tiết sản phẩm</h5>
-                            <%-- chỗ này là shortDescription của Products--%>
-                            <p>Tên sản phẩm: <%= productDetails.getShortDescription() %></p>
-<%--                            <ul style="list-style-type:disc;" class="list-unstyled ps-4">--%>
-<%--                                &lt;%&ndash; chỗ này là detailedDescription của ProductDetails&ndash;%&gt;--%>
-<%--                                <p>Hướng dẫn chế biến</p>--%>
-<%--                                <li>- Đong gạo và nước theo tỉ lệ 1:1 (1 lon gạo : 1 lon nước)</li>--%>
-<%--                                <li>- Sau khi cơm chín, tiếp tục giữ ấm (keep warm) thêm 10 phút sẽ có bữa cơm tuyệt vời--%>
-<%--                                </li>--%>
-<%--                                <li>(Thêm/giảm nước cho những lần nấu sau theo sở thích).</li>--%>
-<%--                            </ul>--%>
-                            <p><%= productDetails.getProductsDetail().getDetailedDescription() %></p>
-
+                            <p>${product.productsDetail.detailedDescription}</p>
                         </div>
-                        <div class="tab-pane fade" id="v-pills-additional" role="tabpanel"
-                             aria-labelledby="v-pills-additional-tab" tabindex="0">
-
+                        <div class="tab-pane fade" id="v-pills-additional" role="tabpanel" aria-labelledby="v-pills-additional-tab" tabindex="0">
                             <p>Thông tin sản phẩm</p>
-                            <%-- chỗ này là detailedDescription của ProductDetails--%>
                             <ul style="list-style-type:disc;" class="list-unstyled ps-4">
-                                <li>Tên sản phẩm: <%= productDetails.getProductName() %></li>
-                                <li>Danh Mục: <%= productDetails.getCategory().getCategoryName() %></li>
-                                <li>Số lượng: <%= productDetails.getStockQuantity() %></li>
-
-                                <li>Ngày hết hạn: <%= (productDetails.getProductsDetail().getExpiryDate() != null) ? new java.text.SimpleDateFormat("dd-MM-yyyy").format(productDetails.getProductsDetail().getExpiryDate()) : "" %></li>
-
+                                <li>Tên sản phẩm: ${product.productName}</li>
+                                <li>Danh Mục: ${product.category.categoryName}</li>
+                                <li>Số lượng: ${product.stockQuantity}</li>
+                                <li>Ngày hết hạn: <fmt:formatDate pattern="dd-MM-yyyy" value="${product.productsDetail.expiryDate}" /></li>
                             </ul>
                         </div>
-                        <div class="tab-pane fade" id="v-pills-reviews" role="tabpanel"
-                             aria-labelledby="v-pills-reviews-tab" tabindex="0">
+                        <div class="tab-pane fade" id="v-pills-reviews" role="tabpanel" aria-labelledby="v-pills-reviews-tab" tabindex="0">
                             <div class="review-box d-flex flex-wrap">
-                                <% if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
-                                    for (fit.hcmuaf.edu.vn.foodmart.model.Reviews review : productDetails.getReviews()) { %>
-                                <div class="col-lg-6 d-flex flex-wrap gap-3">
-                                    <div class="col-md-2">
-                                        <div class="image-holder">
-                                            <img src="<%= review.getUser().getImageURLUser() %>" alt="review"
-                                                 class="img-fluid rounded-circle">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="review-content">
-                                            <div class="rating-container d-flex align-items-center">
-                                                <%-- Hiển thị rating --%>
-                                                <% for (int i = 1; i <= 5; i++) {
-                                                    if (review.getRating() >= i) { %>
-                                                <span class="text-primary" style="font-size: 22px;">&#9733;</span>
-                                                <% } else { %>
-                                                <span class="text-muted" style="font-size: 22px;">&#9734;</span>
-                                                <% }
-                                                } %>
-                                                <span class="rating-count">(<%= review.getRating() %>)</span> <%-- Hoặc String.format("%.1f", review.getRating()) nếu là số thập phân --%>
+                                <c:if test="${not empty product.reviews}">
+                                    <c:forEach var="review" items="${product.reviews}">
+                                        <div class="col-lg-6 d-flex flex-wrap gap-3">
+                                            <div class="col-md-2">
+                                                <div class="image-holder">
+                                                    <img src="${review.user.imageURLUser}" alt="review" class="img-fluid rounded-circle">
+                                                </div>
                                             </div>
-                                            <div class="review-header">
-                                                <span class="author-name"><%= review.getUser().getUsername() %></span>
-                                                <%-- Định dạng ngày tháng --%>
-                                                <span class="review-date">– <% if (review.getCreatedAt() != null) { %><%= new java.text.SimpleDateFormat("dd/MM/yyyy").format(review.getCreatedAt()) %><% } %></span>
+                                            <div class="col-md-8">
+                                                <div class="review-content">
+                                                    <div class="rating-container d-flex align-items-center">
+                                                        <c:forEach var="i" begin="1" end="5">
+                                                            <c:choose>
+                                                                <c:when test="${review.rating >= i}">
+                                                                    <span class="text-primary" style="font-size: 22px;">&#9733;</span>
+                                                                </c:when>
+                                                                <c:otherwise>
+                                                                    <span class="text-muted" style="font-size: 22px;">&#9734;</span>
+                                                                </c:otherwise>
+                                                            </c:choose>
+                                                        </c:forEach>
+                                                        <span class="rating-count">(${review.rating})</span>
+                                                    </div>
+                                                    <div class="review-header">
+                                                        <span class="author-name">${review.user.username}</span>
+                                                        <c:if test="${review.createdAt != null}">
+                                                            <span class="review-date">– <fmt:formatDate pattern="dd/MM/yyyy" value="${review.createdAt}" /></span>
+                                                        </c:if>
+                                                    </div>
+                                                    <p>${review.reviewText}</p>
+                                                </div>
                                             </div>
-                                            <p><%= review.getReviewText() %></p>
                                         </div>
-                                    </div>
-                                </div>
-                                <% }
-                                } else { %>
-                                <p>Không có đánh giá nào.</p>
-                                <% } %>
+                                    </c:forEach>
+                                </c:if>
+                                <c:if test="${empty product.reviews}">
+                                    <p>Không có đánh giá nào.</p>
+                                </c:if>
                             </div>
 
                             <div class="add-review mt-5">
-                                <h3>Đánh giá của bạn </h3>
+                                <h3>Đánh giá của bạn</h3>
                                 <p>Vui lòng điền những dòng *</p>
                                 <form id="form" class="form-group" name="form">
                                     <div class="stars" id="starRating">
@@ -307,14 +248,11 @@
                                         <span data-value="5">&#9733;</span>
                                     </div>
                                     <p>Đánh giá: <span id="ratingValue">0</span> sao</p>
-
                                     <div class="pb-3">
                                         <label>Thêm nhận xét *</label>
                                         <textarea class="form-control" placeholder="Thêm nhận xét của bạn"></textarea>
                                     </div>
-                                    <button type="submit" name="submit"
-                                            class="btn btn-dark btn-large text-uppercase w-100">Submit
-                                    </button>
+                                    <button type="submit" name="submit" class="btn btn-dark btn-large text-uppercase w-100">Gửi</button>
                                 </form>
                             </div>
                         </div>
@@ -322,7 +260,6 @@
                 </div>
             </div>
         </div>
-
     </section>
     <section id="related-products" class="py-5">
         <div class="container">
