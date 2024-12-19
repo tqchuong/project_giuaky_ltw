@@ -2,6 +2,7 @@ package fit.hcmuaf.edu.vn.foodmart.controller;
 
 import fit.hcmuaf.edu.vn.foodmart.dao.UserDAO;
 import fit.hcmuaf.edu.vn.foodmart.model.Users;
+import fit.hcmuaf.edu.vn.foodmart.utils.PasswordUtils;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -36,8 +37,9 @@ public class LoginController extends HttpServlet {
                 Users user = userDAO.getUserByUsername(username);
 
                 // Tạo session và lưu thông tin người dùng
-                HttpSession session = request.getSession();
-                session.setAttribute("userlogin", user);
+                HttpSession session = request.getSession(true);
+                session.setAttribute("auth", user);
+
 
                 // Chuyển hướng đến trang chủ sau khi đăng nhập thành công
                 response.sendRedirect("home.jsp");
@@ -47,12 +49,55 @@ public class LoginController extends HttpServlet {
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
         } else if (action.equals("res")) {
-            // Xử lý hành động đăng ký (nếu có)
+            // Xử lý hành động đăng ký
+            String username = request.getParameter("username");
+            String phone = request.getParameter("phone");
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+
+            // Kiểm tra mật khẩu tối thiểu 6 ký tự
+            if (password == null || password.length() < 6) {
+                request.setAttribute("error", "Mật khẩu phải có ít nhất 6 ký tự.");
+                request.setAttribute("showRegisterForm", true);
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+                return;
+            }
+            String hashedPassword = PasswordUtils.hashPassword(password);
+
+            UserDAO userDAO = new UserDAO();
+            Users user = new Users(username, hashedPassword,email,phone);
+
+            // Kiểm tra nếu tên người dùng đã tồn tại
+            if (userDAO.userExists(username)) {
+                request.setAttribute("error", "Tên người dùng đã tồn tại.");
+                request.setAttribute("showRegisterForm", true);
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+                return;
+            }
+            // Thêm người dùng vào cơ sở dữ liệu
+            if (userDAO.add(user)) {
+                // Tạo session và chuyển hướng tới trang đăng nhập
+                HttpSession session = request.getSession(true);
+                session.setAttribute("auth", user);  // Lưu thông tin người dùng vào session
+                response.sendRedirect("home.jsp");
+            } else {
+                request.setAttribute("error", "Có lỗi xảy ra trong quá trình đăng ký.");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
+
         } else if (action.equals("logout")) {
             // Xử lý hành động đăng xuất
             HttpSession session = request.getSession();
             session.invalidate();  // Hủy session khi đăng xuất
-            response.sendRedirect("login.jsp");  // Chuyển hướng người dùng về trang login
+            response.sendRedirect("home.jsp");  // Chuyển hướng người dùng về trang login
+        } else if(action.equals("forgetPass")){
+            String username = request.getParameter("username");
+            String email = request.getParameter("email");
+            UserDAO userDAO = new UserDAO();
+            if(userDAO.passwordRecorvery(username,email)){
+
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
         }
     }
 }

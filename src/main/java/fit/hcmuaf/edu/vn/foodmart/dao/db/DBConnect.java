@@ -88,7 +88,7 @@ public class DBConnect {
 
     public static void main(String[] args) {
         // Hiển thị các sản phẩm và người dùng khi chạy chương trình
-        displayProducts();
+//        displayProducts();
         displayUsers();
     }
 }

@@ -1,5 +1,6 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
+
 import java.sql.Timestamp;
 
 public class Products {
@@ -10,6 +11,7 @@ public class Products {
     private String imageURL;
     private Timestamp uploadDate;
     private int StockQuantity;
+    private String Description;
 
     // Constructor
     public Products(int productID, String productName, int categoryID, double price, String imageURL, Timestamp uploadDate, int stockQuantity) {
@@ -23,6 +25,14 @@ public class Products {
     }
 
     public Products() {
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
     }
 
     public int getProductID() {

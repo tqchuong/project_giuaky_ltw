@@ -11,7 +11,7 @@ public class ProductDAO {
 
     private static Jdbi jdbi = DBConnect.getJdbi();  // Lấy jdbi từ DBConnect
 
-    // Lấy toàn bộ danh sách sản phẩm từ CSDL, không phân biệt trạng thái sản phẩm
+
     public List<Products> getAllProducts() {
         String sql = "SELECT * FROM products";  // Truy vấn toàn bộ bảng Products
 
@@ -25,6 +25,7 @@ public class ProductDAO {
             return null;
         }
     }
+
 
     // Lấy các sản phẩm mới nhất, sắp xếp theo thời gian tải lên
     public List<Products> getLatestProducts(int limit) {
@@ -61,6 +62,7 @@ public class ProductDAO {
 
         } else {
             System.out.println("Không có sản phẩm mới hoặc có lỗi khi truy vấn.");
+
         }
     }
 }
