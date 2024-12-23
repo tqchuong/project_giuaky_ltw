@@ -47,17 +47,35 @@ public class UserDAO implements ObjectDAO {
 
     //kiểm tra đăng nhập
     public boolean checkLogin(String username, String password) {
-        Users user = userList.get(username); // Lấy thông tin người dùng từ danh sách
-        if (user != null) {
-            String hashedPassword = user.getPassword(); // Lấy mật khẩu đã mã hóa
-            if (hashedPassword != null && PasswordUtils.verifyPassword(password, hashedPassword)) {
-                user.setPassword(null); // Xóa mật khẩu để bảo mật
+        // Truy vấn chỉ để lấy thông tin người dùng dựa trên username
+        String sql = "SELECT * FROM users WHERE username = :username";
+
+        try (Handle handle = jdbi.open()) {
+            // Lấy thông tin người dùng
+            Users user = handle.createQuery(sql)
+                    .bind("username", username) // Gán giá trị tham số cho SQL
+                    .mapToBean(Users.class) // Ánh xạ kết quả sang đối tượng Users
+                    .findOne() // Lấy một kết quả
+                    .orElse(null); // Nếu không tìm thấy, trả về null
+
+            if (user == null) {
+                System.out.println("Người dùng không tồn tại: " + username);
+                return false; // Không tìm thấy người dùng
+            }
+
+            // Kiểm tra mật khẩu
+            if (PasswordUtils.verifyPassword(password, user.getPassword())) {
+                System.out.println("Đăng nhập thành công: " + username);
                 return true; // Đăng nhập thành công
             } else {
-                return false; // Sai mật khẩu
+                System.out.println("Sai mật khẩu cho người dùng: " + username);
+                return false; // Mật khẩu không đúng
             }
-        } else {
-            return false; // Người dùng không tồn tại
+        } catch (Exception e) {
+            // Xử lý lỗi kết nối hoặc truy vấn
+            System.out.println("Lỗi khi kiểm tra đăng nhập: " + e.getMessage());
+            e.printStackTrace();
+            return false; // Trả về false nếu có lỗi
         }
     }
 

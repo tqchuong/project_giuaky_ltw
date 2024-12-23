@@ -5,6 +5,7 @@
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Discount" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.List" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +50,7 @@
                 <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
                 hot
             </a></li>
-            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
+            <li class="menu-list-item"><a class="hotpro-link" href="flash-sale.jsp">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a></li>
         </ul>

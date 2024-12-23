@@ -5,6 +5,7 @@ import fit.hcmuaf.edu.vn.foodmart.model.Products;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ProductDAO {
@@ -26,9 +27,9 @@ public class ProductDAO {
         }
     }
 
-    // Lấy các sản phẩm mới nhất, sắp xếp theo thời gian tải lên
     public List<Products> getLatestProducts(int limit) {
-        String sql = "SELECT p.Id AS ProductID, p.ProductName, p.CategoryID, p.Price, p.UploadDate, p.ImageURL, p.Description, p.StockQuantity " +
+        String sql = "SELECT p.Id AS ProductID, p.ProductName, p.CategoryID, p.Price, p.UploadDate, " +
+                "p.ImageURL, p.ShortDescription, p.StockQuantity " +
                 "FROM Products p " +
                 "ORDER BY p.UploadDate DESC " + // Sắp xếp theo thời gian tải lên mới nhất
                 "LIMIT :limit";  // Lấy số sản phẩm theo tham số limit
@@ -41,7 +42,7 @@ public class ProductDAO {
         } catch (Exception e) {
             System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
             e.printStackTrace();
-            return null;
+            return Collections.emptyList();  // Trả về danh sách rỗng thay vì null
         }
     }
 
@@ -49,7 +50,7 @@ public class ProductDAO {
     public static void main(String[] args) {
         ProductDAO dao = new ProductDAO();
         // Lấy danh sách các sản phẩm mới nhất (2 sản phẩm gần nhất)
-        List<Products> latestProducts = dao.getLatestProducts(4);
+        List<Products> latestProducts = dao.getLatestProducts(6);
 
         // In danh sách sản phẩm mới nhất
         if (latestProducts != null && !latestProducts.isEmpty()) {

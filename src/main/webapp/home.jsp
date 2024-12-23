@@ -1,6 +1,7 @@
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Users" %>
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Products" %>
 <%@ page import="java.util.List" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -45,7 +46,7 @@
                     hot</a>
                 </li>
 
-                <li class="menu-list-item"><a class="flashsale-link" href="flashsale.jsp">
+                <li class="menu-list-item"><a class="hotpro-link" href="flashsale.jsp">
                     <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
                 </a>
                 </li>
@@ -137,20 +138,24 @@
 
 
         </div>
-
+        <%
+            ProductDAO productDAO = new ProductDAO();
+            List<Products> latestProducts = productDAO.getLatestProducts(6);
+        %>
         <div class="carousel-container">
             <h2>SẢN PHẨM MỚI</h2>
-            <div class="carousel">
-                <!-- Lặp qua các sản phẩm mới nhất -->
-                <c:forEach var="product" items="${latestProducts}">
-                    <div class="carousel-item">
-                        <img src="<c:url value='/${product.imageURL}'/>" alt="${product.productName}">
-                        <p>${product.productName}</p>
-                        <span style="color: #B5292F; font-weight: bold;">${product.price}₫</span>
-                    </div>
-                </c:forEach>
-            </div>
+                <div class="carousel">
+                        <% for (Products product : latestProducts) { %>
+
+                            <div class="carousel-item">
+                                <img src="<%= product.getImageURL() %>" alt="<%= product.getProductName() %>">
+                                <p><%= product.getProductName() %></p>
+                                <span style="color: #B5292F; font-weight: bold;"><%= product.getPrice() %>₫</span>
+                            </div>
+                        <% } %>
+                </div>
         </div>
+
     </div>
 
         <div class="new-container">
@@ -239,7 +244,6 @@
 
     <jsp:include page="footer.jsp"/>
     <script src="js/home.js"></script>
-
 
 
 </body>
