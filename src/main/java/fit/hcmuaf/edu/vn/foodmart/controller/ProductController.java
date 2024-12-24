@@ -24,20 +24,10 @@ public class ProductController extends HttpServlet {
 
         // Chuyển tiếp đến trang JSP
         request.getRequestDispatcher("products.jsp").forward(request, response);
-        String category = request.getParameter("category");
 
 
-        if (category == null || category.equalsIgnoreCase("Tất cả")) {
-            products = productService.getAllProducts();
-        } else {
-            products = productService.getProductsByCategory(category); // Lọc theo danh mục
-        }
 
-        // Trả về dữ liệu JSON
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        String json = new com.google.gson.Gson().toJson(products);
-        response.getWriter().write(json);
+
     }
 
 

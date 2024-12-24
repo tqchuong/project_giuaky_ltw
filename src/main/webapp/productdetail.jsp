@@ -156,10 +156,13 @@
                                                 <div class="stock-number">Còn ${product.stockQuantity} sản phẩm</div>
                                             </div>
                                             <div class="button-group">
-                                                <button type="button" class="btn btn-secondary add-to-cart" onclick="window.location.href='shoppingcart.jsp'">
+                                                <button type="button" class="btn btn-secondary add-to-cart"
+                                                        onclick="window.location.href='add-cart?pid=${product.ID}'">
                                                     <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
                                                 </button>
-                                                <button type="button" class="btn btn-primary buy-now" onclick="window.location.href='checkout.jsp'">Mua Ngay</button>
+
+
+                                            <button type="button" class="btn btn-primary buy-now" onclick="window.location.href='checkout.jsp'">Mua Ngay</button>
                                             </div>
                                         </div>
                                     </div>
@@ -169,6 +172,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <section class="product-info-tabs py-5">

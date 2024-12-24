@@ -148,6 +148,144 @@ $(document).ready(function () {
         checkEmptyCart();  // Kiểm tra nếu giỏ hàng trống
     });
 
+// Thêm sản phẩm vào giỏ hàng
+    function addToCart(productId) {
+        fetch('/add-cart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `id=${productId}`
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    alert(data.message);
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error("Lỗi:", error));
+    }
+
+// Xóa sản phẩm khỏi giỏ hàng
+    function removeFromCart(productId) {
+        fetch('/remove-cart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `id=${productId}`
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    alert(data.message);
+                    loadCart(); // Tải lại giỏ hàng
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error("Lỗi:", error));
+    }
+
+// Cập nhật số lượng sản phẩm
+    function updateCart(productId, quantity) {
+        fetch('/update-cart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `id=${productId}&quantity=${quantity}`
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    alert(data.message);
+                    loadCart(); // Tải lại giỏ hàng
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => console.error("Lỗi:", error));
+    }
+
+// Tải danh sách sản phẩm trong giỏ hàng
+    function loadCart() {
+        fetch('/api/cart')
+            .then(response => response.json())
+            .then(cartItems => {
+                const cartList = document.querySelector(".cart-list");
+                if (cartItems.length === 0) {
+                    cartList.innerHTML = `
+                    <div class="gio-hang-trong">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                        <p>Giỏ hàng của bạn trống</p>
+                    </div>
+                `;
+                } else {
+                    cartList.innerHTML = cartItems.map(item => `
+                    <li class="item">
+                        <input type="checkbox" class="productCheckbox" />
+                        <img src="${item.imageURL}" alt="${item.productName}" class="item-image">
+                        <h4>${item.productName}</h4>
+                        <p class="item-price">${item.price} ₫</p>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity minus" data-id="${item.id}">-</button>
+                            <input type="number" class="quantity_field" value="${item.quantity}" data-id="${item.id}" data-price="${item.price}" min="1">
+                            <button class="btn-quantity plus" data-id="${item.id}">+</button>
+                        </div>
+                        <button class="btn-remove" data-id="${item.id}"><i class="fas fa-trash"></i></button>
+                    </li>
+                `).join('');
+                }
+            })
+            .catch(error => console.error("Lỗi khi tải giỏ hàng:", error));
+    }
+
+// Event listeners cho các nút và input
+    document.addEventListener("DOMContentLoaded", () => {
+        // Load giỏ hàng khi trang được tải
+        loadCart();
+
+        // Lắng nghe sự kiện click cho nút xóa sản phẩm
+        document.body.addEventListener("click", (e) => {
+            if (e.target.classList.contains("btn-remove")) {
+                const productId = e.target.dataset.id;
+                removeFromCart(productId);
+            }
+        });
+
+        // Lắng nghe sự kiện click cho nút tăng/giảm số lượng
+        document.body.addEventListener("click", (e) => {
+            if (e.target.classList.contains("btn-quantity")) {
+                const productId = e.target.dataset.id;
+                const quantityField = document.querySelector(`input[data-id="${productId}"]`);
+                let quantity = parseInt(quantityField.value);
+
+                if (e.target.classList.contains("minus") && quantity > 1) {
+                    quantity--;
+                } else if (e.target.classList.contains("plus")) {
+                    quantity++;
+                }
+
+                quantityField.value = quantity;
+                updateCart(productId, quantity);
+            }
+        });
+
+        // Lắng nghe sự kiện thay đổi số lượng trực tiếp trong input
+        document.body.addEventListener("input", (e) => {
+            if (e.target.classList.contains("quantity_field")) {
+                const productId = e.target.dataset.id;
+                const quantity = parseInt(e.target.value);
+
+                if (quantity > 0) {
+                    updateCart(productId, quantity);
+                }
+            }
+        });
+    });
 
 
 
@@ -164,3 +302,84 @@ $(document).ready(function () {
         return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(value);
     }
 });
+function addToCart(productId) {
+    fetch('/add-cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `pid=${productId}`
+    })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            if (data.status === 'success') {
+                updateCartUI();
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+function removeFromCart(productId) {
+    fetch('/remove-cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `pid=${productId}`
+    })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            if (data.status === 'success') {
+                updateCartUI();
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+function updateCart(productId, quantity) {
+    fetch('/update-cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `pid=${productId}&quantity=${quantity}`
+    })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            if (data.status === 'success') {
+                updateCartUI();
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+function updateCartUI() {
+    fetch('/ShowCart')
+        .then(response => response.json())
+        .then(cart => {
+            const cartList = document.querySelector('.cart-list');
+            cartList.innerHTML = '';
+
+            cart.list.forEach(item => {
+                cartList.innerHTML += `
+                <li class="item">
+                    <img src="${item.imageURL}" alt="${item.productName}" class="item-image">
+                    <h4>${item.productName}</h4>
+                    <p class="item-price">${item.price}₫</p>
+                    <div class="quantity-controls">
+                        <button class="btn-quantity minus" onclick="updateCart(${item.id}, ${item.quantity - 1})">-</button>
+                        <input type="number" class="quantity_field" value="${item.quantity}" readonly>
+                        <button class="btn-quantity plus" onclick="updateCart(${item.id}, ${item.quantity + 1})">+</button>
+                    </div>
+                    <button class="btn-remove" onclick="removeFromCart(${item.id})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </li>`;
+            });
+
+            if (cart.list.length === 0) {
+                cartList.innerHTML = '<p>Giỏ hàng của bạn đang trống!</p>';
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
