@@ -30,6 +30,7 @@
             </li>
 
 
+<<<<<<< HEAD
             <li class="menu-list-item">
                 <a class="menu-Category" href="products.jsp">
                     <i class="fa-solid fa-shop" style="padding-right: 5px;color: #B5292F;"></i>
@@ -43,6 +44,26 @@
             </li>
 
         </ul>
+=======
+                <li class="menu-list-item">
+                    <a class="menu-Category" href="products">
+                        <i class="fa-solid fa-shop" style="padding-right: 5px;color: #B5292F;"></i>
+                        Sản phẩm
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                </li>
+                <li class="menu-list-item"><a class="hotpro-link" href="hotproducts.jsp">
+                    <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
+                    hot</a>
+                </li>
+
+                <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
+                    <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
+                </a>
+                </li>
+
+            </ul>
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
 
     </div>
 </nav>

@@ -137,19 +137,26 @@
         hot</a>
       </li>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:html/hotproducts.html
       <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.html">
 =======
       <li class="menu-list-item"><a class="flashsale-link" href="flashsale.jsp">
 >>>>>>> 8c7e98e3961b01786adb05a7fa18c1069980491b:src/main/webapp/hotproducts.jsp
+=======
+      <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
         <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
       </a>
       </li>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:html/hotproducts.html
 =======
 
 >>>>>>> 8c7e98e3961b01786adb05a7fa18c1069980491b:src/main/webapp/hotproducts.jsp
+=======
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
     </ul>
 
   </div>

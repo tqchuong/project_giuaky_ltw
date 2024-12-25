@@ -2,6 +2,7 @@ package fit.hcmuaf.edu.vn.foodmart.dao;
 
 import fit.hcmuaf.edu.vn.foodmart.dao.db.DBConnect;
 import fit.hcmuaf.edu.vn.foodmart.model.Users;
+<<<<<<< HEAD
 import fit.hcmuaf.edu.vn.foodmart.utils.PasswordUtils;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
@@ -12,10 +13,16 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.security.SecureRandom;
 import java.util.Base64;
+=======
+import org.jdbi.v3.core.Handle;
+import org.jdbi.v3.core.Jdbi;
+
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+<<<<<<< HEAD
 public class UserDAO implements ObjectDAO {
 
     private static Jdbi jdbi;
@@ -29,6 +36,19 @@ public class UserDAO implements ObjectDAO {
 
     // Lấy danh sách người dùng từ cơ sở dữ liệu và lưu vào bộ nhớ
     private static Map<String, Users> loadData() {
+=======
+public class UserDAO {
+
+    private static Jdbi jdbi;
+
+    static {
+        // Khởi tạo đối tượng Jdbi từ DBConnect
+        jdbi = DBConnect.getJdbi();
+    }
+
+    // Lấy danh sách người dùng từ cơ sở dữ liệu và lưu vào bộ nhớ
+    public static Map<String, Users> loadData() {
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
         Map<String, Users> userListTemp = new HashMap<>();
         String sql = "SELECT * FROM users";
 
@@ -45,7 +65,9 @@ public class UserDAO implements ObjectDAO {
         return userListTemp;
     }
 
+    // Kiểm tra thông tin đăng nhập của người dùng
     public boolean checkLogin(String username, String password) {
+<<<<<<< HEAD
         Users user = userList.get(username); // Lấy thông tin người dùng từ danh sách
         if (user != null) {
             String hashedPassword = user.getPassword(); // Lấy mật khẩu đã mã hóa
@@ -98,11 +120,31 @@ public class UserDAO implements ObjectDAO {
         } catch (Exception e) {
             // Ghi lỗi vào log thay vì in ra console
             System.err.println("Lỗi khi thêm người dùng: " + e.getMessage());
+=======
+        // Kiểm tra người dùng trong cơ sở dữ liệu
+        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+        try (Handle handle = jdbi.open()) {
+            // Truy vấn để kiểm tra đăng nhập
+            Users user = handle.createQuery(sql)
+                    .bind(0, username)
+                    .bind(1, password)
+                    .mapToBean(Users.class)
+                    .findOnly();  // Trả về đối tượng người dùng nếu tìm thấy
+
+            return user != null;  // Trả về true nếu tìm thấy người dùng, false nếu không
+        } catch (Exception e) {
+            System.out.println("Lỗi khi kiểm tra đăng nhập: " + e.getMessage());
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
             e.printStackTrace();
             return false;
         }
     }
+    // Lấy thông tin người dùng theo tên người dùng
+    public Users getUserByUsername(String username) {
+        String sql = "SELECT * FROM users WHERE username = ?";
 
+<<<<<<< HEAD
     @Override
     public boolean del(String id) {
         if (!userList.containsKey(id)) {
@@ -347,13 +389,27 @@ public class UserDAO implements ObjectDAO {
             System.err.println("Lỗi khi thêm người dùng: " + e.getMessage());
             e.printStackTrace();
             return false;
+=======
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind(0, username)
+                    .mapToBean(Users.class)
+                    .findOnly();  // Trả về đối tượng người dùng nếu tìm thấy
+        } catch (Exception e) {
+            System.out.println("Lỗi khi lấy thông tin người dùng: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
         }
     }
 
     // Phương thức main để kiểm tra và truy vấn dữ liệu
     public static void main(String[] args) {
+<<<<<<< HEAD
         String passwordHash = PasswordUtils.hashPassword("admin123");
         Users userAdmin = new Users("admin",passwordHash,"admin@gmail.com","admin","Admin");
+=======
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
         // Lấy danh sách người dùng từ cơ sở dữ liệu
         Map<String, Users> userList = loadData();
 
@@ -364,6 +420,7 @@ public class UserDAO implements ObjectDAO {
 
         // Kiểm tra đăng nhập
         UserDAO dao = new UserDAO();
+<<<<<<< HEAD
 //        Users userAdmin = new Users("admin","admin123","admin@gmail.com","admin","Admin");
        // System.out.println(dao.checkLogin("hmc", "524173"));
 
@@ -374,5 +431,10 @@ public class UserDAO implements ObjectDAO {
         //System.out.println(dao.userExists("hmc2"));
 //        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
         //     System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
+=======
+        System.out.println(dao.checkLogin("tqc", "123"));  // True nếu thành công
+        System.out.println(dao.checkLogin("tqc", "1234"));  // False nếu sai mật khẩu
+        System.out.println(dao.checkLogin("tqcc", "123"));  // False nếu không có người dùng
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
     }
 }

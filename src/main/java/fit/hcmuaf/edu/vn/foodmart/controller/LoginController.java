@@ -37,9 +37,14 @@ public class LoginController extends HttpServlet {
                 Users user = userDAO.getUserByUsername(username);
 
                 // Tạo session và lưu thông tin người dùng
+<<<<<<< HEAD
                 HttpSession session = request.getSession(true);
                 session.setAttribute("auth", user);
 
+=======
+                HttpSession session = request.getSession();
+                session.setAttribute("userlogin", user);
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
 
                 // Chuyển hướng đến trang chủ sau khi đăng nhập thành công
                 response.sendRedirect("home.jsp");
@@ -89,6 +94,7 @@ public class LoginController extends HttpServlet {
             // Xử lý hành động đăng xuất
             HttpSession session = request.getSession();
             session.invalidate();  // Hủy session khi đăng xuất
+<<<<<<< HEAD
             response.sendRedirect("home.jsp");  // Chuyển hướng người dùng về trang login
         } else if(action.equals("forgetPass")){
             String username = request.getParameter("username");
@@ -98,6 +104,9 @@ public class LoginController extends HttpServlet {
 
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
+=======
+            response.sendRedirect("login.jsp");  // Chuyển hướng người dùng về trang login
+>>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
         }
     }
 }
