@@ -1,34 +1,17 @@
 package fit.hcmuaf.edu.vn.foodmart.dao;
 
 import fit.hcmuaf.edu.vn.foodmart.dao.db.DBConnect;
-<<<<<<< HEAD
-import fit.hcmuaf.edu.vn.foodmart.model.Products;
-import org.jdbi.v3.core.Handle;
-import org.jdbi.v3.core.Jdbi;
-
-=======
 import fit.hcmuaf.edu.vn.foodmart.model.*;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 
 import java.util.ArrayList;
->>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
 import java.util.List;
 
 public class ProductDAO {
 
     private static Jdbi jdbi = DBConnect.getJdbi();  // Lấy jdbi từ DBConnect
 
-<<<<<<< HEAD
-
-    public List<Products> getAllProducts() {
-        String sql = "SELECT * FROM products";  // Truy vấn toàn bộ bảng Products
-
-        try (Handle handle = jdbi.open()) {  // Mở Handle để truy vấn
-            return handle.select(sql)
-                    .mapToBean(Products.class)  // Ánh xạ kết quả vào đối tượng Products
-                    .list();  // Trả về danh sách sản phẩm
-=======
     // Lấy toàn bộ danh sách sản phẩm từ CSDL
     public List<Products> getAllProducts() {
         String sql = """
@@ -48,7 +31,7 @@ public class ProductDAO {
                         category.setCategoryName(rs.getString("categoryName"));
 
                         Products product = new Products();
-                        product.setID(rs.getInt("id"));
+                        product.setProductID(rs.getInt("id"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
@@ -58,13 +41,10 @@ public class ProductDAO {
                         return product;
                     })
                     .list();
->>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
         } catch (Exception e) {
             System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
             e.printStackTrace();
             return null;
-<<<<<<< HEAD
-=======
         }
     }
     // Lấy danh sách sản phẩm theo danh mục
@@ -87,7 +67,7 @@ public class ProductDAO {
                         category.setCategoryName(rs.getString("categoryName"));
 
                         Products product = new Products();
-                        product.setID(rs.getInt("id"));
+                        product.setProductID(rs.getInt("id"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
@@ -101,52 +81,10 @@ public class ProductDAO {
             System.out.println("Lỗi khi truy vấn dữ liệu theo danh mục: " + e.getMessage());
             e.printStackTrace();
             return null;
->>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
         }
     }
 
 
-<<<<<<< HEAD
-    // Lấy các sản phẩm mới nhất, sắp xếp theo thời gian tải lên
-    public List<Products> getLatestProducts(int limit) {
-        String sql = "SELECT p.Id AS ProductID, p.ProductName, p.CategoryID, p.Price, p.UploadDate, p.ImageURL, p.Description, p.StockQuantity " +
-                "FROM Products p " +
-                "ORDER BY p.UploadDate DESC " + // Sắp xếp theo thời gian tải lên mới nhất
-                "LIMIT :limit";  // Lấy số sản phẩm theo tham số limit
-
-        try (Handle handle = jdbi.open()) {
-            return handle.createQuery(sql)
-                    .bind("limit", limit)  // Gán giá trị cho tham số limit
-                    .mapToBean(Products.class)  // Ánh xạ kết quả vào đối tượng Products
-                    .list();  // Trả về danh sách sản phẩm mới nhất
-        } catch (Exception e) {
-            System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    // Test phương thức getLatestProducts()
-    public static void main(String[] args) {
-        ProductDAO dao = new ProductDAO();
-        // Lấy danh sách các sản phẩm mới nhất (2 sản phẩm gần nhất)
-        List<Products> latestProducts = dao.getLatestProducts(4);
-
-        // In danh sách sản phẩm mới nhất
-        if (latestProducts != null && !latestProducts.isEmpty()) {
-            System.out.println("Danh sách sản phẩm mới nhất:");
-            for (Products product : latestProducts) {
-                System.out.println("Product: " + product.getProductName());
-                System.out.println("Image URL: " + product.getImageURL());
-            }
-
-        } else {
-            System.out.println("Không có sản phẩm mới hoặc có lỗi khi truy vấn.");
-
-        }
-    }
-}
-=======
     // Lấy chi tiết sản phẩm theo ID
     public Products getProductDetailsById(int productId) {
         String productSql = """
@@ -203,7 +141,7 @@ public class ProductDAO {
 
                         // Ánh xạ thông tin sản phẩm
                         Products prod = new Products();
-                        prod.setID(rs.getInt("id"));
+                        prod.setProductID(rs.getInt("id"));
                         prod.setProductName(rs.getString("productName"));
                         prod.setCategoryID(rs.getInt("categoryId"));
                         prod.setPrice(rs.getDouble("price"));
@@ -215,7 +153,7 @@ public class ProductDAO {
 
                         // Ánh xạ thông tin chi tiết sản phẩm
                         ProductsDetail detail = new ProductsDetail();
-                        detail.setProductID(prod.getID());
+                        detail.setProductID(prod.getProductID());
                         detail.setDetailedDescription(rs.getString("detailedDescription"));
                         detail.setProductStatus(rs.getString("productStatus"));
                         detail.setExpiryDate(rs.getDate("expiryDate"));
@@ -239,7 +177,7 @@ public class ProductDAO {
                         // Thông tin người dùng đánh giá
                         Users user = new Users();
                         user.setUsername(rs.getString("username"));
-                        user.setImageURLUser(rs.getString("imageURLUser"));
+
 
                         review.setUser(user); // Gắn thông tin người dùng vào review
                         return review;
@@ -310,7 +248,7 @@ public class ProductDAO {
         double averageRating = dao.getAverageRating(productId);
         if (productDetails != null) {
             System.out.println("===== Chi tiết sản phẩm =====");
-            System.out.println("ID: " + productDetails.getID());
+            System.out.println("ID: " + productDetails.getProductID());
             System.out.println("Tên sản phẩm: " + productDetails.getProductName());
             System.out.println("Giá: " + productDetails.getPrice());
             System.out.println("Mô tả ngắn: " + productDetails.getShortDescription());
@@ -329,8 +267,8 @@ public class ProductDAO {
             System.out.println("\n===== Đánh giá =====");
             if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
                 for (Reviews review : productDetails.getReviews()) {
-                    System.out.println("- Người dùng: " + review.getUser().getUsername()
-                            + " (Ảnh: " + review.getUser().getImageURLUser() + ")");
+//                    System.out.println("- Người dùng: " + review.getUser().getUsername()
+//                            + " (Ảnh: " + review.getUser().getImageURLUser() + ")");
                     System.out.println("  Xếp hạng: " + review.getRating());
                     System.out.println("  Nội dung: " + review.getReviewText());
                 }
@@ -345,7 +283,5 @@ public class ProductDAO {
         } else {
             System.out.println("Không tìm thấy chi tiết sản phẩm hoặc có lỗi.");
         }
+    }
 }
-}
-
->>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f

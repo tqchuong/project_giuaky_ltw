@@ -16,15 +16,9 @@ public class DBConnect {
             // Cấu hình thông tin kết nối MySQL trực tiếp trong lớp DBConnect
             String host = "localhost";  // Địa chỉ host MySQL
             int port = 3306;  // Cổng kết nối MySQL
-<<<<<<< HEAD
             String dbname = "project";  // Tên cơ sở dữ liệu
             String username = "root";  // Tên đăng nhập MySQL
             String password = "123456";  // Mật khẩu MySQL
-=======
-            String dbname = "test1";  // Tên cơ sở dữ liệu
-            String username = "root";  // Tên đăng nhập MySQL
-            String password = "";
->>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
             String options = "useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";  // Các tùy chọn kết nối
 
             // Tạo URL kết nối
@@ -94,12 +88,7 @@ public class DBConnect {
 
     public static void main(String[] args) {
         // Hiển thị các sản phẩm và người dùng khi chạy chương trình
-<<<<<<< HEAD
 //        displayProducts();
         displayUsers();
-=======
-        displayProducts();
-
->>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
     }
 }

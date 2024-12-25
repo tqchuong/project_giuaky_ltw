@@ -7,97 +7,6 @@
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>FoodMart Store</title>
-<<<<<<< HEAD:html/hotproducts.html
-  <link href="../css/products.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
-  <link rel="stylesheet" href="../css/home.css">
-</head>
-
-<body>
-<header>
-  <div class="header-top">
-    <div class="container">
-      <div class="header-top-left">
-        <ul class="header-top-list">
-          <li><a href=""><i class="fa-regular fa-phone"></i> 0123 456 789 (miễn phí)</a></li>
-          <li><a href=""><i class="fa-light fa-location-dot"></i> Xem vị trí cửa hàng</a></li>
-        </ul>
-      </div>
-      <div class="header-top-right">
-        <ul class="header-top-list">
-          <li><a href="">Giới thiệu</a></li>
-          <li><a href="">Cửa hàng</a></li>
-          <li><a href="">Chính sách</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="header-middle">
-    <div class="container">
-      <div class="header-middle-left">
-
-        <div class="logo">
-          <a href="">
-            <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
-                 style="width: 250px; height: auto;">
-          </a>
-
-        </div>
-      </div>
-      <div class="header-middle-center">
-        <form action="" class="form-search">
-          <span class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></span>
-          <input class="form-search-input" oninput="searchProducts()" placeholder="Tìm kiếm món ăn..."
-                 type="text">
-          <button class="filter-btn"><i class="fa-solid fa-filter"></i><span>Lọc</span></button>
-        </form>
-      </div>
-
-      <a href="coupon.html" class="discount-code-button">
-        <div class="icon">
-          <span class="vn">VND</span>
-        </div>
-        <span class="text">Mã Giảm Giá</span>
-      </a>
-
-      <div class="header-middle-right">
-        <ul class="header-middle-right-list">
-          <li class="header-middle-right-item dropdown open">
-            <i class="fa-solid fa-user"></i>
-            <div class="auth-container">
-              <span class="text-dndk">Đăng nhập / Đăng ký</span>
-              <span class="text-tk" id="user-fullname">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
-            </div>
-
-
-            <!-- Menu sẽ được cập nhật bằng JavaScript -->
-            <ul class="header-middle-right-menu" id="user-menu" style="display: none;"></ul>
-
-            <!-- Các mục đăng nhập và đăng ký sẽ ẩn đi nếu người dùng đã đăng nhập -->
-            <ul class="header-middle-right-menu" id="auth-options">
-              <li><a href="login.html" id="login"><i
-                      class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a></li>
-              <li><a href="login.html?registerForm" id="signup"><i class="fa-solid fa-user-plus"></i>
-                Đăng ký</a></li>
-            </ul>
-          </li>
-          <li class="header-middle-right-item open">
-            <a href="shoppingcart.html">
-              <div class="cart-icon-menu">
-                <i class="fa-solid fa-basket-shopping"></i>
-                <span class="count-product-cart">0</span>
-              </div>
-              <span>Giỏ hàng</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</header>
-=======
   <link href="css/products.css" rel="stylesheet">
   <link rel="stylesheet" href="font/font-awesome-pro-v6-6.2.0/css/all.min.css" />
   <link rel="stylesheet" href="css/home.css">
@@ -105,7 +14,6 @@
 
 <body>
 <jsp:include page="header.jsp"/>
->>>>>>> 8c7e98e3961b01786adb05a7fa18c1069980491b:src/main/webapp/hotproducts.jsp
 <nav class="header-bottom">
   <div class="container">
     <ul class="menu-list">
@@ -137,26 +45,11 @@
         hot</a>
       </li>
 
-<<<<<<< HEAD
-<<<<<<< HEAD:html/hotproducts.html
-      <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.html">
-=======
-      <li class="menu-list-item"><a class="flashsale-link" href="flashsale.jsp">
->>>>>>> 8c7e98e3961b01786adb05a7fa18c1069980491b:src/main/webapp/hotproducts.jsp
-=======
-      <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
->>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
+      <li class="menu-list-item"><a class="hotpro-link" href="flashsale.jsp">
         <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
       </a>
       </li>
 
-<<<<<<< HEAD
-<<<<<<< HEAD:html/hotproducts.html
-=======
-
->>>>>>> 8c7e98e3961b01786adb05a7fa18c1069980491b:src/main/webapp/hotproducts.jsp
-=======
->>>>>>> 01ab1c9e44c8b034c5de4939514203e3f436944f
     </ul>
 
   </div>
@@ -1022,115 +915,7 @@
 
 <jsp:include page="footer.jsp"/>
 
-<<<<<<< HEAD:html/hotproducts.html
-  <div class="widget-area">
-    <div class="container">
-      <div class="widget-row">
-        <div class="widget-row-col">
-          <div class="logo">
-            <a href="">
-              <img alt="FoodMart Logo" src="../image/shoppingcart/6.png"
-                   style="width: 250px; height: auto;">
-            </a>
-          </div>
-          <h4 style="padding: 5px 0 5px 10px">Kết nối với chúng tôi</h4>
-          <div class="widget-social">
-            <div class="widget-social-item">
-              <a href="">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-            <div class="widget-social-item">
-              <a href="">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </div>
-            <div class="widget-social-item">
-              <a href="">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-            <div class="widget-social-item">
-              <a href="">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="widget-row-col">
-          <h3 class="widget-title">Liên hệ</h3>
-          <p><b>Trụ sở chính:</b> VQCR+GP6, khu phố 6, Thủ Đức, Hồ Chí Minh, Việt Nam</p>
-          <p><b>Điện thoại:</b> 0123 456 789 </p>
-          <p><b>Fax:</b>  1234 567 890</p>
-          <p><b>Email:</b> abc@domain.com</p>
-        </div>
-        <div class="widget-row-col">
-          <h3 class="widget-title">Chính sách</h3>
-          <ul class="widget-contact">
-            <li class="widget-contact-item">
-              <a href="">
-                <i class="fa-solid fa-arrow-right"></i>
-                <span>Chính sách thanh toán</span>
-              </a>
-            </li>
-            <li class="widget-contact-item">
-              <a href="">
-                <i class="fa-solid fa-arrow-right"></i>
-                <span>Chính sách giao hàng</span>
-              </a>
-            </li>
-            <li class="widget-contact-item">
-              <a href="">
-                <i class="fa-solid fa-arrow-right"></i>
-                <span>Chính sách đổi trả</span>
-              </a>
-            </li>
-            <li class="widget-contact-item">
-              <a href="">
-                <i class="fa-solid fa-arrow-right"></i>
-                <span>Chính sách xuất hoá đơn GTGT</span>
-              </a>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="widget-row-col">
-          <h3 class="widget-title">Chăm sóc khách hàng</h3>
-          <ul class="widget-contact">
-            <li class="widget-contact-item">
-              <a href="">
-                <i class="fa-solid fa-arrow-right"></i>
-                <span>Điều khoản sử dụng</span>
-              </a>
-            </li>
-            <li class="widget-contact-item">
-              <a href="">
-                <i class="fa-solid fa-arrow-right"></i>
-                <span>Hướng dẫn mua hàng</span>
-              </a>
-            </li>
-
-          </ul>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-</footer>
-<div class="back-to-top">
-  <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
-</div>
-
-<div class="chat-box">
-  <a href="#">💬</a>
-</div>
-
-<script src="../js/home.js"></script>
-=======
 <script src="js/home.js"></script>
->>>>>>> 8c7e98e3961b01786adb05a7fa18c1069980491b:src/main/webapp/hotproducts.jsp
 
 
 </body>
