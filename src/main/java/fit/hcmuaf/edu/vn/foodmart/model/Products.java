@@ -1,9 +1,10 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
 import java.util.List;
+import java.sql.Timestamp;
 
 public class Products {
-    private int ID;
+    private int productID;
     private String productName;
     private int categoryID;
     private double price;
@@ -16,24 +17,14 @@ public class Products {
     private List<Reviews> reviews; // Danh sách đánh giá
     private int productViews;
     private double averageRating; // Thêm thuộc tính averageRating
+    private Timestamp uploadDate;
 
     // Constructor mặc định
-    public Products() {}
+    public Products() {
+    }
 
-    // Constructor đầy đủ
-    public Products(int ID,
-                    String productName,
-                    int categoryID,
-                    double price,
-                    String imageURL,
-                    String shortDescription,
-                    int stockQuantity,
-                    Category category,
-                    List<ProductImages> images,
-                    ProductsDetail productsDetail,
-                    List<Reviews> reviews,
-                    int productViews,double averageRating) {
-        this.ID = ID;
+    public Products(int productID, String productName, int categoryID, double price, String imageURL, String shortDescription, int stockQuantity, Category category, List<ProductImages> images, ProductsDetail productsDetail, List<Reviews> reviews, int productViews, double averageRating, Timestamp uploadDate) {
+        this.productID = productID;
         this.productName = productName;
         this.categoryID = categoryID;
         this.price = price;
@@ -43,45 +34,18 @@ public class Products {
         this.category = category;
         this.images = images;
         this.productsDetail = productsDetail;
-        this.reviews = reviews;       // Gán danh sách đánh giá
-        this.productViews = productViews; // Gán số lượt xem
-        this.averageRating = averageRating;
-    }
-    public double getAverageRating() {
-        return averageRating;
-    }
-
-    public void setAverageRating(double averageRating) {
-        this.averageRating = averageRating;
-    }
-
-    public ProductsDetail getProductsDetail() {
-        return productsDetail;
-    }
-    public List<Reviews> getReviews() {
-        return reviews;
-    }
-    public void setReviews(List<Reviews> reviews) {
         this.reviews = reviews;
-    }
-
-    public int getProductViews() {
-        return productViews;
-    }
-    public void setProductViews(int productViews) {
         this.productViews = productViews;
+        this.averageRating = averageRating;
+        this.uploadDate = uploadDate;
     }
 
-    public void setProductsDetail(ProductsDetail productsDetail) {
-        this.productsDetail = productsDetail;
-    }
-    // Getters và Setters
-    public int getID() {
-        return ID;
+    public int getProductID() {
+        return productID;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setProductID(int productID) {
+        this.productID = productID;
     }
 
     public String getProductName() {
@@ -148,18 +112,63 @@ public class Products {
         this.images = images;
     }
 
+    public ProductsDetail getProductsDetail() {
+        return productsDetail;
+    }
+
+    public void setProductsDetail(ProductsDetail productsDetail) {
+        this.productsDetail = productsDetail;
+    }
+
+    public List<Reviews> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Reviews> reviews) {
+        this.reviews = reviews;
+    }
+
+    public int getProductViews() {
+        return productViews;
+    }
+
+    public void setProductViews(int productViews) {
+        this.productViews = productViews;
+    }
+
+    public double getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(double averageRating) {
+        this.averageRating = averageRating;
+    }
+
+    public Timestamp getUploadDate() {
+        return uploadDate;
+    }
+
+    public void setUploadDate(Timestamp uploadDate) {
+        this.uploadDate = uploadDate;
+    }
+
     @Override
     public String toString() {
         return "Products{" +
-                "ID=" + ID +
+                "productID=" + productID +
                 ", productName='" + productName + '\'' +
                 ", categoryID=" + categoryID +
                 ", price=" + price +
                 ", imageURL='" + imageURL + '\'' +
                 ", shortDescription='" + shortDescription + '\'' +
                 ", stockQuantity=" + stockQuantity +
-                ", ProductsDetail=" + (productsDetail != null ? productsDetail : "Không có chi tiết sản phẩm") +
+                ", category=" + category +
+                ", images=" + images +
+                ", productsDetail=" + productsDetail +
+                ", reviews=" + reviews +
+                ", productViews=" + productViews +
+                ", averageRating=" + averageRating +
+                ", uploadDate=" + uploadDate +
                 '}';
     }
-
 }

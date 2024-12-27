@@ -31,7 +31,7 @@ public class ProductDAO {
                         category.setCategoryName(rs.getString("categoryName"));
 
                         Products product = new Products();
-                        product.setID(rs.getInt("id"));
+                        product.setProductID(rs.getInt("id"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
@@ -67,7 +67,7 @@ public class ProductDAO {
                         category.setCategoryName(rs.getString("categoryName"));
 
                         Products product = new Products();
-                        product.setID(rs.getInt("id"));
+                        product.setProductID(rs.getInt("id"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
@@ -141,7 +141,7 @@ public class ProductDAO {
 
                         // Ánh xạ thông tin sản phẩm
                         Products prod = new Products();
-                        prod.setID(rs.getInt("id"));
+                        prod.setProductID(rs.getInt("id"));
                         prod.setProductName(rs.getString("productName"));
                         prod.setCategoryID(rs.getInt("categoryId"));
                         prod.setPrice(rs.getDouble("price"));
@@ -153,7 +153,7 @@ public class ProductDAO {
 
                         // Ánh xạ thông tin chi tiết sản phẩm
                         ProductsDetail detail = new ProductsDetail();
-                        detail.setProductID(prod.getID());
+                        detail.setProductID(prod.getProductID());
                         detail.setDetailedDescription(rs.getString("detailedDescription"));
                         detail.setProductStatus(rs.getString("productStatus"));
                         detail.setExpiryDate(rs.getDate("expiryDate"));
@@ -177,7 +177,7 @@ public class ProductDAO {
                         // Thông tin người dùng đánh giá
                         Users user = new Users();
                         user.setUsername(rs.getString("username"));
-                        user.setImageURLUser(rs.getString("imageURLUser"));
+
 
                         review.setUser(user); // Gắn thông tin người dùng vào review
                         return review;
@@ -248,7 +248,7 @@ public class ProductDAO {
         double averageRating = dao.getAverageRating(productId);
         if (productDetails != null) {
             System.out.println("===== Chi tiết sản phẩm =====");
-            System.out.println("ID: " + productDetails.getID());
+            System.out.println("ID: " + productDetails.getProductID());
             System.out.println("Tên sản phẩm: " + productDetails.getProductName());
             System.out.println("Giá: " + productDetails.getPrice());
             System.out.println("Mô tả ngắn: " + productDetails.getShortDescription());
@@ -267,8 +267,8 @@ public class ProductDAO {
             System.out.println("\n===== Đánh giá =====");
             if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
                 for (Reviews review : productDetails.getReviews()) {
-                    System.out.println("- Người dùng: " + review.getUser().getUsername()
-                            + " (Ảnh: " + review.getUser().getImageURLUser() + ")");
+//                    System.out.println("- Người dùng: " + review.getUser().getUsername()
+//                            + " (Ảnh: " + review.getUser().getImageURLUser() + ")");
                     System.out.println("  Xếp hạng: " + review.getRating());
                     System.out.println("  Nội dung: " + review.getReviewText());
                 }
@@ -283,6 +283,5 @@ public class ProductDAO {
         } else {
             System.out.println("Không tìm thấy chi tiết sản phẩm hoặc có lỗi.");
         }
+    }
 }
-}
-
