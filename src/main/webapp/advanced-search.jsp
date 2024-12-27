@@ -5,11 +5,11 @@
     <div class="advanced-search-category">
       <span>Phân loại </span>
       <select id="advanced-search-category-select" name="" onchange="searchProducts()">
-        <option>Tất cả</option>
-        <option>Gạo</option>
-        <option>Khoai</option>
-        <option>Bắp</option>
-        <option>Khác</option>
+        <option >Tất cả</option>
+        <option value="1">Gạo</option>
+        <option value="2">Bắp</option>
+        <option value="3">Khoai</option>
+        <option value="4">Khác</option>
       </select>
     </div>
     <div class="advanced-search-price">

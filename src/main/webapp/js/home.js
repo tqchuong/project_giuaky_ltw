@@ -172,6 +172,7 @@ function searchProducts(mode) {
         const category = product.dataset.loai || "";
         const priceText = product.querySelector(".current-price:last-child").textContent.trim();
         const price = parseFloat(priceText.replace(/[^0-9]/g, ""));
+
         return {
             element: product,
             title,
@@ -184,6 +185,8 @@ function searchProducts(mode) {
     const valueCategory = document.getElementById("advanced-search-category-select").value;
     const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
     const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
+
+
 
     if (minPrice > maxPrice) {
         alert("Giá đã nhập sai!");
@@ -259,7 +262,7 @@ function showCategory(category) {
         ? productAll // Nếu "Tất cả", trả về toàn bộ sản phẩm
         : productAll.filter(item => item.loai === categoryId);
 
-    console.log("Sản phẩm tìm thấy theo danh mục:", productSearch);
+
 
     // Hiển thị danh sách sản phẩm đã lọc
     currentPage = 1; // Đặt lại trang hiện tại là 1

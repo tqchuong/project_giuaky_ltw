@@ -24,16 +24,7 @@
       <div class="header-middle-center">
         <form action="" class="form-search">
           <span class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></span>
-          <input class="form-search-input" placeholder="Tìm kiếm món ăn..." type="text" list="product-names" >
-          <%
-            ProductDAO productDAO = new ProductDAO();
-            List<Products> products = productDAO.getAllProducts();
-          %>
-          <datalist id="product-names">
-            <% for (Products product : products) { %>
-            <option value="<%= product.getProductName() %>"></option>
-            <% } %>
-          </datalist>
+          <input class="form-search-input" oninput="searchProducts()" placeholder="Tìm kiếm sản phẩm..." type="text" >
           <button class="filter-btn"><i class="fa-solid fa-filter"></i><span>Lọc</span></button>
         </form>
       </div>
