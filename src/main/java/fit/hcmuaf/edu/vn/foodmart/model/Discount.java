@@ -27,6 +27,7 @@ public class Discount {
         this.discountedPrice = discountedPrice;  // Khởi tạo discountedPrice
     }
 
+
     // Getter và Setter cho discountedPrice
     public double getDiscountedPrice() {
         return discountedPrice;

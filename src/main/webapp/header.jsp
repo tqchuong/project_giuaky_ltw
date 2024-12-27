@@ -1,4 +1,7 @@
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Users" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Products" %>
+<%@ page import="java.util.List" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "f" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -21,7 +24,16 @@
       <div class="header-middle-center">
         <form action="" class="form-search">
           <span class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></span>
-          <input class="form-search-input" placeholder="Tìm kiếm món ăn..." type="text">
+          <input class="form-search-input" placeholder="Tìm kiếm món ăn..." type="text" list="product-names" >
+          <%
+            ProductDAO productDAO = new ProductDAO();
+            List<Products> products = productDAO.getAllProducts();
+          %>
+          <datalist id="product-names">
+            <% for (Products product : products) { %>
+            <option value="<%= product.getProductName() %>"></option>
+            <% } %>
+          </datalist>
           <button class="filter-btn"><i class="fa-solid fa-filter"></i><span>Lọc</span></button>
         </form>
       </div>

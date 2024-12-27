@@ -1,36 +1,40 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
+import org.jdbi.v3.core.mapper.reflect.ColumnName;
+
 import java.sql.Timestamp;
 
 public class Products {
-    private int productID;
+
+    private int id;
     private String productName;
     private int categoryID;
     private double price;
-    private String imageURL;
     private Timestamp uploadDate;
+    private String imageURL;
+    private String shortDescription;
     private int StockQuantity;
-
-    // Constructor
-    public Products(int productID, String productName, int categoryID, double price, String imageURL, Timestamp uploadDate, int stockQuantity) {
-        this.productID = productID;
-        this.productName = productName;
-        this.categoryID = categoryID;
-        this.price = price;
-        this.imageURL = imageURL;
-        this.uploadDate = uploadDate;
-        this.StockQuantity = stockQuantity;
-    }
 
     public Products() {
     }
 
-    public int getProductID() {
-        return productID;
+    public Products(int id, String productName, int categoryID, double price, Timestamp uploadDate, String imageURL, String shortDescription, int stockQuantity) {
+        this.id = id;
+        this.productName = productName;
+        this.categoryID = categoryID;
+        this.price = price;
+        this.uploadDate = uploadDate;
+        this.imageURL = imageURL;
+        this.shortDescription = shortDescription;
+        StockQuantity = stockQuantity;
     }
 
-    public void setProductID(int productID) {
-        this.productID = productID;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int productID) {
+        this.id = productID;
     }
 
     public String getProductName() {
@@ -57,6 +61,14 @@ public class Products {
         this.price = price;
     }
 
+    public Timestamp getUploadDate() {
+        return uploadDate;
+    }
+
+    public void setUploadDate(Timestamp uploadDate) {
+        this.uploadDate = uploadDate;
+    }
+
     public String getImageURL() {
         return imageURL;
     }
@@ -65,12 +77,12 @@ public class Products {
         this.imageURL = imageURL;
     }
 
-    public Timestamp getUploadDate() {
-        return uploadDate;
+    public String getShortDescription() {
+        return shortDescription;
     }
 
-    public void setUploadDate(Timestamp uploadDate) {
-        this.uploadDate = uploadDate;
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
     public int getStockQuantity() {
@@ -84,12 +96,13 @@ public class Products {
     @Override
     public String toString() {
         return "Products{" +
-                "productID=" + productID +
+                "productID=" + id +
                 ", productName='" + productName + '\'' +
                 ", categoryID=" + categoryID +
                 ", price=" + price +
-                ", imageURL='" + imageURL + '\'' +
                 ", uploadDate=" + uploadDate +
+                ", imageURL='" + imageURL + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
                 ", StockQuantity=" + StockQuantity +
                 '}';
     }
