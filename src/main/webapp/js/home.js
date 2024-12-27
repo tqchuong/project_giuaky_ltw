@@ -374,22 +374,3 @@ function autoScroll() {
     requestAnimationFrame(autoScroll);
 }
 autoScroll();
-
-function hideAllSections() {
-    document.getElementById('trangchu').style.display = 'none';
-    document.getElementById('account-user').style.display = 'none';
-    document.getElementById('order-history').style.display = 'none';
-
-}
-
-// Hiển thị thông tin tài khoản khi nhấn vào "Tài khoản của tôi"
-function showAccountInfo() {
-    hideAllSections();
-    document.getElementById('account-user').style.display = 'block';
-}
-
-// Hiển thị lịch sử đơn hàng khi nhấn vào "Đơn hàng đã mua"
-function showOrderHistory() {
-    hideAllSections();
-    document.getElementById('order-history').style.display = 'block';
-}

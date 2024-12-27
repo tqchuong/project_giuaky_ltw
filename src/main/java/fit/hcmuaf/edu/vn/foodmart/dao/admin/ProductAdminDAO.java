@@ -37,7 +37,7 @@ public class ProductAdminDAO {
                     .bind(1, product.getCategoryID())
                     .bind(2, product.getPrice())
                     .bind(3, product.getImageURL())
-                    .bind(4, product.getDescription())
+                    .bind(4, product.getShortDescription())
                     .bind(5, product.getStockQuantity())
                     .execute();
             return true;
@@ -54,7 +54,7 @@ public class ProductAdminDAO {
                     .bind(1, product.getCategoryID())
                     .bind(2, product.getPrice())
                     .bind(3, product.getImageURL())
-                    .bind(4, product.getDescription())
+                    .bind(4, product.getShortDescription())
                     .bind(5, product.getStockQuantity())
                     .bind(6, product.getProductID())
                     .execute();

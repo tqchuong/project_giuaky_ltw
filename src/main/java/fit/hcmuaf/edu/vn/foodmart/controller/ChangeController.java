@@ -90,7 +90,55 @@ public class ChangeController extends HttpServlet {
 
 
         } else if (action.equals("infor")) {
+            String fullName = request.getParameter("fullName");
+            String phone = request.getParameter("phone");
+            String email = request.getParameter("email");
+            String address = request.getParameter("address");
 
+            UserDAO userDAO = new UserDAO();
+            Users userFromSession = (Users) request.getSession().getAttribute("auth");
+
+
+
+            String usernameFromSession = userFromSession.getUsername();
+
+            // Kiểm tra các trường trống
+            if (fullName == null || fullName.trim().isEmpty() ||
+                    phone == null || phone.trim().isEmpty() ||
+                    email == null || email.trim().isEmpty() ||
+                    address == null || address.trim().isEmpty()) {
+                request.setAttribute("error", "Vui lòng điền đầy đủ tất cả thông tin.");
+                request.getRequestDispatcher("changeInfor.jsp").forward(request, response);
+                return;
+            }
+
+            // Kiểm tra định dạng số điện thoại
+            if (!phone.matches("\\d{10}")) {
+                request.setAttribute("error", "Số điện thoại không hợp lệ.");
+                request.getRequestDispatcher("changeInfor.jsp").forward(request, response);
+                return;
+            }
+
+
+
+            // Thực hiện cập nhật thông tin
+            boolean changeInfor = userDAO.changeInfor(usernameFromSession, fullName, phone, email, address);
+
+            if (changeInfor) {
+                // Cập nhật thông tin trong session
+                userFromSession.setFullName(fullName);
+                userFromSession.setPhone(phone);
+                userFromSession.setEmail(email);
+                userFromSession.setAddress(address);
+                request.getSession().setAttribute("auth", userFromSession);
+
+                request.setAttribute("error", "Đổi thông tin thành công.");
+                request.getRequestDispatcher("changeInfor.jsp").forward(request, response);
+            } else {
+                request.setAttribute("error", "Đổi thông tin thất bại. Vui lòng kiểm tra lại thông tin.");
+                request.getRequestDispatcher("changeInfor.jsp").forward(request, response);
+            }
         }
+
     }
 }

@@ -1,6 +1,6 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
-
+import java.util.List;
 import java.sql.Timestamp;
 
 public class Products {
@@ -9,30 +9,35 @@ public class Products {
     private int categoryID;
     private double price;
     private String imageURL;
+    private String shortDescription; // Mô tả ngắn
+    private int stockQuantity;       // Số lượng tồn kho
+    private Category category;       // Đối tượng danh mục
+    private List<ProductImages> images; // Danh sách hình ảnh
+    private ProductsDetail productsDetail;
+    private List<Reviews> reviews; // Danh sách đánh giá
+    private int productViews;
+    private double averageRating; // Thêm thuộc tính averageRating
     private Timestamp uploadDate;
-    private int StockQuantity;
-    private String Description;
 
-    // Constructor
-    public Products(int productID, String productName, int categoryID, double price, String imageURL, Timestamp uploadDate, int stockQuantity) {
+    // Constructor mặc định
+    public Products() {
+    }
+
+    public Products(int productID, String productName, int categoryID, double price, String imageURL, String shortDescription, int stockQuantity, Category category, List<ProductImages> images, ProductsDetail productsDetail, List<Reviews> reviews, int productViews, double averageRating, Timestamp uploadDate) {
         this.productID = productID;
         this.productName = productName;
         this.categoryID = categoryID;
         this.price = price;
         this.imageURL = imageURL;
+        this.shortDescription = shortDescription;
+        this.stockQuantity = stockQuantity;
+        this.category = category;
+        this.images = images;
+        this.productsDetail = productsDetail;
+        this.reviews = reviews;
+        this.productViews = productViews;
+        this.averageRating = averageRating;
         this.uploadDate = uploadDate;
-        this.StockQuantity = stockQuantity;
-    }
-
-    public Products() {
-    }
-
-    public String getDescription() {
-        return Description;
-    }
-
-    public void setDescription(String description) {
-        Description = description;
     }
 
     public int getProductID() {
@@ -75,20 +80,76 @@ public class Products {
         this.imageURL = imageURL;
     }
 
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+
+    public int getStockQuantity() {
+        return stockQuantity;
+    }
+
+    public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public List<ProductImages> getImages() {
+        return images;
+    }
+
+    public void setImages(List<ProductImages> images) {
+        this.images = images;
+    }
+
+    public ProductsDetail getProductsDetail() {
+        return productsDetail;
+    }
+
+    public void setProductsDetail(ProductsDetail productsDetail) {
+        this.productsDetail = productsDetail;
+    }
+
+    public List<Reviews> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Reviews> reviews) {
+        this.reviews = reviews;
+    }
+
+    public int getProductViews() {
+        return productViews;
+    }
+
+    public void setProductViews(int productViews) {
+        this.productViews = productViews;
+    }
+
+    public double getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(double averageRating) {
+        this.averageRating = averageRating;
+    }
+
     public Timestamp getUploadDate() {
         return uploadDate;
     }
 
     public void setUploadDate(Timestamp uploadDate) {
         this.uploadDate = uploadDate;
-    }
-
-    public int getStockQuantity() {
-        return StockQuantity;
-    }
-
-    public void setStockQuantity(int stockQuantity) {
-        StockQuantity = stockQuantity;
     }
 
     @Override
@@ -99,8 +160,15 @@ public class Products {
                 ", categoryID=" + categoryID +
                 ", price=" + price +
                 ", imageURL='" + imageURL + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", stockQuantity=" + stockQuantity +
+                ", category=" + category +
+                ", images=" + images +
+                ", productsDetail=" + productsDetail +
+                ", reviews=" + reviews +
+                ", productViews=" + productViews +
+                ", averageRating=" + averageRating +
                 ", uploadDate=" + uploadDate +
-                ", StockQuantity=" + StockQuantity +
                 '}';
     }
 }
