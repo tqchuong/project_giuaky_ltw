@@ -1,3 +1,10 @@
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.admin.ProductAdminDAO" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Products" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.admin.UserAdminDAO" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Users" %>
+<%@ page import="java.util.List" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +12,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/admin.css">
-    <link href="../font/font-awesome-pro-v6-6.2.0/css/all.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="../css/admin-responsive.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="font/font-awesome-pro-v6-6.2.0/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/admin-responsive.css">
+
+
+
     <title>Quản lý cửa hàng</title>
 </head>
 
@@ -23,10 +33,10 @@
     <aside class="sidebar open">
         <div class="top-sidebar">
             <a href="#" class="channel-logo">
-                <img src="../image/shoppingcart/7.png" alt="Channel Logo">
+                <img src="image/shoppingcart/7.png" alt="Channel Logo">
             </a>
             <div class="hidden-sidebar your-channel">
-                <img src="../image/shoppingcart/8.png" alt="Your Channel">
+                <img src="image/shoppingcart/8.png" alt="Your Channel">
             </div>
         </div>
 
@@ -103,7 +113,7 @@
                     <div class="box">
                         <h2 id="amount-user">2</h2>
                         <div class="on-box">
-                            <img src="../image/admin/s1.png" alt="" style=" width: 200px;">
+                            <img src="image/admin/s1.png" alt="" style=" width: 200px;">
                             <h3>Khách hàng</h3>
                             <p>Sản phẩm là bất cứ cái gì có thể đưa vào thị trường để tạo sự chú ý, mua sắm, sử dụng
                                 hay tiêu dùng nhằm thỏa mãn một nhu cầu hay ước muốn. Nó có thể là những vật thể,
@@ -115,7 +125,7 @@
                 <div class="card-single">
                     <div class="box">
                         <div class="on-box">
-                            <img src="../image/admin/s2.png" alt="" style=" width: 200px;">
+                            <img src="image/admin/s2.png" alt="" style=" width: 200px;">
                             <h2 id="amount-product">20</h2>
                             <h3>Sản phẩm</h3>
                             <p>Khách hàng mục tiêu là một nhóm đối tượng khách hàng trong phân khúc thị trường mục
@@ -127,7 +137,7 @@
                     <div class="box">
                         <h2 id="doanh-thu">2.818.000&nbsp;₫</h2>
                         <div class="on-box">
-                            <img src="../image/admin/s3.png" alt="" style=" width: 200px;">
+                            <img src="image/admin/s3.png" alt="" style=" width: 200px;">
                             <h3>Doanh thu</h3>
                             <p>Doanh thu của doanh nghiệp là toàn bộ số tiền sẽ thu được do tiêu thụ sản phẩm, cung
                                 cấp dịch vụ với sản lượng.</p>
@@ -136,8 +146,11 @@
                 </div>
             </div>
         </div>
+
+
         <!-- Product  -->
         <div class="section product-all">
+
             <div class="admin-control">
                 <div class="admin-control-left">
                     <select name="the-loai" id="the-loai">
@@ -165,21 +178,27 @@
                         phẩm</button>
                 </div>
             </div>
+            <%
+                ProductAdminDAO productAdminDAO = new ProductAdminDAO();
+                List<Products> products = productAdminDAO.getAllProducts();
+            %>
+
             <div id="show-product">
-                <div class="list">
+                <% for (Products product : products) { %>
+                <div class="list" data-id="<%= product.getId() %>">
                     <div class="list-left">
-                        <img src="../image/img-pro/bap1.jpg" alt="">
+                        <img src= <%= product.getImageURL() %>  alt="<%= product.getProductName() %>">
+
                         <div class="list-info">
-                            <h4>Bắp nữ hoàng</h4>
-                            <p class="list-note">Bắp Nữ Hoàng, với hạt vàng óng ánh, vị ngọt thanh tự nhiên, là lựa
-                                chọn tuyệt vời cho bữa ăn gia đình.</p>
-                            <span class="list-category">Bắp</span>
-                            <span class="list-slkho">3</span>
+                            <h4> <%= product.getProductName() %></h4>
+                            <p class="list-note"><%= product.getShortDescription() %></p>
+                            <span class="list-category"><%= product.getCategoryID() %></span>
+                            <span class="list-slkho"><%= product.getStockQuantity() %></span>
                         </div>
                     </div>
                     <div class="list-right">
                         <div class="list-price">
-                            <span class="list-current-price">10.000&nbsp;₫</span>
+                            <span class="list-current-price"><%= product.getPrice() %></span>
                         </div>
                         <div class="list-control">
                             <div class="list-tool">
@@ -189,9 +208,10 @@
                         </div>
                     </div>
                 </div>
+                <% } %>
                 <div class="list">
                     <div class="list-left">
-                        <img src="../image/img-pro/bap2.jpg" alt="">
+                        <img src="image/img-pro/bap2.jpg" alt="">
                         <div class="list-info">
                             <h4>Bắp nếp</h4>
                             <p class="list-note">Bắp Nếp là loại bắp truyền thống, nổi bật với hạt trắng ngà, dẻo
@@ -214,7 +234,7 @@
                 </div>
                 <div class="list">
                     <div class="list-left">
-                        <img src="../image/img-pro/gaost25.jpg" alt="">
+                        <img src="image/img-pro/gaost25.jpg" alt="">
                         <div class="list-info">
                             <h4>Gạo Thơm Hữu Cơ ST25</h4>
                             <p class="list-note">Gạo Thơm Hữu Cơ ST25 là dòng gạo cao cấp đạt tiêu chuẩn quốc tế,
@@ -238,7 +258,7 @@
                 </div>
                 <div class="list">
                     <div class="list-left">
-                        <img src="../image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg" alt="">
+                        <img src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg" alt="">
                         <div class="list-info">
                             <h4>Lương khô yến mạch</h4>
                             <p class="list-note">Lương Khô Yến Mạch là sự kết hợp hoàn hảo giữa yến mạch nguyên chất
@@ -262,7 +282,7 @@
                 </div>
                 <div class="list">
                     <div class="list-left">
-                        <img src="../image/cereal/Bot-ngu-coc-minmin-29-hat-8.jpg" alt="">
+                        <img src="image/cereal/Bot-ngu-coc-minmin-29-hat-8.jpg" alt="">
                         <div class="list-info">
                             <h4>Bột ngũ cốc minmin</h4>
                             <p class="list-note">Bột Ngũ Cốc Minmin được làm từ 100% ngũ cốc nguyên chất, giàu dinh
@@ -288,7 +308,7 @@
                 </div>
                 <div class="list">
                     <div class="list-left">
-                        <img src="../image/img-pro/khoai lang mat.jpg" alt="">
+                        <img src="image/img-pro/khoai lang mat.jpg" alt="">
                         <div class="list-info">
                             <h4>Khoai lang mật</h4>
                             <p class="list-note">Khoai Lang Mật nổi bật với ruột vàng óng, dẻo mềm và vị ngọt đậm tự nhiên như mật ong khi chế biến. Được trồng trong môi trường sạch, giàu dinh dưỡng và đảm bảo an toàn, khoai lang mật không chỉ thơm ngon mà còn là nguồn cung cấp chất xơ, vitamin và khoáng chất tuyệt vời, hỗ trợ tiêu hóa và tốt cho sức khỏe.</p>
@@ -545,7 +565,7 @@
                     <tr>
                         <td>1</td>
                         <td>
-                            <div class="prod-img-title"><img class="prd-img-tbl" src="../image/img-pro/bap1.jpg"
+                            <div class="prod-img-title"><img class="prd-img-tbl" src="image/img-pro/bap1.jpg"
                                                              alt="Bắp nữ hoàng">
                                 <p>Bắp nữ hoàng</p>
                             </div>
@@ -559,7 +579,7 @@
                     <tr>
                         <td>2</td>
                         <td>
-                            <div class="prod-img-title"><img class="prd-img-tbl" src="../image/img-pro/bap2.jpg"
+                            <div class="prod-img-title"><img class="prd-img-tbl" src="image/img-pro/bap2.jpg"
                                                              alt="Bắp nếp">
                                 <p>Bắp nếp</p>
                             </div>
@@ -574,7 +594,7 @@
                         <td>3</td>
                         <td>
                             <div class="prod-img-title"><img class="prd-img-tbl"
-                                                             src="../image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg"
+                                                             src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg"
                                                              alt="Lương khô Hạt Điều">
                                 <p>Lương khô Hạt Điều</p>
                             </div>
@@ -589,7 +609,7 @@
                         <td>4</td>
                         <td>
                             <div class="prod-img-title"><img class="prd-img-tbl"
-                                                             src="../image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg"
+                                                             src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg"
                                                              alt="Lương khô yến mạch">
                                 <p>Lương khô yến mạch</p>
                             </div>
@@ -642,7 +662,7 @@
             <div class="voucher-container" id="show-product">
                 <!-- Mã giảm giá mẫu -->
                 <div class="coupon-card">
-                    <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
+                    <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
                     <h3>Giảm giá 20% cho đơn hàng trên 500k</h3>
                     <div class="coupon-row">
                         <span class="coupon-code">GIAM20</span>
@@ -652,7 +672,7 @@
                 </div>
 
                 <div class="coupon-card">
-                    <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
+                    <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
                     <h3>Freeship cho đơn hàng trên 300k</h3>
                     <div class="coupon-row">
                         <span class="coupon-code">FREESHIP300</span>
@@ -902,8 +922,8 @@
 </div>
 </div>
 <div id="toast"></div>
-<script src="../js/admin.js"></script>
-<script src="../js/toast-message.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/toast-message.js"></script>
 </body>
 
 </html>

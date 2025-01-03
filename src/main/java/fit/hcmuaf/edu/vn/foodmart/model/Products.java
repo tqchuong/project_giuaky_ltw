@@ -4,7 +4,7 @@ import java.util.List;
 import java.sql.Timestamp;
 
 public class Products {
-    private int productID;
+    private int id;
     private String productName;
     private int categoryID;
     private double price;
@@ -23,8 +23,8 @@ public class Products {
     public Products() {
     }
 
-    public Products(int productID, String productName, int categoryID, double price, String imageURL, String shortDescription, int stockQuantity, Category category, List<ProductImages> images, ProductsDetail productsDetail, List<Reviews> reviews, int productViews, double averageRating, Timestamp uploadDate) {
-        this.productID = productID;
+    public Products(int id, String productName, int categoryID, double price, String imageURL, String shortDescription, int stockQuantity, Category category, List<ProductImages> images, ProductsDetail productsDetail, List<Reviews> reviews, int productViews, double averageRating, Timestamp uploadDate) {
+        this.id = id;
         this.productName = productName;
         this.categoryID = categoryID;
         this.price = price;
@@ -40,12 +40,12 @@ public class Products {
         this.uploadDate = uploadDate;
     }
 
-    public int getProductID() {
-        return productID;
+    public int getId() {
+        return id;
     }
 
-    public void setProductID(int productID) {
-        this.productID = productID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getProductName() {
@@ -155,7 +155,7 @@ public class Products {
     @Override
     public String toString() {
         return "Products{" +
-                "productID=" + productID +
+                "id=" + id +
                 ", productName='" + productName + '\'' +
                 ", categoryID=" + categoryID +
                 ", price=" + price +

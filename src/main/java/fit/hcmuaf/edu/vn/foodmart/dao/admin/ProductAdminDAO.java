@@ -56,7 +56,7 @@ public class ProductAdminDAO {
                     .bind(3, product.getImageURL())
                     .bind(4, product.getShortDescription())
                     .bind(5, product.getStockQuantity())
-                    .bind(6, product.getProductID())
+                    .bind(6, product.getId())
                     .execute();
             return true;
         }

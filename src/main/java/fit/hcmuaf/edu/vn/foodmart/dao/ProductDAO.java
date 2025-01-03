@@ -31,7 +31,7 @@ public class ProductDAO {
                         category.setCategoryName(rs.getString("categoryName"));
 
                         Products product = new Products();
-                        product.setProductID(rs.getInt("id"));
+                        product.setId(rs.getInt("id"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
@@ -67,7 +67,7 @@ public class ProductDAO {
                         category.setCategoryName(rs.getString("categoryName"));
 
                         Products product = new Products();
-                        product.setProductID(rs.getInt("id"));
+                        product.setId(rs.getInt("id"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
@@ -141,7 +141,7 @@ public class ProductDAO {
 
                         // Ánh xạ thông tin sản phẩm
                         Products prod = new Products();
-                        prod.setProductID(rs.getInt("id"));
+                        prod.setId(rs.getInt("id"));
                         prod.setProductName(rs.getString("productName"));
                         prod.setCategoryID(rs.getInt("categoryId"));
                         prod.setPrice(rs.getDouble("price"));
@@ -153,7 +153,7 @@ public class ProductDAO {
 
                         // Ánh xạ thông tin chi tiết sản phẩm
                         ProductsDetail detail = new ProductsDetail();
-                        detail.setProductID(prod.getProductID());
+                        detail.setProductID(prod.getId());
                         detail.setDetailedDescription(rs.getString("detailedDescription"));
                         detail.setProductStatus(rs.getString("productStatus"));
                         detail.setExpiryDate(rs.getDate("expiryDate"));
@@ -248,7 +248,7 @@ public class ProductDAO {
         double averageRating = dao.getAverageRating(productId);
         if (productDetails != null) {
             System.out.println("===== Chi tiết sản phẩm =====");
-            System.out.println("ID: " + productDetails.getProductID());
+            System.out.println("ID: " + productDetails.getId());
             System.out.println("Tên sản phẩm: " + productDetails.getProductName());
             System.out.println("Giá: " + productDetails.getPrice());
             System.out.println("Mô tả ngắn: " + productDetails.getShortDescription());

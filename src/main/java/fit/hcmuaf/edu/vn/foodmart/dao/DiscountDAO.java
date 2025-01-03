@@ -46,7 +46,7 @@ public class DiscountDAO {
 
                         // Tạo đối tượng sản phẩm và gán thông tin sản phẩm
                         Products product = new Products();
-                        product.setProductID(rs.getInt("productID"));
+                        product.setId(rs.getInt("productID"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryID"));
                         product.setPrice(rs.getDouble("price"));
