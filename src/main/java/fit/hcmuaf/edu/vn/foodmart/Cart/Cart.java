@@ -12,11 +12,11 @@ public class Cart
     Map<Integer, CartProduct> data = new HashMap<>();
 
     public boolean add(Products p) {
-        if (data.containsKey(p.getProductID())) {
-            update(p.getProductID(), data.get(p.getProductID()).getQuantity() + 1);
+        if (data.containsKey(p.getId())) {
+            update(p.getId(), data.get(p.getId()).getQuantity() + 1);
             return true;
         } else {
-            data.put(p.getProductID(), convert(p));
+            data.put(p.getId(), convert(p));
             return true;
         }
     }
@@ -41,7 +41,7 @@ public class Cart
     }
     private CartProduct convert(Products p) {
         CartProduct re = new CartProduct();
-        re.setId(p.getProductID());
+        re.setId(p.getId());
         re.setProductName(p.getProductName());
         re.setPrice(p.getPrice());
         re.setImageURL(p.getImageURL());

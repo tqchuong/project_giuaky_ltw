@@ -47,13 +47,12 @@
                 <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
                 hot</a>
             </li>
-<<<<<<< HEAD
+
             <li class="menu-list-item"><a class="flashsale-link" href="flashsale.jsp">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a>
             </li>
-=======
->>>>>>> af7b2bce03c3775e3ac3098281172789b222d1fa
+
 
         </ul>
 
@@ -150,7 +149,7 @@
         %>
         <div class="home-products" id="home-products">
             <% for (Products product : products) { %>
-            <div class="col-product" data-id="<%= product.getProductID() %>" data-loai="<%= product.getProductName() %>">
+            <div class="col-product" data-id="<%= product.getId() %>" data-loai="<%= product.getProductName() %>">
                 <article class="card-product">
                     <div class="card-header">
                         <a href="#" class="card-image-link">
