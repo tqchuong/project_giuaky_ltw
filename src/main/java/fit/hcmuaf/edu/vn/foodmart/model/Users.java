@@ -1,6 +1,7 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 public class Users implements Serializable {
 
@@ -13,7 +14,7 @@ public class Users implements Serializable {
     private String fullName;
     private String role;
     private String userStatus;
-
+private Timestamp created_at;
     public Users() {
     }
 
@@ -114,10 +115,19 @@ public class Users implements Serializable {
         this.userId = userId;
     }
 
+    public Timestamp getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
+    }
+
     @Override
     public String toString() {
         return "Users{" +
-                "username='" + username + '\'' +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
@@ -125,6 +135,7 @@ public class Users implements Serializable {
                 ", fullName='" + fullName + '\'' +
                 ", role='" + role + '\'' +
                 ", userStatus='" + userStatus + '\'' +
+                ", created_at=" + created_at +
                 '}';
     }
 }

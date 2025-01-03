@@ -314,9 +314,19 @@ document.getElementById("btn-add-user").addEventListener("click", function () {
     const modal = document.getElementById("customer-modal");
     modal.classList.add("open");
 
-    // Hiển thị phần "Thêm khách hàng"
+    // Hiển thị phần "Thêm khách hàng mới"
     document.querySelector(".add-customer-e").style.display = "block";
     document.querySelector(".edit-customer-e").style.display = "none";
+
+    // Ẩn nút "Lưu thông tin"
+    document.getElementById("update-customer-button").style.display = "none";
+
+    // Ẩn phần trạng thái
+    const statusGroup = document.getElementById("customer-status").closest(".form-group");
+    if (statusGroup) statusGroup.style.display = "none";
+
+    // Hiển thị nút "Đăng ký"
+    document.getElementById("signup-button").style.display = "block";
 
     // Reset form về mặc định
     document.getElementById("customer-form").reset();
@@ -332,24 +342,29 @@ document.querySelectorAll(".btn-edit").forEach((button) => {
         document.querySelector(".add-customer-e").style.display = "none";
         document.querySelector(".edit-customer-e").style.display = "block";
 
-        // Lấy dữ liệu khách hàng để điền vào form (tạm sử dụng dữ liệu mẫu)
-        const sampleCustomerData = {
-            fullname: "Nguyen Van A",
-            phone: "0123456789",
-            password: "123456",
-            status: true, // true là hoạt động, false là bị khóa
-        };
+        // Ẩn nút "Đăng ký"
+        document.getElementById("signup-button").style.display = "none";
+
+        // Hiển thị nút "Lưu thông tin"
+        document.getElementById("update-customer-button").style.display = "block";
+
+        // Hiển thị phần trạng thái
+        const statusGroup = document.getElementById("customer-status").closest(".form-group");
+        if (statusGroup) statusGroup.style.display = "block";
+
+        // Lấy dữ liệu thực tế từ thuộc tính `data-*` hoặc nguồn khác
+        const customerData = button.closest("tr").dataset; // Lấy dữ liệu từ hàng hiện tại
 
         // Điền dữ liệu vào form
-        document.getElementById("customer-fullname").value = sampleCustomerData.fullname;
-        document.getElementById("customer-phone").value = sampleCustomerData.phone;
-        document.getElementById("customer-password").value = sampleCustomerData.password;
-        document.getElementById("customer-status").checked = sampleCustomerData.status;
+        document.getElementById("customer-fullname").value = customerData.fullname || "";
+        document.getElementById("customer-phone").value = customerData.phone || "";
+        document.getElementById("customer-password").value = customerData.password || "";
+        document.getElementById("customer-status").checked = customerData.status === "true";
     });
 });
 
 // Đóng modal
-document.getElementById("close-customer-modal").addEventListener("click", function () {
+document.querySelector(".modal-close").addEventListener("click", function () {
     const modal = document.getElementById("customer-modal");
     modal.classList.remove("open");
 });

@@ -209,125 +209,7 @@
                     </div>
                 </div>
                 <% } %>
-                <div class="list">
-                    <div class="list-left">
-                        <img src="image/img-pro/bap2.jpg" alt="">
-                        <div class="list-info">
-                            <h4>Bắp nếp</h4>
-                            <p class="list-note">Bắp Nếp là loại bắp truyền thống, nổi bật với hạt trắng ngà, dẻo
-                                thơm và vị ngọt nhẹ nhàng tự nhiên.</p>
-                            <span class="list-category">Bắp</span>
-                            <span class="list-slkho">10</span>
-                        </div>
-                    </div>
-                    <div class="list-right">
-                        <div class="list-price">
-                            <span class="list-current-price">20.000&nbsp;₫</span>
-                        </div>
-                        <div class="list-control">
-                            <div class="list-tool">
-                                <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list">
-                    <div class="list-left">
-                        <img src="image/img-pro/gaost25.jpg" alt="">
-                        <div class="list-info">
-                            <h4>Gạo Thơm Hữu Cơ ST25</h4>
-                            <p class="list-note">Gạo Thơm Hữu Cơ ST25 là dòng gạo cao cấp đạt tiêu chuẩn quốc tế,
-                                nổi bật với hạt gạo dài, trắng trong, dẻo mềm và thơm ngọt tự nhiên.</p>
-                            <span class="list-category">Gạo</span>
-                            <span class="list-slkho">20</span>
 
-                        </div>
-                    </div>
-                    <div class="list-right">
-                        <div class="list-price">
-                            <span class="list-current-price">200.000&nbsp;₫</span>
-                        </div>
-                        <div class="list-control">
-                            <div class="list-tool">
-                                <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list">
-                    <div class="list-left">
-                        <img src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg" alt="">
-                        <div class="list-info">
-                            <h4>Lương khô yến mạch</h4>
-                            <p class="list-note">Lương Khô Yến Mạch là sự kết hợp hoàn hảo giữa yến mạch nguyên chất
-                                và các thành phần dinh dưỡng, mang đến nguồn năng lượng dồi dào trong từng thanh nhỏ
-                                gọn.</p>
-                            <span class="list-category">Lương khô</span>
-                            <span class="list-slkho">89</span>
-                        </div>
-                    </div>
-                    <div class="list-right">
-                        <div class="list-price">
-                            <span class="list-current-price">18.000&nbsp;₫</span>
-                        </div>
-                        <div class="list-control">
-                            <div class="list-tool">
-                                <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list">
-                    <div class="list-left">
-                        <img src="image/cereal/Bot-ngu-coc-minmin-29-hat-8.jpg" alt="">
-                        <div class="list-info">
-                            <h4>Bột ngũ cốc minmin</h4>
-                            <p class="list-note">Bột Ngũ Cốc Minmin được làm từ 100% ngũ cốc nguyên chất, giàu dinh
-                                dưỡng, cung cấp năng lượng thiết yếu cho cơ thể. Sản phẩm là sự kết hợp hoàn hảo
-                                giữa các loại hạt tự nhiên, giàu chất xơ, vitamin và khoáng chất, giúp hỗ trợ tiêu
-                                hóa, cải thiện sức khỏe tim mạch và duy trì vóc dáng.</p>
-                            <span class="list-category">Ngũ cốc</span>
-                            <span class="list-slkho">30</span>
-                        </div>
-                    </div>
-                    <div class="list-right">
-                        <div class="list-price">
-                            <span class="list-current-price">17.000&nbsp;₫</span>
-                        </div>
-                        <div class="list-control">
-                            <div class="list-tool">
-                                <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="list">
-                    <div class="list-left">
-                        <img src="image/img-pro/khoai lang mat.jpg" alt="">
-                        <div class="list-info">
-                            <h4>Khoai lang mật</h4>
-                            <p class="list-note">Khoai Lang Mật nổi bật với ruột vàng óng, dẻo mềm và vị ngọt đậm tự nhiên như mật ong khi chế biến. Được trồng trong môi trường sạch, giàu dinh dưỡng và đảm bảo an toàn, khoai lang mật không chỉ thơm ngon mà còn là nguồn cung cấp chất xơ, vitamin và khoáng chất tuyệt vời, hỗ trợ tiêu hóa và tốt cho sức khỏe.</p>
-                            <span class="list-category">Khoai</span>
-                            <span class="list-slkho">12</span>
-                        </div>
-                    </div>
-                    <div class="list-right">
-                        <div class="list-price">
-                            <span class="list-current-price">16.000&nbsp;₫</span>
-                        </div>
-                        <div class="list-control">
-                            <div class="list-tool">
-                                <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="page-nav">
                 <ul class="page-nav-list">
@@ -336,6 +218,10 @@
                 </ul>
             </div>
         </div>
+        <%
+            UserAdminDAO userAdminDAO = new UserAdminDAO();
+            List<Users> users = userAdminDAO.getAllUsers();
+        %>
         <!-- Account  -->
         <div class="section">
             <div class="admin-control">
@@ -381,13 +267,22 @@
                         <td></td>
                     </tr>
                     </thead>
+
                     <tbody id="show-user">
+                    <%
+                        int index = 1; // Khởi tạo biến đếm STT
+                        for (Users user : users) {
+                    %>
                     <tr>
-                        <td>1</td>
-                        <td>hominhcuong</td>
-                        <td>01234567897</td>
-                        <td>23/10/2024</td>
-                        <td><span class="status-no-complete">Bị khóa</span></td>
+                        <td><%= index %></td> <!-- Hiển thị STT -->
+<%--                        <td><%= user.getUserId() %></td> <!-- Hiển thị ID người dùng -->--%>
+                        <td><%= user.getUsername() %></td>
+                        <td><%= user.getPhone() %></td>
+                        <td><%= user.getCreated_at() %></td>
+                        <td>
+                            <span class="<%= user.getUserStatus().equals("Đang hoạt động") ? "status-complete" : "status-no-complete" %>">
+                            <%= user.getUserStatus() %></span>
+                        </td>
                         <td class="control control-table">
                             <button class="btn-edit" id="edit-account"><i
                                     class="fa-light fa-pen-to-square"></i></button>
@@ -395,21 +290,7 @@
                                     class="fa-regular fa-trash"></i></button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>nguyenphuongthinh</td>
-                        <td>0147852369</td>
-                        <td>24/10/2024</td>
-                        <td><span class="status-complete">Hoạt động</span></td>
-
-                        <td class="control control-table">
-                            <button class="btn-edit" id="edit-account"><i
-                                    class="fa-light fa-pen-to-square"></i></button>
-                            <button class="btn-delete" id="delete-account"><i
-                                    class="fa-regular fa-trash"></i></button>
-                        </td>
-                    </tr>
-
+                    <%   index++;} %>
                     </tbody>
                 </table>
             </div>
@@ -809,15 +690,20 @@
         <h3 class="modal-container-title add-customer-e">THÊM KHÁCH HÀNG MỚI</h3>
         <h3 class="modal-container-title edit-customer-e">CHỈNH SỬA THÔNG TIN</h3>
         <!-- Nội dung Form -->
-        <form id="customer-form">
+        <%
+            for (Users user : users) {
+        %>
+        <%= user.getUsername() %>
+        <form id="customer-form" action="<%= actionUrl %>" method="POST">
             <div class="form-group">
-                <label for="customer-fullname" class="form-label">Tên đầy đủ</label>
+                <label for="customer-fullname" class="form-label">Tên đăng nhập</label>
                 <input
                         id="customer-fullname"
                         name="fullname"
                         type="text"
-                        placeholder="VD: Nhật Sinh"
+                        placeholder="VD: Từ Quang Chương"
                         class="form-control">
+                        value="<%= user != null ? user.getUsername() : "" %>">
             </div>
             <div class="form-group">
                 <label for="customer-phone" class="form-label">Số điện thoại</label>
@@ -827,6 +713,7 @@
                         type="text"
                         placeholder="Nhập số điện thoại"
                         class="form-control">
+                        value="<%= user != null ? user.getPhone() : "" %>">
             </div>
             <div class="form-group">
                 <label for="customer-password" class="form-label">Mật khẩu</label>
@@ -837,17 +724,28 @@
                         placeholder="Nhập mật khẩu"
                         class="form-control">
             </div>
-            <!-- Trạng thái (Chỉ dành cho chỉnh sửa) -->
+            <!-- Trạng thái (chỉ hiển thị khi chỉnh sửa) -->
+            <% if (user != null) { %>
             <div class="form-group edit-customer-e">
                 <label for="customer-status" class="form-label">Trạng thái</label>
-                <input type="checkbox" id="customer-status" class="switch-input">
+                <input
+                        type="checkbox"
+                        id="customer-status"
+                        class="switch-input"
+                        name="status"
+                    <%= user.getUserStatus().equals("Đang hoạt động") ? "checked" : "" %>>
                 <label for="customer-status" class="switch"></label>
             </div>
-            <!-- Nút Hành Động -->
+            <% } %>
 
+            <!-- Nút hành động -->
+            <% if (user == null) { %> <!-- Tạo mới -->
+            <button class="form-submit add-account-e" id="signup-button">Đăng ký</button>
+            <% } else { %> <!-- Cập nhật -->
             <button class="form-submit edit-customer-e" id="update-customer-button">
                 <i class="fa-regular fa-floppy-disk"></i> Lưu thông tin
             </button>
+            <% } %>
         </form>
     </div>
 </div>
