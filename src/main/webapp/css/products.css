@@ -470,8 +470,6 @@ header {
     font-size: 15px;
 }
 
-
-
 .menu-link:hover::after,
 .hotpro-link:hover::after,
 .menu-Category:hover::after
@@ -480,7 +478,6 @@ header {
     transform: scale(1);
     opacity: 1;
 }
-
 
 .menu-link::after,
 .hotpro-link::after,
@@ -501,15 +498,10 @@ header {
 }
 
 
-
-
-.hotpro-link .fa-fire,
-.hotpro-link .fa-bolt
-{
+.hotpro-link .fa-fire  {
     margin-left: 5px;
     animation: blink 0.65s infinite;
 }
-
 
 @keyframes blink {
     50% {
@@ -1090,7 +1082,7 @@ header {
 .main-account-body {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .main-account-body-col {
@@ -1433,7 +1425,7 @@ textarea {
     background-color: #7A1F21; /* Màu khi hover */
 }
 .chat-box:active {
-    transform: scale(0.95);
+       transform: scale(0.95);
 }
 
 .chat-box:hover::after {
@@ -1694,3 +1686,6 @@ textarea {
     align-items: center;
     justify-content: center;
 }
+
+
+

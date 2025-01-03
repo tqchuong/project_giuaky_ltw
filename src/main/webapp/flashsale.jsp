@@ -2,10 +2,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" %>
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Products" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.DiscountDao" %>
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Discount" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.List" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +50,7 @@
                 <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
                 hot
             </a></li>
-            <li class="menu-list-item"><a class="hotpro-link" href="flash-sale.jsp">
+            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a></li>
         </ul>
@@ -117,15 +117,14 @@
                 <div class="col-product" data-id="${discount.product.productID}" data-loai="${discount.product.categoryID}">
                     <article class="card-product">
                         <div class="card-header">
-                            <a href="<c:url value='/productdetail.jsp?id=${discount.product.productID}'/>" class="card-image-link">
+                            <a href="<c:url value='/productDetail?id=${discount.product.productID}'/>" class="card-image-link">
                                 <img class="card-image" src="<c:url value='/${discount.product.imageURL}' />" alt="${discount.product.productName}">
                             </a>
                         </div>
                         <div class="food-info">
                             <div class="card-content">
                                 <div class="card-title">
-                                    <a href="<c:url value='/productdetail.jsp?id=${discount.product.productID}'/>" class="card-title-link">${discount.product.productName}</a>
-                                </div>
+                                    <a href="<c:url value='/productDetail?id=${discount.product.productID}'/>" class="card-title-link">${discount.product.productName}</a>
                             </div>
                             <div class="card-footer">
                                 <div class="product-price">
