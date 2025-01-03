@@ -38,11 +38,6 @@
                 hot</a>
             </li>
 
-            <li class="menu-list-item"><a class="hotpro-link" href="flashsale.jsp">
-                <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
-            </a>
-            </li>
-
         </ul>
 
     </div>
@@ -57,41 +52,29 @@
                 <h3>Thông tin tài khoản của bạn</h3>
                 <p>Quản lý thông tin để bảo mật tài khoản</p>
             </div>
-            <!-- Hiển thị thông báo lỗi nếu có -->
-            <c:if test="${not empty error}">
-                <div style="color: red;  text-align: center; margin-top: 20px">${error}</div>
-                <br>
-            </c:if>
             <div class="main-account-body">
-
                 <div class="main-account-body-col">
-
-                    <form action="change?action=infor" method="post" class="info-user">
-
+                    <form action="" class="info-user">
                         <!-- Các trường thông tin -->
                         <div class="form-group">
                             <label for="infoname" class="form-label">Họ và tên</label>
-                            <input class="form-control" type="text" name="fullName" id="infoname"
-                                   placeholder="Thêm họ và tên"
-                                   value="${not empty sessionScope.auth.fullName ? sessionScope.auth.fullName : ''}">
+                            <input class="form-control" type="text" name="infoname" id="infoname"
+                                   placeholder="Thêm họ và tên">
                         </div>
                         <div class="form-group">
                             <label for="infophone" class="form-label">Số điện thoại</label>
-                            <input class="form-control" type="text" name="phone" id="infophone"
-                                   placeholder="Thêm số điện thoại"
-                                   value="${not empty sessionScope.auth.phone ? sessionScope.auth.phone : ''}">
+                            <input class="form-control" type="text" name="infophone" id="infophone"
+                                   placeholder="Thêm số điện thoại">
                         </div>
                         <div class="form-group">
                             <label for="infoemail" class="form-label">Email</label>
-                            <input class="form-control" type="email" name="email" id="infoemail"
-                                   placeholder="Thêm địa chỉ email của bạn"
-                                   value="${not empty sessionScope.auth.email ? sessionScope.auth.email : ''}">
+                            <input class="form-control" type="email" name="infoemail" id="infoemail"
+                                   placeholder="Thêm địa chỉ email của bạn">
                         </div>
                         <div class="form-group">
                             <label for="infoaddress" class="form-label">Địa chỉ</label>
-                            <input class="form-control" type="text" name="address" id="infoaddress"
-                                   placeholder="Thêm địa chỉ giao hàng của bạn"
-                                   value="${not empty sessionScope.auth.address ? sessionScope.auth.address : ''}">
+                            <input class="form-control" type="text" name="infoaddress" id="infoaddress"
+                                   placeholder="Thêm địa chỉ giao hàng của bạn">
                         </div>
                         <button id="save-info-user" type="submit"><i
                                 class="fa-regular fa-floppy-disk"></i> Lưu thay đổi
@@ -100,7 +83,11 @@
                 </div>
                 <div class="main-account-body-col">
                     <form action="change?action=password" method="post" class="change-password">
-
+                        <!-- Hiển thị thông báo lỗi nếu có -->
+                        <c:if test="${not empty error}">
+                            <div style="color: red;">${error}</div>
+                            <br>
+                        </c:if>
                         <!-- Các trường mật khẩu -->
                         <div class="form-group">
                             <label for="" class="form-label">Tên đăng nhập</label>

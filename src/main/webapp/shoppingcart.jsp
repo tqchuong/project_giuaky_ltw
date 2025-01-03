@@ -1,7 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,42 +51,39 @@
 
                 </div>
 
-                <!-- Hiển thị danh sách sản phẩm trong giỏ hàng -->
-                <c:if test="${sessionScope.cart != null}">
-                    <ul class="cart-list">
-                        <c:forEach var="item" items="${sessionScope.cart.list}">
-                            <li class="item">
-                                <img src="${item.imageURL}" alt="${item.productName}" class="item-image">
-                                <h4>${item.productName}</h4>
-                                <p class="item-price">
-                                   <f:formatNumber value="${item.price}" type="currency" currencySymbol="₫" />
-                                </p>
-                                <div class="quantity-controls">
-                                    <!-- Nút giảm số lượng -->
-                                    <a href="update-cart?pid=${item.id}&quantity=${item.quantity - 1}">
-                                        <button class="btn-quantity minus">-</button>
-                                    </a>
-                                    <!-- Hiển thị số lượng -->
-                                    <input type="number" class="quantity_field" value="${item.quantity}" readonly>
-                                    <!-- Nút tăng số lượng -->
-                                    <a href="update-cart?pid=${item.id}&quantity=${item.quantity + 1}">
-                                        <button class="btn-quantity plus">+</button>
-                                    </a>
-                                </div>
-                                <!-- Nút xóa sản phẩm -->
-                                <a href="remove-cart?pid=${item.id}">
-                                    <button class="btn-remove">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </a>
-                            </li>
-                        </c:forEach>
-                    </ul>
-                    <p>Tổng số lượng: ${sessionScope.cart.list.size()}</p>
-                </c:if>
-                <c:if test="${sessionScope.cart == null || sessionScope.cart.list.size() == 0}">
-                    <p>Giỏ hàng của bạn đang trống!</p>
-                </c:if>
+                <!-- List of Cart Items -->
+                <ul class="cart-list">
+
+                    <li class="item">
+                        <input type="checkbox" class="productCheckbox"  />
+                        <img src="image/img-pro/gaost25.jpg" alt="Gạo Thơm Hữu Cơ ST25" class="item-image">
+                        <h4>Gạo Thơm Hữu Cơ ST25</h4>
+                        <p class="item-price">130.000&nbsp;₫</p>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity minus">-</button>
+                            <input type="number" class="quantity_field" value="1" data-price="130000" min="1">
+                            <button class="btn-quantity plus">+</button>
+                        </div>
+                        <button class="btn-remove"><i class="fas fa-trash"></i></button>
+                    </li>
+                </ul>
+                <ul class="cart-list">
+                    <li class="item">
+                        <input type="checkbox" class="productCheckbox"  />
+                        <img src="image/img-luongkho/LUONG-KHO-BAY-4-300x300.jpg" alt="Lương khô bay" class="item-image">
+                        <h4>Lương khô bay</h4>
+                        <p class="item-price">30.000&nbsp;₫</p>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity minus">-</button>
+                            <input type="number" class="quantity_field" value="1" data-price="30000" min="1">
+                            <button class="btn-quantity plus">+</button>
+                        </div>
+                        <button class="btn-remove"><i class="fas fa-trash"></i></button>
+                    </li>
+                </ul>
+
+            </div>
+
             <!-- Delivery & Payment Details -->
             <div class="delivery-payment grid_12">
                 <div class="delivery-address grid_6">
