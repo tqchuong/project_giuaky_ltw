@@ -15,9 +15,6 @@
     <link rel="stylesheet" href="css/admin.css">
     <link href="font/font-awesome-pro-v6-6.2.0/css/all.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/admin-responsive.css">
-
-
-
     <title>Quản lý cửa hàng</title>
 </head>
 
@@ -202,7 +199,8 @@
                         </div>
                         <div class="list-control">
                             <div class="list-tool">
-                                <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
+
+                                <button class="btn-edit-product"><i class="fa-light fa-pen-to-square"></i></button>
                                 <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
                             </div>
                         </div>
@@ -284,8 +282,7 @@
                             <%= user.getUserStatus() %></span>
                         </td>
                         <td class="control control-table">
-                            <button class="btn-edit" id="edit-account"><i
-                                    class="fa-light fa-pen-to-square"></i></button>
+                            <button class="btn-edit-customer" id="edit-account"><i class="fa-light fa-pen-to-square"></i></button>
                             <button class="btn-delete" id="delete-account"><i
                                     class="fa-regular fa-trash"></i></button>
                         </td>
@@ -690,20 +687,15 @@
         <h3 class="modal-container-title add-customer-e">THÊM KHÁCH HÀNG MỚI</h3>
         <h3 class="modal-container-title edit-customer-e">CHỈNH SỬA THÔNG TIN</h3>
         <!-- Nội dung Form -->
-        <%
-            for (Users user : users) {
-        %>
-        <%= user.getUsername() %>
-        <form id="customer-form" action="<%= actionUrl %>" method="POST">
+        <form id="customer-form">
             <div class="form-group">
-                <label for="customer-fullname" class="form-label">Tên đăng nhập</label>
+                <label for="customer-fullname" class="form-label">Tên đầy đủ</label>
                 <input
                         id="customer-fullname"
                         name="fullname"
                         type="text"
-                        placeholder="VD: Từ Quang Chương"
+                        placeholder="VD: Tuquangchuong"
                         class="form-control">
-                        value="<%= user != null ? user.getUsername() : "" %>">
             </div>
             <div class="form-group">
                 <label for="customer-phone" class="form-label">Số điện thoại</label>
@@ -713,7 +705,6 @@
                         type="text"
                         placeholder="Nhập số điện thoại"
                         class="form-control">
-                        value="<%= user != null ? user.getPhone() : "" %>">
             </div>
             <div class="form-group">
                 <label for="customer-password" class="form-label">Mật khẩu</label>
@@ -724,28 +715,17 @@
                         placeholder="Nhập mật khẩu"
                         class="form-control">
             </div>
-            <!-- Trạng thái (chỉ hiển thị khi chỉnh sửa) -->
-            <% if (user != null) { %>
+            <!-- Trạng thái (Chỉ dành cho chỉnh sửa) -->
             <div class="form-group edit-customer-e">
                 <label for="customer-status" class="form-label">Trạng thái</label>
-                <input
-                        type="checkbox"
-                        id="customer-status"
-                        class="switch-input"
-                        name="status"
-                    <%= user.getUserStatus().equals("Đang hoạt động") ? "checked" : "" %>>
+                <input type="checkbox" id="customer-status" class="switch-input">
                 <label for="customer-status" class="switch"></label>
             </div>
-            <% } %>
-
-            <!-- Nút hành động -->
-            <% if (user == null) { %> <!-- Tạo mới -->
+            <!-- Nút Hành Động -->
             <button class="form-submit add-account-e" id="signup-button">Đăng ký</button>
-            <% } else { %> <!-- Cập nhật -->
             <button class="form-submit edit-customer-e" id="update-customer-button">
                 <i class="fa-regular fa-floppy-disk"></i> Lưu thông tin
             </button>
-            <% } %>
         </form>
     </div>
 </div>

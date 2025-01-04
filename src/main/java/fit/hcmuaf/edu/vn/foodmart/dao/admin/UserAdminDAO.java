@@ -30,10 +30,10 @@ public class UserAdminDAO {
 
     // 2. Thêm người dùng mới
     public boolean addUser(Users user) {
-        String sql = "INSERT INTO users (fullName, phone, password, role, user_status) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO users (username, phone, password, role, user_status) VALUES (?, ?, ?, ?, ?)";
         try (Handle handle = jdbi.open()) {
             handle.createUpdate(sql)
-                    .bind(0, user.getFullName())   // Tên đầy đủ
+                    .bind(0, user.getUsername())   // Tên đầy đủ
                     .bind(1, user.getPhone())      // Số điện thoại
                     .bind(2, user.getPassword())   // Mật khẩu
                     .bind(3, "User")               // Vai trò mặc định là 'User'

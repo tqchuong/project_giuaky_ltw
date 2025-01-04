@@ -309,38 +309,102 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Mở modal thêm khách hàng
-document.getElementById("btn-add-user").addEventListener("click", function () {
-    const modal = document.getElementById("customer-modal");
+// Đóng tất cả modal trước khi mở modal mới
+function closeAllModals() {
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.classList.remove("open");
+    });
+}
+
+// Reset các giá trị mặc định cho modal thêm/chỉnh sửa sản phẩm
+function resetProductForm() {
+    document.querySelector(".upload-image-preview").src = "../image/admin/blank-image.png"; // Hình ảnh mặc định
+    document.getElementById("ten-mon").value = "";
+    document.getElementById("gia-moi").value = "";
+    document.getElementById("mo-ta").value = "";
+    document.getElementById("chon-mon").value = ""; // Đặt danh mục về mặc định
+}
+
+// Reset các giá trị mặc định cho modal thêm/chỉnh sửa khách hàng
+function resetCustomerForm() {
+    document.getElementById("customer-fullname").value = "";
+    document.getElementById("customer-phone").value = "";
+    document.getElementById("customer-password").value = "";
+    document.getElementById("customer-status").checked = false;
+}
+
+// Mở modal thêm mới sản phẩm
+document.getElementById("btn-add-product").addEventListener("click", () => {
+    closeAllModals(); // Đóng các modal khác
+    const modal = document.querySelector(".add-product");
     modal.classList.add("open");
 
-    // Hiển thị phần "Thêm khách hàng mới"
-    document.querySelector(".add-customer-e").style.display = "block";
-    document.querySelector(".edit-customer-e").style.display = "none";
+    // Hiển thị giao diện "Thêm mới sản phẩm"
+    document.querySelectorAll(".add-product-e").forEach(item => item.style.display = "block");
+    document.querySelectorAll(".edit-product-e").forEach(item => item.style.display = "none");
+
+    // Reset các giá trị trong modal về mặc định
+    resetProductForm();
+});
+
+// Mở modal chỉnh sửa sản phẩm
+document.querySelectorAll(".btn-edit-product").forEach(button => {
+    button.addEventListener("click", function () {
+        closeAllModals(); // Đóng các modal khác
+        const modal = document.querySelector(".add-product");
+        modal.classList.add("open");
+
+        // Hiển thị giao diện "Chỉnh sửa sản phẩm"
+        document.querySelectorAll(".add-product-e").forEach(item => item.style.display = "none");
+        document.querySelectorAll(".edit-product-e").forEach(item => item.style.display = "block");
+
+        // Lấy dữ liệu sản phẩm từ danh sách
+        const productItem = button.closest(".list");
+        const title = productItem.querySelector(".list-info h4").textContent.trim();
+        const desc = productItem.querySelector(".list-note").textContent.trim();
+        const category = productItem.querySelector(".list-category").textContent.trim();
+        const price = productItem.querySelector(".list-current-price").textContent.replace("₫", "").trim();
+        const imageSrc = productItem.querySelector(".list-left img").src;
+
+        // Điền dữ liệu vào modal chỉnh sửa sản phẩm
+        document.querySelector(".upload-image-preview").src = imageSrc;
+        document.getElementById("ten-mon").value = title;
+        document.getElementById("gia-moi").value = price;
+        document.getElementById("mo-ta").value = desc;
+        document.getElementById("chon-mon").value = category;
+    });
+});
+
+// Mở modal thêm mới khách hàng
+document.getElementById("btn-add-user").addEventListener("click", function () {
+    closeAllModals(); // Đóng các modal khác
+    const modal = document.querySelector("#customer-modal");
+    modal.classList.add("open");
+
+    // Hiển thị giao diện "Thêm khách hàng mới"
+    document.querySelectorAll(".add-customer-e").forEach(item => item.style.display = "block");
+    document.querySelectorAll(".edit-customer-e").forEach(item => item.style.display = "none");
 
     // Ẩn nút "Lưu thông tin"
     document.getElementById("update-customer-button").style.display = "none";
-
-    // Ẩn phần trạng thái
-    const statusGroup = document.getElementById("customer-status").closest(".form-group");
-    if (statusGroup) statusGroup.style.display = "none";
 
     // Hiển thị nút "Đăng ký"
     document.getElementById("signup-button").style.display = "block";
 
     // Reset form về mặc định
-    document.getElementById("customer-form").reset();
+    resetCustomerForm();
 });
 
-// Mở modal chỉnh sửa thông tin
-document.querySelectorAll(".btn-edit").forEach((button) => {
+// Mở modal chỉnh sửa khách hàng
+document.querySelectorAll(".btn-edit-customer").forEach(button => {
     button.addEventListener("click", function () {
-        const modal = document.getElementById("customer-modal");
+        closeAllModals(); // Đóng các modal khác
+        const modal = document.querySelector("#customer-modal");
         modal.classList.add("open");
 
-        // Hiển thị phần "Chỉnh sửa thông tin"
-        document.querySelector(".add-customer-e").style.display = "none";
-        document.querySelector(".edit-customer-e").style.display = "block";
+        // Hiển thị giao diện "Chỉnh sửa thông tin"
+        document.querySelectorAll(".add-customer-e").forEach(item => item.style.display = "none");
+        document.querySelectorAll(".edit-customer-e").forEach(item => item.style.display = "block");
 
         // Ẩn nút "Đăng ký"
         document.getElementById("signup-button").style.display = "none";
@@ -348,25 +412,25 @@ document.querySelectorAll(".btn-edit").forEach((button) => {
         // Hiển thị nút "Lưu thông tin"
         document.getElementById("update-customer-button").style.display = "block";
 
-        // Hiển thị phần trạng thái
-        const statusGroup = document.getElementById("customer-status").closest(".form-group");
-        if (statusGroup) statusGroup.style.display = "block";
-
-        // Lấy dữ liệu thực tế từ thuộc tính `data-*` hoặc nguồn khác
-        const customerData = button.closest("tr").dataset; // Lấy dữ liệu từ hàng hiện tại
+        // Lấy dữ liệu khách hàng từ danh sách
+        const customerRow = button.closest("tr");
+        const fullname = customerRow.cells[1].textContent.trim();
+        const phone = customerRow.cells[2].textContent.trim();
+        const status = customerRow.querySelector(".status-complete, .status-no-complete").textContent.trim();
 
         // Điền dữ liệu vào form
-        document.getElementById("customer-fullname").value = customerData.fullname || "";
-        document.getElementById("customer-phone").value = customerData.phone || "";
-        document.getElementById("customer-password").value = customerData.password || "";
-        document.getElementById("customer-status").checked = customerData.status === "true";
+        document.getElementById("customer-fullname").value = fullname;
+        document.getElementById("customer-phone").value = phone;
+        document.getElementById("customer-password").value = ""; // Mật khẩu thường không được hiển thị
+        document.getElementById("customer-status").checked = (status === "Hoạt động");
     });
 });
 
-// Đóng modal
-document.querySelector(".modal-close").addEventListener("click", function () {
-    const modal = document.getElementById("customer-modal");
-    modal.classList.remove("open");
+// Đóng modal khi nhấn nút close
+document.querySelectorAll(".modal-close").forEach(closeButton => {
+    closeButton.addEventListener("click", function () {
+        const modal = closeButton.closest(".modal");
+        modal.classList.remove("open");
+    });
 });
-
 
