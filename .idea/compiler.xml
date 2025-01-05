@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="maven-surefire-plugin" />
+        <module name="FoodMart" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FoodMart" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
