@@ -1,40 +1,51 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
-import org.jdbi.v3.core.mapper.reflect.ColumnName;
-
+import java.util.List;
 import java.sql.Timestamp;
 
 public class Products {
-
     private int id;
     private String productName;
     private int categoryID;
     private double price;
-    private Timestamp uploadDate;
     private String imageURL;
-    private String shortDescription;
-    private int StockQuantity;
+    private String shortDescription; // Mô tả ngắn
+    private int stockQuantity;       // Số lượng tồn kho
+    private Category category;       // Đối tượng danh mục
+    private List<ProductImages> images; // Danh sách hình ảnh
+    private ProductsDetail productsDetail;
+    private List<Reviews> reviews; // Danh sách đánh giá
+    private int productViews;
+    private double averageRating; // Thêm thuộc tính averageRating
+    private Timestamp uploadDate;
 
+    // Constructor mặc định
     public Products() {
     }
 
-    public Products(int id, String productName, int categoryID, double price, Timestamp uploadDate, String imageURL, String shortDescription, int stockQuantity) {
+    public Products(int id, String productName, int categoryID, double price, String imageURL, String shortDescription, int stockQuantity, Category category, List<ProductImages> images, ProductsDetail productsDetail, List<Reviews> reviews, int productViews, double averageRating, Timestamp uploadDate) {
         this.id = id;
         this.productName = productName;
         this.categoryID = categoryID;
         this.price = price;
-        this.uploadDate = uploadDate;
         this.imageURL = imageURL;
         this.shortDescription = shortDescription;
-        StockQuantity = stockQuantity;
+        this.stockQuantity = stockQuantity;
+        this.category = category;
+        this.images = images;
+        this.productsDetail = productsDetail;
+        this.reviews = reviews;
+        this.productViews = productViews;
+        this.averageRating = averageRating;
+        this.uploadDate = uploadDate;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int productID) {
-        this.id = productID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getProductName() {
@@ -61,14 +72,6 @@ public class Products {
         this.price = price;
     }
 
-    public Timestamp getUploadDate() {
-        return uploadDate;
-    }
-
-    public void setUploadDate(Timestamp uploadDate) {
-        this.uploadDate = uploadDate;
-    }
-
     public String getImageURL() {
         return imageURL;
     }
@@ -86,24 +89,86 @@ public class Products {
     }
 
     public int getStockQuantity() {
-        return StockQuantity;
+        return stockQuantity;
     }
 
     public void setStockQuantity(int stockQuantity) {
-        StockQuantity = stockQuantity;
+        this.stockQuantity = stockQuantity;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public List<ProductImages> getImages() {
+        return images;
+    }
+
+    public void setImages(List<ProductImages> images) {
+        this.images = images;
+    }
+
+    public ProductsDetail getProductsDetail() {
+        return productsDetail;
+    }
+
+    public void setProductsDetail(ProductsDetail productsDetail) {
+        this.productsDetail = productsDetail;
+    }
+
+    public List<Reviews> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Reviews> reviews) {
+        this.reviews = reviews;
+    }
+
+    public int getProductViews() {
+        return productViews;
+    }
+
+    public void setProductViews(int productViews) {
+        this.productViews = productViews;
+    }
+
+    public double getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(double averageRating) {
+        this.averageRating = averageRating;
+    }
+
+    public Timestamp getUploadDate() {
+        return uploadDate;
+    }
+
+    public void setUploadDate(Timestamp uploadDate) {
+        this.uploadDate = uploadDate;
     }
 
     @Override
     public String toString() {
         return "Products{" +
-                "productID=" + id +
+                "id=" + id +
                 ", productName='" + productName + '\'' +
                 ", categoryID=" + categoryID +
                 ", price=" + price +
-                ", uploadDate=" + uploadDate +
                 ", imageURL='" + imageURL + '\'' +
                 ", shortDescription='" + shortDescription + '\'' +
-                ", StockQuantity=" + StockQuantity +
+                ", stockQuantity=" + stockQuantity +
+                ", category=" + category +
+                ", images=" + images +
+                ", productsDetail=" + productsDetail +
+                ", reviews=" + reviews +
+                ", productViews=" + productViews +
+                ", averageRating=" + averageRating +
+                ", uploadDate=" + uploadDate +
                 '}';
     }
 }

@@ -1,9 +1,11 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 public class Users implements Serializable {
 
+    private int userId;
     private String username;
     private String password;
     private String email;
@@ -12,7 +14,7 @@ public class Users implements Serializable {
     private String fullName;
     private String role;
     private String userStatus;
-
+    private Timestamp created_at;
     public Users() {
     }
 
@@ -23,15 +25,6 @@ public class Users implements Serializable {
         this.email = email;
         this.phone = phone;
     }
-
-//    public Users( String phone, String email, String address, String fullName,boolean isActive) {
-//
-//        this.phone = phone;
-//        this.email = email;
-//        this.address = address;
-//       this.fullName = fullName;
-//   }
-
 
     public Users(String username, String password, String email, String phone, String role) {
         this.username = username;
@@ -105,10 +98,27 @@ public class Users implements Serializable {
         this.userStatus = userStatus;
     }
 
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public Timestamp getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
+    }
+
     @Override
     public String toString() {
         return "Users{" +
-                "username='" + username + '\'' +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
@@ -116,6 +126,7 @@ public class Users implements Serializable {
                 ", fullName='" + fullName + '\'' +
                 ", role='" + role + '\'' +
                 ", userStatus='" + userStatus + '\'' +
+                ", created_at=" + created_at +
                 '}';
     }
 }

@@ -5,7 +5,6 @@
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Discount" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.List" %>
-<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.DiscountDAO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +50,7 @@
                 <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
                 hot
             </a></li>
-            <li class="menu-list-item"><a class="hotpro-link" href="flashsale.jsp">
+            <li class="menu-list-item"><a class="hotpro-link" href="flash-sale.jsp">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a></li>
         </ul>
@@ -86,21 +85,20 @@
         </div>
 
 
-        <section class="product-list">
+        <div class="product-list">
             <!-- Hiển thị sản phẩm giảm giá -->
-            <c:forEach var="discount" items="${data}">
-                <div class="col-product" data-id="${discount.product.id}" data-loai="${discount.product.id}">
+            <c:forEach var="discount" items="${activeDiscounts}">
+                <div class="col-product" data-id="${discount.product.productID}" data-loai="${discount.product.categoryID}">
                     <article class="card-product">
                         <div class="card-header">
-                            <a href="#" class="card-image-link">
-                                <img class="card-image" src="${discount.product.imageURL}" alt="${discount.product.productName}">
+                            <a href="<c:url value='/productDetail?id=${discount.product.productID}'/>" class="card-image-link">
+                                <img class="card-image" src="<c:url value='/${discount.product.imageURL}' />" alt="${discount.product.productName}">
                             </a>
                         </div>
                         <div class="food-info">
                             <div class="card-content">
                                 <div class="card-title">
-                                    <a href="#" class="card-title-link">${discount.product.productName}</a>
-                                </div>
+                                    <a href="<c:url value='/productDetail?id=${discount.product.productID}'/>" class="card-title-link">${discount.product.productName}</a>
                             </div>
                             <div class="card-footer">
                                 <div class="product-price">
@@ -116,8 +114,7 @@
                     </article>
                 </div>
             </c:forEach>
-        </section>
-
+        </div>
     </div>
 </main>
 

@@ -1,4 +1,10 @@
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.admin.ProductAdminDAO" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Products" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.admin.UserAdminDAO" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Users" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,864 +19,789 @@
 </head>
 
 <body>
-    <header class="header">
-        <button class="menu-icon-btn">
-            <div class="menu-icon">
-                <i class="fa-regular fa-bars"></i>
+<header class="header">
+    <button class="menu-icon-btn">
+        <div class="menu-icon">
+            <i class="fa-regular fa-bars"></i>
+        </div>
+    </button>
+</header>
+<div class="container">
+    <aside class="sidebar open">
+        <div class="top-sidebar">
+            <a href="#" class="channel-logo">
+                <img src="image/shoppingcart/7.png" alt="Channel Logo">
+            </a>
+            <div class="hidden-sidebar your-channel">
+                <img src="image/shoppingcart/8.png" alt="Your Channel">
             </div>
-        </button>
-    </header>
-    <div class="container">
-        <aside class="sidebar open">
-            <div class="top-sidebar">
-                <a href="#" class="channel-logo">
-                    <img src="image/shoppingcart/7.png" alt="Channel Logo">
-                </a>
-                <div class="hidden-sidebar your-channel">
-                    <img src="image/shoppingcart/8.png" alt="Your Channel">
+        </div>
+
+        <div class="middle-sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item tab-content active">
+                    <a href="#" class="sidebar-link">
+                        <div class="sidebar-icon"><i class="fa-light fa-house"></i></div>
+                        <div class="hidden-sidebar">Trang tổng quan</div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item tab-content">
+                    <a href="#" class="sidebar-link">
+                        <div class="sidebar-icon"><i class="fa-light fa-pot-food"></i></div>
+                        <div class="hidden-sidebar">Sản phẩm</div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item tab-content">
+                    <a href="#" class="sidebar-link">
+                        <div class="sidebar-icon"><i class="fa-light fa-users"></i></div>
+                        <div class="hidden-sidebar">Khách hàng</div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item tab-content">
+                    <a href="#" class="sidebar-link">
+                        <div class="sidebar-icon"><i class="fa-light fa-basket-shopping"></i></div>
+                        <div class="hidden-sidebar">Đơn hàng</div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item tab-content">
+                    <a href="#" class="sidebar-link">
+                        <div class="sidebar-icon"><i class="fa-light fa-chart-simple"></i></div>
+                        <div class="hidden-sidebar">Thống kê</div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item tab-content">
+                    <a href="#" class="sidebar-link">
+                        <div class="sidebar-icon"><i class="fa-light fa-ticket"></i></div>
+                        <div class="hidden-sidebar">Voucher</div>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="bottom-sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item user-logout">
+                    <a href="home.html" class="sidebar-link">
+                        <div class="sidebar-icon"><i class="fa-thin fa-circle-chevron-left"></i></div>
+                        <div class="hidden-sidebar">Trang chủ</div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item user-logout">
+                    <a href="#" class="sidebar-link">
+                        <div class="sidebar-icon"><i class="fa-light fa-circle-user"></i></div>
+                        <div class="hidden-sidebar" id="name-acc"></div>
+                    </a>
+                </li>
+                <li class="sidebar-list-item user-logout">
+                    <a href="login.html" class="sidebar-link" id="logout-acc">
+                        <div class="sidebar-icon"><i class="fa-light fa-arrow-right-from-bracket"></i></div>
+                        <div class="hidden-sidebar">Đăng xuất</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <main class="content">
+        <div class="section active">
+            <h1 class="page-title">Trang tổng quát của cửa hàng FOODMART</h1>
+            <div class="cards">
+                <div class="card-single">
+                    <div class="box">
+                        <h2 id="amount-user">2</h2>
+                        <div class="on-box">
+                            <img src="image/admin/s1.png" alt="" style=" width: 200px;">
+                            <h3>Khách hàng</h3>
+                            <p>Sản phẩm là bất cứ cái gì có thể đưa vào thị trường để tạo sự chú ý, mua sắm, sử dụng
+                                hay tiêu dùng nhằm thỏa mãn một nhu cầu hay ước muốn. Nó có thể là những vật thể,
+                                dịch vụ, con người, địa điểm, tổ chức hoặc một ý tưởng.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div class="box">
+                        <div class="on-box">
+                            <img src="image/admin/s2.png" alt="" style=" width: 200px;">
+                            <h2 id="amount-product">20</h2>
+                            <h3>Sản phẩm</h3>
+                            <p>Khách hàng mục tiêu là một nhóm đối tượng khách hàng trong phân khúc thị trường mục
+                                tiêu mà doanh nghiệp bạn đang hướng tới. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div class="box">
+                        <h2 id="doanh-thu">2.818.000&nbsp;₫</h2>
+                        <div class="on-box">
+                            <img src="image/admin/s3.png" alt="" style=" width: 200px;">
+                            <h3>Doanh thu</h3>
+                            <p>Doanh thu của doanh nghiệp là toàn bộ số tiền sẽ thu được do tiêu thụ sản phẩm, cung
+                                cấp dịch vụ với sản lượng.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="middle-sidebar">
-                <ul class="sidebar-list">
-                    <li class="sidebar-list-item tab-content active">
-                        <a href="#" class="sidebar-link">
-                            <div class="sidebar-icon"><i class="fa-light fa-house"></i></div>
-                            <div class="hidden-sidebar">Trang tổng quan</div>
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item tab-content">
-                        <a href="#" class="sidebar-link">
-                            <div class="sidebar-icon"><i class="fa-light fa-pot-food"></i></div>
-                            <div class="hidden-sidebar">Sản phẩm</div>
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item tab-content">
-                        <a href="#" class="sidebar-link">
-                            <div class="sidebar-icon"><i class="fa-light fa-users"></i></div>
-                            <div class="hidden-sidebar">Khách hàng</div>
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item tab-content">
-                        <a href="#" class="sidebar-link">
-                            <div class="sidebar-icon"><i class="fa-light fa-basket-shopping"></i></div>
-                            <div class="hidden-sidebar">Đơn hàng</div>
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item tab-content">
-                        <a href="#" class="sidebar-link">
-                            <div class="sidebar-icon"><i class="fa-light fa-chart-simple"></i></div>
-                            <div class="hidden-sidebar">Thống kê</div>
-                        </a>
-                    </li>
-                    
+
+        <!-- Product  -->
+        <div class="section product-all">
+
+            <div class="admin-control">
+                <div class="admin-control-left">
+                    <select name="the-loai" id="the-loai">
+                        <option>Tất cả</option>
+                        <option>Gạo</option>
+                        <option>Bắp</option>
+                        <option>Lương khô</option>
+                        <option>Ngũ cốc</option>
+                        <option>Khoai</option>
+                        <option>Đã xóa</option>
+                        <option>Sản phẩm gần hết hàng</option>
+                    </select>
+                </div>
+                <div class="admin-control-center">
+                    <form action="" class="form-search">
+                        <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input id="form-search-product" type="text" class="form-search-input"
+                               placeholder="Tìm kiếm tên sản phẩm...">
+                    </form>
+                </div>
+                <div class="admin-control-right">
+                    <button class="btn-control-large" id="btn-cancel-product"><i
+                            class="fa-light fa-rotate-right"></i> Làm mới</button>
+                    <button class="btn-control-large" id="btn-add-product"><i class="fa-light fa-plus"></i> Thêm sản
+                        phẩm</button>
+                </div>
+            </div>
+            <%
+                ProductAdminDAO productAdminDAO = new ProductAdminDAO();
+                List<Products> products = productAdminDAO.getAllProducts();
+            %>
+
+            <div id="show-product">
+                <% for (Products product : products) { %>
+                <div class="list" data-id="<%= product.getId() %>">
+                    <div class="list-left">
+                        <img src= <%= product.getImageURL() %>  alt="<%= product.getProductName() %>">
+
+                        <div class="list-info">
+                            <h4> <%= product.getProductName() %></h4>
+                            <p class="list-note"><%= product.getShortDescription() %></p>
+                            <span class="list-category"><%= product.getCategoryID() %></span>
+                            <span class="list-slkho"><%= product.getStockQuantity() %></span>
+                        </div>
+                    </div>
+                    <div class="list-right">
+                        <div class="list-price">
+                            <span class="list-current-price"><%= product.getPrice() %></span>
+                        </div>
+                        <div class="list-control">
+                            <div class="list-tool">
+
+                                <button class="btn-edit-product"><i class="fa-light fa-pen-to-square"></i></button>
+                                <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+
+            </div>
+            <div class="page-nav">
+                <ul class="page-nav-list">
+                    <li class="page-nav-item active"><a href="#">1</a></li>
+                    <li class="page-nav-item active"><a href="#">2</a></li>
                 </ul>
             </div>
-            <div class="bottom-sidebar">
-                <ul class="sidebar-list">
-                    <li class="sidebar-list-item user-logout">
-                        <a href="home.jsp" class="sidebar-link">
-                            <div class="sidebar-icon"><i class="fa-thin fa-circle-chevron-left"></i></div>
-                            <div class="hidden-sidebar">Trang chủ</div>
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item user-logout">
-                        <a href="#" class="sidebar-link">
-                            <div class="sidebar-icon"><i class="fa-light fa-circle-user"></i></div>
-                            <div class="hidden-sidebar" id="name-acc"></div>
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item user-logout">
-                        <a href="login.jsp" class="sidebar-link" id="logout-acc">
-                            <div class="sidebar-icon"><i class="fa-light fa-arrow-right-from-bracket"></i></div>
-                            <div class="hidden-sidebar">Đăng xuất</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        <main class="content">
-            <div class="section active">
-                <h1 class="page-title">Trang tổng quát của cửa hàng FOODMART</h1>
-                <div class="cards">
-                    <div class="card-single">
-                        <div class="box">
-                            <h2 id="amount-user">2</h2>
-                            <div class="on-box">
-                                <img src="image/admin/s1.png" alt="" style=" width: 200px;">
-                                <h3>Khách hàng</h3>
-                                <p>Sản phẩm là bất cứ cái gì có thể đưa vào thị trường để tạo sự chú ý, mua sắm, sử dụng
-                                    hay tiêu dùng nhằm thỏa mãn một nhu cầu hay ước muốn. Nó có thể là những vật thể,
-                                    dịch vụ, con người, địa điểm, tổ chức hoặc một ý tưởng.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="card-single">
-                        <div class="box">
-                            <div class="on-box">
-                                <img src="image/admin/s2.png" alt="" style=" width: 200px;">
-                                <h2 id="amount-product">6</h2>
-                                <h3>Sản phẩm</h3>
-                                <p>Khách hàng mục tiêu là một nhóm đối tượng khách hàng trong phân khúc thị trường mục
-                                    tiêu mà doanh nghiệp bạn đang hướng tới. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-single">
-                        <div class="box">
-                            <h2 id="doanh-thu">73.000&nbsp;₫</h2>
-                            <div class="on-box">
-                                <img src="image/admin/s3.png" alt="" style=" width: 200px;">
-                                <h3>Doanh thu</h3>
-                                <p>Doanh thu của doanh nghiệp là toàn bộ số tiền sẽ thu được do tiêu thụ sản phẩm, cung
-                                    cấp dịch vụ với sản lượng.</p>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+        <%
+            UserAdminDAO userAdminDAO = new UserAdminDAO();
+            List<Users> users = userAdminDAO.getAllUsers();
+        %>
+        <!-- Account  -->
+        <div class="section">
+            <div class="admin-control">
+                <div class="admin-control-left">
+                    <select name="tinh-trang-user" id="tinh-trang-user">
+                        <option value="2">Tất cả</option>
+                        <option value="1">Hoạt động</option>
+                        <option value="0">Bị khóa</option>
+                    </select>
                 </div>
-            </div>
-            <!-- Product  -->
-            <div class="section product-all">
-                <div class="admin-control">
-                    <div class="admin-control-left">
-                        <select name="the-loai" id="the-loai">
-                            <option>Tất cả</option>
-                            <option>Gạo</option>
-                            <option>Bắp</option>
-                            <option>Lương khô</option>
-                            <option>Ngũ cốc</option>
-                            <option>Khoai</option>                    
-                            <option>Đã xóa</option>
-                            <option>Sản phẩm gần hết hàng</option>
-                        </select>
-                    </div>
-                    <div class="admin-control-center">
-                        <form action="" class="form-search">
-                            <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
-                            <input id="form-search-product" type="text" class="form-search-input"
-                                placeholder="Tìm kiếm tên sản phẩm...">
-                        </form>
-                    </div>
-                    <div class="admin-control-right">
-                        <button class="btn-control-large" id="btn-cancel-product"><i
-                                class="fa-light fa-rotate-right"></i> Làm mới</button>
-                        <button class="btn-control-large" id="btn-add-product"><i class="fa-light fa-plus"></i> Thêm sản
-                            phẩm</button>
-                    </div>
+                <div class="admin-control-center">
+                    <form action="" class="form-search">
+                        <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input id="form-search-user" type="text" class="form-search-input"
+                               placeholder="Tìm kiếm khách hàng...">
+                    </form>
                 </div>
-                <div id="show-product">
-
-                    <div class="list">
-                         
-                        <div class="list-left">
-                            <img src="image/img-pro/bap1.jpg" alt="">
-                            <div class="list-info">
-                                <h4>Bắp nữ hoàng</h4>
-                                <p class="list-note">Bắp Nữ Hoàng, với hạt vàng óng ánh, vị ngọt thanh tự nhiên, là lựa
-                                    chọn tuyệt vời cho bữa ăn gia đình.</p>
-                                <span class="list-category">Bắp</span>
-                                <br>
-                                <span class="list-slkho">Số lượng kho: 3</span>
-                            </div>
+                <div class="admin-control-right">
+                    <form action="" class="fillter-date">
+                        <div>
+                            <label for="time-start">Từ</label>
+                            <input type="date" class="form-control-date" id="time-start-user">
                         </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">10.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
+                        <div>
+                            <label for="time-end">Đến</label>
+                            <input type="date" class="form-control-date" id="time-end-user">
                         </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-left">
-                            <img src="image/img-pro/bap2.jpg" alt="">
-                            <div class="list-info">
-                                <h4>Bắp nếp</h4>
-                                <p class="list-note">Bắp Nếp là loại bắp truyền thống, nổi bật với hạt trắng ngà, dẻo
-                                    thơm và vị ngọt nhẹ nhàng tự nhiên.</p>
-                                <span class="list-category">Bắp</span><br>
-                                <span class="list-slkho">Số lượng kho: 10</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">20.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list">
-                         
-                        <div class="list-left">
-                            <img src="image/img-pro/gaost25.jpg" alt="">
-                            <div class="list-info">
-                                <h4>Gạo Thơm Hữu Cơ ST25</h4>
-                                <p class="list-note">Gạo Thơm Hữu Cơ ST25 là dòng gạo cao cấp đạt tiêu chuẩn quốc tế,
-                                    nổi bật với hạt gạo dài, trắng trong, dẻo mềm và thơm ngọt tự nhiên.</p>
-                                <span class="list-category">Gạo</span><br>
-                                <span class="list-slkho">Số lượng kho: 20</span>
-                                
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">200.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list">
-                         
-                        <div class="list-left">
-                            <img src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg" alt="">
-                            <div class="list-info">
-                                <h4>Lương khô yến mạch</h4>
-                                <p class="list-note">Lương Khô Yến Mạch là sự kết hợp hoàn hảo giữa yến mạch nguyên chất
-                                    và các thành phần dinh dưỡng, mang đến nguồn năng lượng dồi dào trong từng thanh nhỏ
-                                    gọn.</p>
-                                <span class="list-category">Lương khô</span><br>
-                                <span class="list-slkho">Số lượng kho:89</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">18.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list">
-                         
-                        <div class="list-left">
-                            <img src="image/cereal/Bot-ngu-coc-minmin-29-hat-8.jpg" alt="">
-                            <div class="list-info">
-                                <h4>Bột ngũ cốc minmin</h4>
-                                <p class="list-note">Bột Ngũ Cốc Minmin được làm từ 100% ngũ cốc nguyên chất, giàu dinh
-                                    dưỡng, cung cấp năng lượng thiết yếu cho cơ thể. Sản phẩm là sự kết hợp hoàn hảo
-                                    giữa các loại hạt tự nhiên, giàu chất xơ, vitamin và khoáng chất, giúp hỗ trợ tiêu
-                                    hóa, cải thiện sức khỏe tim mạch và duy trì vóc dáng.</p>
-                                <span class="list-category">Ngũ cốc</span><br>
-                                <span class="list-slkho">Số lượng kho: 30</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">17.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="list">
-                         
-                        <div class="list-left">
-                            <img src="image/img-pro/khoai lang mat.jpg" alt="">
-                            <div class="list-info">
-                                <h4>Khoai lang mật</h4>
-                                <p class="list-note">Khoai Lang Mật nổi bật với ruột vàng óng, dẻo mềm và vị ngọt đậm tự nhiên như mật ong khi chế biến. Được trồng trong môi trường sạch, giàu dinh dưỡng và đảm bảo an toàn, khoai lang mật không chỉ thơm ngon mà còn là nguồn cung cấp chất xơ, vitamin và khoáng chất tuyệt vời, hỗ trợ tiêu hóa và tốt cho sức khỏe.</p>
-                                <span class="list-category">Khoai</span> <br>
-                                <span class="list-slkho">Số lượng kho: 12</span>
-                            </div>                        
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">16.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list">
-                        <div class="list-left">
-                            <img src="image/img-luongkho/LUONG-KHO-BB-702-1-300x300.jpg" alt="Lương khô BB">
-                            <div class="list-info">
-                                <h4>Lương khô BB</h4>
-                                <p class="list-note">Lương khô BB, hương vị truyền thống, tiện dụng cho mọi chuyến đi.</p>
-                                <span class="list-slkho">Số lượng kho: 16</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">17.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="list">
-                        <div class="list-left">
-                            <img src="image/img-luongkho/LUONG-KHO-CACAO-5-300x300.jpg" alt="Lương khô Cacao">
-                            <div class="list-info">
-                                <h4>Lương khô Cacao</h4>
-                                <p class="list-note">Lương khô vị cacao ngọt nhẹ, bổ dưỡng cho ngày dài năng động.</p>
-                                <span class="list-slkho">Số lượng kho: 17</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">43.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="list">
-                        <div class="list-left">
-                            <img src="image/img-luongkho/LUONG-KHO-DREAM-4-300x300.jpg" alt="Lương khô Dream">
-                            <div class="list-info">
-                                <h4>Lương khô Dream</h4>
-                                <p class="list-note">Dream - Lựa chọn tuyệt vời với hương vị thơm ngon, dễ dàng sử dụng.</p>
-                                <span class="list-slkho">Số lượng kho: 18</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">26.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="list">
-                        <div class="list-left">
-                            <img src="image/img-luongkho/LUONG-KHO-GOLFMAN-2-300x300.jpg" alt="Lương khô Golf Man">
-                            <div class="list-info">
-                                <h4>Lương khô Golf Man</h4>
-                                <p class="list-note">Golf Man - Bổ sung năng lượng nhanh chóng, tiện dụng mọi lúc mọi nơi.</p>
-                                <span class="list-slkho">Số lượng kho: 19</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">29.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="list">
-                        <div class="list-left">
-                            <img src="image/img-luongkho/LUONG-KHO-HAPPY-6-300x300.jpg" alt="Lương khô Happy">
-                            <div class="list-info">
-                                <h4>Lương khô Happy</h4>
-                                <p class="list-note">Happy - Đem đến niềm vui với hương vị ngọt ngào và giàu năng lượng.</p>
-                                <span class="list-slkho">Số lượng kho: 20</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">20.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="list">
-                        <div class="list-left">
-                            <img src="image/img-luongkho/LUONG-KHO-HUONG-QUE-6-300x300.jpg" alt="Lương khô Hương Quê">
-                            <div class="list-info">
-                                <h4>Lương khô Hương Quê</h4>
-                                <p class="list-note">Hương Quê - Món ăn gợi nhớ hương vị truyền thống quê nhà.</p>
-                                <span class="list-slkho">Số lượng kho: 21</span>
-                            </div>
-                        </div>
-                        <div class="list-right">
-                            <div class="list-price">
-                                <span class="list-current-price">46.000&nbsp;₫</span>
-                            </div>
-                            <div class="list-control">
-                                <div class="list-tool">
-                                    <button class="btn-edit"><i class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete"><i class="fa-regular fa-trash"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <div class="page-nav" id="page-nav">
-                    <ul class="page-nav-list">
-                    </ul>
-                </div>
-            </div>
-            <!-- Account  -->
-            <div class="section">
-                <div class="admin-control">
-                    <div class="admin-control-left">
-                        <select name="tinh-trang-user" id="tinh-trang-user">
-                            <option value="2">Tất cả</option>
-                            <option value="1">Hoạt động</option>
-                            <option value="0">Bị khóa</option>
-                        </select>
-                    </div>
-                    <div class="admin-control-center">
-                        <form action="" class="form-search">
-                            <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
-                            <input id="form-search-user" type="text" class="form-search-input"
-                                placeholder="Tìm kiếm khách hàng...">
-                        </form>
-                    </div>
-                    <div class="admin-control-right">
-                        <form action="" class="fillter-date">
-                            <div>
-                                <label for="time-start">Từ</label>
-                                <input type="date" class="form-control-date" id="time-start-user">
-                            </div>
-                            <div>
-                                <label for="time-end">Đến</label>
-                                <input type="date" class="form-control-date" id="time-end-user">
-                            </div>
-                        </form>
-                        <button class="btn-reset-order"><i class="fa-light fa-arrow-rotate-right"></i></button>
-                        <button id="btn-add-user" class="btn-control-large"><i class="fa-light fa-plus"></i> <span>Thêm
+                    </form>
+                    <button class="btn-reset-order"><i class="fa-light fa-arrow-rotate-right"></i></button>
+                    <button id="btn-add-user" class="btn-control-large"><i class="fa-light fa-plus"></i> <span>Thêm
                                 khách hàng</span></button>
-                    </div>
-                </div>
-                <div class="table">
-                    <table width="100%">
-                        <thead>
-                            <tr>
-                                <td>STT</td>
-                                <td>Họ và tên</td>
-                                <td>Liên hệ</td>
-                                <td>Ngày tham gia</td>
-                                <td>Tình trạng</td>
-                                <td></td>
-                            </tr>
-                        </thead>
-                        <tbody id="show-user">
-                            <tr>
-                                <td>1</td>
-                                <td>hominhcuong</td>
-                                <td>01234567897</td>
-                                <td>23/10/2024</td>
-                                <td><span class="status-no-complete">Bị khóa</span></td>
-                                <td class="control control-table">
-                                    <button class="btn-edit" id="edit-account"><i
-                                            class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete" id="delete-account"><i
-                                            class="fa-regular fa-trash"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>nguyenphuongthinh</td>
-                                <td>0147852369</td>
-                                <td>24/10/2024</td>
-                                <td><span class="status-complete">Hoạt động</span></td>
-
-                                <td class="control control-table">
-                                    <button class="btn-edit" id="edit-account"><i
-                                            class="fa-light fa-pen-to-square"></i></button>
-                                    <button class="btn-delete" id="delete-account"><i
-                                            class="fa-regular fa-trash"></i></button>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-                <!-- </div> -->
-            </div>
-            <!-- Order  -->
-            <div class="section">
-                <div class="admin-control">
-                    <div class="admin-control-left">
-                        <select name="tinh-trang" id="tinh-trang">
-                            <option value="2">Tất cả</option>
-                            <option value="1">Đã xử lý</option>
-                            <option value="0">Chưa xử lý</option>
-                        </select>
-                    </div>
-                    <div class="admin-control-center">
-                        <form action="" class="form-search">
-                            <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
-                            <input id="form-search-order" type="text" class="form-search-input"
-                                placeholder="Tìm kiếm mã đơn, khách hàng...">
-                        </form>
-                    </div>
-                    <div class="admin-control-right">
-                        <form action="" class="fillter-date">
-                            <div>
-                                <label for="time-start">Từ</label>
-                                <input type="date" class="form-control-date" id="time-start">
-                            </div>
-                            <div>
-                                <label for="time-end">Đến</label>
-                                <input type="date" class="form-control-date" id="time-end">
-                            </div>
-                        </form>
-                        <button class="btn-reset-order"><i class="fa-light fa-arrow-rotate-right"></i></button>
-                    </div>
-                </div>
-                <div class="table">
-                    <table width="100%">
-                        <thead>
-                            <tr>
-                                <td>Mã đơn</td>
-                                <td>Khách hàng</td>
-                                <td>Ngày đặt</td>
-                                <td>Tổng tiền</td>
-                                <td>Trạng thái</td>
-                                <td>Thao tác</td>
-                            </tr>
-                        </thead>
-                        <tbody id="showOrder">
-                            <tr>
-                                <td>DH2</td>
-                                <td>01234567897</td>
-                                <td>31/10/2024</td>
-                                <td>20.000&nbsp;₫</td>
-                                <td><span class="status-no-complete">Đã xử lý</span></td>
-                                <td class="control">
-                                    <button class="btn-detail" id=""><i class="fa-regular fa-eye"></i> Chi tiết</button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>DH1</td>
-                                <td>0147852369</td>
-                                <td>23/10/2024</td>
-                                <td>140.000&nbsp;₫</td>
-                                <td><span class="status-complete">Đã xử lý</span></td>
-                                <td class="control">
-                                    <button class="btn-detail" id=""><i class="fa-regular fa-eye"></i> Chi tiết</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
-            <div class="section">
-                <div class="admin-control">
-                    <div class="admin-control-left">
-                        <select name="the-loai-tk" id="the-loai-tk">
-                            <option>Tất cả</option>
+            <div class="table">
+                <table width="100%">
+                    <thead>
+                    <tr>
+                        <td>STT</td>
+                        <td>Họ và tên</td>
+                        <td>Liên hệ</td>
+                        <td>Ngày tham gia</td>
+                        <td>Tình trạng</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+
+                    <tbody id="show-user">
+                    <%
+                        int index = 1; // Khởi tạo biến đếm STT
+                        for (Users user : users) {
+                    %>
+                    <tr>
+                        <td><%= index %></td> <!-- Hiển thị STT -->
+<%--                        <td><%= user.getUserId() %></td> <!-- Hiển thị ID người dùng -->--%>
+                        <td><%= user.getUsername() %></td>
+                        <td><%= user.getPhone() %></td>
+                        <td><%= user.getCreated_at() %></td>
+                        <td>
+                            <span class="<%= user.getUserStatus().equals("Đang hoạt động") ? "status-complete" : "status-no-complete" %>">
+                            <%= user.getUserStatus() %></span>
+                        </td>
+                        <td class="control control-table">
+                            <button class="btn-edit-customer" id="edit-account"><i class="fa-light fa-pen-to-square"></i></button>
+                            <button class="btn-delete" id="delete-account"><i
+                                    class="fa-regular fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <%   index++;} %>
+                    </tbody>
+                </table>
+            </div>
+            <!-- </div> -->
+        </div>
+        <!-- Order  -->
+        <div class="section">
+            <div class="admin-control">
+                <div class="admin-control-left">
+                    <select name="tinh-trang" id="tinh-trang">
+                        <option value="2">Tất cả</option>
+                        <option value="1">Đã xử lý</option>
+                        <option value="0">Chưa xử lý</option>
+                    </select>
+                </div>
+                <div class="admin-control-center">
+                    <form action="" class="form-search">
+                        <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input id="form-search-order" type="text" class="form-search-input"
+                               placeholder="Tìm kiếm mã đơn, khách hàng...">
+                    </form>
+                </div>
+                <div class="admin-control-right">
+                    <form action="" class="fillter-date">
+                        <div>
+                            <label for="time-start">Từ</label>
+                            <input type="date" class="form-control-date" id="time-start">
+                        </div>
+                        <div>
+                            <label for="time-end">Đến</label>
+                            <input type="date" class="form-control-date" id="time-end">
+                        </div>
+                    </form>
+                    <button class="btn-reset-order"><i class="fa-light fa-arrow-rotate-right"></i></button>
+                </div>
+            </div>
+            <div class="table">
+                <table width="100%">
+                    <thead>
+                    <tr>
+                        <td>Mã đơn</td>
+                        <td>Khách hàng</td>
+                        <td>Ngày đặt</td>
+                        <td>Tổng tiền</td>
+                        <td>Trạng thái</td>
+                        <td>Thao tác</td>
+                    </tr>
+                    </thead>
+                    <tbody id="showOrder">
+                    <tr>
+                        <td>DH2</td>
+                        <td>01234567897</td>
+                        <td>31/10/2024</td>
+                        <td>20.000&nbsp;₫</td>
+                        <td><span class="status-no-complete">Đã xử lý</span></td>
+                        <td class="control">
+                            <button class="btn-detail" id=""><i class="fa-regular fa-eye"></i> Chi tiết</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>DH1</td>
+                        <td>0147852369</td>
+                        <td>23/10/2024</td>
+                        <td>140.000&nbsp;₫</td>
+                        <td><span class="status-complete">Đã xử lý</span></td>
+                        <td class="control">
+                            <button class="btn-detail" id=""><i class="fa-regular fa-eye"></i> Chi tiết</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div class="admin-control">
+                <div class="admin-control-left">
+                    <select name="the-loai-tk" id="the-loai-tk">
+                        <option>Tất cả</option>
+                        <option>Gạo</option>
+                        <option>Lương khô</option>
+                        <option>text3</option>
+                        <option>text4</option>
+                        <option>text5</option>
+                        <option>text6</option>
+                        <option>Món khác</option>
+                    </select>
+                </div>
+                <div class="admin-control-center">
+                    <form action="" class="form-search">
+                        <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input id="form-search-tk" type="text" class="form-search-input"
+                               placeholder="Tìm kiếm tên sản phẩm...">
+                    </form>
+                </div>
+                <div class="admin-control-right">
+                    <form action="" class="fillter-date">
+                        <div>
+                            <label for="time-start">Từ</label>
+                            <input type="date" class="form-control-date" id="time-start-tk">
+                        </div>
+                        <div>
+                            <label for="time-end">Đến</label>
+                            <input type="date" class="form-control-date" id="time-end-tk">
+                        </div>
+                    </form>
+                    <button class="btn-reset-order"><i class="fa-regular fa-arrow-up-short-wide"></i></i></button>
+                    <button class="btn-reset-order"><i class="fa-regular fa-arrow-down-wide-short"></i></button>
+                    <button class="btn-reset-order"><i class="fa-light fa-arrow-rotate-right"></i></button>
+                </div>
+            </div>
+            <div class="order-statistical" id="order-statistical">
+                <div class="order-statistical-item">
+                    <div class="order-statistical-item-content">
+                        <p class="order-statistical-item-content-desc">Sản phẩm được bán ra</p>
+                        <h4 class="order-statistical-item-content-h" id="quantity-product">1</h4>
+                    </div>
+                    <div class="order-statistical-item-icon">
+                        <i class="fa-light fa-wheat-awn"></i>
+                    </div>
+                </div>
+                <div class="order-statistical-item">
+                    <div class="order-statistical-item-content">
+                        <p class="order-statistical-item-content-desc">Số lượng bán ra</p>
+                        <h4 class="order-statistical-item-content-h" id="quantity-order">2</h4>
+                    </div>
+                    <div class="order-statistical-item-icon">
+                        <i class="fa-light fa-file-lines"></i>
+                    </div>
+                </div>
+                <div class="order-statistical-item">
+                    <div class="order-statistical-item-content">
+                        <p class="order-statistical-item-content-desc">Doanh thu</p>
+                        <h4 class="order-statistical-item-content-h" id="quantity-sale">2.818.000&nbsp;₫</h4>
+                    </div>
+                    <div class="order-statistical-item-icon">
+                        <i class="fa-light fa-dollar-sign"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <table width="100%">
+                    <thead>
+                    <tr>
+                        <td>STT</td>
+                        <td>Tên món</td>
+                        <td>Số lượng bán</td>
+                        <td>Doanh thu</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+                    <tbody id="showTk">
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="prod-img-title"><img class="prd-img-tbl" src="image/img-pro/bap1.jpg"
+                                                             alt="Bắp nữ hoàng">
+                                <p>Bắp nữ hoàng</p>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>9.000&nbsp;₫</td>
+                        <td><button class="btn-detail product-order-detail" data-id="1"><i
+                                class="fa-regular fa-eye"></i> Chi tiết</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="prod-img-title"><img class="prd-img-tbl" src="image/img-pro/bap2.jpg"
+                                                             alt="Bắp nếp">
+                                <p>Bắp nếp</p>
+                            </div>
+                        </td>
+                        <td>2</td>
+                        <td>17.000&nbsp;₫</td>
+                        <td><button class="btn-detail product-order-detail" data-id="2"><i
+                                class="fa-regular fa-eye"></i> Chi tiết</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="prod-img-title"><img class="prd-img-tbl"
+                                                             src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg"
+                                                             alt="Lương khô Hạt Điều">
+                                <p>Lương khô Hạt Điều</p>
+                            </div>
+                        </td>
+                        <td>3</td>
+                        <td>29.000&nbsp;₫</td>
+                        <td><button class="btn-detail product-order-detail" data-id="3"><i
+                                class="fa-regular fa-eye"></i> Chi tiết</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <div class="prod-img-title"><img class="prd-img-tbl"
+                                                             src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg"
+                                                             alt="Lương khô yến mạch">
+                                <p>Lương khô yến mạch</p>
+                            </div>
+                        </td>
+                        <td>2</td>
+                        <td>18.000&nbsp;₫</td>
+                        <td><button class="btn-detail product-order-detail" data-id="5"><i
+                                class="fa-regular fa-eye"></i> Chi tiết</button></td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Voucher-->
+        <div class="section">
+            <!-- Bộ lọc và tìm kiếm -->
+            <div class="admin-control">
+                <div class="admin-control-left">
+                    <select name="tinh-trang-voucher" id="tinh-trang-voucher">
+                        <option value="2">Tất cả</option>
+                        <option value="1">Còn thời hạn</option>
+                        <option value="0">Hết thời hạn</option>
+                    </select>
+                </div>
+                <div class="admin-control-center">
+                    <form action="" class="form-search">
+                        <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
+                        <input id="form-search-user" type="text" class="form-search-input" placeholder="Tìm kiếm mã giảm giá...">
+                    </form>
+                </div>
+                <div class="admin-control-right">
+                    <form action="" class="fillter-date">
+                        <div>
+                            <label for="time-start">Từ</label>
+                            <input type="date" class="form-control-date" id="time-start-user">
+                        </div>
+                        <div>
+                            <label for="time-end">Đến</label>
+                            <input type="date" class="form-control-date" id="time-end-user">
+                        </div>
+                    </form>
+                    <button class="btn-reset-order"><i class="fa-light fa-arrow-rotate-right"></i></button>
+                    <button id="btn-add-user" class="btn-control-large"><i class="fa-light fa-plus"></i> <span>Thêm Mã</span></button>
+                </div>
+            </div>
+
+            <!-- Hiển thị danh sách mã giảm giá -->
+            <div class="voucher-container" id="show-product">
+                <!-- Mã giảm giá mẫu -->
+                <div class="coupon-card">
+                    <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
+                    <h3>Giảm giá 20% cho đơn hàng trên 500k</h3>
+                    <div class="coupon-row">
+                        <span class="coupon-code">GIAM20</span>
+                        <button class="save-code-btn">Lưu mã</button>
+                    </div>
+                    <p>Hạn sử dụng: 20/12/2024</p>
+                </div>
+
+                <div class="coupon-card">
+                    <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
+                    <h3>Freeship cho đơn hàng trên 300k</h3>
+                    <div class="coupon-row">
+                        <span class="coupon-code">FREESHIP300</span>
+                        <button class="save-code-btn">Lưu mã</button>
+                    </div>
+                    <p>Hạn sử dụng: 31/12/2024</p>
+                </div>
+
+                <div class="coupon-card">
+                    <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
+                    <h3>Giảm giá 15% cho đơn hàng đầu tiên</h3>
+                    <div class="coupon-row">
+                        <span class="coupon-code">FIRST15</span>
+                        <button class="save-code-btn">Lưu mã</button>
+                    </div>
+                    <p>Hạn sử dụng: 15/12/2024</p>
+                </div>
+            </div>
+
+            <!-- Điều hướng trang -->
+            <div class="page-nav">
+                <ul class="page-nav-list">
+                    <li class="page-nav-item active"><a href="#">1</a></li>
+                    <li class="page-nav-item"><a href="#">2</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+</div>
+<div class="modal add-product">
+    <div class="modal-container">
+        <h3 class="modal-container-title add-product-e">THÊM MỚI SẢN PHẨM</h3>
+        <h3 class="modal-container-title edit-product-e">CHỈNH SỬA SẢN PHẨM</h3>
+        <button class="modal-close product-form"><i class="fa-regular fa-xmark"></i></button>
+        <div class="modal-content">
+            <form action="" class="add-product-form">
+                <div class="modal-content-left">
+                    <img src="../image/admin/blank-image.png" alt="" class="upload-image-preview">
+                    <div class="form-group file">
+                        <label for="up-hinh-anh" class="form-label-file"><i
+                                class="fa-regular fa-cloud-arrow-up"></i>Chọn hình ảnh</label>
+                        <input accept="image/jpeg, image/png, image/jpg" id="up-hinh-anh" name="up-hinh-anh"
+                               type="file" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-content-right">
+                    <div class="form-group">
+                        <label for="ten-mon" class="form-label">Tên sản phẩm</label>
+                        <input id="ten-mon" name="ten-mon" type="text" placeholder="Nhập tên sản phẩm"
+                               class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="category" class="form-label">Danh mục</label>
+                        <select name="category" id="chon-mon">
                             <option>Gạo</option>
                             <option>Lương khô</option>
                             <option>text3</option>
                             <option>text4</option>
                             <option>text5</option>
                             <option>text6</option>
-                            <option>Món khác</option>
                         </select>
-                    </div>
-                    <div class="admin-control-center">
-                        <form action="" class="form-search">
-                            <span class="search-btn"><i class="fa-light fa-magnifying-glass"></i></span>
-                            <input id="form-search-tk" type="text" class="form-search-input"
-                                placeholder="Tìm kiếm tên sản phẩm...">
-                        </form>
-                    </div>
-                    <div class="admin-control-right">
-                        <form action="" class="fillter-date">
-                            <div>
-                                <label for="time-start">Từ</label>
-                                <input type="date" class="form-control-date" id="time-start-tk">
-                            </div>
-                            <div>
-                                <label for="time-end">Đến</label>
-                                <input type="date" class="form-control-date" id="time-end-tk">
-                            </div>
-                        </form>
-                        <button class="btn-reset-order"><i class="fa-regular fa-arrow-up-short-wide"></i></i></button>
-                        <button class="btn-reset-order"><i class="fa-regular fa-arrow-down-wide-short"></i></button>
-                        <button class="btn-reset-order"><i class="fa-light fa-arrow-rotate-right"></i></button>
-                    </div>
-                </div>
-                <div class="order-statistical" id="order-statistical">
-                    <div class="order-statistical-item">
-                        <div class="order-statistical-item-content">
-                            <p class="order-statistical-item-content-desc">Sản phẩm được bán ra</p>
-                            <h4 class="order-statistical-item-content-h" id="quantity-product">4</h4>
-                        </div>
-                        <div class="order-statistical-item-icon">
-                            <i class="fa-light fa-wheat-awn"></i>
-                        </div>
-                    </div>
-                    <div class="order-statistical-item">
-                        <div class="order-statistical-item-content">
-                            <p class="order-statistical-item-content-desc">Số lượng bán ra</p>
-                            <h4 class="order-statistical-item-content-h" id="quantity-order">8</h4>
-                        </div>
-                        <div class="order-statistical-item-icon">
-                            <i class="fa-light fa-file-lines"></i>
-                        </div>
-                    </div>
-                    <div class="order-statistical-item">
-                        <div class="order-statistical-item-content">
-                            <p class="order-statistical-item-content-desc">Doanh thu</p>
-                            <h4 class="order-statistical-item-content-h" id="quantity-sale">73.000&nbsp;₫</h4>
-                        </div>
-                        <div class="order-statistical-item-icon">
-                            <i class="fa-light fa-dollar-sign"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="table">
-                    <table width="100%">
-                        <thead>
-                            <tr>
-                                <td>STT</td>
-                                <td>Tên món</td>
-                                <td>Số lượng bán</td>
-                                <td>Doanh thu</td>
-                                <td></td>
-                            </tr>
-                        </thead>
-                        <tbody id="showTk">
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <div class="prod-img-title"><img class="prd-img-tbl" src="image/img-pro/bap1.jpg"
-                                            alt="Bắp nữ hoàng">
-                                        <p>Bắp nữ hoàng</p>
-                                    </div>
-                                </td>
-                                <td>1</td>
-                                <td>9.000&nbsp;₫</td>
-                                <td><button class="btn-detail product-order-detail" data-id="1"><i
-                                            class="fa-regular fa-eye"></i> Chi tiết</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>2</td>
-                                <td>
-                                    <div class="prod-img-title"><img class="prd-img-tbl" src="image/img-pro/bap2.jpg"
-                                            alt="Bắp nếp">
-                                        <p>Bắp nếp</p>
-                                    </div>
-                                </td>
-                                <td>2</td>
-                                <td>17.000&nbsp;₫</td>
-                                <td><button class="btn-detail product-order-detail" data-id="2"><i
-                                            class="fa-regular fa-eye"></i> Chi tiết</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-                                <td>
-                                    <div class="prod-img-title"><img class="prd-img-tbl"
-                                            src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg"
-                                            alt="Lương khô Hạt Điều">
-                                        <p>Lương khô Hạt Điều</p>
-                                    </div>
-                                </td>
-                                <td>3</td>
-                                <td>29.000&nbsp;₫</td>
-                                <td><button class="btn-detail product-order-detail" data-id="3"><i
-                                            class="fa-regular fa-eye"></i> Chi tiết</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>4</td>
-                                <td>
-                                    <div class="prod-img-title"><img class="prd-img-tbl"
-                                            src="image/img-luongkho/vn-11134207-7r98o-lnx9fkfy9uy521-300x300.jpg"
-                                            alt="Lương khô yến mạch">
-                                        <p>Lương khô yến mạch</p>
-                                    </div>
-                                </td>
-                                <td>2</td>
-                                <td>18.000&nbsp;₫</td>
-                                <td><button class="btn-detail product-order-detail" data-id="5"><i
-                                            class="fa-regular fa-eye"></i> Chi tiết</button></td>
-                            </tr>
-
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </main>
-    </div>
-    <div class="modal add-product">
-        <div class="modal-container">
-            <h3 class="modal-container-title add-product-e">THÊM MỚI SẢN PHẨM</h3>
-            <h3 class="modal-container-title edit-product-e">CHỈNH SỬA SẢN PHẨM</h3>
-            <button class="modal-close product-form"><i class="fa-regular fa-xmark"></i></button>
-            <div class="modal-content">
-                <form action="" class="add-product-form">
-                    <div class="modal-content-left">
-                        <img src="image/admin/blank-image.png" alt="" class="upload-image-preview">
-                        <div class="form-group file">
-                            <label for="up-hinh-anh" class="form-label-file"><i
-                                    class="fa-regular fa-cloud-arrow-up"></i>Chọn hình ảnh</label>
-                            <input accept="image/jpeg, image/png, image/jpg" id="up-hinh-anh" name="up-hinh-anh"
-                                type="file" class="form-control">
-                        </div>
-                    </div>
-                    <div class="modal-content-right">
-                        <div class="form-group">
-                            <label for="ten-mon" class="form-label">Tên món</label>
-                            <input id="ten-mon" name="ten-mon" type="text" placeholder="Nhập tên món"
-                                class="form-control">
-                            <span class="form-message"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="category" class="form-label">Chọn món</label>
-                            <select name="category" id="chon-mon">
-                                <option>Gạo</option>
-                                <option>Lương khô</option>
-                                <option>text3</option>
-                                <option>text4</option>
-                                <option>text5</option>
-                                <option>text6</option>
-                            </select>
-                            <span class="form-message"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="gia-moi" class="form-label">Giá bán</label>
-                            <input id="gia-moi" name="gia-moi" type="text" placeholder="Nhập giá bán"
-                                class="form-control">
-                            <span class="form-message"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="mo-ta" class="form-label">Mô tả</label>
-                            <textarea class="product-desc" id="mo-ta" placeholder="Nhập mô tả món ăn..."></textarea>
-                            <span class="form-message"></span>
-                        </div>
-                        <button class="form-submit btn-add-product-form add-product-e" id="add-product-button">
-                            <i class="fa-regular fa-plus"></i>
-                            <span>THÊM MÓN</span>
-                        </button>
-                        <button class="form-submit btn-update-product-form edit-product-e" id="update-product-button">
-                            <i class="fa-light fa-pencil"></i>
-                            <span>LƯU THAY ĐỔI</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-            </form>
-        </div>
-    </div>
-    <div class="modal detail-order">
-        <div class="modal-container">
-            <h3 class="modal-container-title">CHI TIẾT ĐƠN HÀNG</h3>
-            <button class="modal-close"><i class="fa-regular fa-xmark"></i></button>
-            <div class="modal-detail-order">
-            </div>
-            <div class="modal-detail-bottom">
-            </div>
-            </form>
-        </div>
-    </div>
-    <div class="modal detail-order-product">
-        <div class="modal-container">
-            <button class="modal-close"><i class="fa-regular fa-xmark"></i></button>
-            <div class="table">
-                <table width="100%">
-                    <thead>
-                        <tr>
-                            <td>Mã đơn</td>
-                            <td>Số lượng</td>
-                            <td>Đơn giá</td>
-                            <td>Ngày đặt</td>
-                        </tr>
-                    </thead>
-                    <tbody id="show-product-order-detail">
-                    </tbody>
-                </table>
-            </div>
-            </form>
-        </div>
-    </div>
-    <div class="modal signup">
-        <div class="modal-container">
-            <h3 class="modal-container-title add-account-e">THÊM KHÁCH HÀNG MỚI</h3>
-            <h3 class="modal-container-title edit-account-e">CHỈNH SỬA THÔNG TIN</h3>
-            <button class="modal-close"><i class="fa-regular fa-xmark"></i></button>
-            <div class="form-content sign-up">
-                <form action="" class="signup-form">
-                    <div class="form-group">
-                        <label for="fullname" class="form-label">Tên đầy đủ</label>
-                        <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Sinh"
-                            class="form-control">
-                        <span class="form-message-name form-message"></span>
+                        <span class="form-message"></span>
                     </div>
                     <div class="form-group">
-                        <label for="phone" class="form-label">Số điện thoại</label>
-                        <input id="phone" name="phone" type="text" placeholder="Nhập số điện thoại"
-                            class="form-control">
-                        <span class="form-message-phone form-message"></span>
+                        <label for="gia-moi" class="form-label">Giá bán</label>
+                        <input id="gia-moi" name="gia-moi" type="text" placeholder="Nhập giá bán"
+                               class="form-control">
+                        <span class="form-message"></span>
                     </div>
                     <div class="form-group">
-                        <label for="password" class="form-label">Mật khẩu</label>
-                        <input id="password" name="password" type="text" placeholder="Nhập mật khẩu"
-                            class="form-control">
-                        <span class="form-message-password form-message"></span>
+                        <label for="so-luong" class="form-label">Số lượng</label>
+                        <input id="so-luong" name="so-luong" type="text" placeholder="Nhập số lượng"
+                               class="form-control">
+                        <span class="form-message"></span>
                     </div>
-                    <div class="form-group edit-account-e">
-                        <label for="" class="form-label">Trạng thái</label>
-                        <input type="checkbox" id="user-status" class="switch-input">
-                        <label for="user-status" class="switch"></label>
+                    <div class="form-group">
+                        <label for="mo-ta" class="form-label">Mô tả</label>
+                        <textarea class="product-desc" id="mo-ta" placeholder="Nhập mô tả sản phẩm..."></textarea>
+                        <span class="form-message"></span>
                     </div>
-                    <button class="form-submit add-account-e" id="signup-button">Đăng ký</button>
-                    <button class="form-submit edit-account-e" id="btn-update-account"><i
-                            class="fa-regular fa-floppy-disk"></i> Lưu thông tin</button>
-                </form>
-            </div>
+                    <button class="form-submit btn-add-product-form add-product-e" id="add-product-button">
+                        <i class="fa-regular fa-plus"></i>
+                        <span>THÊM SẢN PHẨM</span>
+                    </button>
+                    <button class="form-submit btn-update-product-form edit-product-e" id="update-product-button">
+                        <i class="fa-light fa-pencil"></i>
+                        <span>LƯU THAY ĐỔI</span>
+                    </button>
+                </div>
+            </form>
         </div>
+        </form>
     </div>
+</div>
+<div class="modal detail-order">
+    <div class="modal-container">
+        <h3 class="modal-container-title">CHI TIẾT ĐƠN HÀNG</h3>
+        <button class="modal-close"><i class="fa-regular fa-xmark"></i></button>
+        <div class="modal-detail-order">
+        </div>
+        <div class="modal-detail-bottom">
+        </div>
+        </form>
     </div>
-    <div id="toast"></div>
-    <script src="js/admin.js"></script>
+</div>
+<div class="modal detail-order-product">
+    <div class="modal-container">
+        <button class="modal-close"><i class="fa-regular fa-xmark"></i></button>
+        <div class="table">
+            <table width="100%">
+                <thead>
+                <tr>
+                    <td>Mã đơn</td>
+                    <td>Số lượng</td>
+                    <td>Đơn giá</td>
+                    <td>Ngày đặt</td>
+                </tr>
+                </thead>
+                <tbody id="show-product-order-detail">
+                </tbody>
+            </table>
+        </div>
+        </form>
+    </div>
+</div>
+<div class="modal" id="customer-modal">
+    <div class="modal-container">
+        <!-- Nút đóng -->
+        <button class="modal-close product-form"><i class="fa-regular fa-xmark"></i></button>
+        </button>
+        <!-- Tiêu đề Modal -->
+        <h3 class="modal-container-title add-customer-e">THÊM KHÁCH HÀNG MỚI</h3>
+        <h3 class="modal-container-title edit-customer-e">CHỈNH SỬA THÔNG TIN</h3>
+        <!-- Nội dung Form -->
+        <form id="customer-form">
+            <div class="form-group">
+                <label for="customer-fullname" class="form-label">Tên đầy đủ</label>
+                <input
+                        id="customer-fullname"
+                        name="fullname"
+                        type="text"
+                        placeholder="VD: Tuquangchuong"
+                        class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="customer-phone" class="form-label">Số điện thoại</label>
+                <input
+                        id="customer-phone"
+                        name="phone"
+                        type="text"
+                        placeholder="Nhập số điện thoại"
+                        class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="customer-password" class="form-label">Mật khẩu</label>
+                <input
+                        id="customer-password"
+                        name="password"
+                        type="password"
+                        placeholder="Nhập mật khẩu"
+                        class="form-control">
+            </div>
+            <!-- Trạng thái (Chỉ dành cho chỉnh sửa) -->
+            <div class="form-group edit-customer-e">
+                <label for="customer-status" class="form-label">Trạng thái</label>
+                <input type="checkbox" id="customer-status" class="switch-input">
+                <label for="customer-status" class="switch"></label>
+            </div>
+            <!-- Nút Hành Động -->
+            <button class="form-submit add-account-e" id="signup-button">Đăng ký</button>
+            <button class="form-submit edit-customer-e" id="update-customer-button">
+                <i class="fa-regular fa-floppy-disk"></i> Lưu thông tin
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="modal add-voucher">
+    <div class="modal-container">
+        <h3 class="modal-container-title add-voucher-e">THÊM MỚI SẢN PHẨM</h3>
+        <h3 class="modal-container-title edit-voucher-e">CHỈNH SỬA SẢN PHẨM</h3>
+        <button class="modal-close"><i class="fa-regular fa-xmark"></i></button>
+        <div class="modal-content">
+            <form action="" class="add-voucher-form">
+                <div class="modal-content-left">
+                    <img src="../image/admin/blank-image.png" alt="" class="upload-image-preview">
+                    <div class="form-group file">
+                        <label for="up-hinh-anh" class="form-label-file"><i
+                                class="fa-regular fa-cloud-arrow-up"></i>Chọn hình ảnh</label>
+                        <input accept="image/jpeg, image/png, image/jpg" id="up-hinh-anh" name="up-hinh-anh"
+                               type="file" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-content-right">
+                    <div class="form-group">
+                        <label for="ten-mon" class="form-label">Tên sản phẩm</label>
+                        <input id="ten-mon" name="ten-mon" type="text" placeholder="Nhập tên sản phẩm"
+                               class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="category" class="form-label">Danh mục</label>
+                        <select name="category" id="chon-mon">
+                            <option>Gạo</option>
+                            <option>Lương khô</option>
+                            <option>text3</option>
+                            <option>text4</option>
+                            <option>text5</option>
+                            <option>text6</option>
+                        </select>
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gia-moi" class="form-label">Giá bán</label>
+                        <input id="gia-moi" name="gia-moi" type="text" placeholder="Nhập giá bán"
+                               class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="so-luong" class="form-label">Số lượng</label>
+                        <input id="so-luong" name="so-luong" type="text" placeholder="Nhập số lượng"
+                               class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mo-ta" class="form-label">Mô tả</label>
+                        <textarea class="voucher-desc" id="mo-ta" placeholder="Nhập mô tả sản phẩm..."></textarea>
+                        <span class="form-message"></span>
+                    </div>
+                    <button class="form-submit btn-add-voucher-form add-voucher-e" id="add-voucher-button">
+                        <i class="fa-regular fa-plus"></i>
+                        <span>THÊM SẢN PHẨM</span>
+                    </button>
+                    <button class="form-submit btn-update-voucher-form edit-voucher-e" id="update-voucher-button">
+                        <i class="fa-light fa-pencil"></i>
+                        <span>LƯU THAY ĐỔI</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        </form>
+    </div>
+</div>
+</div>
+<div id="toast"></div>
+<script src="js/admin.js"></script>
+<script src="js/toast-message.js"></script>
 </body>
 
 </html>

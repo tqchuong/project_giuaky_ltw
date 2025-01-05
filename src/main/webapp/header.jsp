@@ -87,7 +87,7 @@
                 <i class="fa-solid fa-basket-shopping"></i>
                 <span class="count-product-cart">0</span>
               </div>
-              <span style="color: #333">Giỏ hàng</span>
+              <span>Giỏ hàng</span>
             </a>
           </li>
         </ul>
@@ -96,4 +96,3 @@
     </div>
   </div>
 </header>
-
