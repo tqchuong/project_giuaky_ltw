@@ -23,6 +23,10 @@ public class Products {
     public Products() {
     }
 
+    public Products(Category category) {
+        this.category = category;
+    }
+
     public Products(int id, String productName, int categoryID, double price, String imageURL, String shortDescription, int stockQuantity, Category category, List<ProductImages> images, ProductsDetail productsDetail, List<Reviews> reviews, int productViews, double averageRating, Timestamp uploadDate) {
         this.id = id;
         this.productName = productName;

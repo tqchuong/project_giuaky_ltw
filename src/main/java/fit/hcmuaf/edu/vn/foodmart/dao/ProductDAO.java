@@ -15,12 +15,12 @@ public class ProductDAO {
     // Lấy toàn bộ danh sách sản phẩm từ CSDL
     public List<Products> getAllProducts() {
         String sql = """
-            
-                SELECT p.ID AS id, p.ProductName AS productName, 
-                   p.CategoryID AS categoryId, p.Price AS price, 
-                   p.ImageURL AS imageUrl, c.CategoryName AS categoryName
-            FROM products p
-            INNER JOIN categories c ON p.CategoryID = c.CategoryID
+             SELECT p.Id AS id, p.ProductName AS productName,
+                    p.CategoryID AS categoryId, p.Price AS price,
+                 p.ImageURL AS imageUrl,  c.CategoryName AS categoryName, p.StockQuantity ,c.CategoryName, p.ShortDescription
+                                   FROM products p
+                                   INNER JOIN  categories c
+                                   ON p.CategoryID = c.Id;
             """;
 
         try (Handle handle = jdbi.open()) {
@@ -36,7 +36,9 @@ public class ProductDAO {
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
                         product.setImageURL(rs.getString("imageUrl"));
-                        product.setCategory(category);
+                        product.setStockQuantity(rs.getInt("StockQuantity"));
+                        product.setShortDescription(rs.getString("shortDescription"));
+
 
                         return product;
                     })

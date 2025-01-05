@@ -189,7 +189,7 @@
                         <div class="list-info">
                             <h4> <%= product.getProductName() %></h4>
                             <p class="list-note"><%= product.getShortDescription() %></p>
-                            <span class="list-category"><%= product.getCategoryID() %></span>
+                            <span class="list-category"><%= product.getCategory() %></span>
                             <span class="list-slkho"><%= product.getStockQuantity() %></span>
                         </div>
                     </div>
@@ -273,24 +273,32 @@
                     %>
                     <tr>
                         <td><%= index %></td> <!-- Hiển thị STT -->
-<%--                        <td><%= user.getUserId() %></td> <!-- Hiển thị ID người dùng -->--%>
                         <td><%= user.getUsername() %></td>
                         <td><%= user.getPhone() %></td>
                         <td><%= user.getCreated_at() %></td>
                         <td>
-                            <span class="<%= user.getUserStatus().equals("Đang hoạt động") ? "status-complete" : "status-no-complete" %>">
-                            <%= user.getUserStatus() %></span>
+            <span class="<%= user.getUserStatus().equals("Đang hoạt động") ? "status-complete" : "status-no-complete" %>">
+                <%= user.getUserStatus() %>
+            </span>
                         </td>
                         <td class="control control-table">
-                            <button class="btn-edit-customer" id="edit-account"><i class="fa-light fa-pen-to-square"></i></button>
-                            <button class="btn-delete" id="delete-account"><i
-                                    class="fa-regular fa-trash"></i></button>
+                            <button class="btn-edit-customer" id="edit-account">
+                                <i class="fa-light fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn-delete" data-id="<%= user.getUserId() %>">
+                                <i class="fa-regular fa-trash"></i>
+                            </button>
                         </td>
                     </tr>
-                    <%   index++;} %>
+                    <%
+                            index++;
+                        }
+                    %>
                     </tbody>
+
                 </table>
             </div>
+
             <!-- </div> -->
         </div>
         <!-- Order  -->
@@ -682,38 +690,25 @@
     <div class="modal-container">
         <!-- Nút đóng -->
         <button class="modal-close product-form"><i class="fa-regular fa-xmark"></i></button>
-        </button>
         <!-- Tiêu đề Modal -->
         <h3 class="modal-container-title add-customer-e">THÊM KHÁCH HÀNG MỚI</h3>
         <h3 class="modal-container-title edit-customer-e">CHỈNH SỬA THÔNG TIN</h3>
         <!-- Nội dung Form -->
-        <form id="customer-form">
-            <div class="form-group">
-                <label for="customer-fullname" class="form-label">Tên đầy đủ</label>
-                <input
-                        id="customer-fullname"
-                        name="fullname"
-                        type="text"
-                        placeholder="VD: Tuquangchuong"
-                        class="form-control">
-            </div>
+        <form action="addCustomer" method="post" id="customer-form">
+            <input type="hidden" name="action" id="form-action" value="add">
+            <input type="hidden" name="id" id="customer-id" value="">
+
+            < <div class="form-group">
+            <label for="customer-fullname" class="form-label">Tên đầy đủ</label>
+            <input id="customer-fullname" name="fullname" type="text" placeholder="VD: Tuquangchuong" class="form-control" required>
+        </div>
             <div class="form-group">
                 <label for="customer-phone" class="form-label">Số điện thoại</label>
-                <input
-                        id="customer-phone"
-                        name="phone"
-                        type="text"
-                        placeholder="Nhập số điện thoại"
-                        class="form-control">
+                <input id="customer-phone" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="customer-password" class="form-label">Mật khẩu</label>
-                <input
-                        id="customer-password"
-                        name="password"
-                        type="password"
-                        placeholder="Nhập mật khẩu"
-                        class="form-control">
+                <input id="customer-password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control" required>
             </div>
             <!-- Trạng thái (Chỉ dành cho chỉnh sửa) -->
             <div class="form-group edit-customer-e">
@@ -722,14 +717,13 @@
                 <label for="customer-status" class="switch"></label>
             </div>
             <!-- Nút Hành Động -->
-            <button class="form-submit add-account-e" id="signup-button">Đăng ký</button>
-            <button class="form-submit edit-customer-e" id="update-customer-button">
+            <button type="submit" class="form-submit add-account-e" id="signup-button">Đăng ký</button>
+            <button type="submit" class="form-submit edit-customer-e" id="update-customer-button">
                 <i class="fa-regular fa-floppy-disk"></i> Lưu thông tin
             </button>
         </form>
     </div>
 </div>
-
 
 
 <div class="modal add-voucher">

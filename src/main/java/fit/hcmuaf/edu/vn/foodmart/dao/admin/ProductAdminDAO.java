@@ -3,6 +3,11 @@ package fit.hcmuaf.edu.vn.foodmart.dao.admin;
 import fit.hcmuaf.edu.vn.foodmart.dao.db.DBConnect;
 import fit.hcmuaf.edu.vn.foodmart.model.Products;
 import fit.hcmuaf.edu.vn.foodmart.model.Users;
+import fit.hcmuaf.edu.vn.foodmart.model.Category;
+import org.jdbi.v3.core.mapper.reflect.ConstructorMapper;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 
@@ -17,14 +22,16 @@ public class ProductAdminDAO {
 
     // 1. Lấy tất cả sản phẩm (kèm CategoryName)
     public List<Products> getAllProducts() {
-        String sql = "SELECT p.Id, p.ProductName, c.CategoryName, p.Price, p.UploadDate, " +
-                "p.ImageURL, p.Description, p.StockQuantity " +
-                "FROM Products p LEFT JOIN Categories c ON p.CategoryID = c.Id";
-        try (Handle handle = jdbi.open()) {
-            return handle.createQuery(sql)
-                    .mapToBean(Products.class)
-                    .list();
-        }
+        String sql = "SELECT p.Id AS id, p.ProductName AS productName, " +
+                "p.CategoryID AS categoryId, p.Price AS price, " +
+                "p.ImageURL AS imageUrl, c.CategoryName AS categoryName, " +
+                "p.StockQuantity AS stockQuantity, p.ShortDescription AS shortDescription " +
+                "FROM products p INNER JOIN categories c ON p.CategoryID = c.Id";
+        return jdbi.withHandle(handle ->
+                handle.createQuery(sql)
+                        .mapToBean(Products.class)
+                        .list()
+        );
     }
 
     // 2. Thêm sản phẩm mới

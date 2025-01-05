@@ -307,22 +307,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
 // Đóng tất cả modal trước khi mở modal mới
 function closeAllModals() {
     document.querySelectorAll(".modal").forEach(modal => {
         modal.classList.remove("open");
     });
-}
-
-// Reset các giá trị mặc định cho modal thêm/chỉnh sửa sản phẩm
-function resetProductForm() {
-    document.querySelector(".upload-image-preview").src = "../image/admin/blank-image.png"; // Hình ảnh mặc định
-    document.getElementById("ten-mon").value = "";
-    document.getElementById("gia-moi").value = "";
-    document.getElementById("mo-ta").value = "";
-    document.getElementById("chon-mon").value = ""; // Đặt danh mục về mặc định
 }
 
 // Reset các giá trị mặc định cho modal thêm/chỉnh sửa khách hàng
@@ -332,48 +321,6 @@ function resetCustomerForm() {
     document.getElementById("customer-password").value = "";
     document.getElementById("customer-status").checked = false;
 }
-
-// Mở modal thêm mới sản phẩm
-document.getElementById("btn-add-product").addEventListener("click", () => {
-    closeAllModals(); // Đóng các modal khác
-    const modal = document.querySelector(".add-product");
-    modal.classList.add("open");
-
-    // Hiển thị giao diện "Thêm mới sản phẩm"
-    document.querySelectorAll(".add-product-e").forEach(item => item.style.display = "block");
-    document.querySelectorAll(".edit-product-e").forEach(item => item.style.display = "none");
-
-    // Reset các giá trị trong modal về mặc định
-    resetProductForm();
-});
-
-// Mở modal chỉnh sửa sản phẩm
-document.querySelectorAll(".btn-edit-product").forEach(button => {
-    button.addEventListener("click", function () {
-        closeAllModals(); // Đóng các modal khác
-        const modal = document.querySelector(".add-product");
-        modal.classList.add("open");
-
-        // Hiển thị giao diện "Chỉnh sửa sản phẩm"
-        document.querySelectorAll(".add-product-e").forEach(item => item.style.display = "none");
-        document.querySelectorAll(".edit-product-e").forEach(item => item.style.display = "block");
-
-        // Lấy dữ liệu sản phẩm từ danh sách
-        const productItem = button.closest(".list");
-        const title = productItem.querySelector(".list-info h4").textContent.trim();
-        const desc = productItem.querySelector(".list-note").textContent.trim();
-        const category = productItem.querySelector(".list-category").textContent.trim();
-        const price = productItem.querySelector(".list-current-price").textContent.replace("₫", "").trim();
-        const imageSrc = productItem.querySelector(".list-left img").src;
-
-        // Điền dữ liệu vào modal chỉnh sửa sản phẩm
-        document.querySelector(".upload-image-preview").src = imageSrc;
-        document.getElementById("ten-mon").value = title;
-        document.getElementById("gia-moi").value = price;
-        document.getElementById("mo-ta").value = desc;
-        document.getElementById("chon-mon").value = category;
-    });
-});
 
 // Mở modal thêm mới khách hàng
 document.getElementById("btn-add-user").addEventListener("click", function () {
@@ -385,11 +332,11 @@ document.getElementById("btn-add-user").addEventListener("click", function () {
     document.querySelectorAll(".add-customer-e").forEach(item => item.style.display = "block");
     document.querySelectorAll(".edit-customer-e").forEach(item => item.style.display = "none");
 
-    // Ẩn nút "Lưu thông tin"
-    document.getElementById("update-customer-button").style.display = "none";
-
     // Hiển thị nút "Đăng ký"
     document.getElementById("signup-button").style.display = "block";
+
+    // Ẩn nút "Lưu thông tin"
+    document.getElementById("update-customer-button").style.display = "none";
 
     // Reset form về mặc định
     resetCustomerForm();
@@ -434,3 +381,32 @@ document.querySelectorAll(".modal-close").forEach(closeButton => {
     });
 });
 
+// Xóa người dùng khi nhấn nút Xóa
+// Thêm sự kiện xóa user
+document.querySelectorAll('.btn-delete').forEach(button => {
+    button.addEventListener('click', function () {
+        const userId = this.getAttribute('data-id'); // Lấy ID người dùng từ data-id
+        if (confirm('Bạn có chắc chắn muốn xóa người dùng này?')) {
+            fetch('/deleteUser', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `id=${userId}`
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message); // Hiển thị thông báo thành công
+                        this.closest('tr').remove(); // Xóa dòng tương ứng trong bảng
+                    } else {
+                        alert(data.message); // Hiển thị thông báo thất bại
+                    }
+                })
+                .catch(error => {
+                    console.error('Lỗi:', error);
+                    alert('Có lỗi xảy ra, vui lòng thử lại!');
+                });
+        }
+    });
+});
