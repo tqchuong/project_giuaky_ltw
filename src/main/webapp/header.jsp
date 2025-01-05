@@ -53,33 +53,50 @@
           <li class="header-middle-right-item dropdown open">
             <i class="fa-solid fa-user"></i>
             <div class="auth-container">
-              <span class="text-dndk">Đăng nhập / Đăng ký</span>
-              <span class="text-tk" id="user-fullname">Tài khoản <i
-                      class="fa-sharp fa-solid fa-caret-down"></i></span>
+
+              <c:if test="${sessionScope.auth != null }">
+                <h4 ><c:out value="${sessionScope.auth.username}"/> </h4>
+                <ul class="header-middle-right-menu" id="auth-options">
+                  <c:if test="${sessionScope.auth.role == 'Admin'}">
+                    <li><a href="admin.jsp"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a></li>
+                  </c:if>
+                  <li><a href="changeInfor.jsp"  ><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
+                  <li><a href="changeInfor.jsp" ><i class="fa-solid fa-bag-shopping"></i> Đơn hàng đã mua</a></li>
+                  <li class="border" style="display: flex; justify-content: center; align-items: center;">
+                    <form action="login?action=logout" method="POST">
+                      <button type="submit"
+                              style="background: none; border: none; color: #333; font-size: 15.5px; cursor: pointer; padding: 0;">
+                        <i class="fa-solid fa-right-from-bracket"></i>Thoát tài khoản
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </c:if>
+              <c:if test="${sessionScope.auth == null }">
+                <span class="text-dndk">Đăng nhập / Đăng ký</span>
+                <span class="text-tk" id="user-fullname">Tài khoản <i
+                        class="fa-sharp fa-solid fa-caret-down"></i></span>
+                <!-- Menu sẽ được cập nhật bằng JavaScript -->
+                <ul class="header-middle-right-menu" id="user-menu" style="display: none;"></ul>
+
+                <!-- Các mục đăng nhập và đăng ký sẽ ẩn đi nếu người dùng đã đăng nhập -->
+                <ul class="header-middle-right-menu" id="auth-options">
+                  <li><a href="login.jsp?loginForm" id="login"><i
+                          class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a></li>
+                  <li><a href="login.jsp?registerForm" id="signup"><i class="fa-solid fa-user-plus"></i>
+                    Đăng ký</a></li>
+                </ul>
+              </c:if>
             </div>
-
-<%--            <li><a href="">Xin chào,--%>
-<%--                    <% if(user != null ){--%>
-<%--                      out.print(user.getName());  --%>
-<%--                    }%>--%>
-<%--                </a>--%>
-<%--            </li>--%>
-            <!-- Menu sẽ được cập nhật bằng JavaScript -->
-            <ul class="header-middle-right-menu" id="user-menu" style="display: none;"></ul>
-
-            <!-- Các mục đăng nhập và đăng ký sẽ ẩn đi nếu người dùng đã đăng nhập -->
-            <ul class="header-middle-right-menu" id="auth-options">
-              <li><a href="login.jsp?loginForm" id="login"><i
-                      class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a></li>
-              <li><a href="login.jsp?registerForm" id="signup"><i class="fa-solid fa-user-plus"></i>
-                Đăng ký</a></li>
-            </ul>
           </li>
+
           <li class="header-middle-right-item open">
             <a href="shoppingcart.jsp">
               <div class="cart-icon-menu">
                 <i class="fa-solid fa-basket-shopping"></i>
-                <span class="count-product-cart">0</span>
+                <span class="count-product-cart"> ${sessionScope.cart.list.size()}</span>
+
+
               </div>
               <span>Giỏ hàng</span>
             </a>

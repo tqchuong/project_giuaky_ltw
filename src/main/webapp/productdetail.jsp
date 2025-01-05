@@ -39,19 +39,18 @@
             <ul class="menu-list">
                 <li class="menu-list-item">
                     <a class="menu-link" href="home.jsp">
-                        <i class="fa-sharp fa-regular fa-house " style="color: #B5292F;"></i>
+                        <i class="fa-sharp fa-regular fa-house" style="color: #B5292F;"></i>
                         Trang chủ
                     </a>
                 </li>
 
 
                 <li class="menu-list-item">
-                    <a class="menu-Category" href="products.jsp">
+                    <a class="menu-Category" href="products">
                         <i class="fa-solid fa-shop" style="padding-right: 5px;color: #B5292F;"></i>
                         Sản phẩm
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
-
                 </li>
                 <li class="menu-list-item"><a class="hotpro-link" href="hotproducts.jsp">
                     <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
@@ -149,15 +148,15 @@
                                             <div class="quantity-group">
                                                 <label for="quantity">Số Lượng:</label>
                                                 <div class="quantity-control">
-                                                    <button type="button" class="quantity-left-minus btn">-</button>
-                                                    <input type="text" id="quantity" name="quantity" class="quantity-input" value="1" min="1" max="100" readonly>
-                                                    <button type="button" class="quantity-right-plus btn">+</button>
+                                                    <button type="button" class="quantity-left-minus btn" onclick="updateQuantity(-1)">-</button>
+                                                    <input type="text" id="quantity" name="quantity" class="quantity-input" value="1" min="1" max="${product.stockQuantity}" readonly>
+                                                    <button type="button" class="quantity-right-plus btn" onclick="updateQuantity(1)">+</button>
                                                 </div>
                                                 <div class="stock-number">Còn ${product.stockQuantity} sản phẩm</div>
                                             </div>
                                             <div class="button-group">
                                                 <button type="button" class="btn btn-secondary add-to-cart"
-                                                        onclick="window.location.href='add-cart?pid=${product.ID}'">
+                                                        onclick="addToCart(${product.ID})">
                                                     <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
                                                 </button>
 
@@ -205,7 +204,7 @@
                                         <div class="col-lg-6 d-flex flex-wrap gap-3">
                                             <div class="col-md-2">
                                                 <div class="image-holder">
-                                                    <img src="${review.user.imageURLUser}" alt="review" class="img-fluid rounded-circle">
+<%--                                                    <img src="${review.user.imageURLUser}" alt="review" class="img-fluid rounded-circle">--%>
                                                 </div>
                                             </div>
                                             <div class="col-md-8">

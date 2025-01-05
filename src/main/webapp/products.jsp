@@ -153,7 +153,7 @@
                         <div class="food-info">
                             <div class="card-content">
                                 <div class="card-title">
-                                    <a href="#" class="card-title-link">${product.productName}</a>
+                                    <a href="productDetails?id=${product.ID}" class="card-title-link">${product.productName}</a>
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -162,7 +162,7 @@
                                     <span class="current-price">${product.price}₫</span>
                                 </div>
                                 <div class="product-buy">
-                                    <button class="card-button order-item">
+                                    <button class="card-button order-item" onclick="window.location.href='productDetails?id=${product.ID}'">
                                         <i class="fa-solid fa-cart-plus"></i> Đặt hàng
                                     </button>
                                 </div>

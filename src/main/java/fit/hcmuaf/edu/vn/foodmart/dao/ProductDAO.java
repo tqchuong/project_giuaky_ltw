@@ -18,7 +18,7 @@ public class ProductDAO {
             
                 SELECT p.ID AS id, p.ProductName AS productName, 
                    p.CategoryID AS categoryId, p.Price AS price, 
-                   p.ImageURL AS imageUrl, c.CategoryName AS categoryName
+                   p.ImageURL AS imageUrl,p.ShortDescription AS shortDescription,p.StockQuantity as stockQuantity, c.CategoryName AS categoryName
             FROM products p
             INNER JOIN categories c ON p.CategoryID = c.CategoryID
             """;
@@ -36,6 +36,8 @@ public class ProductDAO {
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
                         product.setImageURL(rs.getString("imageUrl"));
+                        product.setShortDescription(rs.getString("shortDescription"));
+                        product.setStockQuantity(rs.getInt("stockQuantity"));
                         product.setCategory(category);
 
                         return product;
@@ -177,7 +179,7 @@ public class ProductDAO {
                         // Thông tin người dùng đánh giá
                         Users user = new Users();
                         user.setUsername(rs.getString("username"));
-                        user.setImageURLUser(rs.getString("imageURLUser"));
+//                        user.setImageURLUser(rs.getString("imageURLUser"));
 
                         review.setUser(user); // Gắn thông tin người dùng vào review
                         return review;
@@ -267,8 +269,8 @@ public class ProductDAO {
             System.out.println("\n===== Đánh giá =====");
             if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
                 for (Reviews review : productDetails.getReviews()) {
-                    System.out.println("- Người dùng: " + review.getUser().getUsername()
-                            + " (Ảnh: " + review.getUser().getImageURLUser() + ")");
+                   System.out.println("- Người dùng: " + review.getUser().getUsername()
+                           + " (Ảnh: " + review.getUser() + ")");
                     System.out.println("  Xếp hạng: " + review.getRating());
                     System.out.println("  Nội dung: " + review.getReviewText());
                 }

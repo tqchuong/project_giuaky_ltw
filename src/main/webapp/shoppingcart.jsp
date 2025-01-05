@@ -50,9 +50,12 @@
                         <input type="checkbox" id="selectAll" /> Chọn tất cả
                     </label>
 
-                    <button class="deleteItem">Xoá</button>
-
+                    <!-- Nút xóa tất cả sản phẩm -->
+                    <button class="btn-remove-all">
+                        <i class="fas fa-trash"></i> Xóa tất cả
+                    </button>
                 </div>
+            </div>
 
                 <!-- Hiển thị danh sách sản phẩm trong giỏ hàng -->
                 <c:if test="${sessionScope.cart != null}">
@@ -115,10 +118,10 @@
             <div class="summary grid_12">
                 <div class="inner_container">
                     <div class="summary-content">
-                        <!-- Total Amount Display -->
                         <div class="col_1of2 total">
-                            <span class="amount">0 VNĐ</span>
+                            <span class="amount">${sessionScope.cart.totalAmount != null ? sessionScope.cart.totalAmount : 0} VNĐ</span>
                         </div>
+                    </div>
                         <!-- Summary Buttons -->
                         <div class="btn-summary">
                             <a href="home.jsp" class="btn-checkout btn-reverse" role="button">Tiếp tục mua sắm</a>

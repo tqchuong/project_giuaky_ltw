@@ -14,28 +14,29 @@ public class Add extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProductService ps = new ProductService();
-        Products pid = ps.getProductDetailsById(Integer.parseInt(request.getParameter("pid")));
+        int productId = Integer.parseInt(request.getParameter("pid"));
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        String redirectUrl = request.getParameter("redirectUrl"); // Lấy số lượng từ request
+        Products product = ps.getProductDetailsById(productId);
 
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-
-        if (pid == null) {
-            response.getWriter().write("{\"status\": \"error\", \"message\": \"Product not found\"}");
-        } else {
-            HttpSession session = request.getSession(true);
-            Cart cart = (Cart) session.getAttribute("cart");
-            if (cart == null) {
-                cart = new Cart();
-            }
-
-            cart.add(pid);
-            session.setAttribute("cart", cart);
-
-            response.getWriter().write("{\"status\": \"success\", \"message\": \"Product added to cart\"}");
+        HttpSession session = request.getSession(true);
+        Cart cart = (Cart) session.getAttribute("cart");
+        if (cart == null) {
+            cart = new Cart();
         }
+
+        if (product != null) {
+            cart.add(product, quantity); // Thêm sản phẩm với số lượng chỉ định
+            session.setAttribute("cart", cart);
+            session.setAttribute("productTypesCount", cart.getProductTypesCount());
+            session.setAttribute("totalAmount", cart.getTotalAmount());
+        }
+        response.sendRedirect(redirectUrl);
+// Không trả về bất kỳ thông báo nào.
     }
 
-    @Override
+
+        @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 }
