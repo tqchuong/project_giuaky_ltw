@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="project:war" />
+      <artifact name="FoodMart:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,37 +10,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b456d60-5884-49d4-ad25-687dfb03df07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/CheckoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ObjectDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/OrderDetailDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ShippingDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Coupon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/OrderDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Shipping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/utils/PasswordUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/Cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/Cart/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/Cart/CartProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/Cart/CartProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ChangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ChangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/FlashSaleController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ProductDetailsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ProductDetailsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/admin/AddCustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/admin/AddCustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/admin/DeleteUserServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Add.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Remove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Remove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Show.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Update.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ProductDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/admin/ProductAdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/admin/ProductAdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/admin/UserAdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/admin/UserAdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/db/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/db/DBConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/ProductsView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/productdetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/productdetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/changeInfor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/changeInfor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/coupon.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/coupon.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/flashsale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/flashsale.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/productdetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/productdetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/shoppingcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/shoppingcart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hotproducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hotproducts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/productdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/productdetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shoppingcart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +58,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Servlet" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -59,22 +67,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;PhuocThinh1337&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/tqchuong/project_giuaky_ltw.git&quot;,
-    &quot;accountId&quot;: &quot;284141c4-03b4-425f-b9a1-1f96a3eb889f&quot;
-  }
-}</component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -98,50 +90,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DBConnect.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DBProperties.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDBIConnect.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Prodducts2.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.ProductController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProductDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserDAO.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Run.executor&quot;: &quot;Debug&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.31.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.productdetail.jsp (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Tomcat Server.productdetail.jsp.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;npt&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Trash/lab4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CouponDAO.executor": "Run",
+    "Application.DBConnect.executor": "Run",
+    "Application.DiscountDAO.executor": "Run",
+    "Application.HomeServlet.executor": "Run",
+    "Application.JDBIConnect.executor": "Run",
+    "Application.PasswordUtils.executor": "Run",
+    "Application.ProductDAO.executor": "Run",
+    "Application.UserDAO.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 10.1.31.executor": "Run",
+    "git-widget-placeholder": "hmc",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "V:/LTW/FoodMart5/FoodMart/src/main/java/fit/hcmuaf/edu/vn/foodmart",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="V:\LTW\FoodMart5\FoodMart\src\main\java\fit\hcmuaf\edu\vn\foodmart" />
+      <recent name="V:\LTW\FoodMart5\FoodMart\src\main\java\fit\hcmuaf\edu\vn\foodmart\dao" />
+      <recent name="V:\LTW\FoodMart5\FoodMart\src\main\java\fit\hcmuaf\edu\vn\foodmart\controller" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="V:\LTW\FoodMart\src\main\webapp\html" />
       <recent name="V:\LTW\FoodMart\src\main\webapp" />
+      <recent name="V:\LTW\FoodMart\src\main\webapp\WEB-INF" />
+      <recent name="V:\LTW\FoodMart\src\main\webapp\html" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fit.hcmuaf.edu.vn.foodmart.model" />
+      <recent name="fit.hcmuaf.edu.vn.foodmart.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Run">
-    <configuration name="ProductController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.controller.ProductController" />
-      <module name="project" />
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.31">
+    <configuration name="CouponDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.CouponDAO" />
+      <module name="FoodMart" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.controller.cart.*" />
+          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,7 +155,7 @@
     </configuration>
     <configuration name="ProductDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" />
-      <module name="project" />
+      <module name="FoodMart" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.*" />
@@ -162,31 +166,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.UserDAO" />
-      <module name="project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Run" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Run" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="project:war">
+        <artifact name="FoodMart:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/project" />
+            <option name="CONTEXT_PATH" value="/FoodMart" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="ce19489e-94ba-406f-ae76-797e4ca2d225" />
+        <option name="BASE_DIRECTORY_NAME" value="28daf337-7769-4114-bda8-bd104f022d3c" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -194,7 +185,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50704" />
+        <option name="DEBUG_PORT" value="54145" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -259,117 +250,27 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="project:war" />
-        </option>
-      </method>
-    </configuration>
-    <configuration name="productdetail.jsp (1)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Run" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/productdetail.jsp" />
-      <deployment>
-        <artifact name="project:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/project_war_exploded" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="f1fdf05e-9623-4760-9d8d-b5f675752ded" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="64827" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="project:war exploded" />
-        </option>
-      </method>
-    </configuration>
-    <configuration name="productdetail.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Run" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/productdetail.jsp" />
-      <deployment>
-        <artifact name="project:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/project_war_exploded" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="a78d4021-d870-4c96-aa8e-2e82fc716f1a" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="64777" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="project:war exploded" />
+          <artifact name="FoodMart:war" />
         </option>
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.UserDAO" />
-      <item itemvalue="Application.ProductController" />
+      <item itemvalue="Application.CouponDAO" />
       <item itemvalue="Application.ProductDAO" />
-      <item itemvalue="Tomcat Server.Run" />
-      <item itemvalue="Tomcat Server.productdetail.jsp" />
-      <item itemvalue="Tomcat Server.productdetail.jsp (1)" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.31" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserDAO" />
         <item itemvalue="Application.ProductDAO" />
-        <item itemvalue="Tomcat Server.productdetail.jsp (1)" />
-        <item itemvalue="Tomcat Server.productdetail.jsp" />
-        <item itemvalue="Application.ProductController" />
+        <item itemvalue="Application.CouponDAO" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -393,63 +294,53 @@
       <workItem from="1733926973682" duration="2116000" />
       <workItem from="1733930746756" duration="546000" />
       <workItem from="1733938215198" duration="55000" />
-      <workItem from="1734076836130" duration="8452000" />
-      <workItem from="1734106636404" duration="2041000" />
-      <workItem from="1734153330480" duration="10339000" />
-      <workItem from="1734182296670" duration="8139000" />
-      <workItem from="1734229906828" duration="9218000" />
-      <workItem from="1734366061933" duration="167000" />
-      <workItem from="1734451938445" duration="2328000" />
-      <workItem from="1734494050970" duration="14320000" />
-      <workItem from="1734574296119" duration="12560000" />
-      <workItem from="1734665476623" duration="3182000" />
-      <workItem from="1734668802347" duration="22880000" />
-      <workItem from="1735012581047" duration="82000" />
-      <workItem from="1735045388973" duration="3215000" />
-      <workItem from="1735285433436" duration="420000" />
-      <workItem from="1735881432343" duration="32202000" />
-      <workItem from="1735967809028" duration="33257000" />
-      <workItem from="1736046702928" duration="29593000" />
+      <workItem from="1734012719156" duration="3128000" />
+      <workItem from="1734022618942" duration="573000" />
+      <workItem from="1734076108371" duration="230000" />
+      <workItem from="1734149151284" duration="3499000" />
+      <workItem from="1734152697522" duration="4202000" />
+      <workItem from="1734159401520" duration="29794000" />
+      <workItem from="1734228668300" duration="9122000" />
+      <workItem from="1734275086305" duration="11367000" />
+      <workItem from="1734286514383" duration="421000" />
+      <workItem from="1734342786469" duration="789000" />
+      <workItem from="1734344774209" duration="11888000" />
+      <workItem from="1734457397582" duration="5433000" />
+      <workItem from="1734510884601" duration="64000" />
+      <workItem from="1734513417677" duration="5590000" />
+      <workItem from="1734531515324" duration="5325000" />
+      <workItem from="1734635300586" duration="2496000" />
+      <workItem from="1734943506779" duration="495000" />
+      <workItem from="1734945323734" duration="4640000" />
+      <workItem from="1734950230641" duration="355000" />
+      <workItem from="1734960714278" duration="1607000" />
+      <workItem from="1734962536410" duration="8244000" />
+      <workItem from="1735118385499" duration="7492000" />
+      <workItem from="1735185702153" duration="212000" />
+      <workItem from="1735201695419" duration="4756000" />
+      <workItem from="1735216046638" duration="4383000" />
+      <workItem from="1735268422617" duration="21000" />
+      <workItem from="1735284016839" duration="108000" />
+      <workItem from="1735286219065" duration="5897000" />
+      <workItem from="1736094625135" duration="4896000" />
+      <workItem from="1736136804491" duration="10576000" />
+      <workItem from="1736154321835" duration="1028000" />
+      <workItem from="1736155686680" duration="952000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java</url>
-          <line>98</line>
-          <properties class="fit.hcmuaf.edu.vn.foodmart.dao.UserDAO" method="add">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/CheckoutServlet.java</url>
-          <line>33</line>
-          <properties class="fit.hcmuaf.edu.vn.foodmart.controller.CheckoutServlet" method="doPost">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="org.apache.catalina.connector.RequestFacade" memberName="request" />
-        <PinnedItemInfo parentTag="org.apache.catalina.connector.ResponseFacade" memberName="response" />
-        <PinnedItemInfo parentTag="org.apache.catalina.session.StandardSession" memberName="attributes" />
-      </pinned-members>
-    </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-        <watch expression="this" />
-      </configuration>
-    </watches-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

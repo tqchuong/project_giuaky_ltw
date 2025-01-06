@@ -18,7 +18,7 @@ public class DBConnect {
             int port = 3306;  // Cổng kết nối MySQL
             String dbname = "test1";  // Tên cơ sở dữ liệu
             String username = "root";  // Tên đăng nhập MySQL
-            String password = "";
+            String password = "";  // Mật khẩu MySQL
             String options = "useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";  // Các tùy chọn kết nối
 
             // Tạo URL kết nối
@@ -88,7 +88,7 @@ public class DBConnect {
 
     public static void main(String[] args) {
         // Hiển thị các sản phẩm và người dùng khi chạy chương trình
-        displayProducts();
-
+//        displayProducts();
+        displayUsers();
     }
 }

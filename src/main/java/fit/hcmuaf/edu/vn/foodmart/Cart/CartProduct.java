@@ -1,9 +1,6 @@
 package fit.hcmuaf.edu.vn.foodmart.Cart;
 
-import fit.hcmuaf.edu.vn.foodmart.model.ProductImages;
-
 import java.util.Date;
-import java.util.List;
 
 public class CartProduct {
         private int id;              // ID của giỏ hàng

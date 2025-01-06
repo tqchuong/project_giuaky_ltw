@@ -2,14 +2,14 @@ package fit.hcmuaf.edu.vn.foodmart.controller.cart;
 
 import com.google.gson.Gson;
 import fit.hcmuaf.edu.vn.foodmart.Cart.Cart;
-import fit.hcmuaf.edu.vn.foodmart.Cart.CartProduct;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 
 @WebServlet(name = "ShowCart", value = "/ShowCart")
 public class Show extends HttpServlet {

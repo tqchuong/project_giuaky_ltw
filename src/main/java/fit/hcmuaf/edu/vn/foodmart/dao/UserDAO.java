@@ -404,9 +404,9 @@ public class UserDAO implements ObjectDAO {
 //        System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
 
             // Tạo một user mới với mật khẩu đã mã hóa
-            String passwordHash = PasswordUtils.hashPassword("matkhau123"); // Mã hóa mật khẩu
-            Users newUser = new Users("testuser", passwordHash, "testuser@example.com", "0123456789");
-
+            String passwordHash = PasswordUtils.hashPassword("matkhau1234"); // Mã hóa mật khẩu
+//            Users newUser = new Users("testuser", passwordHash, "testuser@example.com", "0123456789");
+        Users newUser = new Users("testuser2", passwordHash, "testuser4@example.com", "0126789");
             // Thêm user vào database
             boolean success = dao.add(newUser);
 
