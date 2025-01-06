@@ -386,7 +386,7 @@ public class UserDAO implements ObjectDAO {
             System.out.println(user);
         }
 
-        // Kiểm tra đăng nhập
+
         UserDAO dao = new UserDAO();
 
         String passwordHash = PasswordUtils.hashPassword("admin123");

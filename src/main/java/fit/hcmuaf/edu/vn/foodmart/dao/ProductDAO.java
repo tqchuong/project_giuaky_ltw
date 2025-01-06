@@ -6,6 +6,7 @@ import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ProductDAO {
@@ -13,7 +14,7 @@ public class ProductDAO {
     private static Jdbi jdbi = DBConnect.getJdbi();  // Lấy jdbi từ DBConnect
 
     // Lấy toàn bộ danh sách sản phẩm từ CSDL
-    public List<Products> getAllProducts() {
+   public List<Products> getAllProducts() {
         String sql = """
              SELECT p.Id AS id, p.ProductName AS productName,
                     p.CategoryID AS categoryId, p.Price AS price,
@@ -227,14 +228,61 @@ public class ProductDAO {
 
     }
 
+    public List<Products> getHotProducts(int limit) {
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT ");
+        sql.append("p.Id AS ProductID, ");
+        sql.append("p.ProductName, ");
+        sql.append("p.CategoryID, ");
+        sql.append("p.Price, ");
+        sql.append("p.ImageURL, ");
+        sql.append("p.UploadDate, ");
+        sql.append("p.ShortDescription, ");
+        sql.append("p.StockQuantity, ");
+        sql.append("SUM(pv.View) AS TotalViews ");
+        sql.append("FROM Products p ");
+        sql.append("JOIN Products_View pv ");
+        sql.append("ON p.Id = pv.ProductID ");
+        sql.append("GROUP BY p.Id, p.ProductName, p.Price, p.ImageURL, p.ShortDescription ");
+        sql.append("ORDER BY TotalViews DESC ");
+        sql.append("LIMIT :limit");
+
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind("limit",limit)
+                    .mapToBean(Products.class)
+                    .list();
+        } catch (Exception e) {
+            System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
+            e.printStackTrace();
+            return Collections.emptyList();  // Trả về danh sách rỗng thay vì null
+        }
+    }
+
+    // Test phương thức getLatestProducts()
 
 
 
     // Test phương thức getAllProducts() và getProductDetailsById()
     public static void main(String[] args) {
         ProductDAO dao = new ProductDAO();
+//        // Lấy danh sách các sản phẩm mới nhất (2 sản phẩm gần nhất)
+//        List<Products> latestProducts = dao.getLatestProducts(6);
+//
+//        // In danh sách sản phẩm mới nhất
+//        if (latestProducts != null && !latestProducts.isEmpty()) {
+//            System.out.println("Danh sách sản phẩm mới nhất:");
+//            for (Products product : latestProducts) {
+//                System.out.println("Product: " + product.getProductName());
+//                System.out.println("Image URL: " + product.getImageURL());
+//            }
+//
+//        } else {
+//            System.out.println("Không có sản phẩm mới hoặc có lỗi khi truy vấn.");
+//        }
 
         // Test getAllProducts()
+        System.out.println("===== Tất cả sản phẩm =====");
         List<Products> products = dao.getAllProducts();
         if (products != null) {
             for (Products product : products) {
@@ -244,46 +292,57 @@ public class ProductDAO {
             System.out.println("Không có sản phẩm hoặc có lỗi khi truy vấn.");
         }
 
-        // Test hàm getProductDetailsById
-        int productId = 3; // Thay ID bằng sản phẩm thực tế có trong DB
-        Products productDetails = dao.getProductDetailsById(productId);
-        double averageRating = dao.getAverageRating(productId);
-        if (productDetails != null) {
-            System.out.println("===== Chi tiết sản phẩm =====");
-            System.out.println("ID: " + productDetails.getId());
-            System.out.println("Tên sản phẩm: " + productDetails.getProductName());
-            System.out.println("Giá: " + productDetails.getPrice());
-            System.out.println("Mô tả ngắn: " + productDetails.getShortDescription());
-            System.out.println("Danh mục: " + (productDetails.getCategory() != null
-                    ? productDetails.getCategory().getCategoryName() : "Không có"));
-
-            System.out.println("\n===== Danh sách ảnh =====");
-            if (productDetails.getImages() != null && !productDetails.getImages().isEmpty()) {
-                for (ProductImages image : productDetails.getImages()) {
-                    System.out.println("- " + image.getImagePath());
-                }
-            } else {
-                System.out.println("Không có ảnh nào.");
-            }
-
-            System.out.println("\n===== Đánh giá =====");
-            if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
-                for (Reviews review : productDetails.getReviews()) {
-//                    System.out.println("- Người dùng: " + review.getUser().getUsername()
-//                            + " (Ảnh: " + review.getUser().getImageURLUser() + ")");
-                    System.out.println("  Xếp hạng: " + review.getRating());
-                    System.out.println("  Nội dung: " + review.getReviewText());
-                }
-            } else {
-                System.out.println("Không có đánh giá nào.");
-            }
-            System.out.println("\n===== Trung bình Rating =====");
-            System.out.println("Trung bình rating: " + averageRating);
-
-            System.out.println("\n===== Lượt xem =====");
-            System.out.println("Số lượt xem: " + productDetails.getProductViews());
-        } else {
-            System.out.println("Không tìm thấy chi tiết sản phẩm hoặc có lỗi.");
-        }
+//        // Test getHotProducts
+//        System.out.println("\n===== Sản phẩm hot =====");
+//        List<Products> hotProducts = dao.getHotProducts(5);
+//        if (hotProducts != null && !hotProducts.isEmpty()) {
+//            for (Products product : hotProducts) {
+//                System.out.println(product);
+//            }
+//        } else {
+//            System.out.println("Không có sản phẩm hot hoặc có lỗi khi truy vấn.");
+//        }
+//
+//        // Test getProductDetailsById
+//        int productId = 3; // Thay ID bằng sản phẩm thực tế có trong DB
+//        Products productDetails = dao.getProductDetailsById(productId);
+//        double averageRating = dao.getAverageRating(productId);
+//
+//        if (productDetails != null) {
+//            System.out.println("\n===== Chi tiết sản phẩm =====");
+//            System.out.println("ID: " + productDetails.getId());
+//            System.out.println("Tên sản phẩm: " + productDetails.getProductName());
+//            System.out.println("Giá: " + productDetails.getPrice());
+//            System.out.println("Mô tả ngắn: " + productDetails.getShortDescription());
+//            System.out.println("Danh mục: " + (productDetails.getCategory() != null
+//                    ? productDetails.getCategory().getCategoryName() : "Không có"));
+//
+//            System.out.println("\n===== Danh sách ảnh =====");
+//            if (productDetails.getImages() != null && !productDetails.getImages().isEmpty()) {
+//                for (ProductImages image : productDetails.getImages()) {
+//                    System.out.println("- " + image.getImagePath());
+//                }
+//            } else {
+//                System.out.println("Không có ảnh nào.");
+//            }
+//
+//            System.out.println("\n===== Đánh giá =====");
+//            if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
+//                for (Reviews review : productDetails.getReviews()) {
+//                    System.out.println("  Xếp hạng: " + review.getRating());
+//                    System.out.println("  Nội dung: " + review.getReviewText());
+//                }
+//            } else {
+//                System.out.println("Không có đánh giá nào.");
+//            }
+//
+//            System.out.println("\n===== Trung bình Rating =====");
+//            System.out.println("Trung bình rating: " + averageRating);
+//
+//            System.out.println("\n===== Lượt xem =====");
+//            System.out.println("Số lượt xem: " + productDetails.getProductViews());
+//        } else {
+//            System.out.println("Không tìm thấy chi tiết sản phẩm hoặc có lỗi.");
+//        }
     }
 }

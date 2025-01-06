@@ -2,10 +2,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" %>
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Products" %>
-<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.DiscountDao" %>
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Discount" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.List" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,40 +50,14 @@
                 <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
                 hot
             </a></li>
-            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
+            <li class="menu-list-item"><a class="hotpro-link" href="flash-sale.jsp">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a></li>
         </ul>
     </div>
 </nav>
 
-<div class="advanced-search">
-    <div class="container">
-        <div class="advanced-search-category">
-            <span>Phân loại </span>
-            <select id="advanced-search-category-select" name="" onchange="searchProducts()">
-                <option>Tất cả</option>
-                <option>Gạo</option>
-                <option>Khoai</option>
-                <option>Bắp</option>
-                <option>Khác</option>
-            </select>
-        </div>
-        <div class="advanced-search-price">
-            <span>Giá từ</span>
-            <input id="min-price" onchange="searchProducts()" placeholder="tối thiểu" type="number">
-            <span>đến</span>
-            <input id="max-price" onchange="searchProducts()" placeholder="tối đa" type="number">
-            <button id="advanced-search-price-btn"><i class="fa-solid fa-magnifying-glass-dollar"></i></button>
-        </div>
-        <div class="advanced-search-control">
-            <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-solid fa-arrow-up-short-wide"></i></button>
-            <button id="sort-descending" onclick="searchProducts(2)"><i class="fa-solid fa-arrow-down-wide-short"></i></button>
-            <button id="reset-search" onclick="searchProducts(0)"><i class="fa-solid fa-arrow-rotate-right"></i></button>
-            <button onclick="closeSearchAdvanced()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-    </div>
-</div>
+<jsp:include page="advanced-search.jsp"/>
 
 <main>
     <div class="flash-sale-container">
