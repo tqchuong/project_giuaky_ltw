@@ -14,7 +14,7 @@ public class Users implements Serializable {
     private String fullName;
     private String role;
     private String userStatus;
-private Timestamp created_at;
+    private Timestamp created_at;
     public Users() {
     }
 
@@ -25,14 +25,6 @@ private Timestamp created_at;
         this.email = email;
         this.phone = phone;
     }
-
-//    public Users( String phone, String email, String address, String fullName,boolean isActive) {
-//
-//        this.phone = phone;
-//        this.email = email;
-//        this.address = address;
-//       this.fullName = fullName;
-//   }
 
 
     public Users(String username, String password, String email, String phone, String role) {
@@ -111,8 +103,8 @@ private Timestamp created_at;
         return Id;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(int id) {
+        this.Id = id;
     }
 
     public Timestamp getCreated_at() {
@@ -126,7 +118,7 @@ private Timestamp created_at;
     @Override
     public String toString() {
         return "Users{" +
-                "id=" + Id +
+                "userId=" + Id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
