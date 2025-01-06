@@ -1,15 +1,16 @@
 package fit.hcmuaf.edu.vn.foodmart.controller;
 
-import fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO;
 import fit.hcmuaf.edu.vn.foodmart.model.Products;
 import fit.hcmuaf.edu.vn.foodmart.service.ProductService;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "ProductDetailsServlet", value = "/productDetail") // Sửa value thành /productDetail
+@WebServlet(name = "ProductDetailsServlet", value = "/productdetail") // Sửa value thành /productDetail
 public class ProductDetailsServlet extends HttpServlet {
     private ProductService productService;
 

@@ -104,7 +104,7 @@ public class UserDAO implements ObjectDAO {
 
         // Câu lệnh SQL để thêm người dùng vào cơ sở dữ liệu
         String sql = "INSERT INTO `users` (`Username`, `Password`, `Email`, `Phone`) \n" +
-                "VALUES (?, ?, ?, ?)";
+                        "VALUES (?, ?, ?, ?)";
 
         try (Handle handle = jdbi.open()) {
             handle.createUpdate(sql)
@@ -386,7 +386,7 @@ public class UserDAO implements ObjectDAO {
             System.out.println(user);
         }
 
-
+        // Kiểm tra đăng nhập
         UserDAO dao = new UserDAO();
 
         String passwordHash = PasswordUtils.hashPassword("admin123");

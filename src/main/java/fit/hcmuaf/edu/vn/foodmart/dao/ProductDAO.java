@@ -1,11 +1,11 @@
 package fit.hcmuaf.edu.vn.foodmart.dao;
 
+
 import fit.hcmuaf.edu.vn.foodmart.dao.db.DBConnect;
 import fit.hcmuaf.edu.vn.foodmart.model.*;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,15 +13,16 @@ public class ProductDAO {
 
     private static Jdbi jdbi = DBConnect.getJdbi();  // Lấy jdbi từ DBConnect
 
+
     // Lấy toàn bộ danh sách sản phẩm từ CSDL
-   public List<Products> getAllProducts() {
+    public List<Products> getAllProducts() {
         String sql = """
-             SELECT p.Id AS id, p.ProductName AS productName,
-                    p.CategoryID AS categoryId, p.Price AS price,
-                 p.ImageURL AS imageUrl,  c.CategoryName AS categoryName, p.StockQuantity ,c.CategoryName, p.ShortDescription
-                                   FROM products p
-                                   INNER JOIN  categories c
-                                   ON p.CategoryID = c.Id;
+            
+                SELECT p.ID AS id, p.ProductName AS productName, 
+                   p.CategoryID AS categoryId, p.Price AS price, 
+                   p.ImageURL AS imageUrl,p.ShortDescription AS shortDescription,p.StockQuantity as stockQuantity, c.CategoryName AS categoryName
+            FROM products p
+            INNER JOIN categories c ON p.CategoryID = c.CategoryID
             """;
 
         try (Handle handle = jdbi.open()) {
@@ -37,9 +38,9 @@ public class ProductDAO {
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
                         product.setImageURL(rs.getString("imageUrl"));
-                        product.setStockQuantity(rs.getInt("StockQuantity"));
                         product.setShortDescription(rs.getString("shortDescription"));
-
+                        product.setStockQuantity(rs.getInt("stockQuantity"));
+                        product.setCategory(category);
 
                         return product;
                     })
@@ -50,6 +51,7 @@ public class ProductDAO {
             return null;
         }
     }
+
     // Lấy danh sách sản phẩm theo danh mục
     public List<Products> getProductsByCategory(String categoryName) {
         String sql = """
@@ -122,8 +124,7 @@ public class ProductDAO {
             r.Rating AS rating,
             r.ReviewText AS reviewText,
             r.Created_At AS createdAt,
-            u.Username AS username,
-            u.ImageURLUser AS imageURLUser
+            u.Username AS username 
         FROM 
             reviews r
         INNER JOIN 
@@ -180,7 +181,7 @@ public class ProductDAO {
                         // Thông tin người dùng đánh giá
                         Users user = new Users();
                         user.setUsername(rs.getString("username"));
-
+//                        user.setImageURLUser(rs.getString("imageURLUser"));
 
                         review.setUser(user); // Gắn thông tin người dùng vào review
                         return review;
@@ -228,6 +229,25 @@ public class ProductDAO {
 
     }
 
+    public List<Products> getLatestProducts(int limit) {
+        String sql = "SELECT p.Id AS ProductID, p.ProductName, p.CategoryID, p.Price, p.UploadDate, " +
+                "p.ImageURL, p.ShortDescription, p.StockQuantity " +
+                "FROM Products p " +
+                "ORDER BY p.UploadDate DESC " + // Sắp xếp theo thời gian tải lên mới nhất
+                "LIMIT :limit";  // Lấy số sản phẩm theo tham số limit
+
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind("limit", limit)  // Gán giá trị cho tham số limit
+                    .mapToBean(Products.class)  // Ánh xạ kết quả vào đối tượng Products
+                    .list();  // Trả về danh sách sản phẩm mới nhất
+        } catch (Exception e) {
+            System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
+            e.printStackTrace();
+            return Collections.emptyList();  // Trả về danh sách rỗng thay vì null
+        }
+    }
+
     public List<Products> getHotProducts(int limit) {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT ");
@@ -260,10 +280,6 @@ public class ProductDAO {
     }
 
     // Test phương thức getLatestProducts()
-
-
-
-    // Test phương thức getAllProducts() và getProductDetailsById()
     public static void main(String[] args) {
         ProductDAO dao = new ProductDAO();
 //        // Lấy danh sách các sản phẩm mới nhất (2 sản phẩm gần nhất)
@@ -281,28 +297,12 @@ public class ProductDAO {
 //            System.out.println("Không có sản phẩm mới hoặc có lỗi khi truy vấn.");
 //        }
 
-        // Test getAllProducts()
-        System.out.println("===== Tất cả sản phẩm =====");
-        List<Products> products = dao.getAllProducts();
-        if (products != null) {
-            for (Products product : products) {
-                System.out.println(product);
+        List<Products> hotProducts = dao.getHotProducts(5);
+        List<Products> allProducts = dao.getAllProducts();
+            for (Products p : allProducts) {
+                System.out.println(p);
             }
-        } else {
-            System.out.println("Không có sản phẩm hoặc có lỗi khi truy vấn.");
-        }
 
-//        // Test getHotProducts
-//        System.out.println("\n===== Sản phẩm hot =====");
-//        List<Products> hotProducts = dao.getHotProducts(5);
-//        if (hotProducts != null && !hotProducts.isEmpty()) {
-//            for (Products product : hotProducts) {
-//                System.out.println(product);
-//            }
-//        } else {
-//            System.out.println("Không có sản phẩm hot hoặc có lỗi khi truy vấn.");
-//        }
-//
 //        // Test getProductDetailsById
 //        int productId = 3; // Thay ID bằng sản phẩm thực tế có trong DB
 //        Products productDetails = dao.getProductDetailsById(productId);

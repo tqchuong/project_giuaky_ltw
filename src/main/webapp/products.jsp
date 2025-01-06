@@ -35,11 +35,11 @@
                     <i class="fa-solid fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="menu-list-item" onclick="showCategory('Tất cả')"><a class="menu-link" href="javascript:">Tất cả</a></li>
-                    <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
-                    <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
-                    <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
-                    <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Tất cả')"><a class="menu-link" href="javascript:" >Tất cả</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:" value="1">Gạo</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:" value="2">Khoai</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:" value="3">Bắp</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:" value="4">Khác</a></li>
 
                 </ul>
             </li>
@@ -120,14 +120,14 @@
             <div class="col-product" data-id="<%= product.getId() %>" data-loai="<%= product.getCategoryID() %>">
                 <article class="card-product">
                     <div class="card-header">
-                        <a href="#" class="card-image-link">
+                        <a href="productdetail.jsp?id=<%= product.getId() %>" class="card-image-link">
                             <img class="card-image" src="<%= product.getImageURL() %>" alt="<%= product.getProductName() %>">
                         </a>
                     </div>
                     <div class="food-info">
                         <div class="card-content">
                             <div class="card-title">
-                                <a href="#" class="card-title-link"><%= product.getProductName() %></a>
+                                <a href="productdetails.jsp?id=<%= product.getId() %>" class="card-title-link"><%= product.getProductName() %></a>
                             </div>
                         </div>
                         <div class="card-footer">
@@ -136,7 +136,7 @@
                                 <span class="current-price"><%= Math.round((product.getPrice() * 0.85)/1000.0)*1000   %>₫</span>
                             </div>
                             <div class="product-buy">
-                                <button class="card-button order-item">
+                                <button class="card-button order-item" onclick="window.location.href='productdetails.jsp?id=<%= product.getId() %>'">
                                     <i class="fa-solid fa-cart-plus"></i> Đặt hàng
                                 </button>
                             </div>
