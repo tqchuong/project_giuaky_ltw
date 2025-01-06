@@ -1,4 +1,7 @@
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Users" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" %>
+<%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Products" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 
@@ -41,7 +44,10 @@
                 <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
                 hot</a>
             </li>
-
+            <li class="menu-list-item"><a class="hotpro-link" href="flashsale.jsp">
+                <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
+            </a>
+            </li>
         </ul>
 
     </div>
@@ -129,69 +135,21 @@
         </div>
 
 
+        <%
+            ProductDAO productDAO = new ProductDAO();
+            List<Products> latestProducts = productDAO.getLatestProducts(6);
+        %>
         <div class="carousel-container">
             <h2>SẢN PHẨM MỚI</h2>
             <div class="carousel">
+                <% for (Products product : latestProducts) { %>
+
                 <div class="carousel-item">
-                    <img src="image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg">
-                    <p>Đậu nành lông đông lạnh</p>
-                    <span style="color: #B5292F;font-weight: bold;">45.000&nbsp;₫</span>
+                    <img src="<%= product.getImageURL() %>" alt="<%= product.getProductName() %>">
+                    <p><%= product.getProductName() %></p>
+                    <span style="color: #B5292F; font-weight: bold;"><%= product.getPrice() %>₫</span>
                 </div>
-                <div class="carousel-item">
-                    <img src="image/riceproducts/gao-ST21_AAN-300x300.jpg">
-                    <p>Gạo ST21</p>
-                    <span style="color: #B5292F;font-weight: bold;">29.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/riceproducts/yen mach.jpg">
-                    <p>Yến mạch Oatmeal</p>
-                    <span style="color: #B5292F;font-weight: bold;">90.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg">
-                    <p>Mì 3 miền gà sợi phở</p>
-                    <span style="color: #B5292F;font-weight: bold;">5.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/dong-goi/mi-hao-hao-chua-cay.jpg">
-                    <p>Mì hảo hảo chua cay</p>
-                    <span style="color: #B5292F;font-weight: bold;">6.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg">
-                    <p>Ngũ cốc cho bé</p>
-                    <span style="color: #B5292F;font-weight: bold;">60.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/img-khoai1/ĐẬU NÀNH LÔNG ĐÔNG LẠNH.jpg">
-                    <p>Đậu nành lông đông lạnh</p>
-                    <span style="color: #B5292F;font-weight: bold;">45.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/riceproducts/gao-ST21_AAN-300x300.jpg">
-                    <p>Gạo ST21</p>
-                    <span style="color: #B5292F;font-weight: bold;">29.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/riceproducts/yen mach.jpg">
-                    <p>Yến mạch Oatmeal</p>
-                    <span style="color: #B5292F;font-weight: bold;">90.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/dong-goi/mi-3-mien-ga-soi-pho-goi-65g-clone-202406131512410241.jpg">
-                    <p>Mì 3 miền gà sợi phở</p>
-                    <span style="color: #B5292F;font-weight: bold;">5.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/dong-goi/mi-hao-hao-chua-cay.jpg">
-                    <p>Mì hảo hảo chua cay</p>
-                    <span style="color: #B5292F;font-weight: bold;">6.000&nbsp;₫</span>
-                </div>
-                <div class="carousel-item">
-                    <img src="image/cereal/ngu-coc-cho-be-nissin-cisco-vi-bap-truyen-thong-180g.jpg">
-                    <p>Ngũ cốc cho bé</p>
-                    <span style="color: #B5292F;font-weight: bold;">60.000&nbsp;₫</span>
-                </div>
+                <% } %>
             </div>
         </div>
 

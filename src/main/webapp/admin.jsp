@@ -598,7 +598,7 @@
 
             <form id="product-form" method="post" action="${pageContext.request.contextPath}/addProduct" enctype="multipart/form-data">
 
-            <!-- Input ẩn chứa ID sản phẩm (dùng cho chỉnh sửa) -->
+                <!-- Input ẩn chứa ID sản phẩm (dùng cho chỉnh sửa) -->
                 <input type="hidden" id="product-id" name="id" value="">
                 <input type="hidden" name="action" id="action" value="add">
 

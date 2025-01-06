@@ -1,11 +1,26 @@
 <%@ page import="fit.hcmuaf.edu.vn.foodmart.model.Users" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "f" uri = "http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<% Users user = (Users) session.getAttribute("userlogin"); %>
 <header>
-
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top-left">
+        <ul class="header-top-list">
+          <li><a href=""><i class="fa-regular fa-phone"></i> 0123 456 789 (miễn phí)</a></li>
+          <li><a href=""><i class="fa-light fa-location-dot"></i> Xem vị trí cửa hàng</a></li>
+        </ul>
+      </div>
+      <div class="header-top-right">
+        <ul class="header-top-list">
+          <li><a href="">Giới thiệu</a></li>
+          <li><a href="">Cửa hàng</a></li>
+          <li><a href="">Chính sách</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <div class="header-middle">
     <div class="container">
       <div class="header-middle-left">
@@ -73,16 +88,15 @@
                 </ul>
               </c:if>
             </div>
-
-
-
-
           </li>
+
           <li class="header-middle-right-item open">
             <a href="shoppingcart.jsp">
               <div class="cart-icon-menu">
                 <i class="fa-solid fa-basket-shopping"></i>
-                <span class="count-product-cart">0</span>
+                <span class="count-product-cart"> ${sessionScope.cart.list.size()}</span>
+
+
               </div>
               <span>Giỏ hàng</span>
             </a>
@@ -93,3 +107,4 @@
     </div>
   </div>
 </header>
+

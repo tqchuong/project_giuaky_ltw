@@ -1,6 +1,6 @@
 package fit.hcmuaf.edu.vn.foodmart.controller;
 
-import fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO;
+
 import fit.hcmuaf.edu.vn.foodmart.model.Products;
 import fit.hcmuaf.edu.vn.foodmart.service.ProductService;
 import jakarta.servlet.ServletException;
@@ -26,9 +26,5 @@ public class ProductController extends HttpServlet {
         request.getRequestDispatcher("products.jsp").forward(request, response);
 
 
-
-
     }
-
-
 }

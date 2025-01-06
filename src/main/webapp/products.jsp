@@ -35,11 +35,11 @@
                     <i class="fa-solid fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="menu-list-item" onclick="showCategory('Tất cả')"><a class="menu-link" href="javascript:">Tất cả</a></li>
-                    <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:">Gạo</a></li>
-                    <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:">Khoai</a></li>
-                    <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:">Bắp</a></li>
-                    <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:">Khác</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Tất cả')"><a class="menu-link" href="javascript:" >Tất cả</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Gạo')"><a class="menu-link" href="javascript:" value="1">Gạo</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Khoai')"><a class="menu-link" href="javascript:" value="2">Khoai</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Bắp')"><a class="menu-link" href="javascript:" value="3">Bắp</a></li>
+                    <li class="menu-list-item" onclick="showCategory('Khác')"><a class="menu-link" href="javascript:" value="4">Khác</a></li>
 
                 </ul>
             </li>
@@ -47,48 +47,16 @@
                 <i class="fa-solid fa-fire fa-shake" style="color: #f00505;"></i>
                 hot</a>
             </li>
-
-            <li class="menu-list-item"><a class="flashsale-link" href="flashsale.jsp">
+            <li class="menu-list-item"><a class="hotpro-link" href="flashsale.jsp">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a>
             </li>
-
 
         </ul>
 
     </div>
 </nav>
-<div class="advanced-search">
-    <div class="container">
-        <div class="advanced-search-category">
-            <span>Phân loại </span>
-            <select id="advanced-search-category-select" name="" onchange="searchProducts()">
-                <option>Tất cả</option>
-                <option>Gạo</option>
-                <option>Khoai</option>
-                <option>Bắp</option>
-                <option>Khác</option>
-            </select>
-        </div>
-        <div class="advanced-search-price">
-            <span>Giá từ</span>
-            <input id="min-price" onchange="searchProducts()" placeholder="tối thiểu" type="number">
-            <span>đến</span>
-            <input id="max-price" onchange="searchProducts()" placeholder="tối đa" type="number">
-            <button id="advanced-search-price-btn"><i class="fa-solid fa-magnifying-glass-dollar"></i></button>
-        </div>
-        <div class="advanced-search-control">
-            <button id="sort-ascending" onclick="searchProducts(1)"><i class="fa-solid fa-arrow-up-short-wide"></i>
-            </button>
-            <button id="sort-descending" onclick="searchProducts(2)"><i
-                    class="fa-solid fa-arrow-down-wide-short"></i>
-            </button>
-            <button id="reset-search" onclick="searchProducts(0)"><i class="fa-solid fa-arrow-rotate-right"></i>
-            </button>
-            <button onclick="closeSearchAdvanced()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-    </div>
-</div>
+<jsp:include page="advanced-search.jsp"/>
 <main class="main-wrapper">
     <div class="container" id="trangchu">
         <div class="home-slider">
@@ -149,28 +117,31 @@
         %>
         <div class="home-products" id="home-products">
             <% for (Products product : products) { %>
-            <div class="col-product" data-id="<%= product.getId() %>" data-loai="<%= product.getProductName() %>">
+            <div class="col-product" data-id="<%= product.getId() %>" data-loai="<%= product.getCategoryID() %>">
                 <article class="card-product">
                     <div class="card-header">
-                        <a href="#" class="card-image-link">
+                        <a href="productdetail.jsp?id=<%= product.getId() %>" class="card-image-link">
                             <img class="card-image" src="<%= product.getImageURL() %>" alt="<%= product.getProductName() %>">
                         </a>
                     </div>
                     <div class="food-info">
                         <div class="card-content">
                             <div class="card-title">
-                                <a href="#" class="card-title-link"><%= product.getProductName() %></a>
+                                <a href="productdetails.jsp?id=<%= product.getId() %>" class="card-title-link"><%= product.getProductName() %></a>
                             </div>
                         </div>
+
+
                         <div class="card-footer">
                             <div class="product-price">
                                 <span class="current-price" style="text-decoration: line-through; color: #999;"><%= product.getPrice() %>₫</span>&nbsp;
-                                <span class="current-price"><%= product.getPrice() %>₫</span>
+                                <span class="current-price"><%= Math.round((product.getPrice() * 0.85)/1000.0)*1000   %>₫</span>
                             </div>
                             <div class="product-buy">
-                                <button class="card-button order-item">
+                                <button class="card-button order-item" onclick="window.location.href='productdetails.jsp?id=<%= product.getId() %>'">
                                     <i class="fa-solid fa-cart-plus"></i> Đặt hàng
                                 </button>
+
                             </div>
                         </div>
                     </div>
@@ -178,6 +149,7 @@
             </div>
             <% } %>
         </div>
+
 
         <div class="page-nav" id="page-nav">
             <ul class="page-nav-list">
@@ -193,6 +165,8 @@
 <jsp:include page="footer.jsp"/>
 
 <script src="js/home.js"></script>
+
+
 
 
 </body>

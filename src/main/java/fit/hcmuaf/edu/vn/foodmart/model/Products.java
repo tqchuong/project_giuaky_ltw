@@ -1,9 +1,12 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
-import java.util.List;
+import org.jdbi.v3.core.mapper.reflect.ColumnName;
+
 import java.sql.Timestamp;
+import java.util.List;
 
 public class Products {
+
     private int id;
     private String productName;
     private int categoryID;
@@ -19,12 +22,7 @@ public class Products {
     private double averageRating; // Thêm thuộc tính averageRating
     private Timestamp uploadDate;
 
-    // Constructor mặc định
     public Products() {
-    }
-
-    public Products(Category category) {
-        this.category = category;
     }
 
     public Products(int id, String productName, int categoryID, double price, String imageURL, String shortDescription, int stockQuantity, Category category, List<ProductImages> images, ProductsDetail productsDetail, List<Reviews> reviews, int productViews, double averageRating, Timestamp uploadDate) {

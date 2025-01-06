@@ -1,9 +1,12 @@
 package fit.hcmuaf.edu.vn.foodmart.controller.cart;
 
 import fit.hcmuaf.edu.vn.foodmart.Cart.Cart;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -14,22 +17,23 @@ public class Remove extends HttpServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 
-        try {
-            int productId = Integer.parseInt(request.getParameter("pid"));
 
-            HttpSession session = request.getSession(true);
-            Cart cart = (Cart) session.getAttribute("cart");
+        int productId = Integer.parseInt(request.getParameter("pid"));
 
-            if (cart != null) {
-                cart.remove(productId);
-            }
+        HttpSession session = request.getSession(true);
+        Cart cart = (Cart) session.getAttribute("cart");
 
-            session.setAttribute("cart", cart);
-            response.getWriter().write("{\"status\": \"success\", \"message\": \"Product removed from cart\"}");
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-            response.getWriter().write("{\"status\": \"error\", \"message\": \"Invalid product ID\"}");
-        }    }
+
+        cart.remove(productId);
+
+
+        session.setAttribute("cart", cart);
+        session.setAttribute("totalAmount", cart.getTotalAmount());
+        response.sendRedirect("shoppingcart.jsp");
+
+    }
+
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -15,12 +15,12 @@ public class ProductDAO {
     // Lấy toàn bộ danh sách sản phẩm từ CSDL
     public List<Products> getAllProducts() {
         String sql = """
-             SELECT p.Id AS id, p.ProductName AS productName,
-                    p.CategoryID AS categoryId, p.Price AS price,
-                 p.ImageURL AS imageUrl,  c.CategoryName AS categoryName, p.StockQuantity ,c.CategoryName, p.ShortDescription
-                                   FROM products p
-                                   INNER JOIN  categories c
-                                   ON p.CategoryID = c.Id;
+            
+                SELECT p.ID AS id, p.ProductName AS productName, 
+                   p.CategoryID AS categoryId, p.Price AS price, 
+                   p.ImageURL AS imageUrl,p.ShortDescription AS shortDescription,p.StockQuantity as stockQuantity, c.CategoryName AS categoryName
+            FROM products p
+            INNER JOIN categories c ON p.CategoryID = c.CategoryID
             """;
 
         try (Handle handle = jdbi.open()) {
@@ -31,14 +31,14 @@ public class ProductDAO {
                         category.setCategoryName(rs.getString("categoryName"));
 
                         Products product = new Products();
-                        product.setId(rs.getInt("id"));
+                        product.setID(rs.getInt("id"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
                         product.setImageURL(rs.getString("imageUrl"));
-                        product.setStockQuantity(rs.getInt("StockQuantity"));
                         product.setShortDescription(rs.getString("shortDescription"));
-
+                        product.setStockQuantity(rs.getInt("stockQuantity"));
+                        product.setCategory(category);
 
                         return product;
                     })
@@ -69,7 +69,7 @@ public class ProductDAO {
                         category.setCategoryName(rs.getString("categoryName"));
 
                         Products product = new Products();
-                        product.setId(rs.getInt("id"));
+                        product.setID(rs.getInt("id"));
                         product.setProductName(rs.getString("productName"));
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
@@ -143,7 +143,7 @@ public class ProductDAO {
 
                         // Ánh xạ thông tin sản phẩm
                         Products prod = new Products();
-                        prod.setId(rs.getInt("id"));
+                        prod.setID(rs.getInt("id"));
                         prod.setProductName(rs.getString("productName"));
                         prod.setCategoryID(rs.getInt("categoryId"));
                         prod.setPrice(rs.getDouble("price"));
@@ -155,7 +155,7 @@ public class ProductDAO {
 
                         // Ánh xạ thông tin chi tiết sản phẩm
                         ProductsDetail detail = new ProductsDetail();
-                        detail.setProductID(prod.getId());
+                        detail.setProductID(prod.getID());
                         detail.setDetailedDescription(rs.getString("detailedDescription"));
                         detail.setProductStatus(rs.getString("productStatus"));
                         detail.setExpiryDate(rs.getDate("expiryDate"));
@@ -179,7 +179,7 @@ public class ProductDAO {
                         // Thông tin người dùng đánh giá
                         Users user = new Users();
                         user.setUsername(rs.getString("username"));
-
+//                        user.setImageURLUser(rs.getString("imageURLUser"));
 
                         review.setUser(user); // Gắn thông tin người dùng vào review
                         return review;
@@ -250,7 +250,7 @@ public class ProductDAO {
         double averageRating = dao.getAverageRating(productId);
         if (productDetails != null) {
             System.out.println("===== Chi tiết sản phẩm =====");
-            System.out.println("ID: " + productDetails.getId());
+            System.out.println("ID: " + productDetails.getID());
             System.out.println("Tên sản phẩm: " + productDetails.getProductName());
             System.out.println("Giá: " + productDetails.getPrice());
             System.out.println("Mô tả ngắn: " + productDetails.getShortDescription());
@@ -269,8 +269,8 @@ public class ProductDAO {
             System.out.println("\n===== Đánh giá =====");
             if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
                 for (Reviews review : productDetails.getReviews()) {
-//                    System.out.println("- Người dùng: " + review.getUser().getUsername()
-//                            + " (Ảnh: " + review.getUser().getImageURLUser() + ")");
+                   System.out.println("- Người dùng: " + review.getUser().getUsername()
+                           + " (Ảnh: " + review.getUser() + ")");
                     System.out.println("  Xếp hạng: " + review.getRating());
                     System.out.println("  Nội dung: " + review.getReviewText());
                 }
@@ -285,5 +285,6 @@ public class ProductDAO {
         } else {
             System.out.println("Không tìm thấy chi tiết sản phẩm hoặc có lỗi.");
         }
-    }
 }
+}
+

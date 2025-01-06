@@ -1,5 +1,3 @@
-
-
 // Open Search Advanced
 document.querySelector(".filter-btn").addEventListener("click", (e) => {
     e.preventDefault();
@@ -15,10 +13,6 @@ document.querySelector(".form-search-input").addEventListener("click", (e) => {
 function closeSearchAdvanced() {
     document.querySelector(".advanced-search").classList.toggle("open");
 }
-
-
-
-
 
 
 // Close popup
@@ -57,7 +51,6 @@ window.onscroll = () => {
 }
 
 
-
 // Hiển thị trang chủ
 function showHomePage() {
     hideAllSections();
@@ -66,7 +59,7 @@ function showHomePage() {
 
 
 // Số sản phẩm hiển thị mỗi trang
-let perPage = 20;
+let perPage = 10;
 let currentPage = 1; // Trang hiện tại
 
 // Lấy danh sách sản phẩm từ DOM
@@ -110,7 +103,7 @@ function setupPagination(productAll, perPage) {
             currentPage--;
             setupPagination(productAll, perPage);
             displayList(productAll, perPage, currentPage);
-            window.scrollTo(0,600);
+            window.scrollTo(0, 600);
         }
     });
     document.querySelector(".page-nav-list").appendChild(prevButton);
@@ -130,7 +123,7 @@ function setupPagination(productAll, perPage) {
             currentPage++;
             setupPagination(productAll, perPage);
             displayList(productAll, perPage, currentPage);
-            window.scrollTo(0,600);
+            window.scrollTo(0, 600);
         }
     });
     document.querySelector(".page-nav-list").appendChild(nextButton);
@@ -179,6 +172,7 @@ function searchProducts(mode) {
         const category = product.dataset.loai || "";
         const priceText = product.querySelector(".current-price:last-child").textContent.trim();
         const price = parseFloat(priceText.replace(/[^0-9]/g, ""));
+
         return {
             element: product,
             title,
@@ -191,6 +185,8 @@ function searchProducts(mode) {
     const valueCategory = document.getElementById("advanced-search-category-select").value;
     const minPrice = parseFloat(document.getElementById("min-price").value) || 0;
     const maxPrice = parseFloat(document.getElementById("max-price").value) || Infinity;
+
+
 
     if (minPrice > maxPrice) {
         alert("Giá đã nhập sai!");
@@ -233,35 +229,40 @@ function searchProducts(mode) {
 }
 
 
-// Hiển thị chuyên mục
 function showCategory(category) {
     // Hiển thị phần tử 'trangchu'
     document.getElementById('trangchu').classList.remove('hide');
+
+    // Bảng ánh xạ giữa chuỗi danh mục và giá trị số trong data-loai
+    const categoryMap = {
+        "Tất cả": null, // null để biểu thị tất cả danh mục
+        "Gạo": 1,
+        "Khoai": 2,
+        "Bắp": 3,
+        "Khác": 4
+    };
+
+    // Lấy giá trị số tương ứng với danh mục chuỗi
+    const categoryId = categoryMap[category];
 
     // Lấy danh sách sản phẩm từ DOM
     const products = Array.from(document.querySelectorAll(".col-product"));
 
     // Ánh xạ danh sách sản phẩm
     const productAll = products.map(product => {
-
-        const category = product.dataset.loai || ""; // Lấy danh mục từ data-loai
-
+        const loai = parseInt(product.dataset.loai) || null; // Chuyển data-loai thành số
         return {
             element: product,
-
-            category
-
+            loai
         };
     });
 
     // Lọc sản phẩm theo danh mục
-    const productSearch = category === "Tất cả"
-        ? productAll
-        : productAll.filter(item =>
-            item.category && item.category.toUpperCase() === category.toUpperCase()
-        );
+    const productSearch = categoryId === null
+        ? productAll // Nếu "Tất cả", trả về toàn bộ sản phẩm
+        : productAll.filter(item => item.loai === categoryId);
 
-    console.log("Sản phẩm tìm thấy theo danh mục:", productSearch);
+
 
     // Hiển thị danh sách sản phẩm đã lọc
     currentPage = 1; // Đặt lại trang hiện tại là 1
@@ -270,8 +271,9 @@ function showCategory(category) {
     setupPagination(filteredProducts, perPage);
 
     // Cuộn tới phần tử hiển thị danh sách
-    window.scrollTo(0,600);
+    window.scrollTo(0, 600);
 }
+
 
 
 //chuyển động banner
@@ -373,23 +375,7 @@ function autoScroll() {
     carousel.scrollLeft = scrollPosition;
     requestAnimationFrame(autoScroll);
 }
+
 autoScroll();
 
-function hideAllSections() {
-    document.getElementById('trangchu').style.display = 'none';
-    document.getElementById('account-user').style.display = 'none';
-    document.getElementById('order-history').style.display = 'none';
 
-}
-
-// Hiển thị thông tin tài khoản khi nhấn vào "Tài khoản của tôi"
-function showAccountInfo() {
-    hideAllSections();
-    document.getElementById('account-user').style.display = 'block';
-}
-
-// Hiển thị lịch sử đơn hàng khi nhấn vào "Đơn hàng đã mua"
-function showOrderHistory() {
-    hideAllSections();
-    document.getElementById('order-history').style.display = 'block';
-}

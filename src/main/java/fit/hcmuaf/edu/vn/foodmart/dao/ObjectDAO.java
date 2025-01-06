@@ -1,5 +1,7 @@
 package fit.hcmuaf.edu.vn.foodmart.dao;
 
+
+
 public interface ObjectDAO {
 
     default boolean add(Object obj){
