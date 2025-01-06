@@ -130,6 +130,8 @@
                                 <a href="productdetails.jsp?id=<%= product.getId() %>" class="card-title-link"><%= product.getProductName() %></a>
                             </div>
                         </div>
+
+
                         <div class="card-footer">
                             <div class="product-price">
                                 <span class="current-price" style="text-decoration: line-through; color: #999;"><%= product.getPrice() %>₫</span>&nbsp;
@@ -139,6 +141,7 @@
                                 <button class="card-button order-item" onclick="window.location.href='productdetails.jsp?id=<%= product.getId() %>'">
                                     <i class="fa-solid fa-cart-plus"></i> Đặt hàng
                                 </button>
+
                             </div>
                         </div>
                     </div>

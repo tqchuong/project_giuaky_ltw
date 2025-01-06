@@ -1,31 +1,26 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
-import java.sql.Timestamp;
-
 public class Coupon {
     private int id;
     private String couponCode;
     private double discountAmount;
-    private String description;
-    private Timestamp startDate;
-    private Timestamp endDate;
+    private String startDate;
+    private String endDate;
     private double minOrderAmount;
-    private int orderId;
+    private Order order;  // Liên kết tới đối tượng Order thay vì chỉ lưu orderId
 
-    public Coupon() {
-    }
-
-    public Coupon(int id, String couponCode, double discountAmount, String description, Timestamp startDate, Timestamp endDate, double minOrderAmount, int orderId) {
+    // Constructor
+    public Coupon(int id, String couponCode, double discountAmount, String startDate, String endDate, double minOrderAmount, Order order) {
         this.id = id;
         this.couponCode = couponCode;
         this.discountAmount = discountAmount;
-        this.description = description;
         this.startDate = startDate;
         this.endDate = endDate;
         this.minOrderAmount = minOrderAmount;
-        this.orderId = orderId;
+        this.order = order;  // Liên kết với đối tượng Order
     }
 
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -50,27 +45,19 @@ public class Coupon {
         this.discountAmount = discountAmount;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Timestamp getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Timestamp startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Timestamp getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Timestamp endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
@@ -82,25 +69,11 @@ public class Coupon {
         this.minOrderAmount = minOrderAmount;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
-    }
-
-    @Override
-    public String toString() {
-        return "Coupon{" +
-                "id=" + id +
-                ", couponCode='" + couponCode + '\'' +
-                ", discountAmount=" + discountAmount +
-                ", description='" + description + '\'' +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                ", minOrderAmount=" + minOrderAmount +
-                ", orderId=" + orderId +
-                '}';
+    public void setOrder(Order order) {
+        this.order = order;
     }
 }

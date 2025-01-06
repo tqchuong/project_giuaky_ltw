@@ -17,22 +17,23 @@ public class Remove extends HttpServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 
-        try {
-            int productId = Integer.parseInt(request.getParameter("pid"));
 
-            HttpSession session = request.getSession(true);
-            Cart cart = (Cart) session.getAttribute("cart");
+        int productId = Integer.parseInt(request.getParameter("pid"));
 
-            if (cart != null) {
-                cart.remove(productId);
-            }
+        HttpSession session = request.getSession(true);
+        Cart cart = (Cart) session.getAttribute("cart");
 
-            session.setAttribute("cart", cart);
-            response.getWriter().write("{\"status\": \"success\", \"message\": \"Product removed from cart\"}");
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-            response.getWriter().write("{\"status\": \"error\", \"message\": \"Invalid product ID\"}");
-        }    }
+
+        cart.remove(productId);
+
+
+        session.setAttribute("cart", cart);
+        session.setAttribute("totalAmount", cart.getTotalAmount());
+        response.sendRedirect("shoppingcart.jsp");
+
+    }
+
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

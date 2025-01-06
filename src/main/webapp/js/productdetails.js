@@ -2,37 +2,23 @@
 function changeImage(imageSrc) {
   document.getElementById('mainImage').src = imageSrc;
 }
-  function changeQuantity(amount) {
-    var quantityInput = document.getElementById('quantity');
-    var currentValue = parseInt(quantityInput.value);
 
-    if (!isNaN(currentValue)) {
-      var newValue = currentValue + amount;
-
-      // Giới hạn số lượng giữa min và max
-      if (newValue >= parseInt(quantityInput.min) && newValue <= parseInt(quantityInput.max)) {
-        quantityInput.value = newValue;
-      }
-    }
+function updateQuantity(change) {
+  const quantityInput = document.getElementById("quantity");
+  let currentQuantity = parseInt(quantityInput.value);
+  const maxQuantity = parseInt(quantityInput.max);
+  if ((currentQuantity + change) >= 1 && (currentQuantity + change) <= maxQuantity) {
+    quantityInput.value = currentQuantity + change;
   }
-  const minusButton = document.querySelector('.quantity-left-minus');
-  const plusButton = document.querySelector('.quantity-right-plus');
-  const quantityInput = document.querySelector('.quantity-input');
+}
 
-  minusButton.addEventListener('click', () => {
-    let currentValue = parseInt(quantityInput.value);
-    if (currentValue > 1) {
-      quantityInput.value = currentValue - 1;
-    }
-  });
+function addToCart(productId) {
+  const currentUrl = window.location.href; // Lấy URL hiện tại
+  const quantity = document.getElementById("quantity").value; // Lấy số lượng
+  const addCartUrl = `add-cart?pid=${productId}&quantity=${quantity}&redirectUrl=${encodeURIComponent(currentUrl)}`;
+  window.location.href = addCartUrl; // Điều hướng đến servlet
+}
 
-  plusButton.addEventListener('click', () => {
-    let currentValue = parseInt(quantityInput.value);
-    let maxValue = parseInt(quantityInput.getAttribute('max'));
-    if (currentValue < maxValue) {
-      quantityInput.value = currentValue + 1;
-    }
-  });
   const mainImage = document.getElementById('mainImage');
   const zoomLens = document.querySelector('.zoom-lens');
   const imageContainer = document.querySelector('.product-main-image');
