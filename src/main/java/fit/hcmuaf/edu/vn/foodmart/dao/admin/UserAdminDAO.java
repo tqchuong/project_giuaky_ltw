@@ -62,7 +62,7 @@ public class UserAdminDAO {
                     .bind(1, user.getPhone())       // Cập nhật số điện thoại
                     .bind(2, user.getPassword())    // Cập nhật mật khẩu
                     .bind(3, user.getUserStatus())  // Cập nhật trạng thái (Đang hoạt động / Bị khóa)
-                    .bind(4, user.getUserId())          // Điều kiện tìm kiếm theo ID
+                    .bind(4, user.getId())          // Điều kiện tìm kiếm theo ID
                     .execute();
             return true;
         } catch (Exception e) {

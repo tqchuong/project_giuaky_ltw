@@ -17,24 +17,30 @@ import java.io.IOException;
 
 @WebServlet("/deleteUser")
 public class DeleteUserServlet extends HttpServlet {
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // Đọc ID từ request
-        int id = Integer.parseInt(request.getParameter("id"));
-
-        // Gọi DAO để xóa người dùng
-        UserAdminDAO userDao = new UserAdminDAO();
-        boolean success = userDao.deleteUser(id);
-
-        // Trả về kết quả dưới dạng JSON
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
-        if (success) {
-            out.print("{\"success\": true, \"message\": \"Xóa thành công!\"}");
-        } else {
-            out.print("{\"success\": false, \"message\": \"Xóa thất bại!\"}");
+
+        try {
+            String idStr = request.getParameter("id");
+            if (idStr != null) {
+                int userId = Integer.parseInt(idStr);
+                UserAdminDAO userDAO = new UserAdminDAO(); // DAO để xử lý logic DB
+                boolean result = userDAO.deleteUser(userId);
+
+                if (result) {
+                    out.write("{\"success\": true, \"message\": \"Xóa người dùng thành công!\"}");
+                } else {
+                    out.write("{\"success\": false, \"message\": \"Không tìm thấy người dùng để xóa!\"}");
+                }
+            } else {
+                out.write("{\"success\": false, \"message\": \"ID người dùng không hợp lệ!\"}");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            out.write("{\"success\": false, \"message\": \"Có lỗi xảy ra trên server!\"}");
         }
-        out.flush();
     }
 }
+
 

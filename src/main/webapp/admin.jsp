@@ -285,7 +285,7 @@
                             <button class="btn-edit-customer" id="edit-account">
                                 <i class="fa-light fa-pen-to-square"></i>
                             </button>
-                            <button class="btn-delete" data-id="<%= user.getUserId() %>">
+                            <button class="btn-delete" data-id="<%= user.getId() %>">
                                 <i class="fa-regular fa-trash"></i>
                             </button>
                         </td>
@@ -568,7 +568,7 @@
                 </div>
 
                 <div class="coupon-card">
-                    <img src="../image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
+                    <img src="image/shoppingcart/6.png" class="logo-voucher" alt="Voucher Logo" />
                     <h3>Giảm giá 15% cho đơn hàng đầu tiên</h3>
                     <div class="coupon-row">
                         <span class="coupon-code">FIRST15</span>
@@ -595,9 +595,15 @@
         <h3 class="modal-container-title edit-product-e">CHỈNH SỬA SẢN PHẨM</h3>
         <button class="modal-close product-form"><i class="fa-regular fa-xmark"></i></button>
         <div class="modal-content">
-            <form action="" class="add-product-form">
+
+            <form id="product-form" method="post" action="${pageContext.request.contextPath}/addProduct" enctype="multipart/form-data">
+
+            <!-- Input ẩn chứa ID sản phẩm (dùng cho chỉnh sửa) -->
+                <input type="hidden" id="product-id" name="id" value="">
+                <input type="hidden" name="action" id="action" value="add">
+
                 <div class="modal-content-left">
-                    <img src="../image/admin/blank-image.png" alt="" class="upload-image-preview">
+                    <img src="image/admin/blank-image.png" alt="" class="upload-image-preview" id="preview-image">
                     <div class="form-group file">
                         <label for="up-hinh-anh" class="form-label-file"><i
                                 class="fa-regular fa-cloud-arrow-up"></i>Chọn hình ảnh</label>
@@ -608,44 +614,44 @@
                 <div class="modal-content-right">
                     <div class="form-group">
                         <label for="ten-mon" class="form-label">Tên sản phẩm</label>
-                        <input id="ten-mon" name="ten-mon" type="text" placeholder="Nhập tên sản phẩm"
+                        <input id="ten-mon" name="productName" type="text" placeholder="Nhập tên sản phẩm"
                                class="form-control">
                         <span class="form-message"></span>
                     </div>
                     <div class="form-group">
                         <label for="category" class="form-label">Danh mục</label>
-                        <select name="category" id="chon-mon">
-                            <option>Gạo</option>
-                            <option>Lương khô</option>
-                            <option>text3</option>
-                            <option>text4</option>
-                            <option>text5</option>
-                            <option>text6</option>
+                        <select name="categoryID" id="chon-mon">
+                            <option value="1"> Gạo</option>
+                            <option value="2" >Lương khô</option>
+                            <option value="3"> text3</option>
+                            <option value="4" >text4</option>
+                            <option value="5" >text5</option>
+                            <option value="6" >text6</option>
                         </select>
                         <span class="form-message"></span>
                     </div>
                     <div class="form-group">
                         <label for="gia-moi" class="form-label">Giá bán</label>
-                        <input id="gia-moi" name="gia-moi" type="text" placeholder="Nhập giá bán"
+                        <input id="gia-moi" name="price" type="text" placeholder="Nhập giá bán"
                                class="form-control">
                         <span class="form-message"></span>
                     </div>
                     <div class="form-group">
                         <label for="so-luong" class="form-label">Số lượng</label>
-                        <input id="so-luong" name="so-luong" type="text" placeholder="Nhập số lượng"
+                        <input id="so-luong" name="stockQuantity" type="text" placeholder="Nhập số lượng"
                                class="form-control">
                         <span class="form-message"></span>
                     </div>
                     <div class="form-group">
                         <label for="mo-ta" class="form-label">Mô tả</label>
-                        <textarea class="product-desc" id="mo-ta" placeholder="Nhập mô tả sản phẩm..."></textarea>
+                        <textarea class="product-desc" name="shortDescription" id="mo-ta" placeholder="Nhập mô tả sản phẩm..."></textarea>
                         <span class="form-message"></span>
                     </div>
-                    <button class="form-submit btn-add-product-form add-product-e" id="add-product-button">
+                    <button type="submit" class="form-submit btn-add-product-form add-product-e" id="add-product-button">
                         <i class="fa-regular fa-plus"></i>
                         <span>THÊM SẢN PHẨM</span>
                     </button>
-                    <button class="form-submit btn-update-product-form edit-product-e" id="update-product-button">
+                    <button type="submit" class="form-submit btn-update-product-form edit-product-e" id="update-product-button">
                         <i class="fa-light fa-pencil"></i>
                         <span>LƯU THAY ĐỔI</span>
                     </button>
@@ -734,7 +740,7 @@
         <div class="modal-content">
             <form action="" class="add-voucher-form">
                 <div class="modal-content-left">
-                    <img src="../image/admin/blank-image.png" alt="" class="upload-image-preview">
+                    <img src="image/admin/blank-image.png" alt="" class="upload-image-preview">
                     <div class="form-group file">
                         <label for="up-hinh-anh" class="form-label-file"><i
                                 class="fa-regular fa-cloud-arrow-up"></i>Chọn hình ảnh</label>
