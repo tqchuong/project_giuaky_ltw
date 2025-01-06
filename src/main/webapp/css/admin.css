@@ -915,6 +915,14 @@ tbody tr td {
         width: 100%;
     }
 }
+#signup-button {
+    display: none; /* Mặc định ẩn */
+}
+
+#update-customer-button {
+    display: none; /* Mặc định ẩn */
+}
+
 
 
 /* Account  */
@@ -927,7 +935,7 @@ tbody tr td {
 .form-content {
     padding: 0 20px 20px;
 }
-add
+
 .form-title {
     text-align: center;
     padding-bottom: 10px;

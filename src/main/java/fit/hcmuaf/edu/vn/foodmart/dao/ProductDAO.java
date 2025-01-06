@@ -14,14 +14,14 @@ public class ProductDAO {
     private static Jdbi jdbi = DBConnect.getJdbi();  // Lấy jdbi từ DBConnect
 
     // Lấy toàn bộ danh sách sản phẩm từ CSDL
-    public List<Products> getAllProducts() {
+   public List<Products> getAllProducts() {
         String sql = """
-            
-                SELECT p.ID AS id, p.ProductName AS productName, 
-                   p.CategoryID AS categoryId, p.Price AS price, 
-                   p.ImageURL AS imageUrl,p.ShortDescription AS shortDescription,p.StockQuantity as stockQuantity, c.CategoryName AS categoryName
-            FROM products p
-            INNER JOIN categories c ON p.CategoryID = c.CategoryID
+             SELECT p.Id AS id, p.ProductName AS productName,
+                    p.CategoryID AS categoryId, p.Price AS price,
+                 p.ImageURL AS imageUrl,  c.CategoryName AS categoryName, p.StockQuantity ,c.CategoryName, p.ShortDescription
+                                   FROM products p
+                                   INNER JOIN  categories c
+                                   ON p.CategoryID = c.Id;
             """;
 
         try (Handle handle = jdbi.open()) {
@@ -37,9 +37,9 @@ public class ProductDAO {
                         product.setCategoryID(rs.getInt("categoryId"));
                         product.setPrice(rs.getDouble("price"));
                         product.setImageURL(rs.getString("imageUrl"));
+                        product.setStockQuantity(rs.getInt("StockQuantity"));
                         product.setShortDescription(rs.getString("shortDescription"));
-                        product.setStockQuantity(rs.getInt("stockQuantity"));
-                        product.setCategory(category);
+
 
                         return product;
                     })

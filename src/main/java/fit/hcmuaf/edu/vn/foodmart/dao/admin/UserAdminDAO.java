@@ -30,8 +30,14 @@ public class UserAdminDAO {
 
     // 2. Thêm người dùng mới
     public boolean addUser(Users user) {
-        String sql = "INSERT INTO users (username, phone, password, role, user_status) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO users (username, phone, password, role, UserStatus ) VALUES (?, ?, ?, ?, ?)";
         try (Handle handle = jdbi.open()) {
+            System.out.println("SQL: INSERT INTO users (username, phone, password, role, user_status)");
+            System.out.println("Username: " + user.getUsername());
+            System.out.println("Phone: " + user.getPhone());
+            System.out.println("Password: " + user.getPassword());
+            System.out.println("Role: " + user.getRole());
+            System.out.println("User Status: " + user.getUserStatus());
             handle.createUpdate(sql)
                     .bind(0, user.getUsername())   // Tên đầy đủ
                     .bind(1, user.getPhone())      // Số điện thoại
@@ -44,6 +50,8 @@ public class UserAdminDAO {
             e.printStackTrace();
             return false;
         }
+
+
     }
 
     public boolean updateUser(Users user) {
@@ -120,6 +128,21 @@ public class UserAdminDAO {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    // 8. Tìm kiếm người dùng theo id
+    public Users getUserById(int id) {
+        String sql = "SELECT * FROM users WHERE id=?";
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind(0, id) // Gắn giá trị id vào câu lệnh SQL
+                    .mapToBean(Users.class) // Chuyển đổi kết quả thành đối tượng Users
+                    .findOne()
+                    .orElse(null); // Trả về null nếu không tìm thấy
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 
