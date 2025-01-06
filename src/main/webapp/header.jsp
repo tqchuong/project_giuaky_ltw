@@ -49,7 +49,7 @@
                     <li><a href="admin.jsp"><i class="fa-solid fa-gear"></i> Quản lý cửa hàng</a></li>
                   </c:if>
                   <li><a href="changeInfor.jsp"  ><i class="fa-solid fa-user"></i> Tài khoản của tôi</a></li>
-                  <li><a href="changeInfor.jsp" ><i class="fa-solid fa-bag-shopping"></i> Đơn hàng đã mua</a></li>
+                  <li><a href="order-his.jsp"  ><i class="fa-solid fa-bag-shopping"></i> Đơn hàng đã mua</a></li>
                   <li class="border" style="display: flex; justify-content: center; align-items: center;">
                     <form action="login?action=logout" method="POST">
                       <button type="submit"
@@ -87,7 +87,7 @@
                 <i class="fa-solid fa-basket-shopping"></i>
                 <span class="count-product-cart">0</span>
               </div>
-              <span>Giỏ hàng</span>
+              <span style="color: #333">Giỏ hàng</span>
             </a>
           </li>
         </ul>
@@ -96,3 +96,4 @@
     </div>
   </div>
 </header>
+

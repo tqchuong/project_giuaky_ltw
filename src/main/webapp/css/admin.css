@@ -750,180 +750,192 @@ tbody tr td {
 
 /* Modal */
 .modal {
-    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
 }
 
 .modal.open {
-    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal-close {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.modal.open .modal-container {
+    transform: scale(1);
+}
+
+.modal-close i {
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.modal-close:hover i {
+    transform: rotate(180deg);
 }
 
 .modal-container {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 500px; /* Giảm chiều rộng modal */
+    background-color: #fff;
+    max-height: calc(100vh - 60px);
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-y: overlay;
     position: relative;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
+    transform: scale(0.8);
+    transition: 0.3s ease;
 }
 
-/* Nút đóng */
-.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
+.modal.add-product .modal-container {
+    width: 800px;
+    padding-bottom: 20px;
 }
 
-/* Tiêu đề Modal */
 .modal-container-title {
-    font-size: 18px; /* Nhỏ hơn để gọn */
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* Nội dung chính */
-.modal-content {
-    display: flex;
-    gap: 10px; /* Giảm khoảng cách giữa 2 phần */
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-/* Phần bên trái: Xem trước ảnh */
-.modal-content-left {
-    flex: 1;
-    text-align: center;
-    max-width: 150px; /* Giới hạn chiều rộng nhỏ hơn */
-}
-
-.upload-image-preview {
-    width: 100%;
-    height: auto;
-    max-height: 120px; /* Giảm chiều cao ảnh */
-    object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.form-label-file {
     display: inline-block;
-    padding: 8px 15px; /* Giảm padding để nhỏ hơn */
-    background-color: #b5292f;
-    color: #fff;
-    font-size: 12px; /* Giảm font-size */
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    text-align: center;
-}
-
-.form-label-file:hover {
-    background-color: #8a1d24;
-}
-
-/* Phần bên phải: Form nhập liệu */
-.modal-content-right {
-    flex: 2;
+    margin-top: 16px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .form-group {
-    margin-bottom: 10px; /* Giảm khoảng cách giữa các trường */
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 10px;
 }
+
 
 .form-label {
-    font-weight: bold;
-    margin-bottom: 3px; /* Giảm khoảng cách tiêu đề */
-    font-size: 14px; /* Nhỏ hơn */
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.form-control,
+.form-control {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s linear;
+}
+
 .product-desc {
     width: 100%;
-    padding: 8px; /* Giảm padding */
-    border: 1px solid #ccc;
+    height: 100px;
+    border: none;
+    outline: none;
     border-radius: 5px;
-    box-sizing: border-box;
+    padding: 15px;
+    background-color: #f7f7f7;
     font-size: 14px;
 }
 
-.product-desc {
-    resize: none;
-    height: 60px; /* Giảm chiều cao textarea */
+.form-control.error {
+    border-color: red;
 }
 
-/* Nút hành động */
+.form-control:focus {
+    border-color: var(--red);
+}
+
+.form-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
 .form-submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 200px; /* Nhỏ hơn */
-    padding: 8px 10px; /* Giảm padding */
-    margin: 15px auto 0;
-    background-color: #b5292f;
+    height: 40px;
+    background-color: var(--red);
     color: #fff;
-    font-size: 14px; /* Nhỏ hơn */
-    font-weight: bold;
-    border: none;
+    padding: 10px 30px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    gap: 5px;
-    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .form-submit i {
-    font-size: 16px; /* Giảm kích thước icon */
+    margin-right: 6px;
 }
 
-.form-submit:hover {
-    background-color: #8a1d24;
+.form-group.file {
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Responsive chỉnh modal */
-@media (max-width: 768px) {
-    .modal-container {
-        width: 90%;
-    }
-
-    .modal-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .modal-content-left,
-    .modal-content-right {
-        width: 100%;
-    }
-}
-#signup-button {
-    display: none; /* Mặc định ẩn */
+input[type="file"] {
+    display: none;
 }
 
-#update-customer-button {
-    display: none; /* Mặc định ẩn */
+.form-label-file {
+    background-color: var(--red);
+    color: #fff;
+    padding: 8px 40px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
 }
 
+.form-label-file i {
+    font-size: 15px;
+    margin-right: 8px;
+    cursor: pointer;
+}
 
+.upload-image-preview {
+    width: 350px;
+    border-radius: 5px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    margin-top: 20px;
+}
+
+.add-product-form {
+    display: flex;
+}
+
+.add-product-form>div {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.modal-content-left {
+    border-right: 1px solid #eee;
+}
 
 /* Account  */
 
