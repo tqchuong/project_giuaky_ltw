@@ -6,9 +6,6 @@ import fit.hcmuaf.edu.vn.foodmart.dao.OrderDao;
 import fit.hcmuaf.edu.vn.foodmart.dao.OrderDetailDAO;
 import fit.hcmuaf.edu.vn.foodmart.dao.ShippingDAO;
 import fit.hcmuaf.edu.vn.foodmart.dao.db.DBConnect;
-import fit.hcmuaf.edu.vn.foodmart.model.Order;
-import fit.hcmuaf.edu.vn.foodmart.model.OrderDetails;
-import fit.hcmuaf.edu.vn.foodmart.model.Shipping;
 import fit.hcmuaf.edu.vn.foodmart.model.Users;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -19,23 +16,15 @@ import jakarta.servlet.http.HttpSession;
 import org.jdbi.v3.core.Jdbi;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.sql.Date;
-import javax.servlet.*;
-import javax.servlet.http.*;
 
-import jakarta.servlet.*;
-        import jakarta.servlet.http.*;
-        import java.io.IOException;
-import java.sql.Connection;
-import java.util.List;
 @WebServlet(name = "CheckoutServlet", value = "/checkout")
 public class CheckoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         Users user = (Users) session.getAttribute("auth");
         Cart cart = (Cart) session.getAttribute("cart");
-        int userId = user.getUserId();
+        int userId = user.getId();
 
         if (user == null || cart == null || cart.getlist().isEmpty()) {
             response.sendRedirect("cart.jsp?error=empty_cart_or_user");
@@ -44,6 +33,8 @@ public class CheckoutServlet extends HttpServlet {
 
         try {
             // Lấy thông tin từ form
+
+            double shippingFee = Double.parseDouble(request.getParameter("shippingFee"));
             String shippingMethod = request.getParameter("shippingMethod");
             String shippingAddress = request.getParameter("recipientAddress");
             String orderNote = request.getParameter("orderNote");
@@ -56,7 +47,7 @@ public class CheckoutServlet extends HttpServlet {
 
 
 
-            double totalAmount = cart.getTotalAmount(); // Lấy từ cart thay vì form
+            double totalAmount = Double.parseDouble(request.getParameter("totalAmount"));
 
             Jdbi jdbi = DBConnect.getJdbi();
             jdbi.useTransaction(handle -> {
@@ -73,11 +64,11 @@ public class CheckoutServlet extends HttpServlet {
                 }
 
                 ShippingDAO shippingDAO = new ShippingDAO(handle.getJdbi());
-                shippingDAO.addShipping(orderId, 1, 30000); // Fixed rate
+                shippingDAO.addShipping(orderId, shippingFee); // Fixed rate
             });
 
             session.removeAttribute("cart");
-            response.sendRedirect("success.jsp");
+            response.sendRedirect("home.jsp");
         } catch (Exception e) {
             e.printStackTrace();
             response.sendRedirect("error.jsp");

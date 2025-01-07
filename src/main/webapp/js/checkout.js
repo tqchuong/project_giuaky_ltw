@@ -1,69 +1,28 @@
 const PHIVANCHUYEN = 30000;
+const PHIVANCHUYEN_DOUOI_5 = 50000; // Phí vận chuyển mới khi totalQuantity > 5
 let priceFinal = document.getElementById("checkout-cart-price-final");
 let phiVanChuyenElement = document.querySelector(".chk-free-ship span");
 let cartTotalElement = document.getElementById("checkout-cart-total");
-
-// Hàm cài đặt ngày giao hàng
-function setupDeliveryDates() {
-    let today = new Date();
-    let ngaymai = new Date(today);
-    let ngaykia = new Date(today);
-    ngaymai.setDate(today.getDate() + 1);
-    ngaykia.setDate(today.getDate() + 2);
-
-    let dateorderhtml = `
-        <a href="javascript:;" class="pick-date active" data-date="${today.toISOString().split('T')[0]}">
-            <span class="text">Hôm nay</span>
-            <span class="date">${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}</span>
-        </a>
-        <a href="javascript:;" class="pick-date" data-date="${ngaymai.toISOString().split('T')[0]}">
-            <span class="text">Ngày mai</span>
-            <span class="date">${ngaymai.getDate()}/${ngaymai.getMonth() + 1}/${ngaymai.getFullYear()}</span>
-        </a>
-        <a href="javascript:;" class="pick-date" data-date="${ngaykia.toISOString().split('T')[0]}">
-            <span class="text">Ngày kia</span>
-            <span class="date">${ngaykia.getDate()}/${ngaykia.getMonth() + 1}/${ngaykia.getFullYear()}</span>
-        </a>`;
-
-    document.querySelector('.date-order').innerHTML = dateorderhtml;
-
-    // Thêm sự kiện click để cập nhật giá trị cho input type="date"
-    const dateLinks = document.querySelectorAll('.pick-date');
-    const dateInput = document.getElementById('deliveryDate');
-    dateLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            // Gỡ bỏ class "active" khỏi các liên kết khác
-            dateLinks.forEach(l => l.classList.remove('active'));
-            // Thêm class "active" vào liên kết được chọn
-            this.classList.add('active');
-            // Gán giá trị ngày vào input type="date"
-            dateInput.value = this.getAttribute('data-date');
-        });
-    });
+let totalAmountInput = document.getElementById("totalAmountInput");
 
 
-    document.querySelector('.date-order').innerHTML = dateorderhtml;
-
-    document.querySelectorAll('.pick-date').forEach(date => {
-        date.onclick = function () {
-            document.querySelector(".pick-date.active").classList.remove("active");
-            this.classList.add('active');
-        };
-    });
-}
 
 // Hàm cập nhật tổng tiền
 function updateTotal(isGiaoTanNoi) {
     let cartTotal = parseInt(cartTotalElement.textContent.replace(/\D/g, ""));
-    let finalTotal = isGiaoTanNoi ? cartTotal + PHIVANCHUYEN : cartTotal;
+    let totalQuantityElement = document.querySelector(".count-1");
+    let phiVanChuyen = isGiaoTanNoi ? (parseInt(totalQuantityElement.textContent) > 5 ? PHIVANCHUYEN_DOUOI_5 : PHIVANCHUYEN) : 0;
+    let finalTotal = cartTotal + phiVanChuyen;
 
     if (isGiaoTanNoi) {
-        phiVanChuyenElement.textContent = `${PHIVANCHUYEN.toLocaleString()} ₫`;
+        phiVanChuyenElement.textContent = `${phiVanChuyen.toLocaleString()} ₫`; // Hiển thị phí vận chuyển
     } else {
         phiVanChuyenElement.textContent = "0 ₫";
     }
 
     priceFinal.textContent = `${finalTotal.toLocaleString()} ₫`;
+    totalAmountInput.value = finalTotal;
+    document.getElementById("shippingFeeInput").value = phiVanChuyen;
 }
 
 // Hàm chuyển đổi giao diện giữa các tùy chọn giao hàng
@@ -82,6 +41,8 @@ function toggleDeliveryOptions() {
         tuDenLayGroup.style.display = "none";
         diaChiNhan.style.display = "block";
         updateTotal(true); // Thêm phí vận chuyển
+        document.getElementById("shippingFeeInput").value = phiVanChuyen;
+
     });
 
     // Khi chọn "Tự đến lấy"
@@ -94,9 +55,28 @@ function toggleDeliveryOptions() {
         updateTotal(false); // Không thêm phí vận chuyển
     });
 }
+function getCurrentDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
 
+// Thiết lập thuộc tính min cho input date
+const dateInput = document.getElementById('deliveryDate');
+dateInput.min = getCurrentDate();
 // Khởi tạo trang thanh toán khi DOM sẵn sàng
 document.addEventListener("DOMContentLoaded", function () {
-    setupDeliveryDates();
+    getCurrentDate();
     toggleDeliveryOptions();
+
+    // Tính toán totalFinal ban đầu
+    let cartTotal = parseInt(cartTotalElement.textContent.replace(/\D/g, ""));
+    let totalFinal = cartTotal + PHIVANCHUYEN; // Ban đầu là "Giao tận nơi"
+
+    // Cập nhật giá trị cho input hidden sau khi totalFinal đã được tính toán
+    totalAmountInput.value = totalFinal;
+
+
 });

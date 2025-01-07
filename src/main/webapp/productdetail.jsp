@@ -83,28 +83,38 @@
                         <div class="row flex-column-reverse flex-lg-row">
                             <div class="col-md-12 col-lg-2">
                                 <div class="product-thumbnails">
-                                    <c:if test="${not empty product.images}">
-                                        <c:forEach var="image" items="${product.images}" varStatus="loop">
-                                            <img src="${image.imagePath}" alt="Thumbnail ${loop.index + 1}"
-                                                 class="thumb-image img-fluid"
-                                                 onclick="changeImage('${image.imagePath}')"
-                                                 data-large-img="${image.imagePath}">
-                                        </c:forEach>
-                                    </c:if>
+                                    <c:choose>
+                                        <c:when test="${not empty product.images}">
+                                            <c:forEach var="image" items="${product.images}" varStatus="loop">
+                                                <img src="${image.imagePath}" alt="Thumbnail ${loop.index + 1}"
+                                                     class="thumb-image img-fluid"
+                                                     onclick="changeImage('${image.imagePath}')"
+                                                     data-large-img="${image.imagePath}">
+                                            </c:forEach>
+                                        </c:when>
+                                        <c:otherwise>
+
+                                        </c:otherwise>
+                                    </c:choose>
                                 </div>
                             </div>
                             <div class="col-md-12 col-lg-10">
                                 <div class="product-main-image">
-                                    <c:if test="${not empty product.images}">
-                                        <c:set var="mainImage" value="${product.images[0].imagePath}" />
-                                        <img id="mainImage" src="${mainImage}" alt="Main Product"
-                                             class="img-fluid" data-large-img="${mainImage}">
-                                    </c:if>
+                                    <c:choose>
+                                        <c:when test="${not empty product.imageURL}">
+                                            <img id="mainImage" src="${product.imageURL}" alt="Main Product" class="img-fluid"
+                                                 data-large-img="${product.imageURL}">
+                                        </c:when>
+                                        <c:otherwise>
+                                            <img src="/images/default-main-image.jpg" alt="No Image Available">
+                                        </c:otherwise>
+                                    </c:choose>
                                     <div class="zoom-lens"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="product-info col-md-5">
                         <div class="product-info-content">
                             <div class="recommendation pt-3">

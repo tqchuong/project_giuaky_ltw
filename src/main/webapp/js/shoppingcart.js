@@ -1,12 +1,9 @@
 $(document).ready(function () {
-    const validCoupons = {
-        "GIAM30": { type: "amount", value: 30000 },
-        "DISCOUNT20": { type: "percent", value: 20 },
-        "FREESHIP": { type: "amount", value: 0 }
-    };
 
 
-
+    $(".apply-coupon-btn").on("click", function () {
+        applyCoupon();
+    });
     // Kiểm tra và ẩn thông báo "Giỏ hàng trống" nếu có sản phẩm
     function checkEmptyCart() {
         const hasItems = $(".cart-list .item").length > 0;
@@ -23,8 +20,37 @@ $(document).ready(function () {
         return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(value);
     }
 
+    function applyCoupon() {
+        const couponCode = document.getElementById("couponCode").value;
 
-    // Sự kiện cho nút "Tăng/Giảm số lượng"
+        fetch(`/project/apply-coupon`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({couponCode}),
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                if (data.success) {
+                    alert(`Áp dụng thành công! Bạn được giảm ${data.discountAmount} VNĐ.`);
+                    document.querySelector(".summary .amount").innerText = `${data.newTotal} VNĐ`;
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch((error) => {
+                console.error("Lỗi khi áp dụng mã giảm giá:", error);
+                alert("Có lỗi xảy ra. Vui lòng thử lại!");
+            });
+    }
+
+        // Sự kiện cho nút "Tăng/Giảm số lượng"
     $(".btn-quantity").on("click", function () {
         const productId = $(this).data("id");
         const action = $(this).data("action");

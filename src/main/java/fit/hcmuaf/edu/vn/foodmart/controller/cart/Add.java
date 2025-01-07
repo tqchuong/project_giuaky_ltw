@@ -30,6 +30,7 @@ public class Add extends HttpServlet {
             session.setAttribute("cart", cart);
             session.setAttribute("productTypesCount", cart.getProductTypesCount());
             session.setAttribute("totalAmount", cart.getTotalAmount());
+            session.setAttribute("totalQuantity", cart.getTotalQuantity());
         }
         response.sendRedirect(redirectUrl);
 // Không trả về bất kỳ thông báo nào.

@@ -9,8 +9,7 @@
     import java.util.Map;
     import java.util.concurrent.atomic.AtomicReference;
 
-    public class Cart
-    {
+    public class Cart {
         Map<Integer, CartProduct> data = new HashMap<>();
 
         public boolean add(Products p, int quantity) {
@@ -25,6 +24,7 @@
             }
             return true;
         }
+
         public int getProductTypesCount() {
             return data.size(); // Đếm số key trong Map, tương ứng với số loại sản phẩm
         }
@@ -35,6 +35,12 @@
 //            }
 //            return total;
 //        }
+
+        public int getTotalQuantity() {
+            return data.values().stream()
+                    .mapToInt(CartProduct::getQuantity)
+                    .sum();
+        }
 
         public boolean update(int id, int quantity) {
 

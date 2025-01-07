@@ -26,6 +26,7 @@ public class Remove extends HttpServlet {
 
         session.setAttribute("cart", cart);
         session.setAttribute("totalAmount", cart.getTotalAmount());
+        session.setAttribute("totalQuantity", cart.getTotalQuantity());
         response.sendRedirect("shoppingcart.jsp");
 
     }

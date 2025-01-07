@@ -11,16 +11,16 @@ import org.jdbi.v3.core.Jdbi;
             this.jdbi = jdbi;
         }
 
-        public void addShipping(int orderId, int shippingRateId, double shippingCost) {
+        public void addShipping(int orderId, double shippingCost) {
             String sql = """
-                INSERT INTO shipping (OrderId, ShippingRateID, ShippingCost)
-                VALUES (:orderId, :shippingRateId, :shippingCost)
+                INSERT INTO shipping (OrderId, ShippingCost)
+                VALUES (:orderId,  :shippingCost)
                 """;
 
             jdbi.useHandle(handle ->
                     handle.createUpdate(sql)
                             .bind("orderId", orderId)
-                            .bind("shippingRateId", shippingRateId)
+
                             .bind("shippingCost", shippingCost)
                             .execute()
             );
@@ -39,7 +39,7 @@ import org.jdbi.v3.core.Jdbi;
                                 Shipping shipping = new Shipping();
                                 shipping.setId(rs.getInt("ID"));
                                 shipping.setOrderId(rs.getInt("OrderId"));
-                                shipping.setShippingRateId(rs.getInt("ShippingRateId"));
+
                                 shipping.setShippingCost(rs.getDouble("ShippingCost"));
                                 return shipping;
                             })

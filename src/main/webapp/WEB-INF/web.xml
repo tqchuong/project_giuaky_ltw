@@ -20,5 +20,9 @@
         <servlet-name>ProductDetailsServlet</servlet-name>
         <url-pattern>/productDetails</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ApplyCouponServlet</servlet-name>
+        <url-pattern>/apply-coupon</url-pattern>
+    </servlet-mapping>
 
 </web-app>

@@ -131,9 +131,10 @@
                 <div class="bill-payment">
                     <div class="total-bill-order">
                         <div class="priceFlx">
-                            <div class="text">Tiền hàng <span class="count">${sessionScope.cart.list.size()} món</span></div>
-                            <div class="price-detail"><span id="checkout-cart-total">${sessionScope.cart.totalAmount != null ? sessionScope.cart.totalAmount : 0}</span></div>
+                            <div class="text">Tiền hàng <span class="count-1">${sessionScope.cart.totalQuantity} món</span></div>
+                            <div class="price-detail"><span id="checkout-cart-total"> ${sessionScope.discountedTotal != null ? sessionScope.discountedTotal : sessionScope.cart.totalAmount}</span></div>
                         </div>
+                        <input type="hidden" name="shippingFee" id="shippingFeeInput" value="0">
                         <div class="priceFlx chk-ship">
                             <div class="text">Phí vận chuyển</div>
                             <div class="price-detail chk-free-ship"><span>${shippingFee}&nbsp;₫</span></div>
@@ -163,13 +164,15 @@
                 </div>
 
                 <!-- Tổng tiền -->
+                <input type="hidden" name="totalAmount" id="totalAmountInput" value="${totalFinal}">
                 <div class="total-checkout">
                     <div class="text">Tổng tiền</div>
                     <div class="price-bill">
-                        <div class="price-final" id="checkout-cart-price-final">${totalFinal}&nbsp;₫</div>
+                        <div class="price-final" id="checkout-cart-price-final" >${totalFinal}&nbsp;₫</div>
                     </div>
                 </div>
                 <button type="submit" class="complete-checkout-btn">Đặt hàng</button>
+            </div>
             </div>
         </main>
     </div>

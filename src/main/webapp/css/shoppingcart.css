@@ -370,7 +370,10 @@ label input[type="checkbox"]:checked {
   background-color: #e60000; /* Màu nền khi nhấn */
   border-color: #e60000; /* Màu viền khi nhấn */
 }
-
+.btn-summary{
+  margin-top: -40px;
+  margin-right: 50px;
+}
 
 
 

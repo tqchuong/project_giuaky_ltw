@@ -111,7 +111,9 @@
             <!-- Coupon Section -->
             <div class="coupon grid_12">
                 <h3>Áp dụng phiếu giảm giá</h3>
-                <input class="coupon-input" type="text" placeholder="Nhập mã vào" aria-label="Coupon Code">
+                <input class="coupon-input" type="text" id="couponCode" placeholder="Nhập mã vào" aria-label="Coupon Code">
+                <button class="apply-coupon-btn">Áp dụng</button>
+
             </div>
 
             <!-- Cart Summary -->

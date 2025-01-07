@@ -29,6 +29,7 @@ public class Update extends HttpServlet {
                 if (updated) {
                     session.setAttribute("cart", cart);
                     session.setAttribute("totalAmount", cart.getTotalAmount());
+                    session.setAttribute("totalQuantity", cart.getTotalQuantity());
                     response.sendRedirect("shoppingcart.jsp");
 
                     // Trả về JSON response

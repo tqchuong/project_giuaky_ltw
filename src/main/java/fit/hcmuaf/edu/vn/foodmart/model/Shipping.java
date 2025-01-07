@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 public class Shipping {
     private int id;
     private int orderId;
-    private int shippingRateId;
+
     private double shippingCost;
     private String shippedDate;
     private String shippingStatus;;
@@ -48,13 +48,6 @@ public class Shipping {
         this.shippingCost = shippingCost;
     }
 
-    public int getShippingRateId() {
-        return shippingRateId;
-    }
-
-    public void setShippingRateId(int shippingRateId) {
-        this.shippingRateId = shippingRateId;
-    }
 
     public int getOrderId() {
         return orderId;

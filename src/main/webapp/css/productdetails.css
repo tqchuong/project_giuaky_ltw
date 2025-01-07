@@ -1023,3 +1023,18 @@ img.img-fluid {
     margin-bottom: 10px;
 
 }
+.product-thumbnails {
+    display: block; /* Mặc định hiển thị */
+}
+
+.product-thumbnails.empty {
+    display: none; /* Ẩn khi không có ảnh thumbnail */
+}
+
+.product-main-image {
+    width: 100%; /* Đảm bảo ảnh chính chiếm toàn bộ chiều rộng */
+}
+
+.product-thumbnails img {
+    margin-bottom: 10px; /* Khoảng cách giữa các thumbnail */
+}
