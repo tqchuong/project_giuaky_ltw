@@ -12,18 +12,35 @@ function setupDeliveryDates() {
     ngaykia.setDate(today.getDate() + 2);
 
     let dateorderhtml = `
-        <a href="javascript:;" class="pick-date active" data-date="${today}">
+        <a href="javascript:;" class="pick-date active" data-date="${today.toISOString().split('T')[0]}">
             <span class="text">Hôm nay</span>
-            <span class="date">${today.getDate()}/${today.getMonth() + 1}</span>
+            <span class="date">${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}</span>
         </a>
-        <a href="javascript:;" class="pick-date" data-date="${ngaymai}">
+        <a href="javascript:;" class="pick-date" data-date="${ngaymai.toISOString().split('T')[0]}">
             <span class="text">Ngày mai</span>
-            <span class="date">${ngaymai.getDate()}/${ngaymai.getMonth() + 1}</span>
+            <span class="date">${ngaymai.getDate()}/${ngaymai.getMonth() + 1}/${ngaymai.getFullYear()}</span>
         </a>
-        <a href="javascript:;" class="pick-date" data-date="${ngaykia}">
+        <a href="javascript:;" class="pick-date" data-date="${ngaykia.toISOString().split('T')[0]}">
             <span class="text">Ngày kia</span>
-            <span class="date">${ngaykia.getDate()}/${ngaykia.getMonth() + 1}</span>
+            <span class="date">${ngaykia.getDate()}/${ngaykia.getMonth() + 1}/${ngaykia.getFullYear()}</span>
         </a>`;
+
+    document.querySelector('.date-order').innerHTML = dateorderhtml;
+
+    // Thêm sự kiện click để cập nhật giá trị cho input type="date"
+    const dateLinks = document.querySelectorAll('.pick-date');
+    const dateInput = document.getElementById('deliveryDate');
+    dateLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            // Gỡ bỏ class "active" khỏi các liên kết khác
+            dateLinks.forEach(l => l.classList.remove('active'));
+            // Thêm class "active" vào liên kết được chọn
+            this.classList.add('active');
+            // Gán giá trị ngày vào input type="date"
+            dateInput.value = this.getAttribute('data-date');
+        });
+    });
+
 
     document.querySelector('.date-order').innerHTML = dateorderhtml;
 

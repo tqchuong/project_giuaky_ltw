@@ -15,7 +15,6 @@ public class AddProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-
         // Lấy action từ form (add hoặc edit)
         String action = request.getParameter("action");
 
@@ -83,4 +82,6 @@ public class AddProductServlet extends HttpServlet {
         }
         response.sendRedirect("admin.jsp");
     }
+
 }
+

@@ -11,5 +11,14 @@
         <servlet-name>products</servlet-name>
         <url-pattern>/products</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/checkout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+
+        <servlet-name>ProductDetailsServlet</servlet-name>
+        <url-pattern>/productDetails</url-pattern>
+    </servlet-mapping>
 
 </web-app>

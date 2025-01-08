@@ -103,8 +103,8 @@ public class UserDAO implements ObjectDAO {
         userList.put(user.getUsername(), user);
 
         // Câu lệnh SQL để thêm người dùng vào cơ sở dữ liệu
-        String sql = "INSERT INTO `users` (`Username`, `Password`, `Email`, `Phone`) \n" +
-                        "VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO `users` (`username`, `password`, `Email`, `Phone`) \n" +
+                "VALUES (?, ?, ?, ?)";
 
         try (Handle handle = jdbi.open()) {
             handle.createUpdate(sql)
@@ -386,8 +386,9 @@ public class UserDAO implements ObjectDAO {
             System.out.println(user);
         }
 
-        // Kiểm tra đăng nhập
+
         UserDAO dao = new UserDAO();
+//
 
 //        String passwordHash = PasswordUtils.hashPassword("admin123");
 //        Users userAdmin = new Users("admin",passwordHash,"admin@gmail.com","admin","Admin");
@@ -402,5 +403,25 @@ public class UserDAO implements ObjectDAO {
 //        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
 
 //        System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
+
+            // Tạo một user mới với mật khẩu đã mã hóa
+            String passwordHash = PasswordUtils.hashPassword("matkhau1234"); // Mã hóa mật khẩu
+//            Users newUser = new Users("testuser", passwordHash, "testuser@example.com", "0123456789");
+        Users newUser = new Users("testuser2", passwordHash, "testuser4@example.com", "0126789");
+            // Thêm user vào database
+            boolean success = dao.add(newUser);
+
+            // Kiểm tra kết quả
+            if (success) {
+                System.out.println("Thêm user thành công!");
+
+                // In ra danh sách user để kiểm tra
+
+                for (Users user : userList.values()) {
+                    System.out.println(user);
+                }
+            } else {
+                System.out.println("Thêm user thất bại!");
+            }
+        }
     }
-}

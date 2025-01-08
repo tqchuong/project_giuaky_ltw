@@ -482,7 +482,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
                 if (data.success) {
                     alert(data.message);
                     location.reload();
@@ -496,6 +495,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
-
-
 
