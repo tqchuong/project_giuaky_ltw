@@ -1,6 +1,9 @@
 package fit.hcmuaf.edu.vn.foodmart.controller.cart;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import fit.hcmuaf.edu.vn.foodmart.Cart.Cart;
+import fit.hcmuaf.edu.vn.foodmart.Cart.CartProduct;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -30,13 +33,27 @@ public class Update extends HttpServlet {
                     session.setAttribute("cart", cart);
                     session.setAttribute("totalAmount", cart.getTotalAmount());
                     session.setAttribute("totalQuantity", cart.getTotalQuantity());
-                    response.sendRedirect("shoppingcart.jsp");
-
+                    session.removeAttribute("discountedTotal");
                     // Trả về JSON response
                     PrintWriter out = response.getWriter();
-                    out.print("{\"success\": true, \"totalAmount\": " + cart.getTotalAmount() + "}");
-                    out.flush();
 
+                    // Lấy thông tin sản phẩm vừa cập nhật
+                    CartProduct updatedProduct = cart.getlist().stream()
+                            .filter(p -> p.getId() == pid)
+                            .findFirst()
+                            .orElse(null);
+
+                    if (updatedProduct != null) {
+                        // Tạo JSON object cho response
+                        JsonObject responseJson = new JsonObject();
+                        responseJson.addProperty("success", true);
+                        responseJson.addProperty("totalAmount", cart.getTotalAmount());
+                        responseJson.addProperty("totalQuantity", cart.getTotalQuantity());
+                        responseJson.add("updatedProduct", new Gson().toJsonTree(updatedProduct)); // Thêm updatedProduct vào JSON object
+
+                        // Trả về JSON response
+                        out.print(responseJson.toString());
+                    }
                 } else {
                     response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
                     response.getWriter().write("{\"success\": false, \"message\": \"Cập nhật thất bại!\"}");

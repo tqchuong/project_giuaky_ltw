@@ -227,7 +227,44 @@ public class ProductDAO {
 
     }
 
+    // Lấy danh sách sản phẩm theo danh mục
+    public List<Products> getProductsByCategory(int categoryId) {
+        String sql = """
+            SELECT p.ID AS id, p.ProductName AS productName, 
+                   p.CategoryID AS categoryId, p.Price AS price, 
+                   p.ImageURL AS imageUrl,p.ShortDescription AS shortDescription,p.StockQuantity as stockQuantity, c.CategoryName AS categoryName
+            FROM products p
+            INNER JOIN categories c ON p.CategoryID = c.CategoryID
+            WHERE c.CategoryID = :categoryId
+            """;
 
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind("categoryId", categoryId)
+                    .map((rs, ctx) -> {
+                        Category category = new Category();
+                        category.setCategoryID(rs.getInt("categoryId"));
+                        category.setCategoryName(rs.getString("categoryName"));
+
+                        Products product = new Products();
+                        product.setID(rs.getInt("id"));
+                        product.setProductName(rs.getString("productName"));
+                        product.setCategoryID(rs.getInt("categoryId"));
+                        product.setPrice(rs.getDouble("price"));
+                        product.setImageURL(rs.getString("imageUrl"));
+                        product.setShortDescription(rs.getString("shortDescription"));
+                        product.setStockQuantity(rs.getInt("stockQuantity"));
+                        product.setCategory(category);
+
+                        return product;
+                    })
+                    .list();
+        } catch (Exception e) {
+            System.out.println("Lỗi khi truy vấn dữ liệu theo danh mục: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 
     // Test phương thức getAllProducts() và getProductDetailsById()

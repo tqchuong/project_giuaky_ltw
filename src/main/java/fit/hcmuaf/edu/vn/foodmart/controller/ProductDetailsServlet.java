@@ -8,6 +8,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "ProductDetailsServlet", value = "/productDetail") // Sửa value thành /productDetail
 public class ProductDetailsServlet extends HttpServlet {
@@ -35,9 +36,11 @@ public class ProductDetailsServlet extends HttpServlet {
                     double averageRating = productService.getAverageRating(productId);
                     int reviewCount = (productDetails.getReviews() != null) ? productDetails.getReviews().size() : 0;
                     int viewCount = productDetails.getProductViews();
-
+                    // Lấy danh sách sản phẩm liên quan
+                    List<Products> randomRelatedProducts = productService.getRandomRelatedProducts(productDetails);
+                    request.setAttribute("randomRelatedProducts", randomRelatedProducts);
                     // Đặt các attribute vào request
-                    request.setAttribute("product", productDetails); // Đổi tên attribute thành "product"
+                    request.setAttribute("product", productDetails);
                     request.setAttribute("averageRating", averageRating);
                     request.setAttribute("reviewCount", reviewCount);
                     request.setAttribute("viewCount", viewCount);

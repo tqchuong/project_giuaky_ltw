@@ -4,6 +4,7 @@ package fit.hcmuaf.edu.vn.foodmart.service;
 import fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO;
 import fit.hcmuaf.edu.vn.foodmart.model.Products;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ProductService {
@@ -28,6 +29,21 @@ public class ProductService {
     // Phương thức lấy trung bình rating của sản phẩm
     public double getAverageRating(int productId) {
         return productDAO.getAverageRating(productId);
+    }
+    // Phương thức lấy danh sách sản phẩm liên quan ngẫu nhiên
+    public List<Products> getRandomRelatedProducts(Products product) {
+        int categoryId = product.getCategory().getCategoryID();
+        List<Products> relatedProducts = productDAO.getProductsByCategory(categoryId);
+
+        // Loại bỏ sản phẩm hiện tại khỏi danh sách sản phẩm liên quan
+        relatedProducts.removeIf(p -> p.getID() == product.getID());
+
+        Collections.shuffle(relatedProducts);
+        if (relatedProducts.size() >= 2) {
+            return relatedProducts.subList(0, 2);
+        } else {
+            return relatedProducts;
+        }
     }
 }
 

@@ -24,5 +24,18 @@
         <servlet-name>ApplyCouponServlet</servlet-name>
         <url-pattern>/apply-coupon</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Add</servlet-name>
+        <url-pattern>/add-cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Remove</servlet-name>
+        <url-pattern>/remove-cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Update</servlet-name>
+        <url-pattern>/update-cart</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

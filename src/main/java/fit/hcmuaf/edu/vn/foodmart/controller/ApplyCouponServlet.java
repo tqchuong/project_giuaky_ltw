@@ -52,7 +52,10 @@ public class ApplyCouponServlet extends HttpServlet {
 
         double discountAmount = coupon.getDiscountAmount();
         double newTotal = totalAmount - discountAmount;
+        // Xóa totalAmount khỏi session trước khi set discountedTotal
+        req.getSession().removeAttribute("totalAmount");
         req.getSession().setAttribute("discountedTotal", newTotal);
+
         resp.getWriter().write(String.format("{\"success\": true, \"discountAmount\": %.2f, \"newTotal\": %.2f}", discountAmount, newTotal));
     }
 

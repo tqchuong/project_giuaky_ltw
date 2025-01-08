@@ -1,5 +1,6 @@
 package fit.hcmuaf.edu.vn.foodmart.controller.cart;
 
+import com.google.gson.Gson;
 import fit.hcmuaf.edu.vn.foodmart.Cart.Cart;
 import fit.hcmuaf.edu.vn.foodmart.model.Products;
 import fit.hcmuaf.edu.vn.foodmart.service.ProductService;
@@ -8,15 +9,18 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "Add", value = "/add-cart")
 public class Add extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+
         ProductService ps = new ProductService();
         int productId = Integer.parseInt(request.getParameter("pid"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
-        String redirectUrl = request.getParameter("redirectUrl"); // Lấy số lượng từ request
         Products product = ps.getProductDetailsById(productId);
 
         HttpSession session = request.getSession(true);
@@ -25,15 +29,29 @@ public class Add extends HttpServlet {
             cart = new Cart();
         }
 
+        boolean success = false;
         if (product != null) {
-            cart.add(product, quantity); // Thêm sản phẩm với số lượng chỉ định
+            success = cart.add(product, quantity);
             session.setAttribute("cart", cart);
-            session.setAttribute("productTypesCount", cart.getProductTypesCount());
-            session.setAttribute("totalAmount", cart.getTotalAmount());
-            session.setAttribute("totalQuantity", cart.getTotalQuantity());
+            session.removeAttribute("discountedTotal");
         }
-        response.sendRedirect(redirectUrl);
-// Không trả về bất kỳ thông báo nào.
+
+        PrintWriter out = response.getWriter();
+        Gson gson = new Gson();
+
+        // Gửi JSON phản hồi
+        out.write(gson.toJson(new ApiResponse(success, cart)));
+        out.flush();
+    }
+
+    class ApiResponse {
+        boolean success;
+        Cart cart;
+
+        ApiResponse(boolean success, Cart cart) {
+            this.success = success;
+            this.cart = cart;
+        }
     }
 
 

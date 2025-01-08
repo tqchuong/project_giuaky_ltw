@@ -13,10 +13,24 @@ function updateQuantity(change) {
 }
 
 function addToCart(productId) {
-  const currentUrl = window.location.href; // Lấy URL hiện tại
-  const quantity = document.getElementById("quantity").value; // Lấy số lượng
-  const addCartUrl = `add-cart?pid=${productId}&quantity=${quantity}&redirectUrl=${encodeURIComponent(currentUrl)}`;
-  window.location.href = addCartUrl; // Điều hướng đến servlet
+  const quantity = document.getElementById("quantity").value;
+  const url = `/project/add-cart?pid=${productId}&quantity=${quantity}`;
+
+  fetch(url, { method: 'GET' })
+      .then((response) => {
+        console.log("Phản hồi từ API:", response);
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Dữ liệu JSON:", data);
+        if (data.success) {
+          alert("Đã thêm vào giỏ hàng");
+          updateCartDisplay(data.cart);
+        } else {
+          alert("Thêm sản phẩm thất bại: " + data.message);
+        }
+      })
+      .catch((error) => console.error("Lỗi khi gọi API:", error));
 }
 
   const mainImage = document.getElementById('mainImage');

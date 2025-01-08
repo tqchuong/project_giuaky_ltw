@@ -278,29 +278,19 @@
         <div class="container">
             <h2 class="section-title text-center mb-4">Sản phẩm tương tự</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <a href="productdetails4.jsp" title="Gạo Thiên Long 5kg">
-                            <img src="image/productdetails/gaotl1.jpg" class="card-img-top" alt="Gạo nếp">
-                            <div class="card-body">
-                                <h5 class="card-title">Gạo Thiên Long 5kg</h5>
-                                <span class="price">₫ 190.000</span>
-                            </div>
-                        </a>
+                <c:forEach var="relatedProduct" items="${randomRelatedProducts}">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <a href="productDetails?id=${relatedProduct.ID}" title="${relatedProduct.productName}">
+                                <img src="${relatedProduct.imageURL}" class="card-img-top" alt="${relatedProduct.productName}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${relatedProduct.productName}</h5>
+                                    <span class="price"><fmt:formatNumber value="${relatedProduct.price}" type="currency" currencySymbol="₫" /></span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <a href="productdetails7.jsp" title="Gạo Lứt Đen Điện Biên">
-                            <img src="image/productdetails/gaolut.jpg" class="card-img-top" alt="gaolut">
-                            <div class="card-body">
-                                <h5 class="card-title">Gạo Lứt Đen Điện Biên</h5>
-                                <span class="price">₫ 190.000</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Thêm các sản phẩm khác tương tự ở đây -->
+                </c:forEach>
             </div>
         </div>
     </section>
