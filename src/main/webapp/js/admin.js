@@ -161,6 +161,7 @@ btnAddProduct.addEventListener("click", () => {
     document.querySelector(".add-product").classList.add("open");
 });
 
+
 // Close Popup Modal
 let closePopup = document.querySelectorAll(".modal-close");
 let modalPopup = document.querySelectorAll(".modal");
@@ -305,6 +306,196 @@ document.addEventListener("DOMContentLoaded", () => {
     showHomeProduct(products); // Hiển thị trang đầu tiên
 });
 
+
+
+
+
+
+// Đóng tất cả modal trước khi mở modal mới
+function closeAllModals() {
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.classList.remove("open");
+    });
+}
+
+// Reset các giá trị mặc định cho modal thêm/chỉnh sửa khách hàng
+function resetCustomerForm() {
+    document.getElementById("customer-fullname").value = "";
+    document.getElementById("customer-phone").value = "";
+    document.getElementById("customer-password").value = "";
+    document.getElementById("customer-status").checked = false;
+}
+
+// Mở modal thêm mới khách hàng
+document.getElementById("btn-add-user").addEventListener("click", function () {
+    closeAllModals(); // Đóng các modal khác
+    const modal = document.querySelector("#customer-modal");
+    modal.classList.add("open");
+
+    // Hiển thị giao diện "Thêm khách hàng mới"
+    document.querySelectorAll(".add-customer-e").forEach(item => item.style.display = "block");
+    document.querySelectorAll(".edit-customer-e").forEach(item => item.style.display = "none");
+
+    // Hiển thị nút "Đăng ký"
+    document.getElementById("signup-button").style.display = "block";
+
+    // Ẩn nút "Lưu thông tin"
+    document.getElementById("update-customer-button").style.display = "none";
+
+    // Reset form về mặc định
+    resetCustomerForm();
+});
+
+// Mở modal chỉnh sửa khách hàng
+document.querySelectorAll(".btn-edit-customer").forEach(button => {
+    button.addEventListener("click", function () {
+        closeAllModals(); // Đóng các modal khác
+        const modal = document.querySelector("#customer-modal");
+        modal.classList.add("open");
+
+        // Hiển thị giao diện "Chỉnh sửa thông tin"
+        document.querySelectorAll(".add-customer-e").forEach(item => item.style.display = "none");
+        document.querySelectorAll(".edit-customer-e").forEach(item => item.style.display = "block");
+
+        // Ẩn nút "Đăng ký"
+        document.getElementById("signup-button").style.display = "none";
+
+        // Hiển thị nút "Lưu thông tin"
+        document.getElementById("update-customer-button").style.display = "block";
+
+        // Lấy dữ liệu khách hàng từ danh sách
+        const customerRow = button.closest("tr");
+        const fullname = customerRow.cells[1].textContent.trim();
+        const phone = customerRow.cells[2].textContent.trim();
+        const status = customerRow.querySelector(".status-complete, .status-no-complete").textContent.trim();
+
+        // Điền dữ liệu vào form
+        document.getElementById("customer-fullname").value = fullname;
+        document.getElementById("customer-phone").value = phone;
+        document.getElementById("customer-password").value = ""; // Mật khẩu thường không được hiển thị
+        document.getElementById("customer-status").checked = (status === "Hoạt động");
+    });
+});
+
+// Đóng modal khi nhấn nút close
+document.querySelectorAll(".modal-close").forEach(closeButton => {
+    closeButton.addEventListener("click", function () {
+        const modal = closeButton.closest(".modal");
+        modal.classList.remove("open");
+    });
+});
+
+// Xóa người dùng khi nhấn nút Xóa
+// Thêm sự kiện xóa user
+document.addEventListener('DOMContentLoaded', () => {
+    // Gắn sự kiện cho tất cả các nút xóa
+    document.querySelectorAll('.btn-delete').forEach(button => {
+        button.addEventListener('click', function () {
+            const userId = this.getAttribute('data-id'); // Lấy ID người dùng từ data-id
+
+            // Xác nhận trước khi xóa
+            if (confirm('Bạn có chắc chắn muốn xóa người dùng này?')) {
+                // Gửi yêu cầu tới API xóa người dùng
+                fetch('/deleteUser', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `id=${encodeURIComponent(userId)}`, // Mã hóa dữ liệu gửi đi
+                })
+                    .then(response => {
+                        // Kiểm tra nếu phản hồi không phải JSON hoặc có lỗi HTTP
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Xử lý kết quả phản hồi từ server
+                        if (data.success) {
+                            alert(data.message); // Thông báo thành công
+                            const row = this.closest('tr'); // Tìm hàng tương ứng
+                            if (row) row.remove(); // Xóa hàng khỏi bảng
+                        } else {
+                            alert(`Xóa thất bại: ${data.message}`); // Thông báo thất bại
+                        }
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi xảy ra khi fetch hoặc từ server
+                        console.error('Lỗi:', error);
+                        alert('Có lỗi xảy ra, vui lòng thử lại sau!');
+                    });
+            }
+        });
+    });
+});
+
+button.addEventListener('click', function () {
+    const userId = this.getAttribute('data-id');
+    console.log("User ID to delete:", userId);
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const productForm = document.getElementById("product-form");
+    const addButton = document.getElementById("add-product-button");
+    const updateButton = document.getElementById("update-product-button");
+    const previewImage = document.getElementById("preview-image");
+
+    // Hàm mở modal để thêm sản phẩm
+    function openAddProductModal() {
+        document.getElementById("product-id").value = "";
+        document.getElementById("action").value = "add";
+        productForm.reset();
+        previewImage.src = "image/admin/blank-image.png";
+        addButton.style.display = "block";
+        updateButton.style.display = "none";
+    }
+
+    // Hàm mở modal để chỉnh sửa sản phẩm
+    function openEditProductModal(product) {
+        document.getElementById("product-id").value = product.id;
+        document.getElementById("action").value = "edit";
+        document.getElementById("ten-mon").value = product.productName;
+        document.getElementById("chon-mon").value = product.categoryID;
+        document.getElementById("gia-moi").value = product.price;
+        document.getElementById("so-luong").value = product.stockQuantity;
+        document.getElementById("mo-ta").value = product.shortDescription;
+        previewImage.src = product.imageURL;
+        addButton.style.display = "none";
+        updateButton.style.display = "block";
+    }
+
+    // Xử lý gửi form
+    productForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(productForm);
+        const url = formData.get("action") === "add" ? "/addProduct" : "/editProduct";
+
+        fetch(url, {
+            method: "POST",
+            body: formData,
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                if (data.success) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    alert(`Lỗi: ${data.message}`);
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                alert("Có lỗi xảy ra. Vui lòng thử lại!");
+            });
+    });
+});
 
 
 

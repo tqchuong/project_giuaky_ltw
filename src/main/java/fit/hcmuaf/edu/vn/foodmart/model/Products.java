@@ -42,6 +42,15 @@ public class Products {
         this.uploadDate = uploadDate;
     }
 
+    public Products(String productName, int categoryID, double price, String imageURL, String shortDescription, int stockQuantity) {
+        this.productName = productName;
+        this.categoryID = categoryID;
+        this.price = price;
+        this.imageURL = imageURL;
+        this.shortDescription = shortDescription;
+        this.stockQuantity = stockQuantity;
+    }
+
     public int getId() {
         return id;
     }

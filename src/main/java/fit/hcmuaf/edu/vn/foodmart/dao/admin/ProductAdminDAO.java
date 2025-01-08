@@ -16,9 +16,14 @@ public class ProductAdminDAO {
 
     // 1. Lấy tất cả sản phẩm (kèm CategoryName)
     public List<Products> getAllProducts() {
-        String sql = "SELECT p.Id, p.ProductName, c.CategoryName, p.Price, p.UploadDate, " +
-                "p.ImageURL, p.Description, p.StockQuantity " +
-                "FROM Products p LEFT JOIN Categories c ON p.CategoryID = c.Id";
+        String sql = """
+                SELECT p.ID AS id, p.ProductName AS productName, 
+                       p.CategoryID AS categoryId, p.Price AS price, 
+                       p.ImageURL AS imageUrl,p.ShortDescription AS shortDescription,p.StockQuantity as stockQuantity, c.CategoryName AS categoryName
+                FROM products p
+                INNER JOIN categories c ON p.CategoryID = c.CategoryID
+                
+                """;
         try (Handle handle = jdbi.open()) {
             return handle.createQuery(sql)
                     .mapToBean(Products.class)
@@ -28,7 +33,7 @@ public class ProductAdminDAO {
 
     // 2. Thêm sản phẩm mới
     public boolean addProduct(Products product) {
-        String sql = "INSERT INTO Products (ProductName, CategoryID, Price, ImageURL, Description, StockQuantity) " +
+        String sql = "INSERT INTO Products (ProductName, CategoryID, Price, ImageURL, ShortDescription, StockQuantity) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
         try (Handle handle = jdbi.open()) {
             handle.createUpdate(sql)
@@ -40,6 +45,10 @@ public class ProductAdminDAO {
                     .bind(5, product.getStockQuantity())
                     .execute();
             return true;
+        } catch (Exception e) {
+            // Ghi log lỗi
+            e.printStackTrace();
+            return false; // Trả về false nếu có lỗi
         }
     }
 
@@ -70,13 +79,37 @@ public class ProductAdminDAO {
                     .execute() > 0;
         }
     }
+    // 5. Lấy thông tin sản phẩm theo ID
+    public Products getProductById(int id) {
+        String sql = "SELECT p.Id AS id, p.ProductName AS productName, " +
+                "p.CategoryID AS categoryId, p.Price AS price, " +
+                "p.ImageURL AS imageUrl, c.CategoryName AS categoryName, " +
+                "p.StockQuantity AS stockQuantity, p.ShortDescription AS shortDescription " +
+                "FROM products p INNER JOIN categories c ON p.CategoryID = c.Id WHERE p.Id = ?";
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind(0, id)
+                    .mapToBean(Products.class)
+                    .findOne()
+                    .orElse(null); // Trả về null nếu không tìm thấy sản phẩm
+        } catch (Exception e) {
+            // Ghi log lỗi
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
     public static void main(String[] args) {
 
         ProductAdminDAO dao = new ProductAdminDAO();
 
-            System.out.println("====== LẤY TẤT CẢ NGƯỜI DÙNG ======");
-            List<Products> product = dao.getAllProducts();
-        product.forEach(System.out::println);
+//        System.out.println("====== LẤY TẤT CẢ NGƯỜI DÙNG ======");
+//        List<Products> product = dao.getAllProducts();
+//        product.forEach(System.out::println);
+
+
+        Products p1 = new Products("abc",2,20000,"image/img-pro/bap1.jpg","abc",50);
+        System.out.println(dao.addProduct(p1));
     }
 }

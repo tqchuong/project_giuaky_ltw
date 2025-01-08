@@ -389,9 +389,9 @@ public class UserDAO implements ObjectDAO {
         // Kiểm tra đăng nhập
         UserDAO dao = new UserDAO();
 
-        String passwordHash = PasswordUtils.hashPassword("admin123");
-        Users userAdmin = new Users("admin",passwordHash,"admin@gmail.com","admin","Admin");
-        System.out.println(dao.addAdmin(userAdmin));
+//        String passwordHash = PasswordUtils.hashPassword("admin123");
+//        Users userAdmin = new Users("admin",passwordHash,"admin@gmail.com","admin","Admin");
+//        System.out.println(dao.addAdmin(userAdmin));
 
 //        System.out.println(dao.checkLogin("hmc", "524173"));
 //        System.out.println(dao.checkLogin("tqc", "1234"));
@@ -399,7 +399,7 @@ public class UserDAO implements ObjectDAO {
 
 //        System.out.println(dao.userExists("hmc2"));
 
-//        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
+        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
 
 //        System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
     }
