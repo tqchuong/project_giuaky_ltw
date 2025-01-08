@@ -399,7 +399,7 @@ public class UserDAO implements ObjectDAO {
 
 //        System.out.println(dao.userExists("hmc2"));
 
-        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
+//        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
 
 //        System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
     }
