@@ -161,6 +161,7 @@ btnAddProduct.addEventListener("click", () => {
     document.querySelector(".add-product").classList.add("open");
 });
 
+
 // Close Popup Modal
 let closePopup = document.querySelectorAll(".modal-close");
 let modalPopup = document.querySelectorAll(".modal");
@@ -494,3 +495,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+

@@ -389,6 +389,7 @@ public class UserDAO implements ObjectDAO {
 
         UserDAO dao = new UserDAO();
 //
+
 //        String passwordHash = PasswordUtils.hashPassword("admin123");
 //        Users userAdmin = new Users("admin",passwordHash,"admin@gmail.com","admin","Admin");
 //        System.out.println(dao.addAdmin(userAdmin));

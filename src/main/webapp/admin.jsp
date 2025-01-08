@@ -383,6 +383,7 @@
                         <option>text6</option>
                         <option>Món khác</option>
                     </select>
+
                 </div>
                 <div class="admin-control-center">
                     <form action="" class="form-search">
@@ -391,6 +392,7 @@
                                placeholder="Tìm kiếm tên sản phẩm...">
                     </form>
                 </div>
+
                 <div class="admin-control-right">
                     <form action="" class="fillter-date">
                         <div>
@@ -402,7 +404,9 @@
                             <input type="date" class="form-control-date" id="time-end-tk">
                         </div>
                     </form>
+
                     <button class="btn-reset-order"><i class="fa-regular fa-arrow-up-short-wide"></i></i></button>
+
                     <button class="btn-reset-order"><i class="fa-regular fa-arrow-down-wide-short"></i></button>
                     <button class="btn-reset-order"><i class="fa-light fa-arrow-rotate-right"></i></button>
                 </div>
@@ -619,7 +623,9 @@
                         <span class="form-message"></span>
                     </div>
                     <div class="form-group">
+
                         <label for="category" class="form-label">Danh mục</label>
+
                         <select name="categoryID" id="chon-mon">
                             <option value="1"> Gạo</option>
                             <option value="2" >Lương khô</option>
@@ -658,6 +664,7 @@
                 </div>
             </form>
         </div>
+
         </form>
     </div>
 </div>

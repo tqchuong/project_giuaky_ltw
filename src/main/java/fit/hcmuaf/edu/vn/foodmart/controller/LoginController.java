@@ -90,7 +90,7 @@ public class LoginController extends HttpServlet {
             // Xử lý hành động đăng xuất
             HttpSession session = request.getSession();
             session.invalidate();  // Hủy session khi đăng xuất
-            response.sendRedirect("home.jsp");  // Chuyển hướng người dùng về trang login
+            response.sendRedirect("home.jsp");
         } else if(action.equals("forgetPass")) {
             String username = request.getParameter("username");
             String email = request.getParameter("email");

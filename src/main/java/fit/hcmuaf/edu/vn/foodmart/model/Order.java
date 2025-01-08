@@ -1,27 +1,60 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
-
-import java.math.BigDecimal;
-import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
     private int id;
-    private int userId;
-    private Date orderDate; // Thay đổi kiểu dữ liệu thành Date
-    private double totalAmount;
+    private int usersID;
+    private Timestamp orderDate;
     private String shippingMethod;
-    private Date deliveryDate; // Thêm thuộc tính deliveryDate
-    private String deliveryTime; // Thêm thuộc tính deliveryTime
-    private String paymentMethod; // Thêm thuộc tính paymentMethod
     private String orderNote;
     private String receiverName;
     private String receiverPhone;
     private String shippingAddress;
     private String orderStatus;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
 
-    // Constructor mặc định
-    public Order() {}
+    // Danh sách chi tiết đơn hàng
+    private List<OrderDetail> orderDetails = new ArrayList<>();
+
+    public Order() {
+    }
+
+    public Order(int id, int usersID, Timestamp orderDate, String shippingMethod, String orderNote, String receiverName, String receiverPhone, String shippingAddress, String orderStatus, Timestamp createdAt, Timestamp updatedAt, List<OrderDetail> orderDetails) {
+        this.id = id;
+        this.usersID = usersID;
+        this.orderDate = orderDate;
+        this.shippingMethod = shippingMethod;
+        this.orderNote = orderNote;
+        this.receiverName = receiverName;
+        this.receiverPhone = receiverPhone;
+        this.shippingAddress = shippingAddress;
+        this.orderStatus = orderStatus;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.orderDetails = orderDetails;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", usersID=" + usersID +
+                ", orderDate=" + orderDate +
+                ", shippingMethod='" + shippingMethod + '\'' +
+                ", orderNote='" + orderNote + '\'' +
+                ", receiverName='" + receiverName + '\'' +
+                ", receiverPhone='" + receiverPhone + '\'' +
+                ", shippingAddress='" + shippingAddress + '\'' +
+                ", orderStatus='" + orderStatus + '\'' +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                ", orderDetails=" + orderDetails +
+                '}';
+    }
 
     public int getId() {
         return id;
@@ -31,68 +64,20 @@ public class Order {
         this.id = id;
     }
 
-    public String getOrderStatus() {
-        return orderStatus;
+    public int getUsersID() {
+        return usersID;
     }
 
-    public void setOrderStatus(String orderStatus) {
-        this.orderStatus = orderStatus;
+    public void setUsersID(int usersID) {
+        this.usersID = usersID;
     }
 
-    public String getShippingAddress() {
-        return shippingAddress;
+    public Timestamp getOrderDate() {
+        return orderDate;
     }
 
-    public void setShippingAddress(String shippingAddress) {
-        this.shippingAddress = shippingAddress;
-    }
-
-    public String getReceiverPhone() {
-        return receiverPhone;
-    }
-
-    public void setReceiverPhone(String receiverPhone) {
-        this.receiverPhone = receiverPhone;
-    }
-
-    public String getReceiverName() {
-        return receiverName;
-    }
-
-    public void setReceiverName(String receiverName) {
-        this.receiverName = receiverName;
-    }
-
-    public String getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public void setPaymentMethod(String paymentMethod) {
-        this.paymentMethod = paymentMethod;
-    }
-
-    public String getOrderNote() {
-        return orderNote;
-    }
-
-    public void setOrderNote(String orderNote) {
-        this.orderNote = orderNote;
-    }
-
-    public String getDeliveryTime() {
-        return deliveryTime;
-    }
-
-    public void setDeliveryTime(String deliveryTime) {
-        this.deliveryTime = deliveryTime;
-    }
-
-    public Date getDeliveryDate() {
-        return deliveryDate;
-    }
-
-    public void setDeliveryDate(Date deliveryDate) {
-        this.deliveryDate = deliveryDate;
+    public void setOrderDate(Timestamp orderDate) {
+        this.orderDate = orderDate;
     }
 
     public String getShippingMethod() {
@@ -103,27 +88,75 @@ public class Order {
         this.shippingMethod = shippingMethod;
     }
 
-    public double getTotalAmount() {
-        return totalAmount;
+    public String getOrderNote() {
+        return orderNote;
     }
 
-    public void setTotalAmount(double totalAmount) {
-        this.totalAmount = totalAmount;
+    public void setOrderNote(String orderNote) {
+        this.orderNote = orderNote;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
+    public String getReceiverName() {
+        return receiverName;
     }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getReceiverPhone() {
+        return receiverPhone;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setReceiverPhone(String receiverPhone) {
+        this.receiverPhone = receiverPhone;
     }
+
+    public String getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public void setShippingAddress(String shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Timestamp getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+
+    public void setOrderDetails(List<OrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
+    }
+
+
+
+    public void addProduct(OrderDetail detail) {
+        this.orderDetails.add(detail);
+    }
+
+    public List<OrderDetail> getOrderDetails() {
+        return orderDetails;
+    }
+
 }
