@@ -654,46 +654,41 @@
 .col-lg-7 {
     margin-bottom: 60px; /* Giảm khoảng cách trên cho cả hai cột */
 }
-
 .product-price-container {
-    background-color: #f8f9fa; /* Màu nền sáng giúp dễ nhìn */
-    padding: 10px; /* Giảm khoảng cách bên trong */
-    border-radius: 5px; /* Bo tròn góc */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng để tăng chiều sâu */
-    margin-bottom: 20px; /* Khoảng cách phía dưới */
-    max-width: 300px; /* Để khung giá tự động nhỏ lại theo nội dung */
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 300px;
 }
 
 .product-price {
-    position: relative; /* Để định vị giá đã giảm */
-}
-
-.current-price {
-    font-size: 24px !important;; /* Giảm kích thước chữ cho giá chính */
-    color: var(--red);
-    margin-left: 70px;
-    display: block; /* Đưa giá chính thành khối */
-
+    display: flex;
+    align-items: center;
 }
 
 .old-price {
-    font-size: 24px!important; /* Kích thước chữ cho giá đã giảm */
-    color: #999; /* Màu xám cho giá đã giảm */
-    text-decoration: line-through; /* Đường gạch ngang cho giá đã giảm */
-    margin-left: 120px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: rgba(0, 0, 0, 0.4);
-
+    font-size: 22px!important;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 15px; /* Khoảng cách với giá mới */
+}
+.product-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.current-price {
+    font-size: 22px !important;
+    color: var(--red);
+    font-weight: bold;
 }
 
 .discount {
-    font-size: 24px!important; /* Giảm kích thước chữ cho phần giảm giá */
-    color: var(--red); /* Màu để làm nổi bật */
-    position: absolute; /* Định vị phần giảm giá */
-    right: 0; /* Nằm bên phải khung */
-    top:0px;
+    font-size: 22px!important;
+    color: var(--red);
+    margin-left: 15px; /* Khoảng cách với giá mới */
 }
 
 .nav-pills .nav-link {

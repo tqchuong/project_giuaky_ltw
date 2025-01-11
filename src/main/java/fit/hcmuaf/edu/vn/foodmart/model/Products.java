@@ -16,6 +16,8 @@ public class Products {
     private List<Reviews> reviews; // Danh sách đánh giá
     private int productViews;
     private double averageRating; // Thêm thuộc tính averageRating
+   private boolean isSale; // Thêm thuộc tính isSale
+    private Sale sales;
 
     // Constructor mặc định
     public Products() {}
@@ -32,7 +34,7 @@ public class Products {
                     List<ProductImages> images,
                     ProductsDetail productsDetail,
                     List<Reviews> reviews,
-                    int productViews,double averageRating) {
+                    int productViews,double averageRating,boolean isSale,Sale sales) {
         this.ID = ID;
         this.productName = productName;
         this.categoryID = categoryID;
@@ -46,9 +48,28 @@ public class Products {
         this.reviews = reviews;       // Gán danh sách đánh giá
         this.productViews = productViews; // Gán số lượt xem
         this.averageRating = averageRating;
+        this.isSale = isSale;
+        this.sales = sales;
     }
     public double getAverageRating() {
         return averageRating;
+    }
+    public boolean isSale() {
+        return isSale;
+    }
+
+    public Sale getSales() {
+        return sales;
+    }
+    public boolean getIsSale() {
+        return isSale;
+    }
+    public void setSales(Sale sales) {
+        this.sales = sales;
+    }
+
+    public void setSale(boolean sale) {
+        isSale = sale;
     }
 
     public void setAverageRating(double averageRating) {
@@ -158,6 +179,8 @@ public class Products {
                 ", imageURL='" + imageURL + '\'' +
                 ", shortDescription='" + shortDescription + '\'' +
                 ", stockQuantity=" + stockQuantity +
+                ", isSale=" + isSale +
+                ", sale=" + sales +
                 ", ProductsDetail=" + (productsDetail != null ? productsDetail : "Không có chi tiết sản phẩm") +
                 '}';
     }

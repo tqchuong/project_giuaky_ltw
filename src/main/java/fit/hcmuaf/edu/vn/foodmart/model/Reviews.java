@@ -54,4 +54,8 @@ public class Reviews {
     public void setUser(Users user) {
         this.user = user;
     }
+
+    public void setProductID(int productId) {
+        this.productId = productId;
+    }
 }

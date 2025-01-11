@@ -154,12 +154,14 @@
                         <input type="radio" id="rdPaymentTypeCod" name="paymentType" value="COD" checked="">&nbsp;&nbsp;
                         <i class="fa-solid fa-hand-holding-usd"></i>
                         <span>&nbsp;&nbsp;Thanh toán khi nhận hàng</span>
+                        <input type="hidden" name="paymentStatus" value="Chưa thanh toán">
                     </label>
 
                     <label style="border: 1px solid #ced4da;height: calc(1.5em + 0.75rem + 2px);border-radius: 0.25rem;width: 100%; padding: 6px; background: #fff;">
                         <input type="radio" id="rdPaymentTypeMomo" name="paymentType" value="MOMO">&nbsp;&nbsp;
                         <i class="fa-solid fa-wallet"></i>
                         <span>&nbsp;&nbsp;Thanh toán bằng ví điện tử</span>
+                        <input type="hidden" name="paymentStatus" value="Đã thanh toán">
                     </label>
                 </div>
 

@@ -143,7 +143,7 @@
 
         <div class="home-products" id="home-products">
             <c:forEach var="product" items="${products}">
-                <div class="col-product" data-id="${product.ID}" data-loai="${product.category.categoryName}">
+                <c:if test="${!product.isSale}"> <div class="col-product" data-id="${product.ID}" data-loai="${product.category.categoryName}">
                     <article class="card-product">
                         <div class="card-header">
                             <a href="productDetails?id=${product.ID}" class="card-image-link">
@@ -170,6 +170,7 @@
                         </div>
                     </article>
                 </div>
+                </c:if>
             </c:forEach>
         </div>
         <div class="page-nav" id="page-nav">

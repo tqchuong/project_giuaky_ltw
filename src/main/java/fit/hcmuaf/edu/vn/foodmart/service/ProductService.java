@@ -4,6 +4,7 @@ package fit.hcmuaf.edu.vn.foodmart.service;
 import fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO;
 import fit.hcmuaf.edu.vn.foodmart.model.Products;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -14,7 +15,20 @@ public class ProductService {
     public List<Products> getAllProducts() {
         return productDAO.getAllProducts();
     }
+    public List<Products> getFlashSaleProducts() {
+        ProductDAO productDAO = new ProductDAO();
+        // Sử dụng ProductDAO để lấy danh sách sản phẩm có isSale = true
+        List<Products> products = productDAO.getAllProducts(); // Lấy tất cả sản phẩm
+        List<Products> flashSaleProducts = new ArrayList<>();
 
+        for (Products product : products) {
+            if (product.isSale()) {
+                flashSaleProducts.add(product);
+            }
+        }
+
+        return flashSaleProducts;
+    }
     // Phương thức lấy sản phẩm theo danh mục
     public List<Products> getProductsByCategory(String categoryName) {
         return productDAO.getProductsByCategory(categoryName);

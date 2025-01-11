@@ -36,6 +36,11 @@
         <servlet-name>Update</servlet-name>
         <url-pattern>/update-cart</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>flash-sale</servlet-name>
+        <url-pattern>/flash-sale</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>

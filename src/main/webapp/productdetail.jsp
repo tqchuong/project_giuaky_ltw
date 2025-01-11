@@ -66,16 +66,7 @@
 
         </div>
     </nav>
-
-    <!--<div class="breadcrumb-container">-->
-    <!--    <nav aria-label="breadcrumb">-->
-    <!--        <ol class="breadcrumb-links">-->
-    <!--            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>-->
-    <!--            <li class="breadcrumb-item"><a href="#">Gạo</a></li>-->
-    <!--            <li class="breadcrumb-item active" aria-current="page">Gạo Ông Cua ST25 Organic chuẩn USDA Mỹ (hộp 2kg)</li>-->
-    <!--        </ol>-->
-    <!--    </nav>-->
-    <!--</div>--><section id="selling-product" class="single-product mt-0 mt-md-5">
+    <section id="selling-product" class="single-product mt-0 mt-md-5">
         <div class="container-fluid">
             <div class="product-details">
                 <div class="row">
@@ -148,9 +139,23 @@
                                         </div>
                                         <div class="product-price-container">
                                             <div class="product-price">
-                                                <strong class="current-price">
-                                                    <fmt:formatNumber type="number" pattern="#,##0" value="${product.price}" /> đ
-                                                </strong>
+                                                <c:choose>
+                                                    <c:when test="${product.isSale}">
+                                                        <del class="old-price">
+                                                            <fmt:formatNumber type="number" pattern="#,##0" value="${product.price}" /> đ
+                                                        </del>
+                                                        <strong class="current-price text-danger">
+                                                            <fmt:formatNumber type="number" pattern="#,##0"
+                                                                              value="${product.price * (1 - product.sales.discountPercentage / 100)}" /> đ
+                                                        </strong>
+                                                        <span class="discount">-${product.sales.discountPercentage}%</span>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <strong class="current-price">
+                                                            <fmt:formatNumber type="number" pattern="#,##0" value="${product.price}" /> đ
+                                                        </strong>
+                                                    </c:otherwise>
+                                                </c:choose>
                                             </div>
                                         </div>
                                         <p>${product.shortDescription}</p>
@@ -213,9 +218,7 @@
                                     <c:forEach var="review" items="${product.reviews}">
                                         <div class="col-lg-6 d-flex flex-wrap gap-3">
                                             <div class="col-md-2">
-                                                <div class="image-holder">
-<%--                                                    <img src="${review.user.imageURLUser}" alt="review" class="img-fluid rounded-circle">--%>
-                                                </div>
+
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="review-content">
@@ -252,7 +255,10 @@
                             <div class="add-review mt-5">
                                 <h3>Đánh giá của bạn</h3>
                                 <p>Vui lòng điền những dòng *</p>
-                                <form id="form" class="form-group" name="form">
+                                <form action="review" method="post" class="form-group" name="form">
+                                <input type="hidden" name="productId" value="${product.ID}">
+                                    <input type="hidden" name="rating" id="ratingInput" value="0">
+                                    <input type="hidden" name="userId" value="${auth.id}">
                                     <div class="stars" id="starRating">
                                         <span data-value="1">&#9733;</span>
                                         <span data-value="2">&#9733;</span>
@@ -263,7 +269,7 @@
                                     <p>Đánh giá: <span id="ratingValue">0</span> sao</p>
                                     <div class="pb-3">
                                         <label>Thêm nhận xét *</label>
-                                        <textarea class="form-control" placeholder="Thêm nhận xét của bạn"></textarea>
+                                        <textarea class="form-control" name="reviewText" placeholder="Thêm nhận xét của bạn"></textarea>
                                     </div>
                                     <button type="submit" name="submit" class="btn btn-dark btn-large text-uppercase w-100">Gửi</button>
                                 </form>

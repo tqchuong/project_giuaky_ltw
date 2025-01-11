@@ -20,6 +20,15 @@
                 // Nếu sản phẩm chưa tồn tại, thêm mới với số lượng chỉ định
                 CartProduct cartProduct = convert(p);
                 cartProduct.setQuantity(quantity);
+
+                // Sử dụng giá đã giảm
+                if (p.isSale()) {
+                    double discountedPrice = p.getPrice() * (1 - p.getSales().getDiscountPercentage() / 100);
+                    cartProduct.setPrice(discountedPrice); // Sử dụng giá đã giảm
+                } else {
+                    cartProduct.setPrice(p.getPrice()); // Sử dụng giá gốc
+                }
+
                 data.put(p.getID(), cartProduct);
             }
             return true;
@@ -28,13 +37,6 @@
         public int getProductTypesCount() {
             return data.size(); // Đếm số key trong Map, tương ứng với số loại sản phẩm
         }
-//        public double getTotal() {
-//            double total = 0.0;
-//            for (CartProduct product : data.values()) {
-//                total += product.getPrice() * product.getQuantity(); // Tính tổng tiền
-//            }
-//            return total;
-//        }
 
         public int getTotalQuantity() {
             return data.values().stream()

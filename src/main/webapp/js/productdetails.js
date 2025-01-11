@@ -103,43 +103,43 @@ function addToCart(productId) {
     });
   });
 
-  // Lấy tất cả các ngôi sao và phần hiển thị số sao được chọn
   const stars = document.querySelectorAll("#starRating span");
-  const ratingValue = document.getElementById("ratingValue");
+const ratingInput = document.getElementById('ratingInput'); // Lấy input hidden
+const ratingValue = document.getElementById("ratingValue");
 
-  // Thêm sự kiện click cho từng ngôi sao
-  stars.forEach((star, index) => {
-    star.addEventListener("click", () => {
-      const value = star.getAttribute("data-value"); // Lấy giá trị sao được chọn
-      ratingValue.textContent = value; // Hiển thị số sao được chọn
+stars.forEach((star, index) => {
+  star.addEventListener("click", () => {
+    const value = star.dataset.value;
+    ratingValue.textContent = value;
+    ratingInput.value = value; // Cập nhật input hidden
 
-      // Xóa trạng thái selected khỏi tất cả các ngôi sao
-      stars.forEach((s) => s.classList.remove("selected"));
-
-      // Thêm trạng thái selected cho các ngôi sao từ đầu đến ngôi sao được chọn
-      for (let i = 0; i <= index; i++) {
+    // Tối ưu hóa việc thêm/xóa class
+    for (let i = 0; i < stars.length; i++) {
+      if (i <= index) {
         stars[i].classList.add("selected");
+      } else {
+        stars[i].classList.remove("selected");
       }
-    });
+    }
   });
 
-  // Thêm hiệu ứng hover qua từng ngôi sao
-  stars.forEach((star, index) => {
-    star.addEventListener("mouseover", () => {
-      // Xóa trạng thái hovered khỏi tất cả các ngôi sao
-      stars.forEach((s) => s.classList.remove("hovered"));
-
-      // Thêm trạng thái hovered cho các ngôi sao từ đầu đến ngôi sao được hover
-      for (let i = 0; i <= index; i++) {
+  star.addEventListener("mouseover", () => {
+    // Tối ưu hóa việc thêm/xóa class
+    for (let i = 0; i < stars.length; i++) {
+      if (i <= index) {
         stars[i].classList.add("hovered");
+      } else {
+        stars[i].classList.remove("hovered");
       }
-    });
-
-    star.addEventListener("mouseout", () => {
-      // Xóa trạng thái hovered khi chuột rời
-      stars.forEach((s) => s.classList.remove("hovered"));
-    });
+    }
   });
+
+  star.addEventListener("mouseout", () => {
+    for (let i = 0; i < stars.length; i++) {
+      stars[i].classList.remove("hovered");
+    }
+  });
+});
 
   function goBack() {
     window.history.back(); // Quay lại trang trước đó

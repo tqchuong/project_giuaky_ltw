@@ -4,6 +4,7 @@ import fit.hcmuaf.edu.vn.foodmart.Cart.Cart;
 import fit.hcmuaf.edu.vn.foodmart.Cart.CartProduct;
 import fit.hcmuaf.edu.vn.foodmart.dao.OrderDao;
 import fit.hcmuaf.edu.vn.foodmart.dao.OrderDetailDAO;
+import fit.hcmuaf.edu.vn.foodmart.dao.PaymentDAO;
 import fit.hcmuaf.edu.vn.foodmart.dao.ShippingDAO;
 import fit.hcmuaf.edu.vn.foodmart.dao.db.DBConnect;
 import fit.hcmuaf.edu.vn.foodmart.model.Users;
@@ -44,7 +45,7 @@ public class CheckoutServlet extends HttpServlet {
             String receiverName = request.getParameter("recipientName");
 
             String receiverPhone = request.getParameter("recipientPhone");
-
+            String paymentStatus = request.getParameter("paymentStatus");
 
 
             double totalAmount = Double.parseDouble(request.getParameter("totalAmount"));
@@ -65,6 +66,10 @@ public class CheckoutServlet extends HttpServlet {
 
                 ShippingDAO shippingDAO = new ShippingDAO(handle.getJdbi());
                 shippingDAO.addShipping(orderId, shippingFee); // Fixed rate
+
+// Thêm thông tin thanh toán
+                PaymentDAO paymentDAO = new PaymentDAO();
+                paymentDAO.addPayment(orderId, paymentStatus);
             });
 
             session.removeAttribute("cart");

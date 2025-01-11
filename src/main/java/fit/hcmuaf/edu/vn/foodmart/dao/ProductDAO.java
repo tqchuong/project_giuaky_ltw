@@ -5,7 +5,6 @@ import fit.hcmuaf.edu.vn.foodmart.model.*;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAO {
@@ -15,13 +14,22 @@ public class ProductDAO {
     // Lấy toàn bộ danh sách sản phẩm từ CSDL
     public List<Products> getAllProducts() {
         String sql = """
-            
-                SELECT p.ID AS id, p.ProductName AS productName, 
-                   p.CategoryID AS categoryId, p.Price AS price, 
-                   p.ImageURL AS imageUrl,p.ShortDescription AS shortDescription,p.StockQuantity as stockQuantity, c.CategoryName AS categoryName
-            FROM products p
-            INNER JOIN categories c ON p.CategoryID = c.CategoryID
-            """;
+        SELECT 
+            p.ID AS id, 
+            p.ProductName AS productName, 
+            p.CategoryID AS categoryId, 
+            p.Price AS price, 
+            p.ImageURL AS imageUrl,
+            p.ShortDescription AS shortDescription,
+            p.StockQuantity as stockQuantity, 
+            c.CategoryName AS categoryName, 
+            p.IsSale AS isSale,
+            s.DiscountPercentage AS discountPercentage,  -- Thêm cột DiscountPercentage
+            s.DataSaleSlot AS dataSaleSlot           -- Thêm cột DataSaleSlot
+        FROM products p
+        INNER JOIN categories c ON p.CategoryID = c.CategoryID
+        LEFT JOIN sales s ON p.ID = s.ProductID      -- JOIN với bảng Sales
+        """;
 
         try (Handle handle = jdbi.open()) {
             return handle.createQuery(sql)
@@ -38,7 +46,19 @@ public class ProductDAO {
                         product.setImageURL(rs.getString("imageUrl"));
                         product.setShortDescription(rs.getString("shortDescription"));
                         product.setStockQuantity(rs.getInt("stockQuantity"));
+                        product.setSale(rs.getBoolean("isSale"));
                         product.setCategory(category);
+
+                        // Ánh xạ thông tin giảm giá (nếu có)
+                        if (product.isSale()) {
+                            Sale sale = new Sale();
+                            sale.setDiscountPercentage(rs.getDouble("discountPercentage"));
+                            sale.setDataSaleSlot(rs.getString("dataSaleSlot"));
+
+
+                            // Gán đối tượng Sale vào sản phẩm
+                            product.setSales(sale);
+                        }
 
                         return product;
                     })
@@ -102,7 +122,10 @@ public class ProductDAO {
             pd.DetailedDescription AS detailedDescription,
             pd.ProductStatus AS productStatus,
             pd.ExpiryDate AS expiryDate,
-            pv.View AS productViews
+            pv.View AS productViews,
+            s.DiscountPercentage AS discountPercentage, 
+            s.DataSaleSlot AS dataSaleSlot,
+            p.IsSale AS isSale
         FROM 
             products p
         INNER JOIN 
@@ -111,6 +134,8 @@ public class ProductDAO {
             productsdetail pd ON p.ID = pd.ProductID
         LEFT JOIN 
             products_view pv ON p.ID = pv.ProductID
+        LEFT JOIN 
+            sales s ON p.ID = s.ProductID
         WHERE 
             p.ID = :productId
         """;
@@ -161,6 +186,16 @@ public class ProductDAO {
                         detail.setExpiryDate(rs.getDate("expiryDate"));
 
                         prod.setProductsDetail(detail);
+                        prod.setSale(rs.getBoolean("isSale")); // Gán giá trị isSale
+
+                        if (prod.isSale()) { // Kiểm tra xem có giảm giá không dựa trên isSale
+                            Sale sale = new Sale();
+                            sale.setDiscountPercentage(rs.getDouble("discountPercentage"));
+                            sale.setDataSaleSlot(rs.getString("dataSaleSlot"));
+
+                            // Gán đối tượng Sale vào sản phẩm
+                            prod.setSales(sale);
+                        }
 
                         return prod;
                     })
@@ -179,7 +214,6 @@ public class ProductDAO {
                         // Thông tin người dùng đánh giá
                         Users user = new Users();
                         user.setUsername(rs.getString("username"));
-//                        user.setImageURLUser(rs.getString("imageURLUser"));
 
                         review.setUser(user); // Gắn thông tin người dùng vào review
                         return review;
@@ -207,7 +241,6 @@ public class ProductDAO {
             e.printStackTrace();
             return null;
         }
-
     }
     public double getAverageRating(int productId) {
         String sql = "SELECT AVG(Rating) AS AverageRating FROM reviews WHERE ProductID = :productId";
@@ -265,7 +298,15 @@ public class ProductDAO {
             return null;
         }
     }
-
+    public void addReview(Reviews review) {
+        String sql = """
+            INSERT INTO Reviews (ProductID, UsersID, Rating, ReviewText, Created_At) 
+            VALUES (:productId, :usersId, :rating, :reviewText, NOW())
+            """;
+        jdbi.useHandle(handle -> handle.createUpdate(sql)
+                .bindBean(review)
+                .execute());
+    }
 
     // Test phương thức getAllProducts() và getProductDetailsById()
     public static void main(String[] args) {
@@ -282,7 +323,7 @@ public class ProductDAO {
         }
 
         // Test hàm getProductDetailsById
-        int productId = 3; // Thay ID bằng sản phẩm thực tế có trong DB
+        int productId = 32; // Thay ID bằng sản phẩm thực tế có trong DB
         Products productDetails = dao.getProductDetailsById(productId);
         double averageRating = dao.getAverageRating(productId);
         if (productDetails != null) {
@@ -319,9 +360,20 @@ public class ProductDAO {
 
             System.out.println("\n===== Lượt xem =====");
             System.out.println("Số lượt xem: " + productDetails.getProductViews());
+            System.out.println("\n===== Giảm giá =====");
+            if (productDetails.isSale()) {
+                System.out.println("Sản phẩm đang giảm giá!");
+                Sale saleInfo = productDetails.getSales(); // Giả sử bạn có phương thức getSaleInfo() trong lớp Products
+                System.out.println("Phần trăm giảm giá: " + saleInfo.getDiscountPercentage());
+                System.out.println("Khung giờ giảm giá: " + saleInfo.getDataSaleSlot());
+                // ... (In thêm thông tin giảm giá nếu cần) ...
+            } else {
+                System.out.println("Sản phẩm không giảm giá.");
+            }
         } else {
             System.out.println("Không tìm thấy chi tiết sản phẩm hoặc có lỗi.");
         }
+
 }
 }
 

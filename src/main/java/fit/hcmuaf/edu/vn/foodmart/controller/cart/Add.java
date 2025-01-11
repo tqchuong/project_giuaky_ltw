@@ -34,6 +34,7 @@ public class Add extends HttpServlet {
             success = cart.add(product, quantity);
             session.setAttribute("cart", cart);
             session.removeAttribute("discountedTotal");
+
         }
 
         PrintWriter out = response.getWriter();
