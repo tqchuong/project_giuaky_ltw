@@ -32,7 +32,9 @@ public class LoginController extends HttpServlet {
 
             // Kiểm tra đăng nhập
             UserDAO userDAO = new UserDAO();
-            if (userDAO.checkLogin(username, password)) {
+            String loginStatus = userDAO.checkLogin(username, password);
+
+            if (loginStatus.equals("LOGIN_SUCCESS")) {
                 // Nếu đăng nhập thành công, lấy thông tin người dùng từ cơ sở dữ liệu
                 Users user = userDAO.getUserByUsername(username);
 
@@ -45,7 +47,19 @@ public class LoginController extends HttpServlet {
                 response.sendRedirect("home.jsp");
             } else {
                 // Nếu đăng nhập không thành công, thông báo lỗi
-                request.setAttribute("loginError", "Tên đăng nhập hoặc mật khẩu không đúng!");
+                String errorMessage = "";
+                switch (loginStatus) {
+                    case "ACCOUNT_LOCKED":
+                        errorMessage = "Tài khoản của bạn đã bị khóa!";
+                        break;
+                    case "INCORRECT_PASSWORD":
+                        errorMessage = "Tài khoản hoặc mật khẩu không đúng!";
+                        break;
+                    case "ERROR":
+                        errorMessage = "Đã có lỗi xảy ra, vui lòng thử lại!";
+                        break;
+                }
+                request.setAttribute("loginError", errorMessage);
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
         } else if (action.equals("res")) {
@@ -90,7 +104,7 @@ public class LoginController extends HttpServlet {
             // Xử lý hành động đăng xuất
             HttpSession session = request.getSession();
             session.invalidate();  // Hủy session khi đăng xuất
-            response.sendRedirect("home.jsp");  // Chuyển hướng người dùng về trang login
+            response.sendRedirect("home.jsp");
         } else if(action.equals("forgetPass")) {
             String username = request.getParameter("username");
             String email = request.getParameter("email");

@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
     orderButtons.forEach(button => {
         button.addEventListener('click', function (event) {
         const productElement = this.closest('.col-product');
-        const productSlot = productElement.getAttribute('data-slot');
-        const productHref = productElement.getAttribute('data-href');
+            const productSlot = this.getAttribute('data-slot'); // Lấy data-slot từ thẻ button
+            const productHref = this.getAttribute('data-href');
         const currentSlot = getCurrentSlot();
 
         if (!currentSlot) {

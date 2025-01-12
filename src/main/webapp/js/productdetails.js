@@ -1,4 +1,5 @@
-
+const isLoggedIn = document.getElementById('userStatus').dataset.isLoggedIn;
+console.log("isLoggedIn:", isLoggedIn);
 function changeImage(imageSrc) {
   document.getElementById('mainImage').src = imageSrc;
 }
@@ -12,6 +13,35 @@ function updateQuantity(change) {
   }
 }
 
+function buyNow(productId) {
+  // Kiểm tra xem người dùng đã đăng nhập hay chưa
+  if (isLoggedIn === "false") {
+    alert('Bạn cần đăng nhập để mua hàng.');
+    window.location.href = 'login.jsp'; // Chuyển hướng đến trang đăng nhập
+    return; // Kết thúc hàm nếu chưa đăng nhập
+  }
+
+  // Nếu đã đăng nhập, tiếp tục xử lý thêm sản phẩm vào giỏ hàng
+  const quantity = document.getElementById("quantity").value;
+  const url = `/project/add-cart?pid=${productId}&quantity=${quantity}`; // URL API giống với addToCart
+
+  fetch(url, { method: 'GET' })
+      .then((response) => {
+        console.log("Phản hồi từ API:", response);
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Dữ liệu JSON:", data);
+        if (data.success) {
+          alert("Đã thêm vào giỏ hàng");
+          // Chuyển hướng đến trang thanh toán
+          window.location.href = 'checkout.jsp'; // URL trang thanh toán
+        } else {
+          alert("Thêm sản phẩm thất bại: " + data.message);
+        }
+      })
+      .catch((error) => console.error("Lỗi khi gọi API:", error));
+}
 function addToCart(productId) {
   const quantity = document.getElementById("quantity").value;
   const url = `/project/add-cart?pid=${productId}&quantity=${quantity}`;

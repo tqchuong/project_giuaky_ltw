@@ -1,19 +1,64 @@
 package fit.hcmuaf.edu.vn.foodmart.model;
 
-
-import java.math.BigDecimal;
-import java.sql.Timestamp;
-
-// Lớp OrderDetails
 public class OrderDetails {
     private int id;
     private int orderId;
-    private int productId;
+    private int productID;
+    private String productName;
+    private String img;
     private int quantity;
     private double unitPrice;
+    private Products product;
+    private Order order;
 
-    // Constructors
     public OrderDetails() {
+    }
+
+    @Override
+    public String toString() {
+        return "OrderDetail{" +
+                "id=" + id +
+                ", orderId=" + orderId +
+                ", productID=" + productID +
+                ", productName='" + productName + '\'' +
+                ", img='" + img + '\'' +
+                ", quantity=" + quantity +
+                ", unitPrice=" + unitPrice +
+                ", product=" + product +
+                ", order=" + order +
+                '}';
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
+
+    public Products getProduct() {
+        return product;
+    }
+
+    public void setProduct(Products product) {
+        this.product = product;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public int getId() {
@@ -24,12 +69,20 @@ public class OrderDetails {
         this.id = id;
     }
 
-    public double getUnitPrice() {
-        return unitPrice;
+    public int getProductID() {
+        return productID;
     }
 
-    public void setUnitPrice(double unitPrice) {
-        this.unitPrice = unitPrice;
+    public void setProductID(int productID) {
+        this.productID = productID;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public int getQuantity() {
@@ -40,19 +93,13 @@ public class OrderDetails {
         this.quantity = quantity;
     }
 
-    public int getProductId() {
-        return productId;
+    public double getUnitPrice() {
+        return unitPrice;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
     }
 
-    public int getOrderId() {
-        return orderId;
-    }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
-    }
 }

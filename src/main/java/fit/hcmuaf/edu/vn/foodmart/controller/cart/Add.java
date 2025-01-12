@@ -33,6 +33,7 @@ public class Add extends HttpServlet {
         if (product != null) {
             success = cart.add(product, quantity);
             session.setAttribute("cart", cart);
+            session.setAttribute("totalAmount", cart.getTotalAmount());
             session.removeAttribute("discountedTotal");
 
         }

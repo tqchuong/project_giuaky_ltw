@@ -16,13 +16,14 @@ public class Products {
     private List<Reviews> reviews; // Danh sách đánh giá
     private int productViews;
     private double averageRating; // Thêm thuộc tính averageRating
-   private boolean isSale; // Thêm thuộc tính isSale
+    private boolean isSale; // Thêm thuộc tính isSale
+    private double discountPercentage; // Thêm thuộc tính discountPercentage
     private Sale sales;
 
     // Constructor mặc định
     public Products() {}
 
-    // Constructor đầy đủ
+    // Constructor đầy đủ (thêm discountPercentage)
     public Products(int ID,
                     String productName,
                     int categoryID,
@@ -34,7 +35,11 @@ public class Products {
                     List<ProductImages> images,
                     ProductsDetail productsDetail,
                     List<Reviews> reviews,
-                    int productViews,double averageRating,boolean isSale,Sale sales) {
+                    int productViews,
+                    double averageRating,
+                    boolean isSale,
+                    double discountPercentage,
+                    Sale sales) {
         this.ID = ID;
         this.productName = productName;
         this.categoryID = categoryID;
@@ -45,11 +50,46 @@ public class Products {
         this.category = category;
         this.images = images;
         this.productsDetail = productsDetail;
-        this.reviews = reviews;       // Gán danh sách đánh giá
-        this.productViews = productViews; // Gán số lượt xem
+        this.reviews = reviews;
+        this.productViews = productViews;
         this.averageRating = averageRating;
         this.isSale = isSale;
+        this.discountPercentage = discountPercentage;
         this.sales = sales;
+    }
+
+    // Các getters và setters khác giữ nguyên
+
+    public double getDiscountPercentage() {
+        return discountPercentage;
+    }
+
+    public void setDiscountPercentage(double discountPercentage) {
+        this.discountPercentage = discountPercentage;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Products{" +
+                "ID=" + ID +
+                ", productName='" + productName + '\'' +
+                ", categoryID=" + categoryID +
+                ", price=" + price +
+                ", imageURL='" + imageURL + '\'' +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", stockQuantity=" + stockQuantity +
+                ", category=" + (category != null ? "Category[ID=" + category.getCategoryName() + "]" : "null") +
+                ", images=" + (images != null ? "List<ProductImages>" : "null") +
+                ", productsDetail=" + (productsDetail != null ? productsDetail.toString() : "null") +
+                ", reviews=" + (reviews != null ? "List<Reviews>" : "null") +
+                ", productViews=" + productViews +
+                ", averageRating=" + averageRating +
+                ", isSale=" + isSale +
+                ", discountPercentage=" + discountPercentage +
+                ", sales=" + (sales != null ? "Sale[ID=" + sales.getId() + "]" : "null") +
+                '}';
     }
     public double getAverageRating() {
         return averageRating;
@@ -168,21 +208,4 @@ public class Products {
     public void setImages(List<ProductImages> images) {
         this.images = images;
     }
-
-    @Override
-    public String toString() {
-        return "Products{" +
-                "ID=" + ID +
-                ", productName='" + productName + '\'' +
-                ", categoryID=" + categoryID +
-                ", price=" + price +
-                ", imageURL='" + imageURL + '\'' +
-                ", shortDescription='" + shortDescription + '\'' +
-                ", stockQuantity=" + stockQuantity +
-                ", isSale=" + isSale +
-                ", sale=" + sales +
-                ", ProductsDetail=" + (productsDetail != null ? productsDetail : "Không có chi tiết sản phẩm") +
-                '}';
-    }
-
 }

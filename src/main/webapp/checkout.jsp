@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,18 +49,14 @@
                             <div class="date-order">
                                 <!-- Nội dung này sẽ được thêm động bởi setupDeliveryDates() -->
                             </div>
-                            <input type="date" name="deliveryDate" id="deliveryDate" style="margin-top: 10px;">
+                            <input type="date" name="deliveryDate" id="deliveryDate" style="margin-top: 10px;"required>
                         </div>
 
                         <!-- Thời gian giao hàng -->
                         <div class="content-group chk-ship" id="giaotannoi-group">
                             <p class="checkout-content-label">Thời gian giao hàng</p>
                             <div class="delivery-time">
-                                <input type="radio" name="deliveryTime" id="giaongay" value="now" class="radio">
-                                <label for="giaongay">Giao ngay khi xong</label>
-                            </div>
-                            <div class="delivery-time">
-                                <input type="radio" name="deliveryTime" id="deliverytime" value="specific" class="radio">
+                                <input type="radio" name="deliveryTime" id="deliverytime" value="specific" class="radio"required>
                                 <label for="deliverytime">Giao vào giờ</label>
                                 <select class="choise-time" name="specificDeliveryTime">
                                     <c:forEach var="hour" begin="8" end="21">
@@ -132,7 +128,18 @@
                     <div class="total-bill-order">
                         <div class="priceFlx">
                             <div class="text">Tiền hàng <span class="count-1">${sessionScope.cart.totalQuantity} món</span></div>
-                            <div class="price-detail"><span id="checkout-cart-total"> ${sessionScope.discountedTotal != null ? sessionScope.discountedTotal : sessionScope.cart.totalAmount}</span></div>
+                            <div class="price-detail">
+    <span id="checkout-cart-total">
+        <c:choose>
+            <c:when test="${not empty sessionScope.discountedTotal}">
+                <fmt:formatNumber value="${sessionScope.discountedTotal}" type="number" pattern="#,##0" />₫
+            </c:when>
+            <c:otherwise>
+                <fmt:formatNumber value="${sessionScope.cart.totalAmount}" type="number" pattern="#,##0" />₫
+            </c:otherwise>
+        </c:choose>
+    </span>
+                            </div>
                         </div>
                         <input type="hidden" name="shippingFee" id="shippingFeeInput" value="0">
                         <div class="priceFlx chk-ship">

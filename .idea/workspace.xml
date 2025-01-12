@@ -10,27 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b456d60-5884-49d4-ad25-687dfb03df07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ProductSaleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ReviewServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/PaymentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Payments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Sale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/advanced-search.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/Cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/Cart/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/CheckoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/CheckoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/cart/Add.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Products.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Reviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/Reviews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/OrderDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/model/OrderDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/productdetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/productdetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/flash-sale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/flash-sale.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/hotproducts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/hotproducts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/flash-sale.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/flash-sale.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/productdetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/productdetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/shoppingcart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/shoppingcart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/productdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/productdetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/shoppingcart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shoppingcart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/src/main/resources/home.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +40,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
+        <option value="HTML File" />
         <option value="Servlet" />
         <option value="Jsp File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,40 +92,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CouponDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DBConnect.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DiscountDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeServlet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JDBIConnect.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PasswordUtils.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProductDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserDAO.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Run.executor&quot;: &quot;Debug&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.31.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;npt&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;V:/LTW/FoodMart5/FoodMart/src/main/java/fit/hcmuaf/edu/vn/foodmart&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CouponDAO.executor": "Run",
+    "Application.DBConnect.executor": "Run",
+    "Application.DiscountDAO.executor": "Run",
+    "Application.HomeServlet.executor": "Run",
+    "Application.JDBIConnect.executor": "Run",
+    "Application.OrderDao.executor": "Run",
+    "Application.PasswordUtils.executor": "Run",
+    "Application.ProductDAO.executor": "Run",
+    "Application.UserDAO.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Run.executor": "Debug",
+    "Tomcat Server.Tomcat 10.1.31.executor": "Run",
+    "git-widget-placeholder": "npt",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "V:/LTW/FoodMart5/FoodMart/src/main/java/fit/hcmuaf/edu/vn/foodmart",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="V:\LTW\FoodMart5\FoodMart\src\main\java\fit\hcmuaf\edu\vn\foodmart" />
@@ -132,6 +135,8 @@
       <recent name="V:\LTW\FoodMart5\FoodMart\src\main\java\fit\hcmuaf\edu\vn\foodmart\controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\project\src\main\webapp" />
+      <recent name="D:\project\project\src\main\webapp\css" />
       <recent name="V:\LTW\FoodMart\src\main\webapp" />
       <recent name="V:\LTW\FoodMart\src\main\webapp\WEB-INF" />
       <recent name="V:\LTW\FoodMart\src\main\webapp\html" />
@@ -155,8 +160,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.OrderDao" />
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" />
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fit.hcmuaf.edu.vn.foodmart.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fit.hcmuaf.edu.vn.foodmart.dao.UserDAO" />
       <module name="project" />
       <extension name="coverage">
         <pattern>
@@ -179,7 +210,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="28daf337-7769-4114-bda8-bd104f022d3c" />
+        <option name="BASE_DIRECTORY_NAME" value="685f6cd0-f247-48a3-a4aa-9ca893d29124" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -187,7 +218,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54145" />
+        <option name="DEBUG_PORT" value="60138" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -252,12 +283,13 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="FoodMart:war" />
           <artifact name="project:war" />
         </option>
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.OrderDao" />
+      <item itemvalue="Application.UserDAO" />
       <item itemvalue="Application.CouponDAO" />
       <item itemvalue="Application.ProductDAO" />
       <item itemvalue="Tomcat Server.Run" />
@@ -265,6 +297,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProductDAO" />
+        <item itemvalue="Application.OrderDao" />
+        <item itemvalue="Application.UserDAO" />
         <item itemvalue="Application.CouponDAO" />
       </list>
     </recent_temporary>
@@ -337,6 +371,9 @@
       <workItem from="1736474166960" duration="5591000" />
       <workItem from="1736510745781" duration="3794000" />
       <workItem from="1736574748871" duration="15116000" />
+      <workItem from="1736609385675" duration="1987000" />
+      <workItem from="1736640955241" duration="15162000" />
+      <workItem from="1736680495013" duration="25818000" />
     </task>
     <servers />
   </component>
@@ -362,14 +399,10 @@
           <line>21</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/dao/ProductDAO.java</url>
-          <line>300</line>
-          <properties class="fit.hcmuaf.edu.vn.foodmart.dao.ProductDAO" method="addReview">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="46" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fit/hcmuaf/edu/vn/foodmart/controller/CheckoutServlet.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

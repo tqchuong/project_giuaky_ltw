@@ -1,11 +1,36 @@
+
+const isLoggedIn = document.getElementById('userStatus').dataset.isLoggedIn;
+console.log("isLoggedIn:", isLoggedIn);
+
+function checkLogin() {
+    if (isLoggedIn === "false") {
+        alert('Bạn chưa đăng nhập. Hãy đăng nhập để tiếp tục.');
+        window.location.href = 'login.jsp'; // Chuyển hướng đến trang login
+    } else {
+        // Kiểm tra giỏ hàng có trống không
+        const cartItemsCount = $(".cart-list .item").length;
+        const totalAmountText = document.querySelector(".summary .amount").innerText;
+        const totalAmount = parseFloat(totalAmountText.replace(/[^\d]/g, '')); // Lấy số tiền từ chuỗi
+
+        if (cartItemsCount === 0 || totalAmount === 0) {
+            alert('Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi thanh toán.');
+        } else {
+            window.location.href = 'checkout.jsp'; // Chuyển đến trang thanh toán nếu đã đăng nhập và giỏ hàng không trống
+        }
+    }
+
+
+}
 $(document).ready(function () {
     // Hàm định dạng VND
     function vnd(value) {
-        return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(value);
+        return new Intl.NumberFormat("vi-VN", {style: "currency", currency: "VND"}).format(value);
     }
+
     $(".apply-coupon-btn").on("click", function () {
         applyCoupon();
     });
+
     function applyCoupon() {
         const couponCode = document.getElementById("couponCode").value;
 
@@ -24,8 +49,8 @@ $(document).ready(function () {
             })
             .then((data) => {
                 if (data.success) {
-                    alert(`Áp dụng thành công! Bạn được giảm ${data.discountAmount} VNĐ.`);
-                    document.querySelector(".summary .amount").innerText = `${data.newTotal} VNĐ`;
+                    alert(`Áp dụng thành công! Bạn được giảm ${data.discountAmount.toLocaleString('vi-VN')} ₫.`);
+                    document.querySelector(".summary .amount").innerText = `${data.newTotal.toLocaleString('vi-VN')} ₫.`;
                 } else {
                     alert(data.message);
                 }
@@ -49,7 +74,7 @@ $(document).ready(function () {
             .then(data => {
                 if (data.success) {
                     // Cập nhật tổng tiền
-                    document.querySelector(".summary .amount").innerText = `${data.totalAmount} VNĐ`;
+                    document.querySelector(".summary .amount").innerText = `${data.totalAmount.toLocaleString('vi-VN')} ₫.`;
 
                     // Cập nhật số lượng và giá tiền của sản phẩm vừa được cập nhật
                     const updatedProduct = data.updatedProduct;
@@ -82,7 +107,7 @@ $(document).ready(function () {
                     $(`.item[data-id="${productId}"]`).remove();
 
                     // Cập nhật tổng tiền
-                    document.querySelector(".summary .amount").innerText = `${data.totalAmount} VNĐ`;
+                    document.querySelector(".summary .amount").innerText = `${data.totalAmount.toLocaleString('vi-VN')} ₫.`;
 
                 } else {
                     alert(data.message || "Xóa sản phẩm thất bại");
@@ -114,7 +139,6 @@ $(document).ready(function () {
             const productId = item.data("id");
             removeFromCart(productId);
         });
-
         // Kiểm tra giỏ hàng trống khi tải trang
         if ($(".cart-list .item").length === 0) {
             $(".gio-hang-trong").show();

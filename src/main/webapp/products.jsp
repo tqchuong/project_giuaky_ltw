@@ -47,7 +47,7 @@
                 hot</a>
             </li>
 
-            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
+            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a>
             </li>

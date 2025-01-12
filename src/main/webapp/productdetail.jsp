@@ -57,7 +57,7 @@
                     hot</a>
                 </li>
 
-                <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
+                <li class="menu-list-item"><a class="flashsale-link" href="flash-sale">
                     <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
                 </a>
                 </li>
@@ -146,9 +146,9 @@
                                                         </del>
                                                         <strong class="current-price text-danger">
                                                             <fmt:formatNumber type="number" pattern="#,##0"
-                                                                              value="${product.price * (1 - product.sales.discountPercentage / 100)}" /> đ
+                                                                              value="${product.price * (1 - product.discountPercentage / 100)}" /> đ
                                                         </strong>
-                                                        <span class="discount">-${product.sales.discountPercentage}%</span>
+                                                        <span class="discount">-${product.discountPercentage}%</span>
                                                     </c:when>
                                                     <c:otherwise>
                                                         <strong class="current-price">
@@ -175,8 +175,9 @@
                                                     <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
                                                 </button>
 
+                                                <div id="userStatus" data-is-logged-in="${sessionScope.auth != null ? 'true' : 'false'}" style="display: none;"></div>
 
-                                            <button type="button" class="btn btn-primary buy-now" onclick="window.location.href='checkout.jsp'">Mua Ngay</button>
+                                                <button type="button" class="btn btn-primary buy-now" onclick="buyNow(${product.ID})">Mua Ngay</button>
                                             </div>
                                         </div>
                                     </div>

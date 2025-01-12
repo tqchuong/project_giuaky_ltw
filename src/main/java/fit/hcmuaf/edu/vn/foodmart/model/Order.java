@@ -4,14 +4,16 @@ package fit.hcmuaf.edu.vn.foodmart.model;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
     private int id;
     private int userId;
-    private Date orderDate; // Thay đổi kiểu dữ liệu thành Date
+    private Timestamp orderDate; // Thay đổi kiểu dữ liệu thành Date
     private double totalAmount;
     private String shippingMethod;
-    private Date deliveryDate; // Thêm thuộc tính deliveryDate
+    private String deliveryDate; // Thêm thuộc tính deliveryDate
     private String deliveryTime; // Thêm thuộc tính deliveryTime
     private String paymentMethod; // Thêm thuộc tính paymentMethod
     private String orderNote;
@@ -19,6 +21,29 @@ public class Order {
     private String receiverPhone;
     private String shippingAddress;
     private String orderStatus;
+    private Timestamp createdAt;   // Thời gian tạo đơn hàng
+    private Timestamp updatedAt;   // Thời gian cập nhật đơn hàng
+
+    // Danh sách chi tiết đơn hàng
+    private List<OrderDetails> orderDetails = new ArrayList<>();
+
+    private Payments payments;
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public Payments getPayments() {
+        return payments;
+    }
+
+    public void setPayments(Payments payments) {
+        this.payments = payments;
+    }
+
+    public Timestamp getUpdatedAt() {
+        return updatedAt;
+    }
 
     // Constructor mặc định
     public Order() {}
@@ -87,11 +112,11 @@ public class Order {
         this.deliveryTime = deliveryTime;
     }
 
-    public Date getDeliveryDate() {
+    public String getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(Date deliveryDate) {
+    public void setDeliveryDate(String deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
 
@@ -111,12 +136,25 @@ public class Order {
         this.totalAmount = totalAmount;
     }
 
-    public Date getOrderDate() {
+
+    public Timestamp getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(Timestamp orderDate) {
         this.orderDate = orderDate;
+    }
+
+    public void setOrderDetails(List<OrderDetails> orderDetails) {
+        this.orderDetails = orderDetails;
+    }
+
+    public void setUpdatedAt(Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
     }
 
     public int getUserId() {
@@ -125,5 +163,13 @@ public class Order {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public void addProduct(OrderDetails detail) {
+        this.orderDetails.add(detail);
+    }
+
+    public List<OrderDetails> getOrderDetails() {
+        return orderDetails;
     }
 }

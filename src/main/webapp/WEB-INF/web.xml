@@ -41,6 +41,9 @@
         <url-pattern>/flash-sale</url-pattern>
     </servlet-mapping>
 
-
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/order-his</url-pattern>
+    </servlet-mapping>
 
 </web-app>

@@ -41,7 +41,7 @@ function toggleDeliveryOptions() {
         tuDenLayGroup.style.display = "none";
         diaChiNhan.style.display = "block";
         updateTotal(true); // Thêm phí vận chuyển
-        document.getElementById("shippingFeeInput").value = phiVanChuyen;
+
 
     });
 

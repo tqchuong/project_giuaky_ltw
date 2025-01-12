@@ -46,7 +46,7 @@ public class UserDAO implements ObjectDAO {
     }
 
     //kiểm tra đăng nhập
-    public boolean checkLogin(String username, String password) {
+    public String checkLogin(String username, String password) {
         // Truy vấn chỉ để lấy thông tin người dùng dựa trên username
         String sql = "SELECT * FROM users WHERE username = :username";
 
@@ -60,22 +60,28 @@ public class UserDAO implements ObjectDAO {
 
             if (user == null) {
                 System.out.println("Người dùng không tồn tại: " + username);
-                return false; // Không tìm thấy người dùng
+                return "INCORRECT_PASSWORD";
+            }
+
+            // Kiểm tra trạng thái người dùng
+            if (!user.getUserStatus().equals("Đang hoạt động")) {
+                System.out.println("Tài khoản không thể đăng nhập do trạng thái: " + user.getUserStatus());
+                return "ACCOUNT_LOCKED"; // Tài khoản bị khóa
             }
 
             // Kiểm tra mật khẩu
             if (PasswordUtils.verifyPassword(password, user.getPassword())) {
                 System.out.println("Đăng nhập thành công: " + username);
-                return true; // Đăng nhập thành công
+                return "LOGIN_SUCCESS";
             } else {
                 System.out.println("Sai mật khẩu cho người dùng: " + username);
-                return false; // Mật khẩu không đúng
+                return "INCORRECT_PASSWORD";
             }
         } catch (Exception e) {
             // Xử lý lỗi kết nối hoặc truy vấn
             System.out.println("Lỗi khi kiểm tra đăng nhập: " + e.getMessage());
             e.printStackTrace();
-            return false; // Trả về false nếu có lỗi
+            return "ERROR"; // Trả về false nếu có lỗi
         }
     }
 
@@ -103,7 +109,7 @@ public class UserDAO implements ObjectDAO {
         userList.put(user.getUsername(), user);
 
         // Câu lệnh SQL để thêm người dùng vào cơ sở dữ liệu
-        String sql = "INSERT INTO `users` (`username`, `password`, `Email`, `Phone`) \n" +
+        String sql = "INSERT INTO `users` (`Username`, `Password`, `Email`, `Phone`) \n" +
                 "VALUES (?, ?, ?, ?)";
 
         try (Handle handle = jdbi.open()) {
@@ -386,12 +392,12 @@ public class UserDAO implements ObjectDAO {
             System.out.println(user);
         }
 
-
+        // Kiểm tra đăng nhập
         UserDAO dao = new UserDAO();
-//
-//        String passwordHash = PasswordUtils.hashPassword("admin123");
-//        Users userAdmin = new Users("admin",passwordHash,"admin@gmail.com","admin","Admin");
-//        System.out.println(dao.addAdmin(userAdmin));
+
+        String passwordHash = PasswordUtils.hashPassword("admin123");
+        Users userAdmin = new Users("admin",passwordHash,"admin@gmail.com","admin","Admin");
+        System.out.println(dao.addAdmin(userAdmin));
 
 //        System.out.println(dao.checkLogin("hmc", "524173"));
 //        System.out.println(dao.checkLogin("tqc", "1234"));
@@ -402,25 +408,5 @@ public class UserDAO implements ObjectDAO {
 //        System.out.println(dao.passwordRecorvery("hmc","gatrong015@gmail.com"));
 
 //        System.out.println(dao.changeInfor("hmc","HMC","0123456789","gatrong015@gmail.com","Bình phước"));
-
-            // Tạo một user mới với mật khẩu đã mã hóa
-            String passwordHash = PasswordUtils.hashPassword("matkhau1234"); // Mã hóa mật khẩu
-//            Users newUser = new Users("testuser", passwordHash, "testuser@example.com", "0123456789");
-        Users newUser = new Users("testuser2", passwordHash, "testuser4@example.com", "0126789");
-            // Thêm user vào database
-            boolean success = dao.add(newUser);
-
-            // Kiểm tra kết quả
-            if (success) {
-                System.out.println("Thêm user thành công!");
-
-                // In ra danh sách user để kiểm tra
-
-                for (Users user : userList.values()) {
-                    System.out.println(user);
-                }
-            } else {
-                System.out.println("Thêm user thất bại!");
-            }
-        }
     }
+}

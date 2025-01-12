@@ -31,7 +31,7 @@
 
 
             <li class="menu-list-item">
-                <a class="menu-Category" href="products.jsp">
+                <a class="menu-Category" href="products">
                     <i class="fa-solid fa-shop" style="padding-right: 5px;color: #B5292F;"></i>
                     Sản phẩm
                     <i class="fa-solid fa-caret-down"></i>
@@ -50,7 +50,7 @@
                 hot</a>
             </li>
 
-            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale.jsp">
+            <li class="menu-list-item"><a class="flashsale-link" href="flash-sale">
                 <i class="fa-solid fa-bolt fa-shake" style="color: #FFD700;"></i> Flashsale
             </a>
             </li>
@@ -157,8 +157,8 @@
                                     <c:choose>
                                         <c:when test="${product.isSale}">
                                             <span class="original-price">${product.price}&nbsp;₫</span>
-                                            <span class="discount-price">${product.price * (1 - product.sales.discountPercentage / 100)}&nbsp;₫</span>
-                                            <span class="discount-message">-${product.sales.discountPercentage}%</span>
+                                            <span class="discount-price">${product.price * (1 - product.discountPercentage / 100)}&nbsp;₫</span>
+                                            <span class="discount-message">-${product.discountPercentage}%</span>
                                         </c:when>
                                         <c:otherwise>
                                             <span class="original-price">${product.price}&nbsp;₫</span>
@@ -166,7 +166,9 @@
                                     </c:choose>
                                 </div>
                                 <div class="product-buy">
-                                    <button class="card-button order-item"><i class="fa-solid fa-cart-plus" onclick="window.location.href='productDetails?id=${product.ID}'"></i> Đặt hàng</button>
+                                    <button class="card-button order-item" data-slot="${product.sales.dataSaleSlot}" data-href="productDetails?id=${product.ID}">
+                                        <i class="fa-solid fa-cart-plus"></i> Đặt hàng
+                                    </button>
                                 </div>
                             </div>
                         </div>

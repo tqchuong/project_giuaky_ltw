@@ -23,7 +23,7 @@
 
                 // Sử dụng giá đã giảm
                 if (p.isSale()) {
-                    double discountedPrice = p.getPrice() * (1 - p.getSales().getDiscountPercentage() / 100);
+                    double discountedPrice = p.getPrice() * (1 - p.getDiscountPercentage() / 100);
                     cartProduct.setPrice(discountedPrice); // Sử dụng giá đã giảm
                 } else {
                     cartProduct.setPrice(p.getPrice()); // Sử dụng giá gốc

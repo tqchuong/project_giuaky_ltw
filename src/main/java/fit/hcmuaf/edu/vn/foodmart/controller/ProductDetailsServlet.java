@@ -27,6 +27,9 @@ public class ProductDetailsServlet extends HttpServlet {
         if (productIdStr != null && !productIdStr.isEmpty()) {
             try {
                 int productId = Integer.parseInt(productIdStr);
+                // Cập nhật lượt xem
+                ProductDAO productDAO = new ProductDAO();
+                boolean updated = productDAO.updateView(productId);
 
                 // Lấy thông tin sản phẩm từ ProductService
                 Products productDetails = productService.getProductDetailsById(productId);
@@ -41,12 +44,14 @@ public class ProductDetailsServlet extends HttpServlet {
                     request.setAttribute("randomRelatedProducts", randomRelatedProducts);
                     // Đặt các attribute vào request
                     request.setAttribute("product", productDetails);
+
                     request.setAttribute("averageRating", averageRating);
                     request.setAttribute("reviewCount", reviewCount);
                     request.setAttribute("viewCount", viewCount);
 
                     // Forward đến JSP
                     request.getRequestDispatcher("productdetail.jsp").forward(request, response);
+
                 } else {
                     // Xử lý trường hợp không tìm thấy sản phẩm
                     response.sendError(HttpServletResponse.SC_NOT_FOUND, "Product not found");

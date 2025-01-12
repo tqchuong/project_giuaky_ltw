@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,13 +113,23 @@
                 <div class="inner_container">
                     <div class="summary-content">
                         <div class="col_1of2 total">
-                            <span class="amount">${sessionScope.cart.totalAmount != null ? sessionScope.cart.totalAmount : 0} VNĐ</span>
+                            <span class="amount">
+    <c:choose>
+        <c:when test="${not empty sessionScope.discountedTotal}">
+            <fmt:formatNumber value="${sessionScope.discountedTotal}" type="number" pattern="#,##0" />₫
+        </c:when>
+        <c:otherwise>
+            <fmt:formatNumber value="${sessionScope.cart.totalAmount}" type="number" pattern="#,##0" />₫
+        </c:otherwise>
+    </c:choose>
+</span>
                         </div>
                     </div>
                         <!-- Summary Buttons -->
                         <div class="btn-summary">
                             <a href="home.jsp" class="btn-checkout btn-reverse" role="button">Tiếp tục mua sắm</a>
-                            <a href="checkout.jsp" class="btn-checkout" role="button">Thanh toán</a>
+                            <div id="userStatus" data-is-logged-in="${sessionScope.auth != null ? 'true' : 'false'}" style="display: none;"></div>
+                            <a href="javascript:void(0);" class="btn-checkout" role="button" onclick="checkLogin()">Thanh toán</a>
                         </div>
                     </div>
                 </div>
@@ -126,7 +137,7 @@
 
 
 
-        </div>
+
     </main>
 
     <!-- External JavaScript -->

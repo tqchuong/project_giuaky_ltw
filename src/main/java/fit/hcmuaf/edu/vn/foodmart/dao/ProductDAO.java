@@ -5,11 +5,12 @@ import fit.hcmuaf.edu.vn.foodmart.model.*;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Jdbi;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ProductDAO {
 
-    private static Jdbi jdbi = DBConnect.getJdbi();  // Lấy jdbi từ DBConnect
+    private static Jdbi jdbi = DBConnect.getJdbi();
 
     // Lấy toàn bộ danh sách sản phẩm từ CSDL
     public List<Products> getAllProducts() {
@@ -24,11 +25,11 @@ public class ProductDAO {
             p.StockQuantity as stockQuantity, 
             c.CategoryName AS categoryName, 
             p.IsSale AS isSale,
-            s.DiscountPercentage AS discountPercentage,  -- Thêm cột DiscountPercentage
-            s.DataSaleSlot AS dataSaleSlot           -- Thêm cột DataSaleSlot
+            p.DiscountPercentage AS discountPercentage ,
+        s.DataSaleSlot AS dataSaleSlot
         FROM products p
         INNER JOIN categories c ON p.CategoryID = c.CategoryID
-        LEFT JOIN sales s ON p.ID = s.ProductID      -- JOIN với bảng Sales
+LEFT JOIN sales s ON p.ID = s.ProductID 
         """;
 
         try (Handle handle = jdbi.open()) {
@@ -47,17 +48,17 @@ public class ProductDAO {
                         product.setShortDescription(rs.getString("shortDescription"));
                         product.setStockQuantity(rs.getInt("stockQuantity"));
                         product.setSale(rs.getBoolean("isSale"));
+                        product.setDiscountPercentage(rs.getDouble("discountPercentage")); // Ánh xạ discountPercentage
                         product.setCategory(category);
 
                         // Ánh xạ thông tin giảm giá (nếu có)
+
                         if (product.isSale()) {
                             Sale sale = new Sale();
-                            sale.setDiscountPercentage(rs.getDouble("discountPercentage"));
                             sale.setDataSaleSlot(rs.getString("dataSaleSlot"));
-
-
-                            // Gán đối tượng Sale vào sản phẩm
+// Gán đối tượng Sale vào sản phẩm
                             product.setSales(sale);
+
                         }
 
                         return product;
@@ -123,8 +124,7 @@ public class ProductDAO {
             pd.ProductStatus AS productStatus,
             pd.ExpiryDate AS expiryDate,
             pv.View AS productViews,
-            s.DiscountPercentage AS discountPercentage, 
-            s.DataSaleSlot AS dataSaleSlot,
+            p.DiscountPercentage AS discountPercentage, 
             p.IsSale AS isSale
         FROM 
             products p
@@ -134,8 +134,6 @@ public class ProductDAO {
             productsdetail pd ON p.ID = pd.ProductID
         LEFT JOIN 
             products_view pv ON p.ID = pv.ProductID
-        LEFT JOIN 
-            sales s ON p.ID = s.ProductID
         WHERE 
             p.ID = :productId
         """;
@@ -146,8 +144,8 @@ public class ProductDAO {
             r.Rating AS rating,
             r.ReviewText AS reviewText,
             r.Created_At AS createdAt,
-            u.Username AS username,
-            u.ImageURLUser AS imageURLUser
+            u.Username AS username
+            
         FROM 
             reviews r
         INNER JOIN 
@@ -177,6 +175,8 @@ public class ProductDAO {
                         prod.setStockQuantity(rs.getInt("stockQuantity"));
                         prod.setCategory(category);
                         prod.setProductViews(rs.getInt("productViews"));
+                        prod.setDiscountPercentage(rs.getDouble("discountPercentage"));
+                        prod.setSale(rs.getBoolean("isSale"));
 
                         // Ánh xạ thông tin chi tiết sản phẩm
                         ProductsDetail detail = new ProductsDetail();
@@ -186,16 +186,6 @@ public class ProductDAO {
                         detail.setExpiryDate(rs.getDate("expiryDate"));
 
                         prod.setProductsDetail(detail);
-                        prod.setSale(rs.getBoolean("isSale")); // Gán giá trị isSale
-
-                        if (prod.isSale()) { // Kiểm tra xem có giảm giá không dựa trên isSale
-                            Sale sale = new Sale();
-                            sale.setDiscountPercentage(rs.getDouble("discountPercentage"));
-                            sale.setDataSaleSlot(rs.getString("dataSaleSlot"));
-
-                            // Gán đối tượng Sale vào sản phẩm
-                            prod.setSales(sale);
-                        }
 
                         return prod;
                     })
@@ -307,72 +297,152 @@ public class ProductDAO {
                 .bindBean(review)
                 .execute());
     }
+    public List<Products> getLatestProducts(int limit) {
+        String sql = "SELECT p.Id AS ProductID, p.ProductName, p.CategoryID, p.Price, p.UploadDate, " +
+                "p.ImageURL, p.ShortDescription, p.StockQuantity " +
+                "FROM Products p " +
+                "ORDER BY p.UploadDate DESC " + // Sắp xếp theo thời gian tải lên mới nhất
+                "LIMIT :limit";  // Lấy số sản phẩm theo tham số limit
 
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind("limit", limit)  // Gán giá trị cho tham số limit
+                    .mapToBean(Products.class)  // Ánh xạ kết quả vào đối tượng Products
+                    .list();  // Trả về danh sách sản phẩm mới nhất
+        } catch (Exception e) {
+            System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
+            e.printStackTrace();
+            return Collections.emptyList();  // Trả về danh sách rỗng thay vì null
+        }
+    }
+
+    public List<Products> getHotProducts(int limit) {
+        String sql = """
+    SELECT 
+        p.ID AS id, 
+        p.ProductName, 
+        p.CategoryID, 
+        p.Price, 
+        p.ImageURL, 
+        p.UploadDate, 
+        p.ShortDescription, 
+        p.StockQuantity, 
+        SUM(pv.View) AS TotalViews 
+    FROM Products p 
+    JOIN Products_View pv 
+        ON p.ID = pv.ProductID 
+    GROUP BY 
+        p.ID, p.ProductName, p.CategoryID, p.Price, 
+        p.ImageURL, p.UploadDate, p.ShortDescription, p.StockQuantity 
+    ORDER BY TotalViews DESC 
+    LIMIT :limit
+    """;
+
+        try (Handle handle = jdbi.open()) {
+            return handle.createQuery(sql)
+                    .bind("limit",limit)
+                    .mapToBean(Products.class)
+                    .list();
+        } catch (Exception e) {
+            System.out.println("Lỗi khi truy vấn dữ liệu: " + e.getMessage());
+            e.printStackTrace();
+            return Collections.emptyList();  // Trả về danh sách rỗng thay vì null
+        }
+    }
+
+    //update view_product mỗi khi vào detail
+    public boolean updateView(int productID) {
+        String sql = """
+            UPDATE Products_view
+            SET View = View + 1 
+            WHERE ProductID = :productID
+            """;
+        try (Handle handle = jdbi.open()) {
+            // Thực thi câu lệnh cập nhật và trả về số dòng bị ảnh hưởng
+            int rowsAffected = handle.createUpdate(sql)
+                    .bind("productID", productID)
+                    .execute();
+
+            // Trả về true nếu ít nhất một dòng bị ảnh hưởng (lượt xem đã được tăng)
+            return rowsAffected > 0;
+        } catch (Exception e) {
+            // In ra thông báo lỗi chi tiết
+            System.out.println("Lỗi khi cập nhật lượt xem sản phẩm: " + e.getMessage());
+            e.printStackTrace();
+            return false;  // Trả về false nếu có lỗi
+        }
+    }
     // Test phương thức getAllProducts() và getProductDetailsById()
     public static void main(String[] args) {
         ProductDAO dao = new ProductDAO();
 
-        // Test getAllProducts()
-        List<Products> products = dao.getAllProducts();
-        if (products != null) {
-            for (Products product : products) {
-                System.out.println(product);
-            }
-        } else {
-            System.out.println("Không có sản phẩm hoặc có lỗi khi truy vấn.");
+        List<Products> hotProducts = dao.getAllProducts();
+
+        for (Products p : hotProducts) {
+            System.out.println(p);
         }
+//
+//        // Test getAllProducts()
+//        List<Products> products = dao.getAllProducts();
+//        if (products != null) {
+//            for (Products product : products) {
+//                System.out.println(product);
+//            }
+//        } else {
+//            System.out.println("Không có sản phẩm hoặc có lỗi khi truy vấn.");
+//        }
 
-        // Test hàm getProductDetailsById
-        int productId = 32; // Thay ID bằng sản phẩm thực tế có trong DB
-        Products productDetails = dao.getProductDetailsById(productId);
-        double averageRating = dao.getAverageRating(productId);
-        if (productDetails != null) {
-            System.out.println("===== Chi tiết sản phẩm =====");
-            System.out.println("ID: " + productDetails.getID());
-            System.out.println("Tên sản phẩm: " + productDetails.getProductName());
-            System.out.println("Giá: " + productDetails.getPrice());
-            System.out.println("Mô tả ngắn: " + productDetails.getShortDescription());
-            System.out.println("Danh mục: " + (productDetails.getCategory() != null
-                    ? productDetails.getCategory().getCategoryName() : "Không có"));
-
-            System.out.println("\n===== Danh sách ảnh =====");
-            if (productDetails.getImages() != null && !productDetails.getImages().isEmpty()) {
-                for (ProductImages image : productDetails.getImages()) {
-                    System.out.println("- " + image.getImagePath());
-                }
-            } else {
-                System.out.println("Không có ảnh nào.");
-            }
-
-            System.out.println("\n===== Đánh giá =====");
-            if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
-                for (Reviews review : productDetails.getReviews()) {
-                   System.out.println("- Người dùng: " + review.getUser().getUsername()
-                           + " (Ảnh: " + review.getUser() + ")");
-                    System.out.println("  Xếp hạng: " + review.getRating());
-                    System.out.println("  Nội dung: " + review.getReviewText());
-                }
-            } else {
-                System.out.println("Không có đánh giá nào.");
-            }
-            System.out.println("\n===== Trung bình Rating =====");
-            System.out.println("Trung bình rating: " + averageRating);
-
-            System.out.println("\n===== Lượt xem =====");
-            System.out.println("Số lượt xem: " + productDetails.getProductViews());
-            System.out.println("\n===== Giảm giá =====");
-            if (productDetails.isSale()) {
-                System.out.println("Sản phẩm đang giảm giá!");
-                Sale saleInfo = productDetails.getSales(); // Giả sử bạn có phương thức getSaleInfo() trong lớp Products
-                System.out.println("Phần trăm giảm giá: " + saleInfo.getDiscountPercentage());
-                System.out.println("Khung giờ giảm giá: " + saleInfo.getDataSaleSlot());
-                // ... (In thêm thông tin giảm giá nếu cần) ...
-            } else {
-                System.out.println("Sản phẩm không giảm giá.");
-            }
-        } else {
-            System.out.println("Không tìm thấy chi tiết sản phẩm hoặc có lỗi.");
-        }
+//        // Test hàm getProductDetailsById
+//        int productId = 32; // Thay ID bằng sản phẩm thực tế có trong DB
+//        Products productDetails = dao.getProductDetailsById(productId);
+//        double averageRating = dao.getAverageRating(productId);
+//        if (productDetails != null) {
+//            System.out.println("===== Chi tiết sản phẩm =====");
+//            System.out.println("ID: " + productDetails.getID());
+//            System.out.println("Tên sản phẩm: " + productDetails.getProductName());
+//            System.out.println("Giá: " + productDetails.getPrice());
+//            System.out.println("Mô tả ngắn: " + productDetails.getShortDescription());
+//            System.out.println("Danh mục: " + (productDetails.getCategory() != null
+//                    ? productDetails.getCategory().getCategoryName() : "Không có"));
+//
+//            System.out.println("\n===== Danh sách ảnh =====");
+//            if (productDetails.getImages() != null && !productDetails.getImages().isEmpty()) {
+//                for (ProductImages image : productDetails.getImages()) {
+//                    System.out.println("- " + image.getImagePath());
+//                }
+//            } else {
+//                System.out.println("Không có ảnh nào.");
+//            }
+//
+//            System.out.println("\n===== Đánh giá =====");
+//            if (productDetails.getReviews() != null && !productDetails.getReviews().isEmpty()) {
+//                for (Reviews review : productDetails.getReviews()) {
+//                   System.out.println("- Người dùng: " + review.getUser().getUsername()
+//                           + " (Ảnh: " + review.getUser() + ")");
+//                    System.out.println("  Xếp hạng: " + review.getRating());
+//                    System.out.println("  Nội dung: " + review.getReviewText());
+//                }
+//            } else {
+//                System.out.println("Không có đánh giá nào.");
+//            }
+//            System.out.println("\n===== Trung bình Rating =====");
+//            System.out.println("Trung bình rating: " + averageRating);
+//
+//            System.out.println("\n===== Lượt xem =====");
+//            System.out.println("Số lượt xem: " + productDetails.getProductViews());
+//            System.out.println("\n===== Giảm giá =====");
+//            if (productDetails.isSale()) {
+//                System.out.println("Sản phẩm đang giảm giá!");
+//                Sale saleInfo = productDetails.getSales(); // Giả sử bạn có phương thức getSaleInfo() trong lớp Products
+//                System.out.println("Phần trăm giảm giá: " + saleInfo.getDiscountPercentage());
+//                System.out.println("Khung giờ giảm giá: " + saleInfo.getDataSaleSlot());
+//                // ... (In thêm thông tin giảm giá nếu cần) ...
+//            } else {
+//                System.out.println("Sản phẩm không giảm giá.");
+//            }
+//        } else {
+//            System.out.println("Không tìm thấy chi tiết sản phẩm hoặc có lỗi.");
+//        }
 
 }
 }
